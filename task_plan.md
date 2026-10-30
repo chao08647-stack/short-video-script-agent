@@ -9,8 +9,8 @@ Goal: Compare mature open-source references for the four campus Agent assignment
 - [complete] Prepare a Chinese comparison with direct sources and practical implications.
 - [complete] Respect exclusion of topic 3; explore a concrete topic 4 concept and acceptance boundaries without implementing it.
 
-## Constraints
-- Research only; do not implement an assignment or install repository code.
+## Historical research-stage constraints (superseded by implementation authorization below)
+- At the research stage only: do not implement an assignment or install repository code.
 - Stars are popularity signals, not proof of reliability or acceptance coverage.
 - User-facing research date: 2026-10-28, Asia/Shanghai.
 - Identify cached page figures as approximate; do not claim live counts without evidence.
@@ -39,7 +39,7 @@ User supplied a private API key and authorized DeepSeek Flash as the primary run
 - [complete] API connectivity and normal / duration-revision flow smoke; later content audit requires revalidation.
 - [complete] Attempt all 14 cases, preserve Qwen baseline, review traces and fix observed UI/feature grounding defects. Raw 8 automated passes; 6 HTTP 402 failures; 4 completed scripts require content revalidation.
 - [complete] Update evidence, documentation, tests and archive smoke: 321 tests, 14 Mock cases passed; all four live batches and latest failures retained.
-- [pending: external dependency] Restore API balance, rerun corrected live suite, validate remaining skill application, then publish to a supplied remote.
+- [resolved for first interruption] User restored API balance and further live batches ran. The second HTTP 402 later stopped paid calls; new verification needs available quota and an explicit whole-experiment budget. Remote publication still needs a supplied destination.
 
 - [complete] User restored balance; executed further real comparisons and targeted skill checks, then stopped paid calls at the second HTTP 402.
 - [pending] Reliable long revision convergence, final live revalidation within a total experiment budget, and remote publication. Latest records are not all passing.

@@ -1,0 +1,19 @@
+{
+  "case": "tutorial",
+  "mode": "live",
+  "run_id": "76632334-0c4a-4d0a-abe8-4958773b9836",
+  "status": "incomplete",
+  "acceptance_passed": false,
+  "acceptance_errors": [
+    "Expected completed, got incomplete"
+  ],
+  "elapsed_seconds": 297.12,
+  "model_calls": 40,
+  "tool_calls": 37,
+  "skills_loaded": [
+    "claim-grounding",
+    "narration-subtitles"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\live\\tutorial"
+}

@@ -1,0 +1,63 @@
+{
+  "run_id": "03533ece-6c80-4789-aa33-7c4778f3c048",
+  "mode": "live",
+  "status": "waiting_human",
+  "phase": "direction",
+  "execution": {
+    "python": "3.12.9",
+    "langgraph": "1.2.18",
+    "mode": "live",
+    "model": {
+      "base_url": "http://127.0.0.1:8012/v1",
+      "model": "qwen25-14b-pbn-answer",
+      "max_tokens": 2048,
+      "timeout_seconds": 120.0,
+      "action_protocol": "json"
+    },
+    "code_hashes": {
+      "engine.py": "caac2981137c068d4bf54bc301e5957013644701ba087016ec33ab63b620c033",
+      "prompts.py": "c84234c921c17b70bf760f042828101c7708e815225ce65d893e6ccfb1863d9e",
+      "model.py": "c1434ac50ad2c5d6416bdffc50e327df0da13e2528226c1ba26eb83f8cea2038",
+      "business_tools.py": "6f3f549b2fe9f49b2ddcfd4881509a93fa162c9422a95d029ec282a11d0d2411"
+    }
+  },
+  "brief": {
+    "topic": "介绍星河投影仪的无线投屏功能",
+    "audience": "短视频剪辑新手",
+    "platform": "抖音",
+    "target_seconds": 30.0,
+    "style": "轻松、直白"
+  },
+  "direction": null,
+  "script": null,
+  "script_version": 0,
+  "checks": {},
+  "estimated_seconds": null,
+  "duration_note": "基于固定语速与画面展示需求估算，不代表真实配音或成片测量。",
+  "sources": [],
+  "pending_review": {
+    "review_id": "b2a26bcab69eaa01641b",
+    "stage": "clarification",
+    "version": 0,
+    "object_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+    "reason": "您能否提供更多关于星河投影仪无线投屏功能的具体信息？",
+    "fields": [
+      "topic",
+      "audience",
+      "platform",
+      "target_seconds",
+      "style"
+    ],
+    "direction": null,
+    "script": null,
+    "checks": {}
+  },
+  "review_history": [],
+  "stop_reason": null,
+  "model_calls": 3,
+  "tool_calls": 3,
+  "skills_loaded": [
+    "material-search"
+  ],
+  "data_hash": "79e31998bf190075d512073ad5b1b9d1b45d682639fa8985787ba31cced7ddda"
+}

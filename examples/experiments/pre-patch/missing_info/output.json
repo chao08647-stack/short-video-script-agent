@@ -1,0 +1,329 @@
+{
+  "run_id": "61d86898-f255-4a2b-a2ca-a7f730f9c3c9",
+  "mode": "live",
+  "status": "failed",
+  "phase": "draft",
+  "execution": {
+    "python": "3.12.9",
+    "langgraph": "1.2.18",
+    "mode": "live",
+    "model": {
+      "base_url": "http://127.0.0.1:8012/v1",
+      "model": "qwen25-14b-pbn-answer",
+      "max_tokens": 2048,
+      "timeout_seconds": 120.0,
+      "action_protocol": "json"
+    },
+    "code_hashes": {
+      "engine.py": "caac2981137c068d4bf54bc301e5957013644701ba087016ec33ab63b620c033",
+      "prompts.py": "c84234c921c17b70bf760f042828101c7708e815225ce65d893e6ccfb1863d9e",
+      "model.py": "c1434ac50ad2c5d6416bdffc50e327df0da13e2528226c1ba26eb83f8cea2038",
+      "business_tools.py": "6f3f549b2fe9f49b2ddcfd4881509a93fa162c9422a95d029ec282a11d0d2411"
+    }
+  },
+  "brief": {
+    "topic": "介绍小剪 App 的字幕功能",
+    "audience": "短视频剪辑新手",
+    "platform": "抖音",
+    "target_seconds": 30.0,
+    "style": "轻松、直白"
+  },
+  "direction": {
+    "angle": "针对短视频剪辑新手，展示小剪App的字幕功能，包括自动生成、手动修改、字体大小和颜色调整等功能，以及建议用户检查并修正自动字幕的识别错误。",
+    "outline": [
+      "介绍小剪App的字幕功能",
+      "演示自动生成字幕",
+      "演示手动修改字幕",
+      "演示调整字幕字体大小和颜色",
+      "建议用户检查并修正自动字幕的识别错误"
+    ],
+    "source_ids": [
+      "P01",
+      "P02",
+      "P03",
+      "P04"
+    ],
+    "notes": "考虑到短视频剪辑新手的需求，我们放弃了关于耳机功能的资料，因为这些信息与当前的主题无关。"
+  },
+  "script": {
+    "title": "小剪App字幕功能介绍",
+    "scenes": [
+      {
+        "scene_id": "1",
+        "visual": "展示小剪App界面，突出字幕功能按钮",
+        "narration": "大家好，今天给大家介绍一下小剪App的字幕功能。首先，我们来看一下小剪App的界面，这里有一个专门用于生成字幕的按钮。",
+        "subtitle": "展示小剪App界面，突出字幕功能按钮",
+        "source_ids": [
+          "P01"
+        ],
+        "min_display_seconds": 1.0
+      },
+      {
+        "scene_id": "2",
+        "visual": "演示自动生成字幕的过程",
+        "narration": "点击这个按钮后，小剪App会自动为我们生成字幕。",
+        "subtitle": "演示自动生成字幕的过程",
+        "source_ids": [
+          "P01"
+        ],
+        "min_display_seconds": 1.0
+      },
+      {
+        "scene_id": "3",
+        "visual": "演示手动修改字幕的过程",
+        "narration": "如果对自动生成的字幕不满意，我们可以手动修改它。",
+        "subtitle": "演示手动修改字幕的过程",
+        "source_ids": [
+          "P02"
+        ],
+        "min_display_seconds": 1.0
+      },
+      {
+        "scene_id": "4",
+        "visual": "演示调整字幕字体大小和颜色的过程",
+        "narration": "此外，小剪App还支持调整字幕的字体大小和颜色。",
+        "subtitle": "演示调整字幕字体大小和颜色的过程",
+        "source_ids": [
+          "P03"
+        ],
+        "min_display_seconds": 1.0
+      },
+      {
+        "scene_id": "5",
+        "visual": "建议用户检查并修正自动字幕的识别错误",
+        "narration": "最后，小剪App建议用户在生成自动字幕后，检查并修正可能存在的识别错误。",
+        "subtitle": "建议用户检查并修正自动字幕的识别错误",
+        "source_ids": [
+          "P04"
+        ],
+        "min_display_seconds": 1.0
+      }
+    ],
+    "claims": [
+      {
+        "text": "自动生成字幕",
+        "source_id": "P01",
+        "quote": "小剪 App 支持自动生成字幕。",
+        "scene_id": "2"
+      },
+      {
+        "text": "手动修改字幕",
+        "source_id": "P02",
+        "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+        "scene_id": "3"
+      },
+      {
+        "text": "调整字幕字体大小和颜色",
+        "source_id": "P03",
+        "quote": "小剪 App 支持调整字幕的字体大小和颜色。",
+        "scene_id": "4"
+      },
+      {
+        "text": "检查并修正自动字幕的识别错误",
+        "source_id": "P04",
+        "quote": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+        "scene_id": "5"
+      }
+    ]
+  },
+  "script_version": 1,
+  "checks": {
+    "duration": {
+      "passed": false,
+      "estimated_seconds": 40.5,
+      "target_seconds": 30.0,
+      "scenes": [
+        {
+          "scene_id": "1",
+          "narration_seconds": 14.2,
+          "subtitle_seconds": 2.74,
+          "min_display_seconds": 1.0,
+          "estimated_seconds": 14.2,
+          "start_seconds": 0.0,
+          "end_seconds": 14.2
+        },
+        {
+          "scene_id": "2",
+          "narration_seconds": 5.75,
+          "subtitle_seconds": 1.84,
+          "min_display_seconds": 1.0,
+          "estimated_seconds": 5.75,
+          "start_seconds": 14.2,
+          "end_seconds": 19.95
+        },
+        {
+          "scene_id": "3",
+          "narration_seconds": 6.1,
+          "subtitle_seconds": 1.84,
+          "min_display_seconds": 1.0,
+          "estimated_seconds": 6.1,
+          "start_seconds": 19.95,
+          "end_seconds": 26.05
+        },
+        {
+          "scene_id": "4",
+          "narration_seconds": 5.75,
+          "subtitle_seconds": 2.67,
+          "min_display_seconds": 1.0,
+          "estimated_seconds": 5.75,
+          "start_seconds": 26.05,
+          "end_seconds": 31.8
+        },
+        {
+          "scene_id": "5",
+          "narration_seconds": 8.7,
+          "subtitle_seconds": 3.0,
+          "min_display_seconds": 1.0,
+          "estimated_seconds": 8.7,
+          "start_seconds": 31.8,
+          "end_seconds": 40.5
+        }
+      ],
+      "issues": [
+        {
+          "code": "TIME_LIMIT_EXCEEDED",
+          "message": "预计 40.5 秒，超过目标 30 秒。请修改内容或请求用户调整要求。",
+          "excess_seconds": 10.5
+        }
+      ],
+      "assumptions": {
+        "chars_per_second": 4.0,
+        "subtitle_chars_per_second": 6.0,
+        "english_words_per_second": 2.5,
+        "minimum_scene_seconds": 1.0,
+        "transition_seconds": 0.0,
+        "timing_rule": "每镜取旁白、字幕阅读、画面最低展示时间的最大值；镜头串行累计。",
+        "limitation": "文字估时，不是实际录音或成片时长；数字、缩写及表演节奏可能存在误差。"
+      },
+      "script_version": 1,
+      "script_hash": "87644b350a3bab668d112e9eef58d3c1b13d4373e71ea031445ca4bf124d5af9",
+      "data_hash": "79547a1a8070046079e5a75d5be2579ee62ecfde50ca53b0d8928795e1c7d323",
+      "brief_hash": "0e3a7dcadb5bcf8c71da182e3d0a8ce26a2c8dece6d49b2393a3562ae9d28e55"
+    }
+  },
+  "estimated_seconds": 40.5,
+  "duration_note": "基于固定语速与画面展示需求估算，不代表真实配音或成片测量。",
+  "sources": [
+    {
+      "source_id": "P01",
+      "version": "2026-10-01",
+      "title": "小剪 App：自动字幕",
+      "text": "小剪 App 支持自动生成字幕。",
+      "facts": [
+        "小剪 App 支持自动生成字幕。"
+      ],
+      "keywords": [
+        "小剪",
+        "字幕",
+        "自动生成",
+        "剪辑",
+        "视频"
+      ],
+      "score": 14.0854
+    },
+    {
+      "source_id": "P02",
+      "version": "2026-10-01",
+      "title": "小剪 App：字幕文字修改",
+      "text": "用户可以手动修改小剪 App 生成的字幕文字。",
+      "facts": [
+        "用户可以手动修改小剪 App 生成的字幕文字。"
+      ],
+      "keywords": [
+        "小剪",
+        "字幕",
+        "手动修改",
+        "文字",
+        "检查"
+      ],
+      "score": 6.8665
+    },
+    {
+      "source_id": "P03",
+      "version": "2026-10-01",
+      "title": "小剪 App：字幕样式",
+      "text": "小剪 App 支持调整字幕的字体大小和颜色。",
+      "facts": [
+        "小剪 App 支持调整字幕的字体大小和颜色。"
+      ],
+      "keywords": [
+        "小剪",
+        "字幕",
+        "样式",
+        "字体",
+        "颜色"
+      ],
+      "score": 6.8665
+    },
+    {
+      "source_id": "P04",
+      "version": "2026-10-01",
+      "title": "小剪 App：字幕使用建议",
+      "text": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+      "facts": [
+        "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。"
+      ],
+      "keywords": [
+        "小剪",
+        "字幕",
+        "检查",
+        "识别错误",
+        "修改"
+      ],
+      "score": 6.8665
+    },
+    {
+      "source_id": "H01",
+      "version": "2026-10-01",
+      "title": "澄音 H1 耳机：降噪功能",
+      "text": "澄音 H1 耳机支持主动降噪模式，也支持通透模式。",
+      "facts": [
+        "澄音 H1 耳机支持主动降噪模式。",
+        "澄音 H1 耳机支持通透模式。"
+      ],
+      "keywords": [
+        "澄音",
+        "H1",
+        "耳机",
+        "主动降噪",
+        "通透"
+      ],
+      "score": 1.6094
+    }
+  ],
+  "pending_review": null,
+  "review_history": [
+    {
+      "review_id": "f14eda5065276bafbb23",
+      "decision": "reply",
+      "feedback": "请依据已有资料自主完成创作并修正稿件问题，保持原始需求和时长不变。没有证据的事实不能添加；真实资料缺口或冲突仍需明确说明。",
+      "answers": {
+        "audience": "短视频剪辑新手",
+        "target_seconds": 30.0,
+        "style": "轻松、直白"
+      },
+      "actor": "evaluation_simulated_human",
+      "stage": "clarification",
+      "version": 0
+    },
+    {
+      "review_id": "0338b8e9b9f4bec021e9",
+      "decision": "approve",
+      "feedback": "",
+      "answers": {},
+      "actor": "evaluation_simulated_human",
+      "stage": "direction",
+      "version": 1
+    }
+  ],
+  "stop_reason": {
+    "code": "model_unavailable",
+    "message": "Model response was truncated at its token limit"
+  },
+  "model_calls": 8,
+  "tool_calls": 7,
+  "skills_loaded": [
+    "audience-angle"
+  ],
+  "data_hash": "79547a1a8070046079e5a75d5be2579ee62ecfde50ca53b0d8928795e1c7d323"
+}

@@ -1,0 +1,37 @@
+{
+  "brief": {
+    "topic": "介绍小剪 App 的字幕功能",
+    "audience": "短视频剪辑新手",
+    "platform": "抖音",
+    "target_seconds": 30.0,
+    "style": "轻松、直白"
+  },
+  "dataset": "demo",
+  "notes": "这是用户提供的待修订初稿，请依据产品资料和品牌规则进行检查与修订。初稿不是本次模型生成结果。",
+  "initial_script": {
+    "title": "全网第一字幕神器，效率提升80%",
+    "scenes": [
+      {
+        "scene_id": "S1",
+        "visual": "展示小剪自动生成字幕的操作。",
+        "narration": "小剪 App 支持自动生成字幕，百分百准确，效率提升80%，还有自动配音功能。",
+        "subtitle": "百分百准确，效率提升80%",
+        "source_ids": [
+          "P01"
+        ],
+        "min_display_seconds": 3.0
+      }
+    ],
+    "claims": [
+      {
+        "text": "小剪 App 支持自动生成字幕，百分百准确，效率提升80%，还有自动配音功能。",
+        "source_id": "P01",
+        "quote": "小剪 App 支持自动生成字幕。",
+        "scene_id": "S1"
+      }
+    ]
+  },
+  "max_model_calls": 40,
+  "max_tool_calls": 60,
+  "failure_injections": {}
+}

@@ -1,0 +1,298 @@
+{
+  "run_id": "c906aceb-bcb6-44f7-8838-110ae68f0bb0",
+  "mode": "live",
+  "status": "failed",
+  "phase": "draft",
+  "execution": {
+    "python": "3.12.9",
+    "langgraph": "1.2.18",
+    "mode": "live",
+    "model": {
+      "base_url": "http://127.0.0.1:8012/v1",
+      "model": "qwen25-14b-pbn-answer",
+      "max_tokens": 2048,
+      "timeout_seconds": 120.0,
+      "action_protocol": "json"
+    },
+    "code_hashes": {
+      "engine.py": "caac2981137c068d4bf54bc301e5957013644701ba087016ec33ab63b620c033",
+      "prompts.py": "c84234c921c17b70bf760f042828101c7708e815225ce65d893e6ccfb1863d9e",
+      "model.py": "c1434ac50ad2c5d6416bdffc50e327df0da13e2528226c1ba26eb83f8cea2038",
+      "business_tools.py": "6f3f549b2fe9f49b2ddcfd4881509a93fa162c9422a95d029ec282a11d0d2411"
+    }
+  },
+  "brief": {
+    "topic": "介绍小剪 App 的字幕功能",
+    "audience": "短视频剪辑新手",
+    "platform": "抖音",
+    "target_seconds": 1.0,
+    "style": "轻松、直白"
+  },
+  "direction": {
+    "angle": "介绍小剪App的字幕功能，包括自动生成和手动修改功能",
+    "outline": [
+      "介绍小剪App的基本功能",
+      "展示如何使用小剪App自动生成字幕",
+      "演示如何手动修改小剪App生成的字幕",
+      "强调检查和修正自动字幕的重要性"
+    ],
+    "source_ids": [
+      "P01",
+      "P02",
+      "P03",
+      "P04"
+    ],
+    "notes": "确保涵盖所有关键功能，特别是自动生成和手动修改字幕。"
+  },
+  "script": {
+    "title": "小剪App字幕功能介绍",
+    "scenes": [
+      {
+        "scene_id": "1",
+        "visual": "展示小剪App界面",
+        "narration": "大家好，今天我们要介绍的是小剪App的字幕功能。",
+        "subtitle": "小剪App字幕功能介绍",
+        "source_ids": [
+          "P01"
+        ],
+        "min_display_seconds": 3.0
+      },
+      {
+        "scene_id": "2",
+        "visual": "演示如何使用小剪App自动生成字幕",
+        "narration": "首先，我们来看一下如何使用小剪App自动生成字幕。",
+        "subtitle": "演示如何使用小剪App自动生成字幕",
+        "source_ids": [
+          "P01",
+          "P02"
+        ],
+        "min_display_seconds": 5.0
+      },
+      {
+        "scene_id": "3",
+        "visual": "演示如何手动修改小剪App生成的字幕",
+        "narration": "接下来，我们将演示如何手动修改小剪App生成的字幕。",
+        "subtitle": "演示如何手动修改小剪App生成的字幕",
+        "source_ids": [
+          "P02",
+          "P04"
+        ],
+        "min_display_seconds": 5.0
+      },
+      {
+        "scene_id": "4",
+        "visual": "强调检查和修正自动字幕的重要性",
+        "narration": "最后，我们来强调一下检查和修正自动字幕的重要性。",
+        "subtitle": "强调检查和修正自动字幕的重要性",
+        "source_ids": [
+          "P04"
+        ],
+        "min_display_seconds": 3.0
+      }
+    ],
+    "claims": [
+      {
+        "text": "小剪 App 支持自动生成字幕。",
+        "source_id": "P01",
+        "quote": "小剪 App 支持自动生成字幕。",
+        "scene_id": "2"
+      },
+      {
+        "text": "用户可以手动修改小剪 App 生成的字幕文字。",
+        "source_id": "P02",
+        "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+        "scene_id": "3"
+      },
+      {
+        "text": "小剪 App 支持调整字幕的字体大小和颜色。",
+        "source_id": "P03",
+        "quote": "小剪 App 支持调整字幕的字体大小和颜色。",
+        "scene_id": "2"
+      },
+      {
+        "text": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+        "source_id": "P04",
+        "quote": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+        "scene_id": "4"
+      }
+    ]
+  },
+  "script_version": 1,
+  "checks": {
+    "duration": {
+      "passed": false,
+      "estimated_seconds": 24.1,
+      "target_seconds": 1.0,
+      "scenes": [
+        {
+          "scene_id": "1",
+          "narration_seconds": 5.75,
+          "subtitle_seconds": 1.74,
+          "min_display_seconds": 3.0,
+          "estimated_seconds": 5.75,
+          "start_seconds": 0.0,
+          "end_seconds": 5.75
+        },
+        {
+          "scene_id": "2",
+          "narration_seconds": 6.0,
+          "subtitle_seconds": 2.74,
+          "min_display_seconds": 5.0,
+          "estimated_seconds": 6.0,
+          "start_seconds": 5.75,
+          "end_seconds": 11.75
+        },
+        {
+          "scene_id": "3",
+          "narration_seconds": 6.25,
+          "subtitle_seconds": 2.9,
+          "min_display_seconds": 5.0,
+          "estimated_seconds": 6.25,
+          "start_seconds": 11.75,
+          "end_seconds": 18.0
+        },
+        {
+          "scene_id": "4",
+          "narration_seconds": 6.1,
+          "subtitle_seconds": 2.5,
+          "min_display_seconds": 3.0,
+          "estimated_seconds": 6.1,
+          "start_seconds": 18.0,
+          "end_seconds": 24.1
+        }
+      ],
+      "issues": [
+        {
+          "code": "TIME_LIMIT_EXCEEDED",
+          "message": "预计 24.1 秒，超过目标 1 秒。请修改内容或请求用户调整要求。",
+          "excess_seconds": 23.1
+        }
+      ],
+      "assumptions": {
+        "chars_per_second": 4.0,
+        "subtitle_chars_per_second": 6.0,
+        "english_words_per_second": 2.5,
+        "minimum_scene_seconds": 1.0,
+        "transition_seconds": 0.0,
+        "timing_rule": "每镜取旁白、字幕阅读、画面最低展示时间的最大值；镜头串行累计。",
+        "limitation": "文字估时，不是实际录音或成片时长；数字、缩写及表演节奏可能存在误差。"
+      },
+      "script_version": 1,
+      "script_hash": "0932cf4966afb5780c0fb507d1a19c88c93c0a2a42cc8c81dd318f3942344bf0",
+      "data_hash": "79547a1a8070046079e5a75d5be2579ee62ecfde50ca53b0d8928795e1c7d323",
+      "brief_hash": "c135c6b5e89783afd5f2f3d9f7b6afdc55dc4c17a4b0690662d3269213b8ff13"
+    }
+  },
+  "estimated_seconds": 24.1,
+  "duration_note": "基于固定语速与画面展示需求估算，不代表真实配音或成片测量。",
+  "sources": [
+    {
+      "source_id": "P01",
+      "version": "2026-10-01",
+      "title": "小剪 App：自动字幕",
+      "text": "小剪 App 支持自动生成字幕。",
+      "facts": [
+        "小剪 App 支持自动生成字幕。"
+      ],
+      "keywords": [
+        "小剪",
+        "字幕",
+        "自动生成",
+        "剪辑",
+        "视频"
+      ],
+      "score": 5.911
+    },
+    {
+      "source_id": "P02",
+      "version": "2026-10-01",
+      "title": "小剪 App：字幕文字修改",
+      "text": "用户可以手动修改小剪 App 生成的字幕文字。",
+      "facts": [
+        "用户可以手动修改小剪 App 生成的字幕文字。"
+      ],
+      "keywords": [
+        "小剪",
+        "字幕",
+        "手动修改",
+        "文字",
+        "检查"
+      ],
+      "score": 5.911
+    },
+    {
+      "source_id": "P03",
+      "version": "2026-10-01",
+      "title": "小剪 App：字幕样式",
+      "text": "小剪 App 支持调整字幕的字体大小和颜色。",
+      "facts": [
+        "小剪 App 支持调整字幕的字体大小和颜色。"
+      ],
+      "keywords": [
+        "小剪",
+        "字幕",
+        "样式",
+        "字体",
+        "颜色"
+      ],
+      "score": 5.911
+    },
+    {
+      "source_id": "P04",
+      "version": "2026-10-01",
+      "title": "小剪 App：字幕使用建议",
+      "text": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+      "facts": [
+        "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。"
+      ],
+      "keywords": [
+        "小剪",
+        "字幕",
+        "检查",
+        "识别错误",
+        "修改"
+      ],
+      "score": 5.911
+    },
+    {
+      "source_id": "H01",
+      "version": "2026-10-01",
+      "title": "澄音 H1 耳机：降噪功能",
+      "text": "澄音 H1 耳机支持主动降噪模式，也支持通透模式。",
+      "facts": [
+        "澄音 H1 耳机支持主动降噪模式。",
+        "澄音 H1 耳机支持通透模式。"
+      ],
+      "keywords": [
+        "澄音",
+        "H1",
+        "耳机",
+        "主动降噪",
+        "通透"
+      ],
+      "score": 1.6094
+    }
+  ],
+  "pending_review": null,
+  "review_history": [
+    {
+      "review_id": "cc85cccb08f294d5e999",
+      "decision": "approve",
+      "feedback": "",
+      "answers": {},
+      "actor": "evaluation_simulated_human",
+      "stage": "direction",
+      "version": 1
+    }
+  ],
+  "stop_reason": {
+    "code": "model_unavailable",
+    "message": "Model response was truncated at its token limit"
+  },
+  "model_calls": 7,
+  "tool_calls": 6,
+  "skills_loaded": [
+    "material-search"
+  ],
+  "data_hash": "79547a1a8070046079e5a75d5be2579ee62ecfde50ca53b0d8928795e1c7d323"
+}

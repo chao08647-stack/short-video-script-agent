@@ -1,0 +1,7 @@
+{
+  "run_id": "e786ffe6-c2c2-4807-9e4f-84c6bcebfb68",
+  "interrupted": true,
+  "reason": "Stopped by experiment operator before changing JSON history projection; not a completed evaluation.",
+  "status_at_interrupt": "running",
+  "model_calls": 4
+}

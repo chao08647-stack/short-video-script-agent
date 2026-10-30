@@ -1,0 +1,19 @@
+{
+  "case": "duration_revision",
+  "mode": "live",
+  "run_id": "4820cd2c-7e65-490e-9980-f9b16816d0b5",
+  "status": "incomplete",
+  "acceptance_passed": false,
+  "acceptance_errors": [
+    "Expected completed, got incomplete",
+    "No ordered over-duration -> revised script -> passing same-target feedback path"
+  ],
+  "elapsed_seconds": 216.38,
+  "model_calls": 40,
+  "tool_calls": 40,
+  "skills_loaded": [
+    "duration-compression"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\live\\duration_revision"
+}

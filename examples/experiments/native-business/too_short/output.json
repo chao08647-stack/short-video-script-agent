@@ -1,0 +1,56 @@
+{
+  "run_id": "48932c17-5700-41b9-a10e-aa63b79d8e98",
+  "mode": "live",
+  "status": "waiting_human",
+  "phase": "direction",
+  "execution": {
+    "python": "3.12.9",
+    "langgraph": "1.2.18",
+    "mode": "live",
+    "model": {
+      "base_url": "http://127.0.0.1:8012/v1",
+      "model": "qwen25-14b-pbn-answer",
+      "max_tokens": 2048,
+      "timeout_seconds": 120.0
+    },
+    "code_hashes": {
+      "engine.py": "1f66056bc8cfff19c1e5c2d6cb06f3fb06b1f114f7e997cf49c186161590aff7",
+      "prompts.py": "2638bbb9a681a0fb76d6961ce533a0b55dbb1eb554c8ddff2f4d56bb99ec74c8",
+      "model.py": "eee2b493bb4836c0d719c1f94a1df6b5eb39e0e94430bf07927879605c161b7e",
+      "business_tools.py": "6f3f549b2fe9f49b2ddcfd4881509a93fa162c9422a95d029ec282a11d0d2411"
+    }
+  },
+  "brief": {
+    "topic": "介绍小剪 App 的字幕功能",
+    "audience": "短视频剪辑新手",
+    "platform": "抖音",
+    "target_seconds": 1.0,
+    "style": "轻松、直白"
+  },
+  "direction": null,
+  "script": null,
+  "script_version": 0,
+  "checks": {},
+  "estimated_seconds": null,
+  "duration_note": "基于固定语速与画面展示需求估算，不代表真实配音或成片测量。",
+  "sources": [],
+  "pending_review": {
+    "review_id": "c6e7daf94e7bb995e4dd",
+    "stage": "clarification",
+    "version": 0,
+    "object_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+    "reason": "您希望在短视频中重点展示小剪App的哪些功能？请列举出至少两个功能点。",
+    "fields": [],
+    "direction": null,
+    "script": null,
+    "checks": {}
+  },
+  "review_history": [],
+  "stop_reason": null,
+  "model_calls": 5,
+  "tool_calls": 5,
+  "skills_loaded": [
+    "audience-angle"
+  ],
+  "data_hash": "79547a1a8070046079e5a75d5be2579ee62ecfde50ca53b0d8928795e1c7d323"
+}

@@ -1,0 +1,488 @@
+{
+  "run_id": "b2ad9b9d-b8bc-4abd-8484-320b08291d71",
+  "mode": "live",
+  "status": "waiting_human",
+  "phase": "draft",
+  "execution": {
+    "python": "3.12.9",
+    "langgraph": "1.2.18",
+    "mode": "live",
+    "model": {
+      "base_url": "http://127.0.0.1:8012/v1",
+      "model": "qwen25-14b-pbn-answer",
+      "max_tokens": 2048,
+      "timeout_seconds": 120.0
+    },
+    "code_hashes": {
+      "engine.py": "1f66056bc8cfff19c1e5c2d6cb06f3fb06b1f114f7e997cf49c186161590aff7",
+      "prompts.py": "2638bbb9a681a0fb76d6961ce533a0b55dbb1eb554c8ddff2f4d56bb99ec74c8",
+      "model.py": "eee2b493bb4836c0d719c1f94a1df6b5eb39e0e94430bf07927879605c161b7e",
+      "business_tools.py": "6f3f549b2fe9f49b2ddcfd4881509a93fa162c9422a95d029ec282a11d0d2411"
+    }
+  },
+  "brief": {
+    "topic": "介绍澄音 H1 耳机的主动降噪与触控播放",
+    "audience": "通勤用户",
+    "platform": "小红书",
+    "target_seconds": 35.0,
+    "style": "清楚、自然"
+  },
+  "direction": {
+    "angle": "强调澄音 H1 耳机的主动降噪功能和触控播放功能，适合通勤用户的日常使用场景。",
+    "outline": [
+      "开场介绍澄音 H1 耳机的主要特点。",
+      "展示主动降噪功能如何帮助用户在嘈杂环境中保持专注。",
+      "解释触控播放功能如何方便用户控制音乐播放。",
+      "结尾总结澄音 H1 耳机的优势，鼓励通勤用户尝试体验。"
+    ],
+    "source_ids": [
+      "H01",
+      "H02",
+      "H03"
+    ],
+    "notes": ""
+  },
+  "script": {
+    "title": "澄音 H1 耳机：主动降噪与触控播放",
+    "scenes": [
+      {
+        "scene_id": "intro",
+        "visual": "展示澄音 H1 耳机的外观",
+        "narration": "这是澄音 H1 耳机，一款专为通勤者设计的产品，它不仅拥有时尚的设计，还具备强大的主动降噪功能。",
+        "subtitle": "澄音 H1 耳机：时尚设计，强大功能",
+        "source_ids": [
+          "H01"
+        ],
+        "min_display_seconds": 1.0
+      },
+      {
+        "scene_id": "noise_cancellation",
+        "visual": "演示耳机在嘈杂环境中的降噪效果",
+        "narration": "这款耳机支持主动降噪模式，能够有效减少背景噪音，让您在嘈杂的环境中也能保持专注。",
+        "subtitle": "主动降噪模式，减少背景噪音",
+        "source_ids": [
+          "H01"
+        ],
+        "min_display_seconds": 1.0
+      },
+      {
+        "scene_id": "touch_control",
+        "visual": "展示耳机的触控操作功能",
+        "narration": "此外，澄音 H1 耳机还配备了触控播放功能，只需轻轻一触，即可轻松控制音乐播放。",
+        "subtitle": "触控播放功能，轻松控制音乐",
+        "source_ids": [
+          "H03"
+        ],
+        "min_display_seconds": 1.0
+      }
+    ],
+    "claims": [
+      {
+        "text": "支持主动降噪模式",
+        "source_id": "H01",
+        "quote": "澄音 H1 耳机支持主动降噪模式，也支持通透模式。",
+        "scene_id": "noise_cancellation"
+      },
+      {
+        "text": "触控操作暂停或继续播放音乐",
+        "source_id": "H03",
+        "quote": "澄音 H1 耳机可以通过触控操作暂停或继续播放音乐。",
+        "scene_id": "touch_control"
+      }
+    ]
+  },
+  "script_version": 3,
+  "checks": {
+    "duration": {
+      "passed": true,
+      "estimated_seconds": 31.35,
+      "target_seconds": 35.0,
+      "scenes": [
+        {
+          "scene_id": "intro",
+          "narration_seconds": 11.65,
+          "subtitle_seconds": 2.57,
+          "min_display_seconds": 1.0,
+          "estimated_seconds": 11.65,
+          "start_seconds": 0.0,
+          "end_seconds": 11.65
+        },
+        {
+          "scene_id": "noise_cancellation",
+          "narration_seconds": 10.05,
+          "subtitle_seconds": 2.0,
+          "min_display_seconds": 1.0,
+          "estimated_seconds": 10.05,
+          "start_seconds": 11.65,
+          "end_seconds": 21.7
+        },
+        {
+          "scene_id": "touch_control",
+          "narration_seconds": 9.65,
+          "subtitle_seconds": 2.0,
+          "min_display_seconds": 1.0,
+          "estimated_seconds": 9.65,
+          "start_seconds": 21.7,
+          "end_seconds": 31.35
+        }
+      ],
+      "issues": [],
+      "assumptions": {
+        "chars_per_second": 4.0,
+        "subtitle_chars_per_second": 6.0,
+        "english_words_per_second": 2.5,
+        "minimum_scene_seconds": 1.0,
+        "transition_seconds": 0.0,
+        "timing_rule": "每镜取旁白、字幕阅读、画面最低展示时间的最大值；镜头串行累计。",
+        "limitation": "文字估时，不是实际录音或成片时长；数字、缩写及表演节奏可能存在误差。"
+      },
+      "script_version": 3,
+      "script_hash": "537cbee50a5000cffac57271eb0e36567f931bacd22fe123d234b37cba4aba2e",
+      "data_hash": "79547a1a8070046079e5a75d5be2579ee62ecfde50ca53b0d8928795e1c7d323",
+      "brief_hash": "f0e72007f7cfd7e4a4eaa20039fe4fa3631666cb41ca8023893dc3f138bae92c"
+    },
+    "rules": {
+      "passed": false,
+      "issues": [
+        {
+          "code": "CLAIM_NOT_IN_SCRIPT",
+          "message": "断言文句未出现在对应脚本内容中。",
+          "claim_index": 1,
+          "scene_id": "touch_control",
+          "source_id": "H03"
+        },
+        {
+          "code": "UNMAPPED_SOURCE",
+          "message": "来源 ID 需要对应脚本文句及支持原文，不能只挂一个引用。",
+          "scene_id": "intro",
+          "source_id": "H01"
+        },
+        {
+          "code": "UNMAPPED_SOURCE",
+          "message": "来源 ID 需要对应脚本文句及支持原文，不能只挂一个引用。",
+          "scene_id": "touch_control",
+          "source_id": "H03"
+        },
+        {
+          "code": "UNSUPPORTED_NUMBER",
+          "message": "数字表述缺少对应文句及支持原文；结构性步骤编号除外。",
+          "scene_id": "",
+          "field": "title",
+          "number": "1"
+        },
+        {
+          "code": "UNSUPPORTED_NUMBER",
+          "message": "数字表述缺少对应文句及支持原文；结构性步骤编号除外。",
+          "scene_id": "intro",
+          "field": "visual",
+          "number": "1"
+        },
+        {
+          "code": "UNSUPPORTED_NUMBER",
+          "message": "数字表述缺少对应文句及支持原文；结构性步骤编号除外。",
+          "scene_id": "intro",
+          "field": "narration",
+          "number": "1"
+        },
+        {
+          "code": "UNSUPPORTED_NUMBER",
+          "message": "数字表述缺少对应文句及支持原文；结构性步骤编号除外。",
+          "scene_id": "intro",
+          "field": "subtitle",
+          "number": "1"
+        },
+        {
+          "code": "UNSUPPORTED_NUMBER",
+          "message": "数字表述缺少对应文句及支持原文；结构性步骤编号除外。",
+          "scene_id": "touch_control",
+          "field": "narration",
+          "number": "1"
+        }
+      ],
+      "scope": "deterministic_only",
+      "requires_semantic_verification": true,
+      "semantic_status": "not_checked",
+      "checked_claims": 2,
+      "valid_quote_mappings": 1,
+      "semantic": {
+        "status": "not_run",
+        "reason": "deterministic_checks_failed"
+      },
+      "script_version": 3,
+      "script_hash": "537cbee50a5000cffac57271eb0e36567f931bacd22fe123d234b37cba4aba2e",
+      "data_hash": "79547a1a8070046079e5a75d5be2579ee62ecfde50ca53b0d8928795e1c7d323",
+      "brief_hash": "f0e72007f7cfd7e4a4eaa20039fe4fa3631666cb41ca8023893dc3f138bae92c"
+    }
+  },
+  "estimated_seconds": 31.35,
+  "duration_note": "基于固定语速与画面展示需求估算，不代表真实配音或成片测量。",
+  "sources": [
+    {
+      "source_id": "H03",
+      "version": "2026-10-01",
+      "title": "澄音 H1 耳机：播放控制",
+      "text": "澄音 H1 耳机可以通过触控操作暂停或继续播放音乐。",
+      "facts": [
+        "澄音 H1 耳机可以通过触控操作暂停或继续播放音乐。"
+      ],
+      "keywords": [
+        "澄音",
+        "H1",
+        "耳机",
+        "触控",
+        "播放",
+        "暂停"
+      ],
+      "score": 16.2046
+    },
+    {
+      "source_id": "H01",
+      "version": "2026-10-01",
+      "title": "澄音 H1 耳机：降噪功能",
+      "text": "澄音 H1 耳机支持主动降噪模式，也支持通透模式。",
+      "facts": [
+        "澄音 H1 耳机支持主动降噪模式。",
+        "澄音 H1 耳机支持通透模式。"
+      ],
+      "keywords": [
+        "澄音",
+        "H1",
+        "耳机",
+        "主动降噪",
+        "通透"
+      ],
+      "score": 15.814
+    },
+    {
+      "source_id": "H02",
+      "version": "2026-10-01",
+      "title": "澄音 H1 耳机：播放续航",
+      "text": "在关闭降噪、音量为50%的实验室条件下，澄音 H1 耳机单次充电连续播放时间为8小时。实际续航会随音量和使用环境变化。",
+      "facts": [
+        "在关闭降噪、音量为50%的实验室条件下，澄音 H1 耳机单次充电连续播放时间为8小时。",
+        "实际续航会随音量和使用环境变化。"
+      ],
+      "keywords": [
+        "澄音",
+        "H1",
+        "耳机",
+        "续航",
+        "8小时",
+        "音量"
+      ],
+      "score": 11.8944
+    }
+  ],
+  "pending_review": {
+    "review_id": "d330a145735bdd3fcb0c",
+    "stage": "clarification",
+    "version": 3,
+    "object_hash": "537cbee50a5000cffac57271eb0e36567f931bacd22fe123d234b37cba4aba2e",
+    "reason": "脚本检查发现一些问题，请问您是否需要进一步修改？",
+    "fields": [],
+    "direction": {
+      "angle": "强调澄音 H1 耳机的主动降噪功能和触控播放功能，适合通勤用户的日常使用场景。",
+      "outline": [
+        "开场介绍澄音 H1 耳机的主要特点。",
+        "展示主动降噪功能如何帮助用户在嘈杂环境中保持专注。",
+        "解释触控播放功能如何方便用户控制音乐播放。",
+        "结尾总结澄音 H1 耳机的优势，鼓励通勤用户尝试体验。"
+      ],
+      "source_ids": [
+        "H01",
+        "H02",
+        "H03"
+      ],
+      "notes": ""
+    },
+    "script": {
+      "title": "澄音 H1 耳机：主动降噪与触控播放",
+      "scenes": [
+        {
+          "scene_id": "intro",
+          "visual": "展示澄音 H1 耳机的外观",
+          "narration": "这是澄音 H1 耳机，一款专为通勤者设计的产品，它不仅拥有时尚的设计，还具备强大的主动降噪功能。",
+          "subtitle": "澄音 H1 耳机：时尚设计，强大功能",
+          "source_ids": [
+            "H01"
+          ],
+          "min_display_seconds": 1.0
+        },
+        {
+          "scene_id": "noise_cancellation",
+          "visual": "演示耳机在嘈杂环境中的降噪效果",
+          "narration": "这款耳机支持主动降噪模式，能够有效减少背景噪音，让您在嘈杂的环境中也能保持专注。",
+          "subtitle": "主动降噪模式，减少背景噪音",
+          "source_ids": [
+            "H01"
+          ],
+          "min_display_seconds": 1.0
+        },
+        {
+          "scene_id": "touch_control",
+          "visual": "展示耳机的触控操作功能",
+          "narration": "此外，澄音 H1 耳机还配备了触控播放功能，只需轻轻一触，即可轻松控制音乐播放。",
+          "subtitle": "触控播放功能，轻松控制音乐",
+          "source_ids": [
+            "H03"
+          ],
+          "min_display_seconds": 1.0
+        }
+      ],
+      "claims": [
+        {
+          "text": "支持主动降噪模式",
+          "source_id": "H01",
+          "quote": "澄音 H1 耳机支持主动降噪模式，也支持通透模式。",
+          "scene_id": "noise_cancellation"
+        },
+        {
+          "text": "触控操作暂停或继续播放音乐",
+          "source_id": "H03",
+          "quote": "澄音 H1 耳机可以通过触控操作暂停或继续播放音乐。",
+          "scene_id": "touch_control"
+        }
+      ]
+    },
+    "checks": {
+      "duration": {
+        "passed": true,
+        "estimated_seconds": 31.35,
+        "target_seconds": 35.0,
+        "scenes": [
+          {
+            "scene_id": "intro",
+            "narration_seconds": 11.65,
+            "subtitle_seconds": 2.57,
+            "min_display_seconds": 1.0,
+            "estimated_seconds": 11.65,
+            "start_seconds": 0.0,
+            "end_seconds": 11.65
+          },
+          {
+            "scene_id": "noise_cancellation",
+            "narration_seconds": 10.05,
+            "subtitle_seconds": 2.0,
+            "min_display_seconds": 1.0,
+            "estimated_seconds": 10.05,
+            "start_seconds": 11.65,
+            "end_seconds": 21.7
+          },
+          {
+            "scene_id": "touch_control",
+            "narration_seconds": 9.65,
+            "subtitle_seconds": 2.0,
+            "min_display_seconds": 1.0,
+            "estimated_seconds": 9.65,
+            "start_seconds": 21.7,
+            "end_seconds": 31.35
+          }
+        ],
+        "issues": [],
+        "assumptions": {
+          "chars_per_second": 4.0,
+          "subtitle_chars_per_second": 6.0,
+          "english_words_per_second": 2.5,
+          "minimum_scene_seconds": 1.0,
+          "transition_seconds": 0.0,
+          "timing_rule": "每镜取旁白、字幕阅读、画面最低展示时间的最大值；镜头串行累计。",
+          "limitation": "文字估时，不是实际录音或成片时长；数字、缩写及表演节奏可能存在误差。"
+        },
+        "script_version": 3,
+        "script_hash": "537cbee50a5000cffac57271eb0e36567f931bacd22fe123d234b37cba4aba2e",
+        "data_hash": "79547a1a8070046079e5a75d5be2579ee62ecfde50ca53b0d8928795e1c7d323",
+        "brief_hash": "f0e72007f7cfd7e4a4eaa20039fe4fa3631666cb41ca8023893dc3f138bae92c"
+      },
+      "rules": {
+        "passed": false,
+        "issues": [
+          {
+            "code": "CLAIM_NOT_IN_SCRIPT",
+            "message": "断言文句未出现在对应脚本内容中。",
+            "claim_index": 1,
+            "scene_id": "touch_control",
+            "source_id": "H03"
+          },
+          {
+            "code": "UNMAPPED_SOURCE",
+            "message": "来源 ID 需要对应脚本文句及支持原文，不能只挂一个引用。",
+            "scene_id": "intro",
+            "source_id": "H01"
+          },
+          {
+            "code": "UNMAPPED_SOURCE",
+            "message": "来源 ID 需要对应脚本文句及支持原文，不能只挂一个引用。",
+            "scene_id": "touch_control",
+            "source_id": "H03"
+          },
+          {
+            "code": "UNSUPPORTED_NUMBER",
+            "message": "数字表述缺少对应文句及支持原文；结构性步骤编号除外。",
+            "scene_id": "",
+            "field": "title",
+            "number": "1"
+          },
+          {
+            "code": "UNSUPPORTED_NUMBER",
+            "message": "数字表述缺少对应文句及支持原文；结构性步骤编号除外。",
+            "scene_id": "intro",
+            "field": "visual",
+            "number": "1"
+          },
+          {
+            "code": "UNSUPPORTED_NUMBER",
+            "message": "数字表述缺少对应文句及支持原文；结构性步骤编号除外。",
+            "scene_id": "intro",
+            "field": "narration",
+            "number": "1"
+          },
+          {
+            "code": "UNSUPPORTED_NUMBER",
+            "message": "数字表述缺少对应文句及支持原文；结构性步骤编号除外。",
+            "scene_id": "intro",
+            "field": "subtitle",
+            "number": "1"
+          },
+          {
+            "code": "UNSUPPORTED_NUMBER",
+            "message": "数字表述缺少对应文句及支持原文；结构性步骤编号除外。",
+            "scene_id": "touch_control",
+            "field": "narration",
+            "number": "1"
+          }
+        ],
+        "scope": "deterministic_only",
+        "requires_semantic_verification": true,
+        "semantic_status": "not_checked",
+        "checked_claims": 2,
+        "valid_quote_mappings": 1,
+        "semantic": {
+          "status": "not_run",
+          "reason": "deterministic_checks_failed"
+        },
+        "script_version": 3,
+        "script_hash": "537cbee50a5000cffac57271eb0e36567f931bacd22fe123d234b37cba4aba2e",
+        "data_hash": "79547a1a8070046079e5a75d5be2579ee62ecfde50ca53b0d8928795e1c7d323",
+        "brief_hash": "f0e72007f7cfd7e4a4eaa20039fe4fa3631666cb41ca8023893dc3f138bae92c"
+      }
+    }
+  },
+  "review_history": [
+    {
+      "review_id": "1e64b87b4cb3589d52f9",
+      "decision": "approve",
+      "feedback": "",
+      "answers": {},
+      "actor": "evaluation_simulated_human",
+      "stage": "direction",
+      "version": 1
+    }
+  ],
+  "stop_reason": null,
+  "model_calls": 28,
+  "tool_calls": 28,
+  "skills_loaded": [
+    "material-search"
+  ],
+  "data_hash": "79547a1a8070046079e5a75d5be2579ee62ecfde50ca53b0d8928795e1c7d323"
+}

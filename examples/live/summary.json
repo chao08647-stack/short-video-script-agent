@@ -1,0 +1,293 @@
+{
+  "mode": "live",
+  "human_decisions": "evaluation_simulated_human",
+  "note": "Latest preserved result per case across development iterations; not a homogeneous frozen-version accuracy benchmark. See docs/03-evaluation.md.",
+  "cases": [
+    {
+      "case": "brand_and_fact_revision",
+      "mode": "live",
+      "run_id": "d96a16bc-1862-462d-8cc9-0c8cabf0cae3",
+      "status": "waiting_human",
+      "acceptance_passed": false,
+      "acceptance_errors": [
+        "Expected completed, got waiting_human",
+        "No observed brand/fact violations -> revised script -> passing rules path"
+      ],
+      "elapsed_seconds": 8.3,
+      "model_calls": 3,
+      "tool_calls": 3,
+      "skills_loaded": [
+        "claim-grounding"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\live\\brand_and_fact_revision"
+    },
+    {
+      "case": "conflict",
+      "mode": "live",
+      "run_id": "a9ec5c65-ac0c-4522-9130-422a7eb45051",
+      "status": "waiting_human",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 27.66,
+      "model_calls": 7,
+      "tool_calls": 7,
+      "skills_loaded": [
+        "material-search",
+        "narrative-structure"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\live\\conflict"
+    },
+    {
+      "case": "duration_revision",
+      "mode": "live",
+      "run_id": "105cf7a8-6133-4717-97da-d9bc91f1aebe",
+      "status": "incomplete",
+      "acceptance_passed": false,
+      "acceptance_errors": [
+        "Expected completed, got incomplete",
+        "No ordered over-duration -> revised script -> passing same-target feedback path"
+      ],
+      "elapsed_seconds": 240.53,
+      "model_calls": 40,
+      "tool_calls": 39,
+      "skills_loaded": [
+        "audience-angle",
+        "brand-revision",
+        "brief-clarification",
+        "claim-grounding",
+        "duration-compression",
+        "evidence-conflict",
+        "factual-revision",
+        "hook-writing",
+        "human-feedback",
+        "material-search",
+        "narration-subtitles",
+        "narrative-structure",
+        "platform-adaptation",
+        "query-rewrite",
+        "storyboard-planning",
+        "visual-direction"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\live\\duration_revision"
+    },
+    {
+      "case": "headphones",
+      "mode": "live",
+      "run_id": "f596b4b7-2100-4308-83e8-60ec86581782",
+      "status": "incomplete",
+      "acceptance_passed": false,
+      "acceptance_errors": [
+        "Expected completed, got incomplete"
+      ],
+      "elapsed_seconds": 111.0,
+      "model_calls": 40,
+      "tool_calls": 40,
+      "skills_loaded": [
+        "material-search"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\live\\headphones"
+    },
+    {
+      "case": "human_feedback",
+      "mode": "live",
+      "run_id": "8ffb6de7-4ce4-42d4-b7ee-7c6ed6795e3f",
+      "status": "incomplete",
+      "acceptance_passed": false,
+      "acceptance_errors": [
+        "Expected completed, got incomplete",
+        "No human revision feedback followed by a model revision and renewed review"
+      ],
+      "elapsed_seconds": 172.17,
+      "model_calls": 40,
+      "tool_calls": 36,
+      "skills_loaded": [
+        "claim-grounding",
+        "duration-compression",
+        "material-search",
+        "narrative-structure"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\live\\human_feedback"
+    },
+    {
+      "case": "minimal",
+      "mode": "live",
+      "run_id": "7f06022b-2f4c-47be-9451-b3852366a306",
+      "status": "incomplete",
+      "acceptance_passed": false,
+      "acceptance_errors": [
+        "Expected completed, got incomplete"
+      ],
+      "elapsed_seconds": 183.64,
+      "model_calls": 40,
+      "tool_calls": 39,
+      "skills_loaded": [
+        "material-search"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\live\\minimal"
+    },
+    {
+      "case": "missing_info",
+      "mode": "live",
+      "run_id": "11c66062-9e52-42d7-bb20-653981f90911",
+      "status": "incomplete",
+      "acceptance_passed": false,
+      "acceptance_errors": [
+        "Expected completed, got incomplete"
+      ],
+      "elapsed_seconds": 148.98,
+      "model_calls": 40,
+      "tool_calls": 40,
+      "skills_loaded": [
+        "brand-revision",
+        "brief-clarification",
+        "claim-grounding",
+        "duration-compression",
+        "factual-revision",
+        "material-search",
+        "narration-subtitles",
+        "narrative-structure",
+        "storyboard-planning",
+        "visual-direction"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\live\\missing_info"
+    },
+    {
+      "case": "no_materials",
+      "mode": "live",
+      "run_id": "ed6a23f4-f2aa-4e28-ae13-967a7f193797",
+      "status": "waiting_human",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 5.91,
+      "model_calls": 3,
+      "tool_calls": 3,
+      "skills_loaded": [
+        "material-search"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\live\\no_materials"
+    },
+    {
+      "case": "normal",
+      "mode": "live",
+      "run_id": "4ae25638-811b-43d1-90e8-8e4d7277515b",
+      "status": "incomplete",
+      "acceptance_passed": false,
+      "acceptance_errors": [
+        "Expected completed, got incomplete"
+      ],
+      "elapsed_seconds": 127.02,
+      "model_calls": 40,
+      "tool_calls": 40,
+      "skills_loaded": [
+        "material-search"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\live\\normal"
+    },
+    {
+      "case": "query_rewrite",
+      "mode": "live",
+      "run_id": "5ac68036-0987-49d1-a0ea-812519784a8d",
+      "status": "incomplete",
+      "acceptance_passed": false,
+      "acceptance_errors": [
+        "Expected completed, got incomplete",
+        "No observed empty search -> changed query -> successful retrieval path"
+      ],
+      "elapsed_seconds": 175.95,
+      "model_calls": 40,
+      "tool_calls": 35,
+      "skills_loaded": [
+        "claim-grounding",
+        "material-search"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\live\\query_rewrite"
+    },
+    {
+      "case": "step_limit",
+      "mode": "live",
+      "run_id": "66a33b98-5093-4eb0-9d0b-3582a598733d",
+      "status": "incomplete",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 2.55,
+      "model_calls": 1,
+      "tool_calls": 1,
+      "skills_loaded": [
+        "material-search"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\live\\step_limit"
+    },
+    {
+      "case": "too_short",
+      "mode": "live",
+      "run_id": "19eda89f-9475-4c74-a1b2-ce28da36a2ad",
+      "status": "incomplete",
+      "acceptance_passed": false,
+      "acceptance_errors": [
+        "Expected a grounded clarification/stop, not an unrelated failure or exhausted loop"
+      ],
+      "elapsed_seconds": 136.36,
+      "model_calls": 40,
+      "tool_calls": 40,
+      "skills_loaded": [
+        "duration-compression",
+        "material-search",
+        "narration-subtitles",
+        "narrative-structure"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\live\\too_short"
+    },
+    {
+      "case": "tool_failure",
+      "mode": "live",
+      "run_id": "0a54bcab-cc80-4ed3-99ad-88eff9f7e0c6",
+      "status": "incomplete",
+      "acceptance_passed": false,
+      "acceptance_errors": [
+        "Expected completed, got incomplete"
+      ],
+      "elapsed_seconds": 128.14,
+      "model_calls": 40,
+      "tool_calls": 40,
+      "skills_loaded": [
+        "material-search",
+        "narrative-structure",
+        "query-rewrite"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\live\\tool_failure"
+    },
+    {
+      "case": "tutorial",
+      "mode": "live",
+      "run_id": "524eb608-005a-48ac-884b-d9ce7cb51c47",
+      "status": "incomplete",
+      "acceptance_passed": false,
+      "acceptance_errors": [
+        "Expected completed, got incomplete"
+      ],
+      "elapsed_seconds": 182.42,
+      "model_calls": 40,
+      "tool_calls": 40,
+      "skills_loaded": [
+        "material-search"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\live\\tutorial"
+    }
+  ],
+  "passed": 3,
+  "total": 14
+}

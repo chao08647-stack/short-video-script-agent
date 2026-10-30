@@ -1,0 +1,10 @@
+{
+  "brief": {
+    "topic": "介绍小剪 App 的字幕功能",
+    "audience": "短视频剪辑新手",
+    "platform": "抖音",
+    "target_seconds": 30,
+    "style": "轻松、直白"
+  },
+  "dataset": "demo"
+}

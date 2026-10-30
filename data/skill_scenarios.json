@@ -1,0 +1,101 @@
+{
+  "notice": "仅用于评估设计，不向模型预置下一技能或动作；这份映射不代表技能已被真实调用，实际覆盖由Trace证明。",
+  "cases": [
+    {
+      "skill_id": "brief-clarification",
+      "input_file": "examples/inputs/missing_info.json",
+      "scenario": "缺少受众、时长和风格",
+      "observable_result": "追问真实缺口，不默认补30秒"
+    },
+    {
+      "skill_id": "audience-angle",
+      "input_file": "examples/inputs/normal.json",
+      "scenario": "面向剪辑新手介绍字幕",
+      "observable_result": "方向中出现与新手需求相关的角度及资料依据"
+    },
+    {
+      "skill_id": "platform-adaptation",
+      "input_file": "examples/inputs/tutorial.json",
+      "scenario": "B站专业操作教程",
+      "observable_result": "表达结构符合教程而非夸大营销，时长要求保留"
+    },
+    {
+      "skill_id": "narrative-structure",
+      "input_file": "examples/inputs/normal.json",
+      "scenario": "两项功能需要形成完整故事",
+      "observable_result": "方向含开场、展开、收尾，并为每个节点明确目的"
+    },
+    {
+      "skill_id": "material-search",
+      "input_file": "examples/inputs/headphones.json",
+      "scenario": "针对耳机功能找到对应事实",
+      "observable_result": "实际检索澄音资料，使用H01/H03等相关来源"
+    },
+    {
+      "skill_id": "query-rewrite",
+      "input_file": "examples/inputs/no_materials.json",
+      "scenario": "真实搜索返回空结果",
+      "observable_result": "根据空结果调整查询；仍无结果时请求补充，不换用其他产品"
+    },
+    {
+      "skill_id": "evidence-conflict",
+      "input_file": "examples/inputs/conflict.json",
+      "scenario": "同产品续航8小时和12小时冲突",
+      "observable_result": "列明双方资料，未确定适用范围时不自行选较新版本"
+    },
+    {
+      "skill_id": "claim-grounding",
+      "input_file": "examples/inputs/normal.json",
+      "scenario": "产品功能需要可追溯引用",
+      "observable_result": "脚本断言、来源ID和支持原文形成可检查映射"
+    },
+    {
+      "skill_id": "hook-writing",
+      "input_file": "examples/inputs/normal.json",
+      "scenario": "脚本开场需要快速说明问题",
+      "observable_result": "实际产出短开场且没有无依据承诺"
+    },
+    {
+      "skill_id": "storyboard-planning",
+      "input_file": "examples/inputs/tutorial.json",
+      "scenario": "字幕生成与修改存在操作先后",
+      "observable_result": "稳定镜头ID与正确顺序，核心信息合理分配"
+    },
+    {
+      "skill_id": "narration-subtitles",
+      "input_file": "examples/inputs/normal.json",
+      "scenario": "为镜头编写口语旁白和屏幕字幕",
+      "observable_result": "旁白字幕各有内容且字幕没有新增无依据卖点"
+    },
+    {
+      "skill_id": "visual-direction",
+      "input_file": "examples/inputs/tutorial.json",
+      "scenario": "说明可录屏演示的具体画面",
+      "observable_result": "画面有主体动作但不捏造按钮名称或界面布局"
+    },
+    {
+      "skill_id": "duration-compression",
+      "input_file": "examples/inputs/duration_revision.json",
+      "scenario": "用户初稿估时54.35秒而目标30秒",
+      "observable_result": "观察超时后修改旁白或镜头；用工具复检新版本"
+    },
+    {
+      "skill_id": "brand-revision",
+      "input_file": "examples/inputs/brand_and_fact_revision.json",
+      "scenario": "初稿含全网第一和百分百准确",
+      "observable_result": "修改所有相关位置并复检品牌规则"
+    },
+    {
+      "skill_id": "factual-revision",
+      "input_file": "examples/inputs/brand_and_fact_revision.json",
+      "scenario": "初稿新增80%效果与自动配音",
+      "observable_result": "删除或补证不受支持的断言，并同步修正claims"
+    },
+    {
+      "skill_id": "human-feedback",
+      "input_file": "examples/inputs/human_feedback.json",
+      "scenario": "人审提出开场修改意见",
+      "observable_result": "实际改变稿件，旧检查失效并重新送审"
+    }
+  ]
+}

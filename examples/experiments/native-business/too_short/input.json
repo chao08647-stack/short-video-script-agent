@@ -1,0 +1,15 @@
+{
+  "brief": {
+    "topic": "介绍小剪 App 的字幕功能",
+    "audience": "短视频剪辑新手",
+    "platform": "抖音",
+    "target_seconds": 1.0,
+    "style": "轻松、直白"
+  },
+  "dataset": "demo",
+  "notes": "必须明确介绍自动生成字幕和手动修改字幕两个功能，不能省略其中任何一项，也不能提高语速。",
+  "initial_script": null,
+  "max_model_calls": 40,
+  "max_tool_calls": 60,
+  "failure_injections": {}
+}

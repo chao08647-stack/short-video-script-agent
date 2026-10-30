@@ -1,0 +1,27 @@
+{
+  "case": "missing_info",
+  "mode": "live",
+  "run_id": "11c66062-9e52-42d7-bb20-653981f90911",
+  "status": "incomplete",
+  "acceptance_passed": false,
+  "acceptance_errors": [
+    "Expected completed, got incomplete"
+  ],
+  "elapsed_seconds": 148.98,
+  "model_calls": 40,
+  "tool_calls": 40,
+  "skills_loaded": [
+    "brand-revision",
+    "brief-clarification",
+    "claim-grounding",
+    "duration-compression",
+    "factual-revision",
+    "material-search",
+    "narration-subtitles",
+    "narrative-structure",
+    "storyboard-planning",
+    "visual-direction"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\live\\missing_info"
+}

@@ -1,0 +1,20 @@
+{
+  "case": "query_rewrite",
+  "mode": "live",
+  "run_id": "5ac68036-0987-49d1-a0ea-812519784a8d",
+  "status": "incomplete",
+  "acceptance_passed": false,
+  "acceptance_errors": [
+    "Expected completed, got incomplete",
+    "No observed empty search -> changed query -> successful retrieval path"
+  ],
+  "elapsed_seconds": 175.95,
+  "model_calls": 40,
+  "tool_calls": 35,
+  "skills_loaded": [
+    "claim-grounding",
+    "material-search"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\live\\query_rewrite"
+}

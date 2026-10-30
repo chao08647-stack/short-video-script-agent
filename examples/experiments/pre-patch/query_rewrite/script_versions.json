@@ -1,0 +1,81 @@
+[
+  {
+    "event_seq": 17,
+    "arguments": {
+      "used_skills": [
+        "material-search",
+        "material-search",
+        "material-search",
+        "material-search"
+      ],
+      "title": "小剪App如何将语音转换为屏幕文字",
+      "scenes": [
+        {
+          "scene_id": "1",
+          "visual": "展示小剪App界面",
+          "narration": "大家好，今天我们将展示小剪App如何将语音转换为屏幕文字，并强调手动修改的重要性。",
+          "subtitle": "展示小剪App界面",
+          "source_ids": [
+            "P01"
+          ]
+        },
+        {
+          "scene_id": "2",
+          "visual": "演示小剪App将语音转换为字幕的过程",
+          "narration": "首先，我们来看一下小剪App是如何将语音转换为字幕的。",
+          "subtitle": "演示小剪App将语音转换为字幕的过程",
+          "source_ids": [
+            "P01",
+            "P02"
+          ]
+        },
+        {
+          "scene_id": "3",
+          "visual": "强调手动修改字幕的重要性",
+          "narration": "接下来，我们要强调的是，尽管小剪App能够自动生成字幕，但手动修改字幕是非常重要的。",
+          "subtitle": "强调手动修改字幕的重要性",
+          "source_ids": [
+            "P02",
+            "P04"
+          ]
+        },
+        {
+          "scene_id": "4",
+          "visual": "展示调整字幕字体大小和颜色的功能",
+          "narration": "最后，我们来展示一下小剪App调整字幕字体大小和颜色的功能。",
+          "subtitle": "展示调整字幕字体大小和颜色的功能",
+          "source_ids": [
+            "P03"
+          ]
+        }
+      ],
+      "claims": [
+        {
+          "text": "小剪App支持自动生成字幕",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "1"
+        },
+        {
+          "text": "用户可以手动修改小剪App生成的字幕文字",
+          "source_id": "P02",
+          "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "scene_id": "2"
+        },
+        {
+          "text": "小剪App支持调整字幕的字体大小和颜色",
+          "source_id": "P03",
+          "quote": "小剪 App 支持调整字幕的字体大小和颜色。",
+          "scene_id": "4"
+        },
+        {
+          "text": "建议用户检查内容，并手动修正识别错误",
+          "source_id": "P04",
+          "quote": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+          "scene_id": "3"
+        }
+      ],
+      "reason": "根据检索到的材料，形成了一个完整的短视频脚本，包括四个场景的视觉描述、旁白和屏幕字幕，以及相应的引用来源。"
+    }
+  }
+]

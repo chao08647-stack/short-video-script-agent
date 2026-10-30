@@ -1,0 +1,20 @@
+{
+  "case": "tool_failure",
+  "mode": "live",
+  "run_id": "0a54bcab-cc80-4ed3-99ad-88eff9f7e0c6",
+  "status": "incomplete",
+  "acceptance_passed": false,
+  "acceptance_errors": [
+    "Expected completed, got incomplete"
+  ],
+  "elapsed_seconds": 128.14,
+  "model_calls": 40,
+  "tool_calls": 40,
+  "skills_loaded": [
+    "material-search",
+    "narrative-structure",
+    "query-rewrite"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\live\\tool_failure"
+}

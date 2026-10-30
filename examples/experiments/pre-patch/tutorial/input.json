@@ -1,0 +1,15 @@
+{
+  "brief": {
+    "topic": "小剪 App 从生成字幕到手动修改的操作教程",
+    "audience": "第一次剪辑视频的用户",
+    "platform": "B站",
+    "target_seconds": 40.0,
+    "style": "专业、耐心"
+  },
+  "dataset": "demo",
+  "notes": "操作说明应清楚，但资料未提供按钮名称和界面位置，不要捏造精确UI。",
+  "initial_script": null,
+  "max_model_calls": 40,
+  "max_tool_calls": 60,
+  "failure_injections": {}
+}

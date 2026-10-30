@@ -1,0 +1,16 @@
+{
+  "case": "no_materials",
+  "mode": "live",
+  "run_id": "ed6a23f4-f2aa-4e28-ae13-967a7f193797",
+  "status": "waiting_human",
+  "acceptance_passed": true,
+  "acceptance_errors": [],
+  "elapsed_seconds": 5.91,
+  "model_calls": 3,
+  "tool_calls": 3,
+  "skills_loaded": [
+    "material-search"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\live\\no_materials"
+}

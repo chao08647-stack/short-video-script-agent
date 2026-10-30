@@ -1,0 +1,18 @@
+{
+  "case": "duration_revision",
+  "mode": "mock",
+  "run_id": "e5ddeb69-3f70-4b65-9e8d-dab1967b113c",
+  "status": "completed",
+  "acceptance_passed": true,
+  "acceptance_errors": [],
+  "elapsed_seconds": 0.36,
+  "model_calls": 15,
+  "tool_calls": 13,
+  "skills_loaded": [
+    "audience-angle",
+    "duration-compression",
+    "material-search"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\mock\\duration_revision"
+}

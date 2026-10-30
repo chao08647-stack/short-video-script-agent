@@ -1,0 +1,593 @@
+[
+  {
+    "event_seq": 17,
+    "tool": "submit_script",
+    "arguments": {
+      "used_skills": [
+        "material-search"
+      ],
+      "title": "小剪App字幕功能介绍",
+      "scenes": [
+        {
+          "scene_id": "S01",
+          "visual": "展示小剪App界面，突出字幕功能按钮",
+          "narration": "大家好，今天给大家介绍一下小剪App的字幕功能。首先，我们来看一下小剪App的界面，这里有一个专门用于生成字幕的按钮。",
+          "subtitle": "小剪App支持自动生成字幕",
+          "source_ids": [
+            "P01"
+          ]
+        }
+      ],
+      "claims": [
+        {
+          "text": "自动生成字幕",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S01"
+        }
+      ],
+      "reason": "根据已有的资料，创作出符合要求的短视频脚本"
+    },
+    "version": 1,
+    "script": {
+      "title": "小剪App字幕功能介绍",
+      "scenes": [
+        {
+          "scene_id": "S01",
+          "visual": "展示小剪App界面，突出字幕功能按钮",
+          "narration": "大家好，今天给大家介绍一下小剪App的字幕功能。首先，我们来看一下小剪App的界面，这里有一个专门用于生成字幕的按钮。",
+          "subtitle": "小剪App支持自动生成字幕",
+          "source_ids": [
+            "P01"
+          ],
+          "min_display_seconds": 1.0
+        }
+      ],
+      "claims": [
+        {
+          "text": "自动生成字幕",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S01"
+        }
+      ]
+    }
+  },
+  {
+    "event_seq": 23,
+    "tool": "patch_script",
+    "arguments": {
+      "used_skills": [
+        "material-search"
+      ],
+      "edits": [
+        {
+          "op": "replace",
+          "path": "/scenes/0/narration",
+          "value": "大家好，今天给大家介绍一下小剪App的字幕功能。首先，我们来看一下小剪App的界面，这里有一个专门用于生成字幕的按钮。"
+        },
+        {
+          "op": "replace",
+          "path": "/scenes/0/subtitle",
+          "value": "小剪App支持自动生成字幕，用户可以手动修改"
+        }
+      ],
+      "reason": "根据时长检查结果，缩短冗余旁白和字幕以符合目标时长要求"
+    },
+    "version": 2,
+    "script": {
+      "title": "小剪App字幕功能介绍",
+      "scenes": [
+        {
+          "scene_id": "S01",
+          "visual": "展示小剪App界面，突出字幕功能按钮",
+          "narration": "大家好，今天给大家介绍一下小剪App的字幕功能。首先，我们来看一下小剪App的界面，这里有一个专门用于生成字幕的按钮。",
+          "subtitle": "小剪App支持自动生成字幕，用户可以手动修改",
+          "source_ids": [
+            "P01"
+          ],
+          "min_display_seconds": 1.0
+        }
+      ],
+      "claims": [
+        {
+          "text": "自动生成字幕",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S01"
+        }
+      ]
+    }
+  },
+  {
+    "event_seq": 29,
+    "tool": "patch_script",
+    "arguments": {
+      "used_skills": [
+        "material-search"
+      ],
+      "edits": [
+        {
+          "op": "replace",
+          "path": "/scenes/0/narration",
+          "value": "大家好，今天给大家介绍一下小剪App的字幕功能。首先，我们来看一下小剪App的界面，这里有一个专门用于生成字幕的按钮。"
+        },
+        {
+          "op": "replace",
+          "path": "/scenes/0/subtitle",
+          "value": "小剪App支持自动生成字幕，用户可以手动修改"
+        },
+        {
+          "op": "remove",
+          "path": "/scenes/0/source_ids/0"
+        },
+        {
+          "op": "remove",
+          "path": "/claims/0"
+        }
+      ],
+      "reason": "根据时长检查结果，缩短冗余旁白和字幕以符合目标时长要求"
+    },
+    "version": 3,
+    "script": {
+      "title": "小剪App字幕功能介绍",
+      "scenes": [
+        {
+          "scene_id": "S01",
+          "visual": "展示小剪App界面，突出字幕功能按钮",
+          "narration": "大家好，今天给大家介绍一下小剪App的字幕功能。首先，我们来看一下小剪App的界面，这里有一个专门用于生成字幕的按钮。",
+          "subtitle": "小剪App支持自动生成字幕，用户可以手动修改",
+          "source_ids": [],
+          "min_display_seconds": 1.0
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "event_seq": 40,
+    "tool": "patch_script",
+    "arguments": {
+      "used_skills": [
+        "duration-compression"
+      ],
+      "edits": [
+        {
+          "op": "replace",
+          "path": "/scenes/0/narration",
+          "value": "大家好，今天给大家介绍一下小剪App的字幕功能。这个功能包括自动生成字幕和手动修改字幕。"
+        },
+        {
+          "op": "replace",
+          "path": "/scenes/0/subtitle",
+          "value": "小剪App支持自动生成字幕，用户可以手动修改"
+        }
+      ],
+      "reason": "根据时长检查结果，缩短冗余旁白和字幕以符合目标时长要求"
+    },
+    "version": 4,
+    "script": {
+      "title": "小剪App字幕功能介绍",
+      "scenes": [
+        {
+          "scene_id": "S01",
+          "visual": "展示小剪App界面，突出字幕功能按钮",
+          "narration": "大家好，今天给大家介绍一下小剪App的字幕功能。这个功能包括自动生成字幕和手动修改字幕。",
+          "subtitle": "小剪App支持自动生成字幕，用户可以手动修改",
+          "source_ids": [],
+          "min_display_seconds": 1.0
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "event_seq": 51,
+    "tool": "patch_script",
+    "arguments": {
+      "used_skills": [
+        "duration-compression",
+        "narration-subtitles"
+      ],
+      "edits": [
+        {
+          "op": "replace",
+          "path": "/scenes/0/narration",
+          "value": "大家好，今天给大家介绍一下小剪App的字幕功能。这个功能包括自动生成字幕和手动修改字幕。"
+        },
+        {
+          "op": "replace",
+          "path": "/scenes/0/subtitle",
+          "value": "支持自动生成字幕，用户可以手动修改"
+        }
+      ],
+      "reason": "根据时长检查结果，进一步缩短冗余旁白和字幕以符合目标时长要求"
+    },
+    "version": 5,
+    "script": {
+      "title": "小剪App字幕功能介绍",
+      "scenes": [
+        {
+          "scene_id": "S01",
+          "visual": "展示小剪App界面，突出字幕功能按钮",
+          "narration": "大家好，今天给大家介绍一下小剪App的字幕功能。这个功能包括自动生成字幕和手动修改字幕。",
+          "subtitle": "支持自动生成字幕，用户可以手动修改",
+          "source_ids": [],
+          "min_display_seconds": 1.0
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "event_seq": 63,
+    "tool": "patch_script",
+    "arguments": {
+      "used_skills": [
+        "duration-compression",
+        "narration-subtitles"
+      ],
+      "edits": [
+        {
+          "op": "replace",
+          "path": "/scenes/0/narration",
+          "value": "大家好，今天我们将介绍小剪App的字幕功能。这个功能包括自动生成字幕和手动修改字幕。"
+        },
+        {
+          "op": "replace",
+          "path": "/scenes/0/subtitle",
+          "value": "支持自动生成字幕，用户可以手动修改"
+        }
+      ],
+      "reason": "根据时长检查结果，进一步缩短冗余旁白和字幕以符合目标时长要求"
+    },
+    "version": 6,
+    "script": {
+      "title": "小剪App字幕功能介绍",
+      "scenes": [
+        {
+          "scene_id": "S01",
+          "visual": "展示小剪App界面，突出字幕功能按钮",
+          "narration": "大家好，今天我们将介绍小剪App的字幕功能。这个功能包括自动生成字幕和手动修改字幕。",
+          "subtitle": "支持自动生成字幕，用户可以手动修改",
+          "source_ids": [],
+          "min_display_seconds": 1.0
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "event_seq": 70,
+    "tool": "patch_script",
+    "arguments": {
+      "used_skills": [
+        "duration-compression"
+      ],
+      "edits": [
+        {
+          "op": "replace",
+          "path": "/scenes/0/narration",
+          "value": "大家好，今天我们来介绍小剪App的字幕功能。这个功能包括自动生成字幕和手动修改字幕。"
+        },
+        {
+          "op": "replace",
+          "path": "/scenes/0/subtitle",
+          "value": "支持自动生成字幕，用户可以手动修改"
+        }
+      ],
+      "reason": "根据时长检查结果，进一步缩短冗余旁白和字幕以符合目标时长要求"
+    },
+    "version": 7,
+    "script": {
+      "title": "小剪App字幕功能介绍",
+      "scenes": [
+        {
+          "scene_id": "S01",
+          "visual": "展示小剪App界面，突出字幕功能按钮",
+          "narration": "大家好，今天我们来介绍小剪App的字幕功能。这个功能包括自动生成字幕和手动修改字幕。",
+          "subtitle": "支持自动生成字幕，用户可以手动修改",
+          "source_ids": [],
+          "min_display_seconds": 1.0
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "event_seq": 76,
+    "tool": "patch_script",
+    "arguments": {
+      "used_skills": [
+        "duration-compression"
+      ],
+      "edits": [
+        {
+          "op": "replace",
+          "path": "/scenes/0/narration",
+          "value": "大家好，今天我们将介绍小剪App的字幕功能。这个功能包括自动生成字幕和手动修改字幕。"
+        },
+        {
+          "op": "replace",
+          "path": "/scenes/0/subtitle",
+          "value": "支持自动生成字幕，用户可以手动修改"
+        }
+      ],
+      "reason": "根据时长检查结果，进一步缩短冗余旁白和字幕以符合目标时长要求"
+    },
+    "version": 8,
+    "script": {
+      "title": "小剪App字幕功能介绍",
+      "scenes": [
+        {
+          "scene_id": "S01",
+          "visual": "展示小剪App界面，突出字幕功能按钮",
+          "narration": "大家好，今天我们将介绍小剪App的字幕功能。这个功能包括自动生成字幕和手动修改字幕。",
+          "subtitle": "支持自动生成字幕，用户可以手动修改",
+          "source_ids": [],
+          "min_display_seconds": 1.0
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "event_seq": 82,
+    "tool": "patch_script",
+    "arguments": {
+      "used_skills": [
+        "duration-compression"
+      ],
+      "edits": [
+        {
+          "op": "replace",
+          "path": "/scenes/0/narration",
+          "value": "大家好，今天我们来介绍小剪App的字幕功能。这个功能包括自动生成字幕和手动修改字幕。"
+        },
+        {
+          "op": "replace",
+          "path": "/scenes/0/subtitle",
+          "value": "支持自动生成字幕，用户可以手动修改"
+        }
+      ],
+      "reason": "根据时长检查结果，进一步缩短冗余旁白和字幕以符合目标时长要求"
+    },
+    "version": 9,
+    "script": {
+      "title": "小剪App字幕功能介绍",
+      "scenes": [
+        {
+          "scene_id": "S01",
+          "visual": "展示小剪App界面，突出字幕功能按钮",
+          "narration": "大家好，今天我们来介绍小剪App的字幕功能。这个功能包括自动生成字幕和手动修改字幕。",
+          "subtitle": "支持自动生成字幕，用户可以手动修改",
+          "source_ids": [],
+          "min_display_seconds": 1.0
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "event_seq": 88,
+    "tool": "patch_script",
+    "arguments": {
+      "used_skills": [
+        "duration-compression"
+      ],
+      "edits": [
+        {
+          "op": "replace",
+          "path": "/scenes/0/narration",
+          "value": "大家好，今天我们将介绍小剪App的字幕功能。这个功能包括自动生成字幕和手动修改字幕。"
+        },
+        {
+          "op": "replace",
+          "path": "/scenes/0/subtitle",
+          "value": "支持自动生成字幕，用户可以手动修改"
+        }
+      ],
+      "reason": "根据时长检查结果，进一步缩短冗余旁白和字幕以符合目标时长要求"
+    },
+    "version": 10,
+    "script": {
+      "title": "小剪App字幕功能介绍",
+      "scenes": [
+        {
+          "scene_id": "S01",
+          "visual": "展示小剪App界面，突出字幕功能按钮",
+          "narration": "大家好，今天我们将介绍小剪App的字幕功能。这个功能包括自动生成字幕和手动修改字幕。",
+          "subtitle": "支持自动生成字幕，用户可以手动修改",
+          "source_ids": [],
+          "min_display_seconds": 1.0
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "event_seq": 94,
+    "tool": "patch_script",
+    "arguments": {
+      "used_skills": [
+        "duration-compression"
+      ],
+      "edits": [
+        {
+          "op": "replace",
+          "path": "/scenes/0/narration",
+          "value": "大家好，今天我们来介绍小剪App的字幕功能。这个功能包括自动生成字幕和手动修改字幕。"
+        },
+        {
+          "op": "replace",
+          "path": "/scenes/0/subtitle",
+          "value": "支持自动生成字幕，用户可以手动修改"
+        }
+      ],
+      "reason": "根据时长检查结果，进一步缩短冗余旁白和字幕以符合目标时长要求"
+    },
+    "version": 11,
+    "script": {
+      "title": "小剪App字幕功能介绍",
+      "scenes": [
+        {
+          "scene_id": "S01",
+          "visual": "展示小剪App界面，突出字幕功能按钮",
+          "narration": "大家好，今天我们来介绍小剪App的字幕功能。这个功能包括自动生成字幕和手动修改字幕。",
+          "subtitle": "支持自动生成字幕，用户可以手动修改",
+          "source_ids": [],
+          "min_display_seconds": 1.0
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "event_seq": 100,
+    "tool": "patch_script",
+    "arguments": {
+      "used_skills": [
+        "duration-compression"
+      ],
+      "edits": [
+        {
+          "op": "replace",
+          "path": "/scenes/0/narration",
+          "value": "大家好，今天我们将介绍小剪App的字幕功能。这个功能包括自动生成字幕和手动修改字幕。"
+        },
+        {
+          "op": "replace",
+          "path": "/scenes/0/subtitle",
+          "value": "支持自动生成字幕，用户可以手动修改"
+        }
+      ],
+      "reason": "根据时长检查结果，进一步缩短冗余旁白和字幕以符合目标时长要求"
+    },
+    "version": 12,
+    "script": {
+      "title": "小剪App字幕功能介绍",
+      "scenes": [
+        {
+          "scene_id": "S01",
+          "visual": "展示小剪App界面，突出字幕功能按钮",
+          "narration": "大家好，今天我们将介绍小剪App的字幕功能。这个功能包括自动生成字幕和手动修改字幕。",
+          "subtitle": "支持自动生成字幕，用户可以手动修改",
+          "source_ids": [],
+          "min_display_seconds": 1.0
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "event_seq": 106,
+    "tool": "patch_script",
+    "arguments": {
+      "used_skills": [
+        "duration-compression"
+      ],
+      "edits": [
+        {
+          "op": "replace",
+          "path": "/scenes/0/narration",
+          "value": "大家好，今天我们来介绍小剪App的字幕功能。这个功能包括自动生成字幕和手动修改字幕。"
+        },
+        {
+          "op": "replace",
+          "path": "/scenes/0/subtitle",
+          "value": "支持自动生成字幕，用户可以手动修改"
+        }
+      ],
+      "reason": "根据时长检查结果，进一步缩短冗余旁白和字幕以符合目标时长要求"
+    },
+    "version": 13,
+    "script": {
+      "title": "小剪App字幕功能介绍",
+      "scenes": [
+        {
+          "scene_id": "S01",
+          "visual": "展示小剪App界面，突出字幕功能按钮",
+          "narration": "大家好，今天我们来介绍小剪App的字幕功能。这个功能包括自动生成字幕和手动修改字幕。",
+          "subtitle": "支持自动生成字幕，用户可以手动修改",
+          "source_ids": [],
+          "min_display_seconds": 1.0
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "event_seq": 112,
+    "tool": "patch_script",
+    "arguments": {
+      "used_skills": [
+        "duration-compression"
+      ],
+      "edits": [
+        {
+          "op": "replace",
+          "path": "/scenes/0/narration",
+          "value": "大家好，今天我们将介绍小剪App的字幕功能。这个功能包括自动生成字幕和手动修改字幕。"
+        },
+        {
+          "op": "replace",
+          "path": "/scenes/0/subtitle",
+          "value": "支持自动生成字幕，用户可以手动修改"
+        }
+      ],
+      "reason": "根据时长检查结果，进一步缩短冗余旁白和字幕以符合目标时长要求"
+    },
+    "version": 14,
+    "script": {
+      "title": "小剪App字幕功能介绍",
+      "scenes": [
+        {
+          "scene_id": "S01",
+          "visual": "展示小剪App界面，突出字幕功能按钮",
+          "narration": "大家好，今天我们将介绍小剪App的字幕功能。这个功能包括自动生成字幕和手动修改字幕。",
+          "subtitle": "支持自动生成字幕，用户可以手动修改",
+          "source_ids": [],
+          "min_display_seconds": 1.0
+        }
+      ],
+      "claims": []
+    }
+  },
+  {
+    "event_seq": 118,
+    "tool": "patch_script",
+    "arguments": {
+      "used_skills": [
+        "duration-compression"
+      ],
+      "edits": [
+        {
+          "op": "replace",
+          "path": "/scenes/0/narration",
+          "value": "大家好，今天我们来介绍小剪App的字幕功能。这个功能包括自动生成字幕和手动修改字幕。"
+        },
+        {
+          "op": "replace",
+          "path": "/scenes/0/subtitle",
+          "value": "支持自动生成字幕，用户可以手动修改"
+        }
+      ],
+      "reason": "根据时长检查结果，进一步缩短冗余旁白和字幕以符合目标时长要求"
+    },
+    "version": 15,
+    "script": {
+      "title": "小剪App字幕功能介绍",
+      "scenes": [
+        {
+          "scene_id": "S01",
+          "visual": "展示小剪App界面，突出字幕功能按钮",
+          "narration": "大家好，今天我们来介绍小剪App的字幕功能。这个功能包括自动生成字幕和手动修改字幕。",
+          "subtitle": "支持自动生成字幕，用户可以手动修改",
+          "source_ids": [],
+          "min_display_seconds": 1.0
+        }
+      ],
+      "claims": []
+    }
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "case": "brand_and_fact_revision",
+  "mode": "live",
+  "run_id": "e5fc901d-121a-4256-a021-b536a4db6314",
+  "status": "incomplete",
+  "acceptance_passed": false,
+  "acceptance_errors": [
+    "Expected completed, got incomplete",
+    "No observed brand/fact violations -> revised script -> passing rules path"
+  ],
+  "elapsed_seconds": 70.97,
+  "model_calls": 20,
+  "tool_calls": 20,
+  "skills_loaded": [
+    "brand-revision",
+    "claim-grounding",
+    "factual-revision",
+    "narration-subtitles",
+    "query-rewrite"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\live\\brand_and_fact_revision"
+}

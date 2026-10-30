@@ -1,0 +1,15 @@
+{
+  "brief": {
+    "topic": "小剪怎样把片子里说的话变成屏幕上的字",
+    "audience": "短视频剪辑新手",
+    "platform": "抖音",
+    "target_seconds": 30.0,
+    "style": "轻松、直白"
+  },
+  "dataset": "demo",
+  "notes": "产品名称是小剪。运营提供的内部素材标签为 VOICE2WORDS，请先按该标签查找；如果标签没有命中，再结合产品名和功能含义查找可用原文。不要臆测语音识别准确率。",
+  "initial_script": null,
+  "max_model_calls": 40,
+  "max_tool_calls": 60,
+  "failure_injections": {}
+}

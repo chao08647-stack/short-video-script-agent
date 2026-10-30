@@ -1,0 +1,1344 @@
+{
+  "note": "加载、模型声明与候选关联分别统计。候选关联不等于证明技能有效，须结合对应产物审阅。Mock与live输出目录分离。",
+  "skills": {
+    "audience-angle": {
+      "loaded": [
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 9
+        },
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 9
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 9
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 9
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 9
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 17
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 9
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 15
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 9
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 11
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 9
+        }
+      ],
+      "model_declared_artifacts": [
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 14,
+          "tool": "submit_direction",
+          "artifact_event_seq": 12
+        },
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 14,
+          "tool": "submit_direction",
+          "artifact_event_seq": 12
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 14,
+          "tool": "submit_direction",
+          "artifact_event_seq": 12
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 14,
+          "tool": "submit_direction",
+          "artifact_event_seq": 12
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 14,
+          "tool": "submit_direction",
+          "artifact_event_seq": 12
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 22,
+          "tool": "submit_direction",
+          "artifact_event_seq": 20
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 14,
+          "tool": "submit_direction",
+          "artifact_event_seq": 12
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 20,
+          "tool": "submit_direction",
+          "artifact_event_seq": 18
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 14,
+          "tool": "submit_direction",
+          "artifact_event_seq": 12
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 16,
+          "tool": "submit_direction",
+          "artifact_event_seq": 14
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 14,
+          "tool": "submit_direction",
+          "artifact_event_seq": 12
+        }
+      ],
+      "candidate_links": [
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 18,
+          "tool": "request_review",
+          "artifact_event_seq": 17
+        },
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 22,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 21
+        },
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 25,
+          "tool": "check_rules",
+          "artifact_event_seq": 24
+        },
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 29,
+          "tool": "request_review",
+          "artifact_event_seq": 28
+        },
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 18,
+          "tool": "request_review",
+          "artifact_event_seq": 17
+        },
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 22,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 21
+        },
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 26,
+          "tool": "check_rules",
+          "artifact_event_seq": 25
+        },
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 30,
+          "tool": "request_review",
+          "artifact_event_seq": 29
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 18,
+          "tool": "request_review",
+          "artifact_event_seq": 17
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 18,
+          "tool": "request_review",
+          "artifact_event_seq": 17
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 18,
+          "tool": "request_review",
+          "artifact_event_seq": 17
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 26,
+          "tool": "request_review",
+          "artifact_event_seq": 25
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 18,
+          "tool": "request_review",
+          "artifact_event_seq": 17
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 24,
+          "tool": "request_review",
+          "artifact_event_seq": 23
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 18,
+          "tool": "request_review",
+          "artifact_event_seq": 17
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 20,
+          "tool": "request_review",
+          "artifact_event_seq": 19
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 18,
+          "tool": "request_review",
+          "artifact_event_seq": 17
+        }
+      ]
+    },
+    "brand-revision": {
+      "loaded": [],
+      "model_declared_artifacts": [],
+      "candidate_links": []
+    },
+    "brief-clarification": {
+      "loaded": [
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 3
+        }
+      ],
+      "model_declared_artifacts": [],
+      "candidate_links": [
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 8,
+          "tool": "ask_user",
+          "artifact_event_seq": 7
+        }
+      ]
+    },
+    "claim-grounding": {
+      "loaded": [
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 27
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 27
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 27
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 35
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 27
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 33
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 27
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 29
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 27
+        }
+      ],
+      "model_declared_artifacts": [
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 33,
+          "tool": "submit_script",
+          "artifact_event_seq": 30
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 33,
+          "tool": "submit_script",
+          "artifact_event_seq": 30
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 52,
+          "tool": "submit_script",
+          "artifact_event_seq": 50
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 33,
+          "tool": "submit_script",
+          "artifact_event_seq": 30
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 41,
+          "tool": "submit_script",
+          "artifact_event_seq": 38
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 33,
+          "tool": "submit_script",
+          "artifact_event_seq": 30
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 39,
+          "tool": "submit_script",
+          "artifact_event_seq": 36
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 33,
+          "tool": "submit_script",
+          "artifact_event_seq": 30
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 35,
+          "tool": "submit_script",
+          "artifact_event_seq": 32
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 33,
+          "tool": "submit_script",
+          "artifact_event_seq": 30
+        }
+      ],
+      "candidate_links": [
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 36,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 35
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 40,
+          "tool": "check_rules",
+          "artifact_event_seq": 39
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 44,
+          "tool": "request_review",
+          "artifact_event_seq": 43
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 49,
+          "tool": "request_review",
+          "artifact_event_seq": 48
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 36,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 35
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 40,
+          "tool": "check_rules",
+          "artifact_event_seq": 39
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 44,
+          "tool": "request_review",
+          "artifact_event_seq": 43
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 36,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 35
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 40,
+          "tool": "check_rules",
+          "artifact_event_seq": 39
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 44,
+          "tool": "request_review",
+          "artifact_event_seq": 43
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 49,
+          "tool": "request_review",
+          "artifact_event_seq": 48
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 44,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 43
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 48,
+          "tool": "check_rules",
+          "artifact_event_seq": 47
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 52,
+          "tool": "request_review",
+          "artifact_event_seq": 51
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 57,
+          "tool": "request_review",
+          "artifact_event_seq": 56
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 36,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 35
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 40,
+          "tool": "check_rules",
+          "artifact_event_seq": 39
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 44,
+          "tool": "request_review",
+          "artifact_event_seq": 43
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 49,
+          "tool": "request_review",
+          "artifact_event_seq": 48
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 42,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 41
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 46,
+          "tool": "check_rules",
+          "artifact_event_seq": 45
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 50,
+          "tool": "request_review",
+          "artifact_event_seq": 49
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 55,
+          "tool": "request_review",
+          "artifact_event_seq": 54
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 36,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 35
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 40,
+          "tool": "check_rules",
+          "artifact_event_seq": 39
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 44,
+          "tool": "request_review",
+          "artifact_event_seq": 43
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 38,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 37
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 42,
+          "tool": "check_rules",
+          "artifact_event_seq": 41
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 46,
+          "tool": "request_review",
+          "artifact_event_seq": 45
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 51,
+          "tool": "request_review",
+          "artifact_event_seq": 50
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 36,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 35
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 40,
+          "tool": "check_rules",
+          "artifact_event_seq": 39
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 44,
+          "tool": "request_review",
+          "artifact_event_seq": 43
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 49,
+          "tool": "request_review",
+          "artifact_event_seq": 48
+        }
+      ]
+    },
+    "duration-compression": {
+      "loaded": [
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 33
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 47
+        }
+      ],
+      "model_declared_artifacts": [
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 37,
+          "tool": "submit_script",
+          "artifact_event_seq": 36
+        }
+      ],
+      "candidate_links": [
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 40,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 39
+        },
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 44,
+          "tool": "check_rules",
+          "artifact_event_seq": 43
+        },
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 48,
+          "tool": "request_review",
+          "artifact_event_seq": 47
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 52,
+          "tool": "finish_incomplete",
+          "artifact_event_seq": 51
+        }
+      ]
+    },
+    "evidence-conflict": {
+      "loaded": [
+        {
+          "case": "conflict",
+          "trace": "conflict\\trace.jsonl",
+          "event_seq": 9
+        }
+      ],
+      "model_declared_artifacts": [],
+      "candidate_links": [
+        {
+          "case": "conflict",
+          "trace": "conflict\\trace.jsonl",
+          "event_seq": 14,
+          "tool": "ask_user",
+          "artifact_event_seq": 13
+        }
+      ]
+    },
+    "factual-revision": {
+      "loaded": [
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 32
+        }
+      ],
+      "model_declared_artifacts": [
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 36,
+          "tool": "submit_script",
+          "artifact_event_seq": 35
+        }
+      ],
+      "candidate_links": [
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 39,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 38
+        },
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 43,
+          "tool": "check_rules",
+          "artifact_event_seq": 42
+        },
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 47,
+          "tool": "request_review",
+          "artifact_event_seq": 46
+        }
+      ]
+    },
+    "hook-writing": {
+      "loaded": [],
+      "model_declared_artifacts": [],
+      "candidate_links": []
+    },
+    "human-feedback": {
+      "loaded": [
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 47
+        }
+      ],
+      "model_declared_artifacts": [
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 51,
+          "tool": "submit_script",
+          "artifact_event_seq": 50
+        }
+      ],
+      "candidate_links": [
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 55,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 54
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 59,
+          "tool": "check_rules",
+          "artifact_event_seq": 58
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 63,
+          "tool": "request_review",
+          "artifact_event_seq": 62
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 68,
+          "tool": "request_review",
+          "artifact_event_seq": 67
+        }
+      ]
+    },
+    "material-search": {
+      "loaded": [
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 3
+        },
+        {
+          "case": "conflict",
+          "trace": "conflict\\trace.jsonl",
+          "event_seq": 3
+        },
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 3
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 3
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 3
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 3
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 11
+        },
+        {
+          "case": "no_materials",
+          "trace": "no_materials\\trace.jsonl",
+          "event_seq": 3
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 3
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 3
+        },
+        {
+          "case": "step_limit",
+          "trace": "step_limit\\trace.jsonl",
+          "event_seq": 3
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 3
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 3
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 3
+        }
+      ],
+      "model_declared_artifacts": [
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 13,
+          "tool": "submit_direction",
+          "artifact_event_seq": 12
+        },
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 13,
+          "tool": "submit_direction",
+          "artifact_event_seq": 12
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 13,
+          "tool": "submit_direction",
+          "artifact_event_seq": 12
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 13,
+          "tool": "submit_direction",
+          "artifact_event_seq": 12
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 13,
+          "tool": "submit_direction",
+          "artifact_event_seq": 12
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 21,
+          "tool": "submit_direction",
+          "artifact_event_seq": 20
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 13,
+          "tool": "submit_direction",
+          "artifact_event_seq": 12
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 19,
+          "tool": "submit_direction",
+          "artifact_event_seq": 18
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 13,
+          "tool": "submit_direction",
+          "artifact_event_seq": 12
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 15,
+          "tool": "submit_direction",
+          "artifact_event_seq": 14
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 13,
+          "tool": "submit_direction",
+          "artifact_event_seq": 12
+        }
+      ],
+      "candidate_links": [
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 7,
+          "tool": "search_materials",
+          "artifact_event_seq": 6
+        },
+        {
+          "case": "conflict",
+          "trace": "conflict\\trace.jsonl",
+          "event_seq": 7,
+          "tool": "search_materials",
+          "artifact_event_seq": 6
+        },
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 7,
+          "tool": "search_materials",
+          "artifact_event_seq": 6
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 7,
+          "tool": "search_materials",
+          "artifact_event_seq": 6
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 7,
+          "tool": "search_materials",
+          "artifact_event_seq": 6
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 7,
+          "tool": "search_materials",
+          "artifact_event_seq": 6
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 15,
+          "tool": "search_materials",
+          "artifact_event_seq": 14
+        },
+        {
+          "case": "no_materials",
+          "trace": "no_materials\\trace.jsonl",
+          "event_seq": 7,
+          "tool": "search_materials",
+          "artifact_event_seq": 6
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 7,
+          "tool": "search_materials",
+          "artifact_event_seq": 6
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 7,
+          "tool": "search_materials",
+          "artifact_event_seq": 6
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 7,
+          "tool": "search_materials",
+          "artifact_event_seq": 6
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 9,
+          "tool": "search_materials",
+          "artifact_event_seq": 8
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 7,
+          "tool": "search_materials",
+          "artifact_event_seq": 6
+        }
+      ]
+    },
+    "narration-subtitles": {
+      "loaded": [
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 24
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 24
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 24
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 32
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 24
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 30
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 24
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 26
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 24
+        }
+      ],
+      "model_declared_artifacts": [
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 32,
+          "tool": "submit_script",
+          "artifact_event_seq": 30
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 32,
+          "tool": "submit_script",
+          "artifact_event_seq": 30
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 32,
+          "tool": "submit_script",
+          "artifact_event_seq": 30
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 40,
+          "tool": "submit_script",
+          "artifact_event_seq": 38
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 32,
+          "tool": "submit_script",
+          "artifact_event_seq": 30
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 38,
+          "tool": "submit_script",
+          "artifact_event_seq": 36
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 32,
+          "tool": "submit_script",
+          "artifact_event_seq": 30
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 34,
+          "tool": "submit_script",
+          "artifact_event_seq": 32
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 32,
+          "tool": "submit_script",
+          "artifact_event_seq": 30
+        }
+      ],
+      "candidate_links": []
+    },
+    "narrative-structure": {
+      "loaded": [],
+      "model_declared_artifacts": [],
+      "candidate_links": []
+    },
+    "platform-adaptation": {
+      "loaded": [],
+      "model_declared_artifacts": [],
+      "candidate_links": []
+    },
+    "query-rewrite": {
+      "loaded": [
+        {
+          "case": "no_materials",
+          "trace": "no_materials\\trace.jsonl",
+          "event_seq": 9
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 9
+        }
+      ],
+      "model_declared_artifacts": [],
+      "candidate_links": [
+        {
+          "case": "no_materials",
+          "trace": "no_materials\\trace.jsonl",
+          "event_seq": 13,
+          "tool": "search_materials",
+          "artifact_event_seq": 12
+        },
+        {
+          "case": "no_materials",
+          "trace": "no_materials\\trace.jsonl",
+          "event_seq": 17,
+          "tool": "ask_user",
+          "artifact_event_seq": 16
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 13,
+          "tool": "search_materials",
+          "artifact_event_seq": 12
+        }
+      ]
+    },
+    "storyboard-planning": {
+      "loaded": [
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 21
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 21
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 21
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 29
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 21
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 27
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 21
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 23
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 21
+        }
+      ],
+      "model_declared_artifacts": [
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 31,
+          "tool": "submit_script",
+          "artifact_event_seq": 30
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 31,
+          "tool": "submit_script",
+          "artifact_event_seq": 30
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 31,
+          "tool": "submit_script",
+          "artifact_event_seq": 30
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 39,
+          "tool": "submit_script",
+          "artifact_event_seq": 38
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 31,
+          "tool": "submit_script",
+          "artifact_event_seq": 30
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 37,
+          "tool": "submit_script",
+          "artifact_event_seq": 36
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 31,
+          "tool": "submit_script",
+          "artifact_event_seq": 30
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 33,
+          "tool": "submit_script",
+          "artifact_event_seq": 32
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 31,
+          "tool": "submit_script",
+          "artifact_event_seq": 30
+        }
+      ],
+      "candidate_links": []
+    },
+    "visual-direction": {
+      "loaded": [],
+      "model_declared_artifacts": [],
+      "candidate_links": []
+    }
+  }
+}

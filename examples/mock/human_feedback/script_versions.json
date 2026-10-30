@@ -1,0 +1,131 @@
+[
+  {
+    "event_seq": 30,
+    "tool": "submit_script",
+    "arguments": {
+      "title": "产品功能介绍",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "展示创作者准备开始操作的情景。",
+          "narration": "先看看这个功能。",
+          "subtitle": "功能介绍",
+          "source_ids": [],
+          "min_display_seconds": 1.0
+        },
+        {
+          "scene_id": "S2",
+          "visual": "展示产品说明中的对应功能文字，供拍摄参考。",
+          "narration": "小剪 App 支持自动生成字幕。",
+          "subtitle": "小剪 App 支持自动生成字幕。",
+          "source_ids": [
+            "P01"
+          ],
+          "min_display_seconds": 1.0
+        }
+      ],
+      "claims": [
+        {
+          "text": "小剪 App 支持自动生成字幕。",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S2"
+        }
+      ],
+      "used_skills": [
+        "storyboard-planning",
+        "narration-subtitles",
+        "claim-grounding"
+      ],
+      "reason": "离线 Mock 固定流程，仅用于验证工程行为。"
+    },
+    "version": 1,
+    "script": {
+      "title": "产品功能介绍",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "展示创作者准备开始操作的情景。",
+          "narration": "先看看这个功能。",
+          "subtitle": "功能介绍",
+          "source_ids": [],
+          "min_display_seconds": 1.0
+        },
+        {
+          "scene_id": "S2",
+          "visual": "展示产品说明中的对应功能文字，供拍摄参考。",
+          "narration": "小剪 App 支持自动生成字幕。",
+          "subtitle": "小剪 App 支持自动生成字幕。",
+          "source_ids": [
+            "P01"
+          ],
+          "min_display_seconds": 1.0
+        }
+      ],
+      "claims": [
+        {
+          "text": "小剪 App 支持自动生成字幕。",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S2"
+        }
+      ]
+    }
+  },
+  {
+    "event_seq": 50,
+    "tool": "submit_script",
+    "arguments": {
+      "title": "产品功能介绍 · 修改稿",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "展示产品说明中的对应功能文字，供拍摄参考。",
+          "narration": "支持自动生成字幕",
+          "subtitle": "支持自动生成字幕",
+          "source_ids": [
+            "P01"
+          ],
+          "min_display_seconds": 1.0
+        }
+      ],
+      "claims": [
+        {
+          "text": "支持自动生成字幕",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S1"
+        }
+      ],
+      "used_skills": [
+        "human-feedback",
+        "claim-grounding"
+      ],
+      "reason": "离线 Mock 固定流程，仅用于验证工程行为。"
+    },
+    "version": 2,
+    "script": {
+      "title": "产品功能介绍 · 修改稿",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "展示产品说明中的对应功能文字，供拍摄参考。",
+          "narration": "支持自动生成字幕",
+          "subtitle": "支持自动生成字幕",
+          "source_ids": [
+            "P01"
+          ],
+          "min_display_seconds": 1.0
+        }
+      ],
+      "claims": [
+        {
+          "text": "支持自动生成字幕",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S1"
+        }
+      ]
+    }
+  }
+]

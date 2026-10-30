@@ -1,0 +1,21 @@
+{
+  "case": "human_feedback",
+  "mode": "mock",
+  "run_id": "3e8ba8ec-b1b8-4299-95c3-ebefb12db3a1",
+  "status": "completed",
+  "acceptance_passed": true,
+  "acceptance_errors": [],
+  "elapsed_seconds": 0.45,
+  "model_calls": 20,
+  "tool_calls": 18,
+  "skills_loaded": [
+    "audience-angle",
+    "claim-grounding",
+    "human-feedback",
+    "material-search",
+    "narration-subtitles",
+    "storyboard-planning"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\mock\\human_feedback"
+}

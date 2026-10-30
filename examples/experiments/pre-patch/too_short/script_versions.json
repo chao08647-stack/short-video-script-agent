@@ -1,0 +1,82 @@
+[
+  {
+    "event_seq": 17,
+    "arguments": {
+      "used_skills": [
+        "material-search"
+      ],
+      "title": "小剪App字幕功能介绍",
+      "scenes": [
+        {
+          "scene_id": "1",
+          "visual": "展示小剪App界面",
+          "narration": "大家好，今天我们要介绍的是小剪App的字幕功能。",
+          "subtitle": "小剪App字幕功能介绍",
+          "source_ids": [
+            "P01"
+          ],
+          "min_display_seconds": 3
+        },
+        {
+          "scene_id": "2",
+          "visual": "演示如何使用小剪App自动生成字幕",
+          "narration": "首先，我们来看一下如何使用小剪App自动生成字幕。",
+          "subtitle": "演示如何使用小剪App自动生成字幕",
+          "source_ids": [
+            "P01",
+            "P02"
+          ],
+          "min_display_seconds": 5
+        },
+        {
+          "scene_id": "3",
+          "visual": "演示如何手动修改小剪App生成的字幕",
+          "narration": "接下来，我们将演示如何手动修改小剪App生成的字幕。",
+          "subtitle": "演示如何手动修改小剪App生成的字幕",
+          "source_ids": [
+            "P02",
+            "P04"
+          ],
+          "min_display_seconds": 5
+        },
+        {
+          "scene_id": "4",
+          "visual": "强调检查和修正自动字幕的重要性",
+          "narration": "最后，我们来强调一下检查和修正自动字幕的重要性。",
+          "subtitle": "强调检查和修正自动字幕的重要性",
+          "source_ids": [
+            "P04"
+          ],
+          "min_display_seconds": 3
+        }
+      ],
+      "claims": [
+        {
+          "text": "小剪 App 支持自动生成字幕。",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "2"
+        },
+        {
+          "text": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "source_id": "P02",
+          "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "scene_id": "3"
+        },
+        {
+          "text": "小剪 App 支持调整字幕的字体大小和颜色。",
+          "source_id": "P03",
+          "quote": "小剪 App 支持调整字幕的字体大小和颜色。",
+          "scene_id": "2"
+        },
+        {
+          "text": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+          "source_id": "P04",
+          "quote": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+          "scene_id": "4"
+        }
+      ],
+      "reason": "根据已获取的资料，形成了合理的创作方向，并完成了完整的脚本创作。"
+    }
+  }
+]

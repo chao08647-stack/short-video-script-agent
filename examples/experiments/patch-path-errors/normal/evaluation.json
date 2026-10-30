@@ -1,0 +1,33 @@
+{
+  "case": "normal",
+  "mode": "live",
+  "run_id": "5d76c5f5-8a4b-49a1-b606-9a6acf21c478",
+  "status": "incomplete",
+  "acceptance_passed": false,
+  "acceptance_errors": [
+    "Expected completed, got incomplete"
+  ],
+  "elapsed_seconds": 226.06,
+  "model_calls": 40,
+  "tool_calls": 40,
+  "skills_loaded": [
+    "audience-angle",
+    "brand-revision",
+    "brief-clarification",
+    "claim-grounding",
+    "duration-compression",
+    "evidence-conflict",
+    "factual-revision",
+    "hook-writing",
+    "human-feedback",
+    "material-search",
+    "narration-subtitles",
+    "narrative-structure",
+    "platform-adaptation",
+    "query-rewrite",
+    "storyboard-planning",
+    "visual-direction"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\live\\normal"
+}

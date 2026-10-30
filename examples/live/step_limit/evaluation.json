@@ -1,0 +1,16 @@
+{
+  "case": "step_limit",
+  "mode": "live",
+  "run_id": "66a33b98-5093-4eb0-9d0b-3582a598733d",
+  "status": "incomplete",
+  "acceptance_passed": true,
+  "acceptance_errors": [],
+  "elapsed_seconds": 2.55,
+  "model_calls": 1,
+  "tool_calls": 1,
+  "skills_loaded": [
+    "material-search"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\live\\step_limit"
+}

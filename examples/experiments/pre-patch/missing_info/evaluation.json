@@ -1,0 +1,18 @@
+{
+  "case": "missing_info",
+  "mode": "live",
+  "run_id": "61d86898-f255-4a2b-a2ca-a7f730f9c3c9",
+  "status": "failed",
+  "acceptance_passed": false,
+  "acceptance_errors": [
+    "Expected completed, got failed"
+  ],
+  "elapsed_seconds": 98.92,
+  "model_calls": 8,
+  "tool_calls": 7,
+  "skills_loaded": [
+    "audience-angle"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\live\\missing_info"
+}

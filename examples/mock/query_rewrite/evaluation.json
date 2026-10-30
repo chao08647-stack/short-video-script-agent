@@ -1,0 +1,21 @@
+{
+  "case": "query_rewrite",
+  "mode": "mock",
+  "run_id": "502fd94b-5e5e-4176-9071-bc17a14d10e6",
+  "status": "completed",
+  "acceptance_passed": true,
+  "acceptance_errors": [],
+  "elapsed_seconds": 0.38,
+  "model_calls": 16,
+  "tool_calls": 15,
+  "skills_loaded": [
+    "audience-angle",
+    "claim-grounding",
+    "material-search",
+    "narration-subtitles",
+    "query-rewrite",
+    "storyboard-planning"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\mock\\query_rewrite"
+}

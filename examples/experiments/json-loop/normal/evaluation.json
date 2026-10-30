@@ -1,0 +1,20 @@
+{
+  "case": "normal",
+  "mode": "live",
+  "run_id": "8cc2f572-f62e-4372-bd93-fed72c1f1344",
+  "status": "incomplete",
+  "acceptance_passed": false,
+  "acceptance_errors": [
+    "Expected completed, got incomplete"
+  ],
+  "elapsed_seconds": 99.38,
+  "model_calls": 40,
+  "tool_calls": 40,
+  "skills_loaded": [
+    "audience-angle",
+    "duration-compression",
+    "narration-subtitles"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\live\\normal"
+}

@@ -1,0 +1,29 @@
+[
+  {
+    "version": 1,
+    "origin": "provided_test_input",
+    "script": {
+      "title": "全网第一字幕神器，效率提升80%",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "展示小剪自动生成字幕的操作。",
+          "narration": "小剪 App 支持自动生成字幕，百分百准确，效率提升80%，还有自动配音功能。",
+          "subtitle": "百分百准确，效率提升80%",
+          "source_ids": [
+            "P01"
+          ],
+          "min_display_seconds": 3.0
+        }
+      ],
+      "claims": [
+        {
+          "text": "小剪 App 支持自动生成字幕，百分百准确，效率提升80%，还有自动配音功能。",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S1"
+        }
+      ]
+    }
+  }
+]

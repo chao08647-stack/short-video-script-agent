@@ -1,0 +1,411 @@
+{
+  "run_id": "645a41f4-5a8a-4bdb-8730-7cd09617ca3f",
+  "mode": "live",
+  "status": "waiting_human",
+  "phase": "draft",
+  "execution": {
+    "python": "3.12.9",
+    "langgraph": "1.2.18",
+    "mode": "live",
+    "model": {
+      "base_url": "http://127.0.0.1:8012/v1",
+      "model": "qwen25-14b-pbn-answer",
+      "max_tokens": 2048,
+      "timeout_seconds": 120.0
+    },
+    "code_hashes": {
+      "engine.py": "1f66056bc8cfff19c1e5c2d6cb06f3fb06b1f114f7e997cf49c186161590aff7",
+      "prompts.py": "2638bbb9a681a0fb76d6961ce533a0b55dbb1eb554c8ddff2f4d56bb99ec74c8",
+      "model.py": "eee2b493bb4836c0d719c1f94a1df6b5eb39e0e94430bf07927879605c161b7e",
+      "business_tools.py": "6f3f549b2fe9f49b2ddcfd4881509a93fa162c9422a95d029ec282a11d0d2411"
+    }
+  },
+  "brief": {
+    "topic": "介绍小剪 App 的字幕功能",
+    "audience": "短视频剪辑新手",
+    "platform": "抖音",
+    "target_seconds": 30.0,
+    "style": "轻松、直白"
+  },
+  "direction": {
+    "angle": "介绍小剪App的字幕功能",
+    "outline": [
+      "开场：介绍小剪App的基本功能",
+      "主体部分一：展示小剪App的自动字幕生成功能",
+      "主体部分二：展示如何手动修改字幕",
+      "主体部分三：展示如何调整字幕的字体大小和颜色",
+      "结尾：强调用户在使用自动字幕功能后需要检查并手动修正可能存在的识别错误"
+    ],
+    "source_ids": [
+      "P01",
+      "P02",
+      "P03",
+      "P04"
+    ],
+    "notes": ""
+  },
+  "script": {
+    "title": "全网第一字幕神器，效率提升80%",
+    "scenes": [
+      {
+        "scene_id": "S1",
+        "visual": "展示小剪自动生成字幕的操作。",
+        "narration": "小剪 App 支持自动生成字幕，百分百准确，效率提升80%，还有自动配音功能。",
+        "subtitle": "百分百准确，效率提升80%",
+        "source_ids": [
+          "P01"
+        ],
+        "min_display_seconds": 3.0
+      }
+    ],
+    "claims": [
+      {
+        "text": "小剪 App 支持自动生成字幕，百分百准确，效率提升80%，还有自动配音功能。",
+        "source_id": "P01",
+        "quote": "小剪 App 支持自动生成字幕。",
+        "scene_id": "S1"
+      }
+    ]
+  },
+  "script_version": 1,
+  "checks": {
+    "duration": {
+      "passed": true,
+      "estimated_seconds": 8.65,
+      "target_seconds": 30.0,
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "narration_seconds": 8.65,
+          "subtitle_seconds": 1.84,
+          "min_display_seconds": 3.0,
+          "estimated_seconds": 8.65,
+          "start_seconds": 0.0,
+          "end_seconds": 8.65
+        }
+      ],
+      "issues": [],
+      "assumptions": {
+        "chars_per_second": 4.0,
+        "subtitle_chars_per_second": 6.0,
+        "english_words_per_second": 2.5,
+        "minimum_scene_seconds": 1.0,
+        "transition_seconds": 0.0,
+        "timing_rule": "每镜取旁白、字幕阅读、画面最低展示时间的最大值；镜头串行累计。",
+        "limitation": "文字估时，不是实际录音或成片时长；数字、缩写及表演节奏可能存在误差。"
+      },
+      "script_version": 1,
+      "script_hash": "3bc193223eeedeca0a4d5a6eea1dbeee72fc2f546823f64cd106548c0967c116",
+      "data_hash": "79547a1a8070046079e5a75d5be2579ee62ecfde50ca53b0d8928795e1c7d323",
+      "brief_hash": "0e3a7dcadb5bcf8c71da182e3d0a8ce26a2c8dece6d49b2393a3562ae9d28e55"
+    },
+    "rules": {
+      "passed": false,
+      "issues": [
+        {
+          "code": "BANNED_PHRASE",
+          "message": "出现品牌禁用表述：全网第一",
+          "scene_id": "",
+          "field": "title",
+          "phrase": "全网第一"
+        },
+        {
+          "code": "BANNED_PHRASE",
+          "message": "出现品牌禁用表述：百分百准确",
+          "scene_id": "S1",
+          "field": "narration",
+          "phrase": "百分百准确"
+        },
+        {
+          "code": "BANNED_PHRASE",
+          "message": "出现品牌禁用表述：百分百准确",
+          "scene_id": "S1",
+          "field": "subtitle",
+          "phrase": "百分百准确"
+        },
+        {
+          "code": "UNSUPPORTED_NUMBER",
+          "message": "数字表述缺少对应文句及支持原文；结构性步骤编号除外。",
+          "scene_id": "",
+          "field": "title",
+          "number": "80%"
+        },
+        {
+          "code": "UNSUPPORTED_NUMBER",
+          "message": "数字表述缺少对应文句及支持原文；结构性步骤编号除外。",
+          "scene_id": "S1",
+          "field": "narration",
+          "number": "80%"
+        },
+        {
+          "code": "UNSUPPORTED_NUMBER",
+          "message": "数字表述缺少对应文句及支持原文；结构性步骤编号除外。",
+          "scene_id": "S1",
+          "field": "subtitle",
+          "number": "80%"
+        }
+      ],
+      "scope": "deterministic_only",
+      "requires_semantic_verification": true,
+      "semantic_status": "not_checked",
+      "checked_claims": 1,
+      "valid_quote_mappings": 1,
+      "semantic": {
+        "status": "not_run",
+        "reason": "deterministic_checks_failed"
+      },
+      "script_version": 1,
+      "script_hash": "3bc193223eeedeca0a4d5a6eea1dbeee72fc2f546823f64cd106548c0967c116",
+      "data_hash": "79547a1a8070046079e5a75d5be2579ee62ecfde50ca53b0d8928795e1c7d323",
+      "brief_hash": "0e3a7dcadb5bcf8c71da182e3d0a8ce26a2c8dece6d49b2393a3562ae9d28e55"
+    }
+  },
+  "estimated_seconds": 8.65,
+  "duration_note": "基于固定语速与画面展示需求估算，不代表真实配音或成片测量。",
+  "sources": [
+    {
+      "source_id": "P01",
+      "version": "2026-10-01",
+      "title": "小剪 App：自动字幕",
+      "text": "小剪 App 支持自动生成字幕。",
+      "facts": [
+        "小剪 App 支持自动生成字幕。"
+      ],
+      "keywords": [
+        "小剪",
+        "字幕",
+        "自动生成",
+        "剪辑",
+        "视频"
+      ],
+      "score": 6.8665
+    },
+    {
+      "source_id": "P02",
+      "version": "2026-10-01",
+      "title": "小剪 App：字幕文字修改",
+      "text": "用户可以手动修改小剪 App 生成的字幕文字。",
+      "facts": [
+        "用户可以手动修改小剪 App 生成的字幕文字。"
+      ],
+      "keywords": [
+        "小剪",
+        "字幕",
+        "手动修改",
+        "文字",
+        "检查"
+      ],
+      "score": 6.8665
+    },
+    {
+      "source_id": "P03",
+      "version": "2026-10-01",
+      "title": "小剪 App：字幕样式",
+      "text": "小剪 App 支持调整字幕的字体大小和颜色。",
+      "facts": [
+        "小剪 App 支持调整字幕的字体大小和颜色。"
+      ],
+      "keywords": [
+        "小剪",
+        "字幕",
+        "样式",
+        "字体",
+        "颜色"
+      ],
+      "score": 6.8665
+    },
+    {
+      "source_id": "P04",
+      "version": "2026-10-01",
+      "title": "小剪 App：字幕使用建议",
+      "text": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+      "facts": [
+        "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。"
+      ],
+      "keywords": [
+        "小剪",
+        "字幕",
+        "检查",
+        "识别错误",
+        "修改"
+      ],
+      "score": 6.8665
+    },
+    {
+      "source_id": "H01",
+      "version": "2026-10-01",
+      "title": "澄音 H1 耳机：降噪功能",
+      "text": "澄音 H1 耳机支持主动降噪模式，也支持通透模式。",
+      "facts": [
+        "澄音 H1 耳机支持主动降噪模式。",
+        "澄音 H1 耳机支持通透模式。"
+      ],
+      "keywords": [
+        "澄音",
+        "H1",
+        "耳机",
+        "主动降噪",
+        "通透"
+      ],
+      "score": 1.6094
+    }
+  ],
+  "pending_review": {
+    "review_id": "dbc234564bdd5b245448",
+    "stage": "clarification",
+    "version": 1,
+    "object_hash": "3bc193223eeedeca0a4d5a6eea1dbeee72fc2f546823f64cd106548c0967c116",
+    "reason": "请问您希望如何修改标题和场景中的表述？",
+    "fields": [],
+    "direction": {
+      "angle": "介绍小剪App的字幕功能",
+      "outline": [
+        "开场：介绍小剪App的基本功能",
+        "主体部分一：展示小剪App的自动字幕生成功能",
+        "主体部分二：展示如何手动修改字幕",
+        "主体部分三：展示如何调整字幕的字体大小和颜色",
+        "结尾：强调用户在使用自动字幕功能后需要检查并手动修正可能存在的识别错误"
+      ],
+      "source_ids": [
+        "P01",
+        "P02",
+        "P03",
+        "P04"
+      ],
+      "notes": ""
+    },
+    "script": {
+      "title": "全网第一字幕神器，效率提升80%",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "展示小剪自动生成字幕的操作。",
+          "narration": "小剪 App 支持自动生成字幕，百分百准确，效率提升80%，还有自动配音功能。",
+          "subtitle": "百分百准确，效率提升80%",
+          "source_ids": [
+            "P01"
+          ],
+          "min_display_seconds": 3.0
+        }
+      ],
+      "claims": [
+        {
+          "text": "小剪 App 支持自动生成字幕，百分百准确，效率提升80%，还有自动配音功能。",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S1"
+        }
+      ]
+    },
+    "checks": {
+      "duration": {
+        "passed": true,
+        "estimated_seconds": 8.65,
+        "target_seconds": 30.0,
+        "scenes": [
+          {
+            "scene_id": "S1",
+            "narration_seconds": 8.65,
+            "subtitle_seconds": 1.84,
+            "min_display_seconds": 3.0,
+            "estimated_seconds": 8.65,
+            "start_seconds": 0.0,
+            "end_seconds": 8.65
+          }
+        ],
+        "issues": [],
+        "assumptions": {
+          "chars_per_second": 4.0,
+          "subtitle_chars_per_second": 6.0,
+          "english_words_per_second": 2.5,
+          "minimum_scene_seconds": 1.0,
+          "transition_seconds": 0.0,
+          "timing_rule": "每镜取旁白、字幕阅读、画面最低展示时间的最大值；镜头串行累计。",
+          "limitation": "文字估时，不是实际录音或成片时长；数字、缩写及表演节奏可能存在误差。"
+        },
+        "script_version": 1,
+        "script_hash": "3bc193223eeedeca0a4d5a6eea1dbeee72fc2f546823f64cd106548c0967c116",
+        "data_hash": "79547a1a8070046079e5a75d5be2579ee62ecfde50ca53b0d8928795e1c7d323",
+        "brief_hash": "0e3a7dcadb5bcf8c71da182e3d0a8ce26a2c8dece6d49b2393a3562ae9d28e55"
+      },
+      "rules": {
+        "passed": false,
+        "issues": [
+          {
+            "code": "BANNED_PHRASE",
+            "message": "出现品牌禁用表述：全网第一",
+            "scene_id": "",
+            "field": "title",
+            "phrase": "全网第一"
+          },
+          {
+            "code": "BANNED_PHRASE",
+            "message": "出现品牌禁用表述：百分百准确",
+            "scene_id": "S1",
+            "field": "narration",
+            "phrase": "百分百准确"
+          },
+          {
+            "code": "BANNED_PHRASE",
+            "message": "出现品牌禁用表述：百分百准确",
+            "scene_id": "S1",
+            "field": "subtitle",
+            "phrase": "百分百准确"
+          },
+          {
+            "code": "UNSUPPORTED_NUMBER",
+            "message": "数字表述缺少对应文句及支持原文；结构性步骤编号除外。",
+            "scene_id": "",
+            "field": "title",
+            "number": "80%"
+          },
+          {
+            "code": "UNSUPPORTED_NUMBER",
+            "message": "数字表述缺少对应文句及支持原文；结构性步骤编号除外。",
+            "scene_id": "S1",
+            "field": "narration",
+            "number": "80%"
+          },
+          {
+            "code": "UNSUPPORTED_NUMBER",
+            "message": "数字表述缺少对应文句及支持原文；结构性步骤编号除外。",
+            "scene_id": "S1",
+            "field": "subtitle",
+            "number": "80%"
+          }
+        ],
+        "scope": "deterministic_only",
+        "requires_semantic_verification": true,
+        "semantic_status": "not_checked",
+        "checked_claims": 1,
+        "valid_quote_mappings": 1,
+        "semantic": {
+          "status": "not_run",
+          "reason": "deterministic_checks_failed"
+        },
+        "script_version": 1,
+        "script_hash": "3bc193223eeedeca0a4d5a6eea1dbeee72fc2f546823f64cd106548c0967c116",
+        "data_hash": "79547a1a8070046079e5a75d5be2579ee62ecfde50ca53b0d8928795e1c7d323",
+        "brief_hash": "0e3a7dcadb5bcf8c71da182e3d0a8ce26a2c8dece6d49b2393a3562ae9d28e55"
+      }
+    }
+  },
+  "review_history": [
+    {
+      "review_id": "3e22453ef1569cf2f4fa",
+      "decision": "approve",
+      "feedback": "",
+      "answers": {},
+      "actor": "evaluation_simulated_human",
+      "stage": "direction",
+      "version": 1
+    }
+  ],
+  "stop_reason": null,
+  "model_calls": 10,
+  "tool_calls": 9,
+  "skills_loaded": [
+    "narrative-structure"
+  ],
+  "data_hash": "79547a1a8070046079e5a75d5be2579ee62ecfde50ca53b0d8928795e1c7d323"
+}

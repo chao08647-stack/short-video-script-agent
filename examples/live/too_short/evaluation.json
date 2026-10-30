@@ -1,0 +1,21 @@
+{
+  "case": "too_short",
+  "mode": "live",
+  "run_id": "19eda89f-9475-4c74-a1b2-ce28da36a2ad",
+  "status": "incomplete",
+  "acceptance_passed": false,
+  "acceptance_errors": [
+    "Expected a grounded clarification/stop, not an unrelated failure or exhausted loop"
+  ],
+  "elapsed_seconds": 136.36,
+  "model_calls": 40,
+  "tool_calls": 40,
+  "skills_loaded": [
+    "duration-compression",
+    "material-search",
+    "narration-subtitles",
+    "narrative-structure"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\live\\too_short"
+}

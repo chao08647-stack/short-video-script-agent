@@ -1,0 +1,21 @@
+{
+  "dataset_notice": "所有品牌、产品、功能与数据均为本考核项目的合成资料，不代表真实商品。",
+  "banned_phrases": [
+    "全网第一",
+    "百分百准确",
+    "100%准确",
+    "永久有效",
+    "保证爆款",
+    "零错误"
+  ],
+  "chars_per_second": 4,
+  "subtitle_chars_per_second": 6,
+  "english_words_per_second": 2.5,
+  "minimum_scene_seconds": 1,
+  "brand_guidance": [
+    "使用清楚、具体的功能描述。",
+    "产品断言必须由对应来源原文支持。",
+    "不得扩大实验数据的适用条件。",
+    "不得编造价格、下载量、效率提升或准确率。"
+  ]
+}

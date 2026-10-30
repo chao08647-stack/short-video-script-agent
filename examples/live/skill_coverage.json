@@ -1,0 +1,2411 @@
+{
+  "note": "加载、模型声明与候选关联分别统计。候选关联不等于证明技能有效，须结合对应产物审阅。Mock与live输出目录分离。",
+  "skills": {
+    "audience-angle": {
+      "loaded": [
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 83
+        }
+      ],
+      "model_declared_artifacts": [],
+      "candidate_links": []
+    },
+    "brand-revision": {
+      "loaded": [
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 93
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 118
+        }
+      ],
+      "model_declared_artifacts": [],
+      "candidate_links": []
+    },
+    "brief-clarification": {
+      "loaded": [
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 46
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 3
+        }
+      ],
+      "model_declared_artifacts": [
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 8,
+          "tool": "ask_user",
+          "artifact_event_seq": 7
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 33,
+          "tool": "patch_script",
+          "artifact_event_seq": 31
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 70,
+          "tool": "patch_script",
+          "artifact_event_seq": 68
+        }
+      ],
+      "candidate_links": []
+    },
+    "claim-grounding": {
+      "loaded": [
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 3
+        },
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 32
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 124
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 98
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 102
+        }
+      ],
+      "model_declared_artifacts": [
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 8,
+          "tool": "ask_user",
+          "artifact_event_seq": 7
+        },
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 13,
+          "tool": "ask_user",
+          "artifact_event_seq": 12
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 106,
+          "tool": "patch_script",
+          "artifact_event_seq": 105
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 110,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 108
+        }
+      ],
+      "candidate_links": [
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 37,
+          "tool": "check_rules",
+          "artifact_event_seq": 36
+        }
+      ]
+    },
+    "duration-compression": {
+      "loaded": [
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 3
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 59
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 83
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 37
+        }
+      ],
+      "model_declared_artifacts": [
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 19,
+          "tool": "submit_direction",
+          "artifact_event_seq": 17
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 63,
+          "tool": "patch_script",
+          "artifact_event_seq": 62
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 66,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 65
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 69,
+          "tool": "patch_script",
+          "artifact_event_seq": 68
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 72,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 71
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 75,
+          "tool": "patch_script",
+          "artifact_event_seq": 74
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 78,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 77
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 84,
+          "tool": "check_rules",
+          "artifact_event_seq": 81
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 87,
+          "tool": "patch_script",
+          "artifact_event_seq": 86
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 92,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 91
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 98,
+          "tool": "check_rules",
+          "artifact_event_seq": 95
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 102,
+          "tool": "patch_script",
+          "artifact_event_seq": 100
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 106,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 105
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 114,
+          "tool": "patch_script",
+          "artifact_event_seq": 112
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 120,
+          "tool": "check_rules",
+          "artifact_event_seq": 118
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 41,
+          "tool": "patch_script",
+          "artifact_event_seq": 40
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 52,
+          "tool": "patch_script",
+          "artifact_event_seq": 51
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 64,
+          "tool": "patch_script",
+          "artifact_event_seq": 63
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 68,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 67
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 71,
+          "tool": "patch_script",
+          "artifact_event_seq": 70
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 74,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 73
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 77,
+          "tool": "patch_script",
+          "artifact_event_seq": 76
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 80,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 79
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 83,
+          "tool": "patch_script",
+          "artifact_event_seq": 82
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 86,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 85
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 89,
+          "tool": "patch_script",
+          "artifact_event_seq": 88
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 92,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 91
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 95,
+          "tool": "patch_script",
+          "artifact_event_seq": 94
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 98,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 97
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 101,
+          "tool": "patch_script",
+          "artifact_event_seq": 100
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 104,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 103
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 107,
+          "tool": "patch_script",
+          "artifact_event_seq": 106
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 110,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 109
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 113,
+          "tool": "patch_script",
+          "artifact_event_seq": 112
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 116,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 115
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 119,
+          "tool": "patch_script",
+          "artifact_event_seq": 118
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 122,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 121
+        }
+      ],
+      "candidate_links": [
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 8,
+          "tool": "ask_user",
+          "artifact_event_seq": 7
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 110,
+          "tool": "check_rules",
+          "artifact_event_seq": 109
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 44,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 43
+        }
+      ]
+    },
+    "evidence-conflict": {
+      "loaded": [
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 53
+        }
+      ],
+      "model_declared_artifacts": [],
+      "candidate_links": []
+    },
+    "factual-revision": {
+      "loaded": [
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 73
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 113
+        }
+      ],
+      "model_declared_artifacts": [],
+      "candidate_links": []
+    },
+    "hook-writing": {
+      "loaded": [
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 98
+        }
+      ],
+      "model_declared_artifacts": [],
+      "candidate_links": []
+    },
+    "human-feedback": {
+      "loaded": [
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 68
+        }
+      ],
+      "model_declared_artifacts": [],
+      "candidate_links": []
+    },
+    "material-search": {
+      "loaded": [
+        {
+          "case": "conflict",
+          "trace": "conflict\\trace.jsonl",
+          "event_seq": 3
+        },
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 58
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 3
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 3
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 3
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 93
+        },
+        {
+          "case": "no_materials",
+          "trace": "no_materials\\trace.jsonl",
+          "event_seq": 3
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 3
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 3
+        },
+        {
+          "case": "step_limit",
+          "trace": "step_limit\\trace.jsonl",
+          "event_seq": 3
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 3
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 3
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 3
+        }
+      ],
+      "model_declared_artifacts": [
+        {
+          "case": "conflict",
+          "trace": "conflict\\trace.jsonl",
+          "event_seq": 7,
+          "tool": "search_materials",
+          "artifact_event_seq": 6
+        },
+        {
+          "case": "conflict",
+          "trace": "conflict\\trace.jsonl",
+          "event_seq": 10,
+          "tool": "submit_direction",
+          "artifact_event_seq": 9
+        },
+        {
+          "case": "conflict",
+          "trace": "conflict\\trace.jsonl",
+          "event_seq": 14,
+          "tool": "request_review",
+          "artifact_event_seq": 13
+        },
+        {
+          "case": "conflict",
+          "trace": "conflict\\trace.jsonl",
+          "event_seq": 21,
+          "tool": "search_materials",
+          "artifact_event_seq": 20
+        },
+        {
+          "case": "conflict",
+          "trace": "conflict\\trace.jsonl",
+          "event_seq": 26,
+          "tool": "ask_user",
+          "artifact_event_seq": 25
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 7,
+          "tool": "search_materials",
+          "artifact_event_seq": 6
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 10,
+          "tool": "submit_direction",
+          "artifact_event_seq": 9
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 14,
+          "tool": "request_review",
+          "artifact_event_seq": 13
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 18,
+          "tool": "submit_script",
+          "artifact_event_seq": 17
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 21,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 20
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 24,
+          "tool": "check_rules",
+          "artifact_event_seq": 23
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 7,
+          "tool": "search_materials",
+          "artifact_event_seq": 6
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 10,
+          "tool": "submit_direction",
+          "artifact_event_seq": 9
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 14,
+          "tool": "request_review",
+          "artifact_event_seq": 13
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 22,
+          "tool": "submit_script",
+          "artifact_event_seq": 20
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 82,
+          "tool": "check_rules",
+          "artifact_event_seq": 81
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 89,
+          "tool": "patch_script",
+          "artifact_event_seq": 86
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 96,
+          "tool": "check_rules",
+          "artifact_event_seq": 95
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 103,
+          "tool": "patch_script",
+          "artifact_event_seq": 100
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 115,
+          "tool": "patch_script",
+          "artifact_event_seq": 112
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 7,
+          "tool": "search_materials",
+          "artifact_event_seq": 6
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 10,
+          "tool": "submit_direction",
+          "artifact_event_seq": 9
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 14,
+          "tool": "request_review",
+          "artifact_event_seq": 13
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 18,
+          "tool": "submit_script",
+          "artifact_event_seq": 17
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 21,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 20
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 24,
+          "tool": "patch_script",
+          "artifact_event_seq": 23
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 27,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 26
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 30,
+          "tool": "patch_script",
+          "artifact_event_seq": 29
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 36,
+          "tool": "check_rules",
+          "artifact_event_seq": 35
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 39,
+          "tool": "patch_script",
+          "artifact_event_seq": 38
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 42,
+          "tool": "check_rules",
+          "artifact_event_seq": 41
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 45,
+          "tool": "patch_script",
+          "artifact_event_seq": 44
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 48,
+          "tool": "check_rules",
+          "artifact_event_seq": 47
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 51,
+          "tool": "patch_script",
+          "artifact_event_seq": 50
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 55,
+          "tool": "check_rules",
+          "artifact_event_seq": 54
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 88,
+          "tool": "patch_script",
+          "artifact_event_seq": 87
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 94,
+          "tool": "patch_script",
+          "artifact_event_seq": 93
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 97,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 96
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 100,
+          "tool": "patch_script",
+          "artifact_event_seq": 99
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 103,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 102
+        },
+        {
+          "case": "no_materials",
+          "trace": "no_materials\\trace.jsonl",
+          "event_seq": 7,
+          "tool": "search_materials",
+          "artifact_event_seq": 6
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 7,
+          "tool": "search_materials",
+          "artifact_event_seq": 6
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 10,
+          "tool": "submit_direction",
+          "artifact_event_seq": 9
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 14,
+          "tool": "request_review",
+          "artifact_event_seq": 13
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 18,
+          "tool": "submit_script",
+          "artifact_event_seq": 17
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 21,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 20
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 24,
+          "tool": "check_rules",
+          "artifact_event_seq": 23
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 27,
+          "tool": "patch_script",
+          "artifact_event_seq": 26
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 30,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 29
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 33,
+          "tool": "check_rules",
+          "artifact_event_seq": 32
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 36,
+          "tool": "patch_script",
+          "artifact_event_seq": 35
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 39,
+          "tool": "check_rules",
+          "artifact_event_seq": 38
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 42,
+          "tool": "patch_script",
+          "artifact_event_seq": 41
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 45,
+          "tool": "check_rules",
+          "artifact_event_seq": 44
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 48,
+          "tool": "patch_script",
+          "artifact_event_seq": 47
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 51,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 50
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 54,
+          "tool": "check_rules",
+          "artifact_event_seq": 53
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 57,
+          "tool": "patch_script",
+          "artifact_event_seq": 56
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 60,
+          "tool": "check_rules",
+          "artifact_event_seq": 59
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 63,
+          "tool": "patch_script",
+          "artifact_event_seq": 62
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 66,
+          "tool": "check_rules",
+          "artifact_event_seq": 65
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 69,
+          "tool": "patch_script",
+          "artifact_event_seq": 68
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 72,
+          "tool": "check_rules",
+          "artifact_event_seq": 71
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 75,
+          "tool": "patch_script",
+          "artifact_event_seq": 74
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 78,
+          "tool": "check_rules",
+          "artifact_event_seq": 77
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 81,
+          "tool": "patch_script",
+          "artifact_event_seq": 80
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 84,
+          "tool": "check_rules",
+          "artifact_event_seq": 83
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 87,
+          "tool": "patch_script",
+          "artifact_event_seq": 86
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 90,
+          "tool": "check_rules",
+          "artifact_event_seq": 89
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 93,
+          "tool": "patch_script",
+          "artifact_event_seq": 92
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 96,
+          "tool": "check_rules",
+          "artifact_event_seq": 95
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 99,
+          "tool": "patch_script",
+          "artifact_event_seq": 98
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 102,
+          "tool": "check_rules",
+          "artifact_event_seq": 101
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 105,
+          "tool": "patch_script",
+          "artifact_event_seq": 104
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 108,
+          "tool": "check_rules",
+          "artifact_event_seq": 107
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 111,
+          "tool": "patch_script",
+          "artifact_event_seq": 110
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 114,
+          "tool": "check_rules",
+          "artifact_event_seq": 113
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 117,
+          "tool": "patch_script",
+          "artifact_event_seq": 116
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 120,
+          "tool": "check_rules",
+          "artifact_event_seq": 119
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 123,
+          "tool": "patch_script",
+          "artifact_event_seq": 122
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 7,
+          "tool": "search_materials",
+          "artifact_event_seq": 6
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 10,
+          "tool": "submit_direction",
+          "artifact_event_seq": 9
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 14,
+          "tool": "request_review",
+          "artifact_event_seq": 13
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 18,
+          "tool": "submit_script",
+          "artifact_event_seq": 17
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 21,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 20
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 24,
+          "tool": "check_rules",
+          "artifact_event_seq": 23
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 27,
+          "tool": "patch_script",
+          "artifact_event_seq": 26
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 30,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 29
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 33,
+          "tool": "check_rules",
+          "artifact_event_seq": 32
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 36,
+          "tool": "patch_script",
+          "artifact_event_seq": 35
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 39,
+          "tool": "check_rules",
+          "artifact_event_seq": 38
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 42,
+          "tool": "patch_script",
+          "artifact_event_seq": 41
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 45,
+          "tool": "check_rules",
+          "artifact_event_seq": 44
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 48,
+          "tool": "patch_script",
+          "artifact_event_seq": 47
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 51,
+          "tool": "check_rules",
+          "artifact_event_seq": 50
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 54,
+          "tool": "patch_script",
+          "artifact_event_seq": 53
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 58,
+          "tool": "check_rules",
+          "artifact_event_seq": 57
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 61,
+          "tool": "patch_script",
+          "artifact_event_seq": 60
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 65,
+          "tool": "check_rules",
+          "artifact_event_seq": 64
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 68,
+          "tool": "patch_script",
+          "artifact_event_seq": 67
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 72,
+          "tool": "check_rules",
+          "artifact_event_seq": 71
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 75,
+          "tool": "patch_script",
+          "artifact_event_seq": 74
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 79,
+          "tool": "check_rules",
+          "artifact_event_seq": 78
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 82,
+          "tool": "patch_script",
+          "artifact_event_seq": 81
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 86,
+          "tool": "check_rules",
+          "artifact_event_seq": 85
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 89,
+          "tool": "patch_script",
+          "artifact_event_seq": 88
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 92,
+          "tool": "check_rules",
+          "artifact_event_seq": 91
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 95,
+          "tool": "patch_script",
+          "artifact_event_seq": 94
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 98,
+          "tool": "check_rules",
+          "artifact_event_seq": 97
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 109,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 108
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 7,
+          "tool": "search_materials",
+          "artifact_event_seq": 6
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 10,
+          "tool": "submit_direction",
+          "artifact_event_seq": 9
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 14,
+          "tool": "request_review",
+          "artifact_event_seq": 13
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 18,
+          "tool": "submit_script",
+          "artifact_event_seq": 17
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 21,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 20
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 24,
+          "tool": "patch_script",
+          "artifact_event_seq": 23
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 27,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 26
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 30,
+          "tool": "patch_script",
+          "artifact_event_seq": 29
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 20,
+          "tool": "submit_direction",
+          "artifact_event_seq": 19
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 24,
+          "tool": "request_review",
+          "artifact_event_seq": 23
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 38,
+          "tool": "patch_script",
+          "artifact_event_seq": 36
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 46,
+          "tool": "patch_script",
+          "artifact_event_seq": 44
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 54,
+          "tool": "patch_script",
+          "artifact_event_seq": 52
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 62,
+          "tool": "patch_script",
+          "artifact_event_seq": 60
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 66,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 65
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 74,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 73
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 82,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 81
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 90,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 89
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 98,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 97
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 104,
+          "tool": "patch_script",
+          "artifact_event_seq": 102
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 111,
+          "tool": "patch_script",
+          "artifact_event_seq": 109
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 114,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 113
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 120,
+          "tool": "patch_script",
+          "artifact_event_seq": 118
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 128,
+          "tool": "patch_script",
+          "artifact_event_seq": 126
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 136,
+          "tool": "patch_script",
+          "artifact_event_seq": 134
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 144,
+          "tool": "patch_script",
+          "artifact_event_seq": 142
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 152,
+          "tool": "patch_script",
+          "artifact_event_seq": 150
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 7,
+          "tool": "search_materials",
+          "artifact_event_seq": 6
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 10,
+          "tool": "submit_direction",
+          "artifact_event_seq": 9
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 14,
+          "tool": "request_review",
+          "artifact_event_seq": 13
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 18,
+          "tool": "submit_script",
+          "artifact_event_seq": 17
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 21,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 20
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 24,
+          "tool": "check_rules",
+          "artifact_event_seq": 23
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 33,
+          "tool": "patch_script",
+          "artifact_event_seq": 32
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 36,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 35
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 39,
+          "tool": "check_rules",
+          "artifact_event_seq": 38
+        }
+      ],
+      "candidate_links": [
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 33,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 32
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 91,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 90
+        },
+        {
+          "case": "no_materials",
+          "trace": "no_materials\\trace.jsonl",
+          "event_seq": 11,
+          "tool": "ask_user",
+          "artifact_event_seq": 10
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 33,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 32
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 10,
+          "tool": "ask_user",
+          "artifact_event_seq": 9
+        }
+      ]
+    },
+    "narration-subtitles": {
+      "loaded": [
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 29
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 88
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 48
+        }
+      ],
+      "model_declared_artifacts": [
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 53,
+          "tool": "patch_script",
+          "artifact_event_seq": 51
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 65,
+          "tool": "patch_script",
+          "artifact_event_seq": 63
+        }
+      ],
+      "candidate_links": [
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 56,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 55
+        }
+      ]
+    },
+    "narrative-structure": {
+      "loaded": [
+        {
+          "case": "conflict",
+          "trace": "conflict\\trace.jsonl",
+          "event_seq": 17
+        },
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 11
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 17
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 11
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 60
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 27
+        }
+      ],
+      "model_declared_artifacts": [
+        {
+          "case": "conflict",
+          "trace": "conflict\\trace.jsonl",
+          "event_seq": 22,
+          "tool": "search_materials",
+          "artifact_event_seq": 20
+        },
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 18,
+          "tool": "submit_direction",
+          "artifact_event_seq": 17
+        },
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 23,
+          "tool": "request_review",
+          "artifact_event_seq": 22
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 21,
+          "tool": "submit_script",
+          "artifact_event_seq": 20
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 25,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 24
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 28,
+          "tool": "patch_script",
+          "artifact_event_seq": 27
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 31,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 30
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 34,
+          "tool": "patch_script",
+          "artifact_event_seq": 33
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 37,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 36
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 40,
+          "tool": "patch_script",
+          "artifact_event_seq": 39
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 43,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 42
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 46,
+          "tool": "patch_script",
+          "artifact_event_seq": 45
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 49,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 48
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 52,
+          "tool": "patch_script",
+          "artifact_event_seq": 51
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 55,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 54
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 83,
+          "tool": "check_rules",
+          "artifact_event_seq": 81
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 88,
+          "tool": "patch_script",
+          "artifact_event_seq": 86
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 97,
+          "tool": "check_rules",
+          "artifact_event_seq": 95
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 101,
+          "tool": "patch_script",
+          "artifact_event_seq": 100
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 113,
+          "tool": "patch_script",
+          "artifact_event_seq": 112
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 119,
+          "tool": "check_rules",
+          "artifact_event_seq": 118
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 15,
+          "tool": "search_materials",
+          "artifact_event_seq": 14
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 18,
+          "tool": "submit_direction",
+          "artifact_event_seq": 17
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 22,
+          "tool": "request_review",
+          "artifact_event_seq": 21
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 26,
+          "tool": "submit_script",
+          "artifact_event_seq": 25
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 32,
+          "tool": "patch_script",
+          "artifact_event_seq": 31
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 36,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 35
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 39,
+          "tool": "patch_script",
+          "artifact_event_seq": 38
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 42,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 41
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 45,
+          "tool": "patch_script",
+          "artifact_event_seq": 44
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 48,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 47
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 51,
+          "tool": "patch_script",
+          "artifact_event_seq": 50
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 54,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 53
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 57,
+          "tool": "patch_script",
+          "artifact_event_seq": 56
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 63,
+          "tool": "patch_script",
+          "artifact_event_seq": 62
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 66,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 65
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 69,
+          "tool": "patch_script",
+          "artifact_event_seq": 68
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 73,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 72
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 76,
+          "tool": "patch_script",
+          "artifact_event_seq": 75
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 79,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 78
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 31,
+          "tool": "submit_script",
+          "artifact_event_seq": 30
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 34,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 33
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 37,
+          "tool": "patch_script",
+          "artifact_event_seq": 36
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 42,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 41
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 45,
+          "tool": "patch_script",
+          "artifact_event_seq": 44
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 50,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 49
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 53,
+          "tool": "patch_script",
+          "artifact_event_seq": 52
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 58,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 57
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 61,
+          "tool": "patch_script",
+          "artifact_event_seq": 60
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 68,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 65
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 71,
+          "tool": "patch_script",
+          "artifact_event_seq": 70
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 76,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 73
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 79,
+          "tool": "patch_script",
+          "artifact_event_seq": 78
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 84,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 81
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 87,
+          "tool": "patch_script",
+          "artifact_event_seq": 86
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 92,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 89
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 95,
+          "tool": "patch_script",
+          "artifact_event_seq": 94
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 100,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 97
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 103,
+          "tool": "patch_script",
+          "artifact_event_seq": 102
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 110,
+          "tool": "patch_script",
+          "artifact_event_seq": 109
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 116,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 113
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 119,
+          "tool": "patch_script",
+          "artifact_event_seq": 118
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 124,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 123
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 127,
+          "tool": "patch_script",
+          "artifact_event_seq": 126
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 132,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 131
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 135,
+          "tool": "patch_script",
+          "artifact_event_seq": 134
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 140,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 139
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 143,
+          "tool": "patch_script",
+          "artifact_event_seq": 142
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 148,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 147
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 151,
+          "tool": "patch_script",
+          "artifact_event_seq": 150
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 156,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 155
+        }
+      ],
+      "candidate_links": [
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 15,
+          "tool": "search_materials",
+          "artifact_event_seq": 14
+        },
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 27,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 26
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 29,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 28
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 60,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 59
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 107,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 106
+        }
+      ]
+    },
+    "platform-adaptation": {
+      "loaded": [
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 88
+        }
+      ],
+      "model_declared_artifacts": [],
+      "candidate_links": []
+    },
+    "query-rewrite": {
+      "loaded": [
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 41
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 13
+        }
+      ],
+      "model_declared_artifacts": [
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 17,
+          "tool": "search_materials",
+          "artifact_event_seq": 16
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 39,
+          "tool": "patch_script",
+          "artifact_event_seq": 36
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 47,
+          "tool": "patch_script",
+          "artifact_event_seq": 44
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 55,
+          "tool": "patch_script",
+          "artifact_event_seq": 52
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 63,
+          "tool": "patch_script",
+          "artifact_event_seq": 60
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 67,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 65
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 75,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 73
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 83,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 81
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 91,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 89
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 99,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 97
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 115,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 113
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 121,
+          "tool": "patch_script",
+          "artifact_event_seq": 118
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 129,
+          "tool": "patch_script",
+          "artifact_event_seq": 126
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 137,
+          "tool": "patch_script",
+          "artifact_event_seq": 134
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 145,
+          "tool": "patch_script",
+          "artifact_event_seq": 142
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 153,
+          "tool": "patch_script",
+          "artifact_event_seq": 150
+        }
+      ],
+      "candidate_links": []
+    },
+    "storyboard-planning": {
+      "loaded": [
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 63
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 103
+        }
+      ],
+      "model_declared_artifacts": [],
+      "candidate_links": []
+    },
+    "visual-direction": {
+      "loaded": [
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 78
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 108
+        }
+      ],
+      "model_declared_artifacts": [],
+      "candidate_links": []
+    }
+  }
+}

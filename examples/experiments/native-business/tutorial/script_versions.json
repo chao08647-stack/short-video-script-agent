@@ -1,0 +1,313 @@
+[
+  {
+    "event_seq": 24,
+    "arguments": {
+      "title": "小剪 App 从生成字幕到手动修改的操作教程",
+      "scenes": [
+        {
+          "scene_id": "S01",
+          "visual": "小剪 App 主界面，显示字幕生成按钮",
+          "narration": "欢迎来到小剪 App，点击这里开始自动生成字幕",
+          "subtitle": "点击生成字幕",
+          "source_ids": [
+            "P01"
+          ]
+        },
+        {
+          "scene_id": "S02",
+          "visual": "生成后的字幕列表，显示可编辑区域",
+          "narration": "现在你可以手动修改这些字幕了",
+          "subtitle": "支持手动修改字幕",
+          "source_ids": [
+            "P02"
+          ]
+        },
+        {
+          "scene_id": "S03",
+          "visual": "字幕样式设置界面，展示字体大小和颜色选项",
+          "narration": "调整字幕的字体大小和颜色，让它们更加突出",
+          "subtitle": "调整字幕样式",
+          "source_ids": [
+            "P03"
+          ]
+        },
+        {
+          "scene_id": "S04",
+          "visual": "检查字幕内容，显示识别错误提示",
+          "narration": "检查字幕内容，如果有识别错误，请手动修正",
+          "subtitle": "检查并修正字幕",
+          "source_ids": [
+            "P04"
+          ]
+        }
+      ],
+      "claims": [
+        {
+          "text": "小剪 App 支持自动生成字幕。",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S01"
+        },
+        {
+          "text": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "source_id": "P02",
+          "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "scene_id": "S02"
+        },
+        {
+          "text": "小剪 App 支持调整字幕的字体大小和颜色。",
+          "source_id": "P03",
+          "quote": "小剪 App 支持调整字幕的字体大小和颜色。",
+          "scene_id": "S03"
+        },
+        {
+          "text": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+          "source_id": "P04",
+          "quote": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+          "scene_id": "S04"
+        }
+      ],
+      "used_skills": [
+        "narration-subtitles"
+      ],
+      "reason": "根据现有材料和已加载的旁白与字幕技能，提交完整的脚本"
+    }
+  },
+  {
+    "event_seq": 47,
+    "arguments": {
+      "title": "小剪 App 从生成字幕到手动修改的操作教程",
+      "scenes": [
+        {
+          "scene_id": "S01",
+          "visual": "小剪 App 主界面，显示字幕生成按钮",
+          "narration": "欢迎来到小剪 App，点击这里开始自动生成字幕",
+          "subtitle": "点击生成字幕",
+          "source_ids": [
+            "P01"
+          ],
+          "min_display_seconds": 1.0
+        },
+        {
+          "scene_id": "S02",
+          "visual": "生成后的字幕列表，显示可编辑区域",
+          "narration": "现在你可以手动修改这些字幕了",
+          "subtitle": "支持手动修改字幕",
+          "source_ids": [
+            "P02"
+          ],
+          "min_display_seconds": 1.0
+        },
+        {
+          "scene_id": "S03",
+          "visual": "字幕样式设置界面，展示字体大小和颜色选项",
+          "narration": "调整字幕的字体大小和颜色，让它们更加突出",
+          "subtitle": "调整字幕样式",
+          "source_ids": [
+            "P03"
+          ],
+          "min_display_seconds": 1.0
+        },
+        {
+          "scene_id": "S04",
+          "visual": "检查字幕内容，显示识别错误提示",
+          "narration": "检查字幕内容，如果有识别错误，请手动修正",
+          "subtitle": "检查并修正字幕",
+          "source_ids": [
+            "P04"
+          ],
+          "min_display_seconds": 1.0
+        }
+      ],
+      "claims": [
+        {
+          "text": "小剪 App 支持自动生成字幕。",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S01"
+        },
+        {
+          "text": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "source_id": "P02",
+          "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "scene_id": "S02"
+        },
+        {
+          "text": "小剪 App 支持调整字幕的字体大小和颜色。",
+          "source_id": "P03",
+          "quote": "小剪 App 支持调整字幕的字体大小和颜色。",
+          "scene_id": "S03"
+        },
+        {
+          "text": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+          "source_id": "P04",
+          "quote": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+          "scene_id": "S04"
+        }
+      ],
+      "used_skills": [
+        "narration-subtitles",
+        "claim-grounding"
+      ],
+      "reason": "根据现有材料和已加载的旁白与字幕技能，提交完整的脚本"
+    }
+  },
+  {
+    "event_seq": 64,
+    "arguments": {
+      "title": "小剪 App 从生成字幕到手动修改的操作教程",
+      "scenes": [
+        {
+          "scene_id": "S01",
+          "visual": "小剪 App 主界面，显示字幕生成按钮",
+          "narration": "欢迎来到小剪 App，点击这里开始自动生成字幕",
+          "subtitle": "点击生成字幕",
+          "source_ids": [
+            "P01"
+          ],
+          "min_display_seconds": 1.0
+        },
+        {
+          "scene_id": "S02",
+          "visual": "生成后的字幕列表，显示可编辑区域",
+          "narration": "现在你可以手动修改这些字幕了",
+          "subtitle": "支持手动修改字幕",
+          "source_ids": [
+            "P02"
+          ],
+          "min_display_seconds": 1.0
+        },
+        {
+          "scene_id": "S03",
+          "visual": "字幕样式设置界面，展示字体大小和颜色选项",
+          "narration": "调整字幕的字体大小和颜色，让它们更加突出",
+          "subtitle": "调整字幕样式",
+          "source_ids": [
+            "P03"
+          ],
+          "min_display_seconds": 1.0
+        },
+        {
+          "scene_id": "S04",
+          "visual": "检查字幕内容，显示识别错误提示",
+          "narration": "检查字幕内容，如果有识别错误，请手动修正",
+          "subtitle": "检查并修正字幕",
+          "source_ids": [
+            "P04"
+          ],
+          "min_display_seconds": 1.0
+        }
+      ],
+      "claims": [
+        {
+          "text": "小剪 App 支持自动生成字幕。",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S01"
+        },
+        {
+          "text": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "source_id": "P02",
+          "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "scene_id": "S02"
+        },
+        {
+          "text": "小剪 App 支持调整字幕的字体大小和颜色。",
+          "source_id": "P03",
+          "quote": "小剪 App 支持调整字幕的字体大小和颜色。",
+          "scene_id": "S03"
+        },
+        {
+          "text": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+          "source_id": "P04",
+          "quote": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+          "scene_id": "S04"
+        }
+      ],
+      "used_skills": [
+        "narration-subtitles",
+        "claim-grounding"
+      ],
+      "reason": "根据现有材料和已加载的旁白与字幕技能，提交完整的脚本"
+    }
+  },
+  {
+    "event_seq": 85,
+    "arguments": {
+      "title": "小剪 App 从生成字幕到手动修改的操作教程",
+      "scenes": [
+        {
+          "scene_id": "S01",
+          "visual": "小剪 App 主界面，显示字幕生成按钮",
+          "narration": "欢迎来到小剪 App，点击这里开始自动生成字幕",
+          "subtitle": "点击生成字幕",
+          "source_ids": [
+            "P01"
+          ],
+          "min_display_seconds": 1.0
+        },
+        {
+          "scene_id": "S02",
+          "visual": "生成后的字幕列表，显示可编辑区域",
+          "narration": "现在你可以手动修改这些字幕了",
+          "subtitle": "支持手动修改字幕",
+          "source_ids": [
+            "P02"
+          ],
+          "min_display_seconds": 1.0
+        },
+        {
+          "scene_id": "S03",
+          "visual": "字幕样式设置界面，展示字体大小和颜色选项",
+          "narration": "调整字幕的字体大小和颜色，让它们更加突出",
+          "subtitle": "调整字幕样式",
+          "source_ids": [
+            "P03"
+          ],
+          "min_display_seconds": 1.0
+        },
+        {
+          "scene_id": "S04",
+          "visual": "检查字幕内容，显示识别错误提示",
+          "narration": "检查字幕内容，如果有识别错误，请手动修正",
+          "subtitle": "检查并修正字幕",
+          "source_ids": [
+            "P04"
+          ],
+          "min_display_seconds": 1.0
+        }
+      ],
+      "claims": [
+        {
+          "text": "小剪 App 支持自动生成字幕。",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S01"
+        },
+        {
+          "text": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "source_id": "P02",
+          "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "scene_id": "S02"
+        },
+        {
+          "text": "小剪 App 支持调整字幕的字体大小和颜色。",
+          "source_id": "P03",
+          "quote": "小剪 App 支持调整字幕的字体大小和颜色。",
+          "scene_id": "S03"
+        },
+        {
+          "text": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+          "source_id": "P04",
+          "quote": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+          "scene_id": "S04"
+        }
+      ],
+      "used_skills": [
+        "narration-subtitles",
+        "claim-grounding"
+      ],
+      "reason": "根据现有材料和已加载的旁白与字幕技能，提交完整的脚本"
+    }
+  }
+]

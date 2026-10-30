@@ -1,0 +1,18 @@
+{
+  "case": "missing_info",
+  "mode": "live",
+  "run_id": "8c3b38fc-ec86-46b4-af23-a3b1e984b165",
+  "status": "incomplete",
+  "acceptance_passed": false,
+  "acceptance_errors": [
+    "Expected completed, got incomplete"
+  ],
+  "elapsed_seconds": 101.73,
+  "model_calls": 11,
+  "tool_calls": 8,
+  "skills_loaded": [
+    "material-search"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\live\\missing_info"
+}

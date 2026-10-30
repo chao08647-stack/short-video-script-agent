@@ -1,0 +1,16 @@
+{
+  "case": "step_limit",
+  "mode": "mock",
+  "run_id": "e2c11e91-04b0-4676-a4da-cead5be3690e",
+  "status": "incomplete",
+  "acceptance_passed": true,
+  "acceptance_errors": [],
+  "elapsed_seconds": 0.06,
+  "model_calls": 1,
+  "tool_calls": 1,
+  "skills_loaded": [
+    "material-search"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\mock\\step_limit"
+}

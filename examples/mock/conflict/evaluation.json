@@ -1,0 +1,17 @@
+{
+  "case": "conflict",
+  "mode": "mock",
+  "run_id": "7c8c422e-1f2c-467c-a5eb-392122181eac",
+  "status": "waiting_human",
+  "acceptance_passed": true,
+  "acceptance_errors": [],
+  "elapsed_seconds": 0.09,
+  "model_calls": 4,
+  "tool_calls": 4,
+  "skills_loaded": [
+    "evidence-conflict",
+    "material-search"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\mock\\conflict"
+}

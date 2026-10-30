@@ -1,0 +1,18 @@
+{
+  "case": "brand_and_fact_revision",
+  "mode": "mock",
+  "run_id": "f4f36c76-2953-40f5-9756-5535b7f649d0",
+  "status": "completed",
+  "acceptance_passed": true,
+  "acceptance_errors": [],
+  "elapsed_seconds": 0.34,
+  "model_calls": 14,
+  "tool_calls": 13,
+  "skills_loaded": [
+    "audience-angle",
+    "factual-revision",
+    "material-search"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\mock\\brand_and_fact_revision"
+}

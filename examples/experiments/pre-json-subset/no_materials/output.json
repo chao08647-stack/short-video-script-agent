@@ -1,0 +1,39 @@
+{
+  "run_id": "baccc624-d20f-4011-b0b8-205f74899aaa",
+  "mode": "live",
+  "status": "waiting_human",
+  "phase": "direction",
+  "brief": {
+    "topic": "介绍星河投影仪的无线投屏功能",
+    "audience": "短视频剪辑新手",
+    "platform": "抖音",
+    "target_seconds": 30.0,
+    "style": "轻松、直白"
+  },
+  "direction": null,
+  "script": null,
+  "script_version": 0,
+  "checks": {},
+  "estimated_seconds": null,
+  "duration_note": "基于固定语速与画面展示需求估算，不代表真实配音或成片测量。",
+  "sources": [],
+  "pending_review": {
+    "review_id": "c64ee35f479cb353e157",
+    "stage": "clarification",
+    "version": 0,
+    "object_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+    "reason": "您能否提供更多关于星河投影仪无线投屏功能的具体描述？",
+    "fields": [],
+    "direction": null,
+    "script": null,
+    "checks": {}
+  },
+  "review_history": [],
+  "stop_reason": null,
+  "model_calls": 3,
+  "tool_calls": 3,
+  "skills_loaded": [
+    "material-search"
+  ],
+  "data_hash": "79e31998bf190075d512073ad5b1b9d1b45d682639fa8985787ba31cced7ddda"
+}

@@ -1,0 +1,245 @@
+{
+  "run_id": "7f06022b-2f4c-47be-9451-b3852366a306",
+  "mode": "live",
+  "status": "incomplete",
+  "phase": "draft",
+  "execution": {
+    "python": "3.12.9",
+    "langgraph": "1.2.18",
+    "mode": "live",
+    "model": {
+      "base_url": "http://127.0.0.1:8012/v1",
+      "model": "qwen25-14b-pbn-answer",
+      "max_tokens": 2048,
+      "timeout_seconds": 120.0,
+      "action_protocol": "json"
+    },
+    "code_hashes": {
+      "engine.py": "70ebd55307fcc1e4115c7cad7c9c607e8079472be526cfa65445cd7c0c6b2d32",
+      "prompts.py": "fe9bd6f6c6c753dfed8cf10d902edc30a585bc8670333f2e7246d3b822540192",
+      "model.py": "9d9c0f529d6b01c48a88dd11dec889a4d7f2909504ea20ee3295686355fa1f06",
+      "business_tools.py": "6f3f549b2fe9f49b2ddcfd4881509a93fa162c9422a95d029ec282a11d0d2411",
+      "script_patch.py": "ec77a077f3a59753457e082c6936897bad7379218f7a24f0fee9ff7927de3ad7"
+    }
+  },
+  "brief": {
+    "topic": "用一个镜头介绍小剪 App 自动生成字幕的功能",
+    "audience": "第一次接触视频剪辑的新手",
+    "platform": "抖音",
+    "target_seconds": 10.0,
+    "style": "简洁、直白的功能说明"
+  },
+  "direction": {
+    "angle": "介绍小剪App的自动生成字幕功能，强调新手友好，适合初次尝试视频剪辑的人群。",
+    "outline": [
+      "小剪App支持自动生成字幕",
+      "建议用户检查并手动修正识别错误",
+      "用户可以手动修改生成的字幕文字"
+    ],
+    "source_ids": [
+      "P01",
+      "P04",
+      "P02"
+    ],
+    "notes": "根据检索到的资料，形成了一个简洁、直白的功能介绍方向，适用于抖音平台的新手用户。"
+  },
+  "script": {
+    "title": "小剪App自动生成字幕功能介绍",
+    "scenes": [
+      {
+        "scene_id": "S01",
+        "visual": "展示小剪App界面，突出字幕生成按钮，并引用原文支持",
+        "narration": "小剪App支持自动生成字幕",
+        "subtitle": "自动生成字幕功能",
+        "source_ids": [],
+        "min_display_seconds": 1.0
+      },
+      {
+        "scene_id": "S02",
+        "visual": "演示自动字幕生成后的内容，引用原文支持",
+        "narration": "建议用户检查并修正自动识别错误",
+        "subtitle": "检查并修正自动识别错误",
+        "source_ids": [],
+        "min_display_seconds": 1.0
+      },
+      {
+        "scene_id": "S03",
+        "visual": "展示手动修改字幕文字的界面，引用原文支持",
+        "narration": "用户可以手动调整生成的字幕文字",
+        "subtitle": "手动调整生成的字幕文字",
+        "source_ids": [],
+        "min_display_seconds": 1.0
+      }
+    ],
+    "claims": []
+  },
+  "script_version": 9,
+  "checks": {
+    "duration": {
+      "passed": false,
+      "estimated_seconds": 10.4,
+      "target_seconds": 10.0,
+      "scenes": [
+        {
+          "scene_id": "S01",
+          "narration_seconds": 2.9,
+          "subtitle_seconds": 1.34,
+          "min_display_seconds": 1.0,
+          "estimated_seconds": 2.9,
+          "start_seconds": 0.0,
+          "end_seconds": 2.9
+        },
+        {
+          "scene_id": "S02",
+          "narration_seconds": 3.75,
+          "subtitle_seconds": 1.84,
+          "min_display_seconds": 1.0,
+          "estimated_seconds": 3.75,
+          "start_seconds": 2.9,
+          "end_seconds": 6.65
+        },
+        {
+          "scene_id": "S03",
+          "narration_seconds": 3.75,
+          "subtitle_seconds": 1.84,
+          "min_display_seconds": 1.0,
+          "estimated_seconds": 3.75,
+          "start_seconds": 6.65,
+          "end_seconds": 10.4
+        }
+      ],
+      "issues": [
+        {
+          "code": "TIME_LIMIT_EXCEEDED",
+          "message": "预计 10.4 秒，超过目标 10 秒。请修改内容或请求用户调整要求。",
+          "excess_seconds": 0.4
+        }
+      ],
+      "assumptions": {
+        "chars_per_second": 4.0,
+        "subtitle_chars_per_second": 6.0,
+        "english_words_per_second": 2.5,
+        "minimum_scene_seconds": 1.0,
+        "transition_seconds": 0.0,
+        "timing_rule": "每镜取旁白、字幕阅读、画面最低展示时间的最大值；镜头串行累计。",
+        "limitation": "文字估时，不是实际录音或成片时长；数字、缩写及表演节奏可能存在误差。"
+      },
+      "script_version": 9,
+      "script_hash": "65e20d4075688e5479d234b4ba6b7d658bc7e123bd288a3b3c868145208183cb",
+      "data_hash": "79547a1a8070046079e5a75d5be2579ee62ecfde50ca53b0d8928795e1c7d323",
+      "brief_hash": "e0df72a80e9d9d5e77e08063920475698f3eea51f25b0fd0cbede5431175e4a1"
+    }
+  },
+  "estimated_seconds": 10.4,
+  "duration_note": "基于固定语速与画面展示需求估算，不代表真实配音或成片测量。",
+  "sources": [
+    {
+      "source_id": "P01",
+      "version": "2026-10-01",
+      "title": "小剪 App：自动字幕",
+      "text": "小剪 App 支持自动生成字幕。",
+      "facts": [
+        "小剪 App 支持自动生成字幕。"
+      ],
+      "keywords": [
+        "小剪",
+        "字幕",
+        "自动生成",
+        "剪辑",
+        "视频"
+      ],
+      "score": 8.9628
+    },
+    {
+      "source_id": "P04",
+      "version": "2026-10-01",
+      "title": "小剪 App：字幕使用建议",
+      "text": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+      "facts": [
+        "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。"
+      ],
+      "keywords": [
+        "小剪",
+        "字幕",
+        "检查",
+        "识别错误",
+        "修改"
+      ],
+      "score": 5.3534
+    },
+    {
+      "source_id": "P02",
+      "version": "2026-10-01",
+      "title": "小剪 App：字幕文字修改",
+      "text": "用户可以手动修改小剪 App 生成的字幕文字。",
+      "facts": [
+        "用户可以手动修改小剪 App 生成的字幕文字。"
+      ],
+      "keywords": [
+        "小剪",
+        "字幕",
+        "手动修改",
+        "文字",
+        "检查"
+      ],
+      "score": 4.0541
+    },
+    {
+      "source_id": "P03",
+      "version": "2026-10-01",
+      "title": "小剪 App：字幕样式",
+      "text": "小剪 App 支持调整字幕的字体大小和颜色。",
+      "facts": [
+        "小剪 App 支持调整字幕的字体大小和颜色。"
+      ],
+      "keywords": [
+        "小剪",
+        "字幕",
+        "样式",
+        "字体",
+        "颜色"
+      ],
+      "score": 2.9555
+    },
+    {
+      "source_id": "H01",
+      "version": "2026-10-01",
+      "title": "澄音 H1 耳机：降噪功能",
+      "text": "澄音 H1 耳机支持主动降噪模式，也支持通透模式。",
+      "facts": [
+        "澄音 H1 耳机支持主动降噪模式。",
+        "澄音 H1 耳机支持通透模式。"
+      ],
+      "keywords": [
+        "澄音",
+        "H1",
+        "耳机",
+        "主动降噪",
+        "通透"
+      ],
+      "score": 1.6094
+    }
+  ],
+  "pending_review": null,
+  "review_history": [
+    {
+      "review_id": "d8dde7251899a4e889a7",
+      "decision": "approve",
+      "feedback": "",
+      "answers": {},
+      "actor": "evaluation_simulated_human",
+      "stage": "direction",
+      "version": 1
+    }
+  ],
+  "stop_reason": {
+    "code": "model_call_limit",
+    "message": "达到模型请求次数上限。"
+  },
+  "model_calls": 40,
+  "tool_calls": 39,
+  "skills_loaded": [
+    "material-search"
+  ],
+  "data_hash": "79547a1a8070046079e5a75d5be2579ee62ecfde50ca53b0d8928795e1c7d323"
+}

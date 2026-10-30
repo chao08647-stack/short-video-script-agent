@@ -1,0 +1,17 @@
+{
+  "case": "no_materials",
+  "mode": "mock",
+  "run_id": "2a5dd218-efbd-4d3d-93cb-f222fa454007",
+  "status": "waiting_human",
+  "acceptance_passed": true,
+  "acceptance_errors": [],
+  "elapsed_seconds": 0.09,
+  "model_calls": 5,
+  "tool_calls": 5,
+  "skills_loaded": [
+    "material-search",
+    "query-rewrite"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\mock\\no_materials"
+}

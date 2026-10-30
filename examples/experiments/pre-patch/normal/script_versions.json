@@ -1,0 +1,47 @@
+[
+  {
+    "event_seq": 17,
+    "arguments": {
+      "used_skills": [
+        "material-search"
+      ],
+      "title": "小剪App字幕功能介绍",
+      "scenes": [
+        {
+          "scene_id": "1",
+          "visual": "展示小剪App界面，突出字幕功能按钮",
+          "narration": "大家好，今天我们要介绍的是小剪App的字幕功能。首先，我们来看一下小剪App的界面，这里有一个专门用于生成字幕的按钮。",
+          "subtitle": "小剪App界面展示，点击字幕生成按钮",
+          "source_ids": [
+            "P01"
+          ]
+        },
+        {
+          "scene_id": "2",
+          "visual": "演示如何使用小剪App生成字幕",
+          "narration": "接下来，我们将演示如何使用小剪App生成字幕。只需点击这个按钮，就可以自动生成字幕了。",
+          "subtitle": "演示小剪App字幕生成过程",
+          "source_ids": [
+            "P01",
+            "P02"
+          ]
+        }
+      ],
+      "claims": [
+        {
+          "text": "自动生成字幕",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "2"
+        },
+        {
+          "text": "手动修改字幕",
+          "source_id": "P02",
+          "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "scene_id": "2"
+        }
+      ],
+      "reason": "根据已检索到的资料，形成了以上脚本"
+    }
+  }
+]

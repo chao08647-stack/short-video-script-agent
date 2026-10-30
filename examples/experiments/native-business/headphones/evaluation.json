@@ -1,0 +1,18 @@
+{
+  "case": "headphones",
+  "mode": "live",
+  "run_id": "b2ad9b9d-b8bc-4abd-8484-320b08291d71",
+  "status": "waiting_human",
+  "acceptance_passed": false,
+  "acceptance_errors": [
+    "Expected completed, got waiting_human"
+  ],
+  "elapsed_seconds": 131.25,
+  "model_calls": 28,
+  "tool_calls": 28,
+  "skills_loaded": [
+    "material-search"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\live\\headphones"
+}

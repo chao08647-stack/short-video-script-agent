@@ -1,0 +1,20 @@
+{
+  "case": "minimal",
+  "mode": "mock",
+  "run_id": "570ef54d-0f0d-4599-9fd3-c1e5396c2b52",
+  "status": "completed",
+  "acceptance_passed": true,
+  "acceptance_errors": [],
+  "elapsed_seconds": 0.38,
+  "model_calls": 14,
+  "tool_calls": 13,
+  "skills_loaded": [
+    "audience-angle",
+    "claim-grounding",
+    "material-search",
+    "narration-subtitles",
+    "storyboard-planning"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\mock\\minimal"
+}

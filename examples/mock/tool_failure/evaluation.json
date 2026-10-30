@@ -1,0 +1,20 @@
+{
+  "case": "tool_failure",
+  "mode": "mock",
+  "run_id": "e3948ba4-47d7-4b0e-8a3b-befef0c6a0c6",
+  "status": "completed",
+  "acceptance_passed": true,
+  "acceptance_errors": [],
+  "elapsed_seconds": 0.38,
+  "model_calls": 15,
+  "tool_calls": 14,
+  "skills_loaded": [
+    "audience-angle",
+    "claim-grounding",
+    "material-search",
+    "narration-subtitles",
+    "storyboard-planning"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\mock\\tool_failure"
+}

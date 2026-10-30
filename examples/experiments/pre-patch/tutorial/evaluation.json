@@ -1,0 +1,18 @@
+{
+  "case": "tutorial",
+  "mode": "live",
+  "run_id": "6ab84332-faad-4286-a7d7-747d5e93242f",
+  "status": "failed",
+  "acceptance_passed": false,
+  "acceptance_errors": [
+    "Expected completed, got failed"
+  ],
+  "elapsed_seconds": 107.45,
+  "model_calls": 8,
+  "tool_calls": 7,
+  "skills_loaded": [
+    "material-search"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\live\\tutorial"
+}

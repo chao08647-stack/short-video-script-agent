@@ -1,0 +1,18 @@
+{
+  "case": "normal",
+  "mode": "live",
+  "run_id": "0e476af7-ca47-4c87-a48a-9eedf6225c4a",
+  "status": "waiting_human",
+  "acceptance_passed": false,
+  "acceptance_errors": [
+    "Expected completed, got waiting_human"
+  ],
+  "elapsed_seconds": 23.53,
+  "model_calls": 8,
+  "tool_calls": 8,
+  "skills_loaded": [
+    "material-search"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\live\\normal"
+}

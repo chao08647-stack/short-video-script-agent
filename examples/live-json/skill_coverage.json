@@ -1,0 +1,85 @@
+{
+  "note": "加载、模型声明与候选关联分别统计。候选关联不等于证明技能有效，须结合对应产物审阅。Mock与live输出目录分离。",
+  "skills": {
+    "audience-angle": {
+      "loaded": [],
+      "model_declared_artifacts": [],
+      "candidate_links": []
+    },
+    "brand-revision": {
+      "loaded": [],
+      "model_declared_artifacts": [],
+      "candidate_links": []
+    },
+    "brief-clarification": {
+      "loaded": [],
+      "model_declared_artifacts": [],
+      "candidate_links": []
+    },
+    "claim-grounding": {
+      "loaded": [],
+      "model_declared_artifacts": [],
+      "candidate_links": []
+    },
+    "duration-compression": {
+      "loaded": [],
+      "model_declared_artifacts": [],
+      "candidate_links": []
+    },
+    "evidence-conflict": {
+      "loaded": [],
+      "model_declared_artifacts": [],
+      "candidate_links": []
+    },
+    "factual-revision": {
+      "loaded": [],
+      "model_declared_artifacts": [],
+      "candidate_links": []
+    },
+    "hook-writing": {
+      "loaded": [],
+      "model_declared_artifacts": [],
+      "candidate_links": []
+    },
+    "human-feedback": {
+      "loaded": [],
+      "model_declared_artifacts": [],
+      "candidate_links": []
+    },
+    "material-search": {
+      "loaded": [],
+      "model_declared_artifacts": [],
+      "candidate_links": []
+    },
+    "narration-subtitles": {
+      "loaded": [],
+      "model_declared_artifacts": [],
+      "candidate_links": []
+    },
+    "narrative-structure": {
+      "loaded": [],
+      "model_declared_artifacts": [],
+      "candidate_links": []
+    },
+    "platform-adaptation": {
+      "loaded": [],
+      "model_declared_artifacts": [],
+      "candidate_links": []
+    },
+    "query-rewrite": {
+      "loaded": [],
+      "model_declared_artifacts": [],
+      "candidate_links": []
+    },
+    "storyboard-planning": {
+      "loaded": [],
+      "model_declared_artifacts": [],
+      "candidate_links": []
+    },
+    "visual-direction": {
+      "loaded": [],
+      "model_declared_artifacts": [],
+      "candidate_links": []
+    }
+  }
+}

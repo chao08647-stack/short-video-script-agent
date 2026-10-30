@@ -1,0 +1,21 @@
+{
+  "case": "too_short",
+  "mode": "mock",
+  "run_id": "aa2e62a6-3849-4e84-8b79-93869bbda3ed",
+  "status": "incomplete",
+  "acceptance_passed": true,
+  "acceptance_errors": [],
+  "elapsed_seconds": 0.33,
+  "model_calls": 15,
+  "tool_calls": 14,
+  "skills_loaded": [
+    "audience-angle",
+    "claim-grounding",
+    "duration-compression",
+    "material-search",
+    "narration-subtitles",
+    "storyboard-planning"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\mock\\too_short"
+}

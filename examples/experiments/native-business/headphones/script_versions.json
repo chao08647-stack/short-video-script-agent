@@ -1,0 +1,164 @@
+[
+  {
+    "event_seq": 20,
+    "arguments": {
+      "title": "澄音 H1 耳机：主动降噪与触控播放",
+      "scenes": [
+        {
+          "scene_id": "intro",
+          "visual": "展示澄音 H1 耳机的外观",
+          "narration": "这是澄音 H1 耳机，一款专为通勤者设计的产品，它不仅拥有时尚的设计，还具备强大的主动降噪功能。",
+          "subtitle": "澄音 H1 耳机：时尚设计，强大功能",
+          "source_ids": [
+            "H01"
+          ]
+        },
+        {
+          "scene_id": "noise_cancellation",
+          "visual": "演示耳机在嘈杂环境中的降噪效果",
+          "narration": "这款耳机支持主动降噪模式，能够有效减少背景噪音，让您在嘈杂的环境中也能保持专注。",
+          "subtitle": "主动降噪模式，减少背景噪音",
+          "source_ids": [
+            "H01"
+          ]
+        },
+        {
+          "scene_id": "touch_control",
+          "visual": "展示耳机的触控操作功能",
+          "narration": "此外，澄音 H1 耳机还配备了触控播放功能，只需轻轻一触，即可轻松控制音乐播放。",
+          "subtitle": "触控播放功能，轻松控制音乐",
+          "source_ids": [
+            "H03"
+          ]
+        }
+      ],
+      "claims": [
+        {
+          "text": "支持主动降噪模式",
+          "source_id": "H01",
+          "quote": "澄音 H1 耳机支持主动降噪模式，也支持通透模式。",
+          "scene_id": "noise_cancellation"
+        },
+        {
+          "text": "触控操作暂停或继续播放音乐",
+          "source_id": "H03",
+          "quote": "澄音 H1 耳机可以通过触控操作暂停或继续播放音乐。",
+          "scene_id": "touch_control"
+        }
+      ],
+      "used_skills": [
+        "material-search"
+      ],
+      "reason": "根据现有资料，创建并提交一个包含三个场景的短视频脚本"
+    }
+  },
+  {
+    "event_seq": 31,
+    "arguments": {
+      "title": "澄音 H1 耳机：主动降噪与触控播放",
+      "scenes": [
+        {
+          "scene_id": "intro",
+          "visual": "展示澄音 H1 耳机的外观",
+          "narration": "这是澄音 H1 耳机，一款专为通勤者设计的产品，它不仅拥有时尚的设计，还具备强大的主动降噪功能。",
+          "subtitle": "澄音 H1 耳机：时尚设计，强大功能",
+          "source_ids": [
+            "H01"
+          ],
+          "min_display_seconds": 1.0
+        },
+        {
+          "scene_id": "noise_cancellation",
+          "visual": "演示耳机在嘈杂环境中的降噪效果",
+          "narration": "这款耳机支持主动降噪模式，能够有效减少背景噪音，让您在嘈杂的环境中也能保持专注。",
+          "subtitle": "主动降噪模式，减少背景噪音",
+          "source_ids": [
+            "H01"
+          ],
+          "min_display_seconds": 1.0
+        },
+        {
+          "scene_id": "touch_control",
+          "visual": "展示耳机的触控操作功能",
+          "narration": "此外，澄音 H1 耳机还配备了触控播放功能，只需轻轻一触，即可轻松控制音乐播放。",
+          "subtitle": "触控播放功能，轻松控制音乐",
+          "source_ids": [
+            "H03"
+          ],
+          "min_display_seconds": 1.0
+        }
+      ],
+      "claims": [
+        {
+          "text": "支持主动降噪模式",
+          "source_id": "H01",
+          "quote": "澄音 H1 耳机支持主动降噪模式，也支持通透模式。",
+          "scene_id": "noise_cancellation"
+        },
+        {
+          "text": "触控操作暂停或继续播放音乐",
+          "source_id": "H03",
+          "quote": "澄音 H1 耳机可以通过触控操作暂停或继续播放音乐。",
+          "scene_id": "touch_control"
+        }
+      ],
+      "used_skills": [
+        "material-search"
+      ],
+      "reason": "根据现有资料，创建并提交一个包含三个场景的短视频脚本"
+    }
+  },
+  {
+    "event_seq": 58,
+    "arguments": {
+      "title": "澄音 H1 耳机：主动降噪与触控播放",
+      "scenes": [
+        {
+          "scene_id": "intro",
+          "visual": "展示澄音 H1 耳机的外观",
+          "narration": "这是澄音 H1 耳机，一款专为通勤者设计的产品，它不仅拥有时尚的设计，还具备强大的主动降噪功能。",
+          "subtitle": "澄音 H1 耳机：时尚设计，强大功能",
+          "source_ids": [
+            "H01"
+          ]
+        },
+        {
+          "scene_id": "noise_cancellation",
+          "visual": "演示耳机在嘈杂环境中的降噪效果",
+          "narration": "这款耳机支持主动降噪模式，能够有效减少背景噪音，让您在嘈杂的环境中也能保持专注。",
+          "subtitle": "主动降噪模式，减少背景噪音",
+          "source_ids": [
+            "H01"
+          ]
+        },
+        {
+          "scene_id": "touch_control",
+          "visual": "展示耳机的触控操作功能",
+          "narration": "此外，澄音 H1 耳机还配备了触控播放功能，只需轻轻一触，即可轻松控制音乐播放。",
+          "subtitle": "触控播放功能，轻松控制音乐",
+          "source_ids": [
+            "H03"
+          ]
+        }
+      ],
+      "claims": [
+        {
+          "text": "支持主动降噪模式",
+          "source_id": "H01",
+          "quote": "澄音 H1 耳机支持主动降噪模式，也支持通透模式。",
+          "scene_id": "noise_cancellation"
+        },
+        {
+          "text": "触控操作暂停或继续播放音乐",
+          "source_id": "H03",
+          "quote": "澄音 H1 耳机可以通过触控操作暂停或继续播放音乐。",
+          "scene_id": "touch_control"
+        }
+      ],
+      "used_skills": [
+        "material-search"
+      ],
+      "reason": "根据现有材料和检查结果，修订脚本以确保所有断言都符合原文支持。"
+    }
+  }
+]

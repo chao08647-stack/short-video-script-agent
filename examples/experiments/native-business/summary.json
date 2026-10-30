@@ -1,0 +1,170 @@
+{
+  "mode": "live",
+  "human_decisions": "evaluation_simulated_human",
+  "cases": [
+    {
+      "case": "brand_and_fact_revision",
+      "mode": "live",
+      "run_id": "645a41f4-5a8a-4bdb-8730-7cd09617ca3f",
+      "status": "waiting_human",
+      "acceptance_passed": false,
+      "acceptance_errors": [
+        "Expected completed, got waiting_human",
+        "No observed brand/fact violations -> revised script -> passing rules path"
+      ],
+      "elapsed_seconds": 41.16,
+      "model_calls": 10,
+      "tool_calls": 9,
+      "skills_loaded": [
+        "narrative-structure"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\live\\brand_and_fact_revision"
+    },
+    {
+      "case": "duration_revision",
+      "mode": "live",
+      "run_id": "1cf8f8b6-74ca-453d-8531-a7994e2f6467",
+      "status": "waiting_human",
+      "acceptance_passed": false,
+      "acceptance_errors": [
+        "Expected completed, got waiting_human",
+        "No ordered over-duration -> revised script -> passing same-target feedback path"
+      ],
+      "elapsed_seconds": 3.61,
+      "model_calls": 1,
+      "tool_calls": 1,
+      "skills_loaded": [],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\live\\duration_revision"
+    },
+    {
+      "case": "headphones",
+      "mode": "live",
+      "run_id": "b2ad9b9d-b8bc-4abd-8484-320b08291d71",
+      "status": "waiting_human",
+      "acceptance_passed": false,
+      "acceptance_errors": [
+        "Expected completed, got waiting_human"
+      ],
+      "elapsed_seconds": 131.25,
+      "model_calls": 28,
+      "tool_calls": 28,
+      "skills_loaded": [
+        "material-search"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\live\\headphones"
+    },
+    {
+      "case": "human_feedback",
+      "mode": "live",
+      "run_id": "a688da6a-ab3d-4f74-af84-fe1db38034f7",
+      "status": "waiting_human",
+      "acceptance_passed": false,
+      "acceptance_errors": [
+        "Expected completed, got waiting_human",
+        "No human revision feedback followed by a model revision and renewed review"
+      ],
+      "elapsed_seconds": 16.91,
+      "model_calls": 4,
+      "tool_calls": 4,
+      "skills_loaded": [
+        "material-search"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\live\\human_feedback"
+    },
+    {
+      "case": "missing_info",
+      "mode": "live",
+      "run_id": "8c3b38fc-ec86-46b4-af23-a3b1e984b165",
+      "status": "incomplete",
+      "acceptance_passed": false,
+      "acceptance_errors": [
+        "Expected completed, got incomplete"
+      ],
+      "elapsed_seconds": 101.73,
+      "model_calls": 11,
+      "tool_calls": 8,
+      "skills_loaded": [
+        "material-search"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\live\\missing_info"
+    },
+    {
+      "case": "no_materials",
+      "mode": "live",
+      "run_id": "baccc624-d20f-4011-b0b8-205f74899aaa",
+      "status": "waiting_human",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 12.05,
+      "model_calls": 3,
+      "tool_calls": 3,
+      "skills_loaded": [
+        "material-search"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\live\\no_materials"
+    },
+    {
+      "case": "normal",
+      "mode": "live",
+      "run_id": "6a31f262-9254-4307-8708-c3b4f0b0d7e8",
+      "status": "waiting_human",
+      "acceptance_passed": false,
+      "acceptance_errors": [
+        "Expected completed, got waiting_human"
+      ],
+      "elapsed_seconds": 18.78,
+      "model_calls": 4,
+      "tool_calls": 4,
+      "skills_loaded": [
+        "material-search"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\live\\normal"
+    },
+    {
+      "case": "too_short",
+      "mode": "live",
+      "run_id": "48932c17-5700-41b9-a10e-aa63b79d8e98",
+      "status": "waiting_human",
+      "acceptance_passed": false,
+      "acceptance_errors": [
+        "No actual over-duration observation explains non-completion"
+      ],
+      "elapsed_seconds": 25.8,
+      "model_calls": 5,
+      "tool_calls": 5,
+      "skills_loaded": [
+        "audience-angle"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\live\\too_short"
+    },
+    {
+      "case": "tutorial",
+      "mode": "live",
+      "run_id": "76632334-0c4a-4d0a-abe8-4958773b9836",
+      "status": "incomplete",
+      "acceptance_passed": false,
+      "acceptance_errors": [
+        "Expected completed, got incomplete"
+      ],
+      "elapsed_seconds": 297.12,
+      "model_calls": 40,
+      "tool_calls": 37,
+      "skills_loaded": [
+        "claim-grounding",
+        "narration-subtitles"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\live\\tutorial"
+    }
+  ],
+  "passed": 1,
+  "total": 9
+}

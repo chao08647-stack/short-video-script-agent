@@ -1,0 +1,18 @@
+{
+  "case": "minimal",
+  "mode": "live",
+  "run_id": "7f06022b-2f4c-47be-9451-b3852366a306",
+  "status": "incomplete",
+  "acceptance_passed": false,
+  "acceptance_errors": [
+    "Expected completed, got incomplete"
+  ],
+  "elapsed_seconds": 183.64,
+  "model_calls": 40,
+  "tool_calls": 39,
+  "skills_loaded": [
+    "material-search"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\live\\minimal"
+}

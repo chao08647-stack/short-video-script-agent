@@ -1,0 +1,21 @@
+{
+  "case": "missing_info",
+  "mode": "mock",
+  "run_id": "172dfa22-b6d8-42f2-9d4c-c9b2eeac232b",
+  "status": "completed",
+  "acceptance_passed": true,
+  "acceptance_errors": [],
+  "elapsed_seconds": 0.42,
+  "model_calls": 16,
+  "tool_calls": 15,
+  "skills_loaded": [
+    "audience-angle",
+    "brief-clarification",
+    "claim-grounding",
+    "material-search",
+    "narration-subtitles",
+    "storyboard-planning"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\mock\\missing_info"
+}

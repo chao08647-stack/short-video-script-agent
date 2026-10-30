@@ -1,0 +1,17 @@
+{
+  "case": "conflict",
+  "mode": "live",
+  "run_id": "a9ec5c65-ac0c-4522-9130-422a7eb45051",
+  "status": "waiting_human",
+  "acceptance_passed": true,
+  "acceptance_errors": [],
+  "elapsed_seconds": 27.66,
+  "model_calls": 7,
+  "tool_calls": 7,
+  "skills_loaded": [
+    "material-search",
+    "narrative-structure"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\live\\conflict"
+}

@@ -1,0 +1,20 @@
+{
+  "case": "tutorial",
+  "mode": "mock",
+  "run_id": "4c4d8a4e-10c4-4ac0-89dc-c34cbbf3ca98",
+  "status": "completed",
+  "acceptance_passed": true,
+  "acceptance_errors": [],
+  "elapsed_seconds": 0.34,
+  "model_calls": 14,
+  "tool_calls": 13,
+  "skills_loaded": [
+    "audience-angle",
+    "claim-grounding",
+    "material-search",
+    "narration-subtitles",
+    "storyboard-planning"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\mock\\tutorial"
+}

@@ -1,0 +1,24 @@
+{
+  "mode": "live",
+  "human_decisions": "evaluation_simulated_human",
+  "cases": [
+    {
+      "case": "normal",
+      "mode": "live",
+      "run_id": "96afe1cb-5667-484d-89d8-23f64ebb51a0",
+      "status": "failed",
+      "acceptance_passed": false,
+      "acceptance_errors": [
+        "Expected completed, got failed"
+      ],
+      "elapsed_seconds": 2.19,
+      "model_calls": 1,
+      "tool_calls": 0,
+      "skills_loaded": [],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\live-json\\normal"
+    }
+  ],
+  "passed": 0,
+  "total": 1
+}

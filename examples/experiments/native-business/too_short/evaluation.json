@@ -1,0 +1,18 @@
+{
+  "case": "too_short",
+  "mode": "live",
+  "run_id": "48932c17-5700-41b9-a10e-aa63b79d8e98",
+  "status": "waiting_human",
+  "acceptance_passed": false,
+  "acceptance_errors": [
+    "No actual over-duration observation explains non-completion"
+  ],
+  "elapsed_seconds": 25.8,
+  "model_calls": 5,
+  "tool_calls": 5,
+  "skills_loaded": [
+    "audience-angle"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\live\\too_short"
+}

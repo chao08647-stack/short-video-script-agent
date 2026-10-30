@@ -1,0 +1,85 @@
+[
+  {
+    "event_seq": 22,
+    "arguments": {
+      "used_skills": [
+        "audience-angle"
+      ],
+      "title": "小剪App字幕功能介绍",
+      "scenes": [
+        {
+          "scene_id": "1",
+          "visual": "展示小剪App界面，突出字幕功能按钮",
+          "narration": "大家好，今天给大家介绍一下小剪App的字幕功能。首先，我们来看一下小剪App的界面，这里有一个专门用于生成字幕的按钮。",
+          "subtitle": "展示小剪App界面，突出字幕功能按钮",
+          "source_ids": [
+            "P01"
+          ]
+        },
+        {
+          "scene_id": "2",
+          "visual": "演示自动生成字幕的过程",
+          "narration": "点击这个按钮后，小剪App会自动为我们生成字幕。",
+          "subtitle": "演示自动生成字幕的过程",
+          "source_ids": [
+            "P01"
+          ]
+        },
+        {
+          "scene_id": "3",
+          "visual": "演示手动修改字幕的过程",
+          "narration": "如果对自动生成的字幕不满意，我们可以手动修改它。",
+          "subtitle": "演示手动修改字幕的过程",
+          "source_ids": [
+            "P02"
+          ]
+        },
+        {
+          "scene_id": "4",
+          "visual": "演示调整字幕字体大小和颜色的过程",
+          "narration": "此外，小剪App还支持调整字幕的字体大小和颜色。",
+          "subtitle": "演示调整字幕字体大小和颜色的过程",
+          "source_ids": [
+            "P03"
+          ]
+        },
+        {
+          "scene_id": "5",
+          "visual": "建议用户检查并修正自动字幕的识别错误",
+          "narration": "最后，小剪App建议用户在生成自动字幕后，检查并修正可能存在的识别错误。",
+          "subtitle": "建议用户检查并修正自动字幕的识别错误",
+          "source_ids": [
+            "P04"
+          ]
+        }
+      ],
+      "claims": [
+        {
+          "text": "自动生成字幕",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "2"
+        },
+        {
+          "text": "手动修改字幕",
+          "source_id": "P02",
+          "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "scene_id": "3"
+        },
+        {
+          "text": "调整字幕字体大小和颜色",
+          "source_id": "P03",
+          "quote": "小剪 App 支持调整字幕的字体大小和颜色。",
+          "scene_id": "4"
+        },
+        {
+          "text": "检查并修正自动字幕的识别错误",
+          "source_id": "P04",
+          "quote": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+          "scene_id": "5"
+        }
+      ],
+      "reason": "根据已有的资料，完成了短视频的初稿创作"
+    }
+  }
+]

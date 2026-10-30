@@ -1,0 +1,18 @@
+{
+  "case": "tool_failure",
+  "mode": "live",
+  "run_id": "ff2f1398-50bf-4f71-b4a5-c14ce498da92",
+  "status": "waiting_human",
+  "acceptance_passed": false,
+  "acceptance_errors": [
+    "Expected completed, got waiting_human"
+  ],
+  "elapsed_seconds": 7.61,
+  "model_calls": 4,
+  "tool_calls": 4,
+  "skills_loaded": [
+    "material-search"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\live\\tool_failure"
+}

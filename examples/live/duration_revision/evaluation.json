@@ -1,0 +1,34 @@
+{
+  "case": "duration_revision",
+  "mode": "live",
+  "run_id": "105cf7a8-6133-4717-97da-d9bc91f1aebe",
+  "status": "incomplete",
+  "acceptance_passed": false,
+  "acceptance_errors": [
+    "Expected completed, got incomplete",
+    "No ordered over-duration -> revised script -> passing same-target feedback path"
+  ],
+  "elapsed_seconds": 240.53,
+  "model_calls": 40,
+  "tool_calls": 39,
+  "skills_loaded": [
+    "audience-angle",
+    "brand-revision",
+    "brief-clarification",
+    "claim-grounding",
+    "duration-compression",
+    "evidence-conflict",
+    "factual-revision",
+    "hook-writing",
+    "human-feedback",
+    "material-search",
+    "narration-subtitles",
+    "narrative-structure",
+    "platform-adaptation",
+    "query-rewrite",
+    "storyboard-planning",
+    "visual-direction"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\live\\duration_revision"
+}

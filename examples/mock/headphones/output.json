@@ -1,0 +1,246 @@
+{
+  "run_id": "dfe1c8d7-746e-4a8b-8df1-417300fdb23f",
+  "mode": "mock",
+  "status": "completed",
+  "phase": "final",
+  "execution": {
+    "python": "3.12.9",
+    "langgraph": "1.2.18",
+    "mode": "mock",
+    "model": {
+      "name": "explicit_offline_mock"
+    },
+    "code_hashes": {
+      "engine.py": "167491b35b46e5fe569be1b55bf01633787bc5f219cd33da9af99ef89f2db3ab",
+      "prompts.py": "1ab58d618a46e01dc43c73bc6e43c6bb6a170741bfc921747511a5ac0c04731d",
+      "model.py": "9d9c0f529d6b01c48a88dd11dec889a4d7f2909504ea20ee3295686355fa1f06",
+      "business_tools.py": "6f3f549b2fe9f49b2ddcfd4881509a93fa162c9422a95d029ec282a11d0d2411",
+      "script_patch.py": "ec77a077f3a59753457e082c6936897bad7379218f7a24f0fee9ff7927de3ad7",
+      "runtime.py": "ffe5a3005c1df86b7535ab728d314b20a2a0cccf4fd6c7dc838c18b1129d4ff2"
+    },
+    "code_hash_capture": "process_import"
+  },
+  "brief": {
+    "topic": "介绍澄音 H1 耳机的主动降噪与触控播放",
+    "audience": "通勤用户",
+    "platform": "小红书",
+    "target_seconds": 35.0,
+    "style": "清楚、自然"
+  },
+  "direction": {
+    "angle": "通过有来源的产品功能说明帮助目标受众理解用途。",
+    "outline": [
+      "提出使用场景",
+      "说明有依据的产品功能",
+      "提醒按需尝试"
+    ],
+    "source_ids": [
+      "H03",
+      "H01",
+      "H02"
+    ],
+    "notes": "离线 Mock 固定示意方向，不证明真实策划能力。"
+  },
+  "script": {
+    "title": "产品功能介绍",
+    "scenes": [
+      {
+        "scene_id": "S1",
+        "visual": "展示创作者准备开始操作的情景。",
+        "narration": "先看看这个功能。",
+        "subtitle": "功能介绍",
+        "source_ids": [],
+        "min_display_seconds": 1.0
+      },
+      {
+        "scene_id": "S2",
+        "visual": "展示产品说明中的对应功能文字，供拍摄参考。",
+        "narration": "澄音 H1 耳机可以通过触控操作暂停或继续播放音乐。",
+        "subtitle": "澄音 H1 耳机可以通过触控操作暂停或继续播放音乐。",
+        "source_ids": [
+          "H03"
+        ],
+        "min_display_seconds": 1.0
+      }
+    ],
+    "claims": [
+      {
+        "text": "澄音 H1 耳机可以通过触控操作暂停或继续播放音乐。",
+        "source_id": "H03",
+        "quote": "澄音 H1 耳机可以通过触控操作暂停或继续播放音乐。",
+        "scene_id": "S2"
+      }
+    ]
+  },
+  "script_version": 1,
+  "checks": {
+    "duration": {
+      "passed": true,
+      "estimated_seconds": 8.45,
+      "target_seconds": 35.0,
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "narration_seconds": 2.15,
+          "subtitle_seconds": 0.67,
+          "min_display_seconds": 1.0,
+          "estimated_seconds": 2.15,
+          "start_seconds": 0.0,
+          "end_seconds": 2.15
+        },
+        {
+          "scene_id": "S2",
+          "narration_seconds": 6.3,
+          "subtitle_seconds": 4.07,
+          "min_display_seconds": 1.0,
+          "estimated_seconds": 6.3,
+          "start_seconds": 2.15,
+          "end_seconds": 8.45
+        }
+      ],
+      "issues": [],
+      "assumptions": {
+        "chars_per_second": 4.0,
+        "subtitle_chars_per_second": 6.0,
+        "english_words_per_second": 2.5,
+        "minimum_scene_seconds": 1.0,
+        "transition_seconds": 0.0,
+        "timing_rule": "每镜取旁白、字幕阅读、画面最低展示时间的最大值；镜头串行累计。",
+        "limitation": "文字估时，不是实际录音或成片时长；数字、缩写及表演节奏可能存在误差。"
+      },
+      "script_version": 1,
+      "script_hash": "fd15bec69b3a3724498528c469d83c58a8807e754c47e1dd20515e304330120a",
+      "data_hash": "79547a1a8070046079e5a75d5be2579ee62ecfde50ca53b0d8928795e1c7d323",
+      "brief_hash": "f0e72007f7cfd7e4a4eaa20039fe4fa3631666cb41ca8023893dc3f138bae92c"
+    },
+    "rules": {
+      "passed": true,
+      "issues": [],
+      "scope": "deterministic_only",
+      "requires_semantic_verification": true,
+      "semantic_status": "not_checked",
+      "checked_claims": 1,
+      "valid_quote_mappings": 1,
+      "semantic": {
+        "passed": true,
+        "issues": [],
+        "claims": [
+          {
+            "text": "澄音 H1 耳机可以通过触控操作暂停或继续播放音乐。",
+            "source_id": "H03",
+            "quote": "澄音 H1 耳机可以通过触控操作暂停或继续播放音乐。",
+            "scene_id": "S2",
+            "status": "supported",
+            "reason": "离线字符串对照，不能证明语义支持。"
+          }
+        ],
+        "mode": "mock",
+        "limitation": "仅验证流程与原文子串关系，不检测所有遗漏断言，不证明真实模型事实核验能力。"
+      },
+      "script_version": 1,
+      "script_hash": "fd15bec69b3a3724498528c469d83c58a8807e754c47e1dd20515e304330120a",
+      "data_hash": "79547a1a8070046079e5a75d5be2579ee62ecfde50ca53b0d8928795e1c7d323",
+      "brief_hash": "f0e72007f7cfd7e4a4eaa20039fe4fa3631666cb41ca8023893dc3f138bae92c"
+    }
+  },
+  "estimated_seconds": 8.45,
+  "duration_note": "基于固定语速与画面展示需求估算，不代表真实配音或成片测量。",
+  "sources": [
+    {
+      "source_id": "H03",
+      "version": "2026-10-01",
+      "title": "澄音 H1 耳机：播放控制",
+      "text": "澄音 H1 耳机可以通过触控操作暂停或继续播放音乐。",
+      "facts": [
+        "澄音 H1 耳机可以通过触控操作暂停或继续播放音乐。"
+      ],
+      "keywords": [
+        "澄音",
+        "H1",
+        "耳机",
+        "触控",
+        "播放",
+        "暂停"
+      ],
+      "score": 16.2046
+    },
+    {
+      "source_id": "H01",
+      "version": "2026-10-01",
+      "title": "澄音 H1 耳机：降噪功能",
+      "text": "澄音 H1 耳机支持主动降噪模式，也支持通透模式。",
+      "facts": [
+        "澄音 H1 耳机支持主动降噪模式。",
+        "澄音 H1 耳机支持通透模式。"
+      ],
+      "keywords": [
+        "澄音",
+        "H1",
+        "耳机",
+        "主动降噪",
+        "通透"
+      ],
+      "score": 15.814
+    },
+    {
+      "source_id": "H02",
+      "version": "2026-10-01",
+      "title": "澄音 H1 耳机：播放续航",
+      "text": "在关闭降噪、音量为50%的实验室条件下，澄音 H1 耳机单次充电连续播放时间为8小时。实际续航会随音量和使用环境变化。",
+      "facts": [
+        "在关闭降噪、音量为50%的实验室条件下，澄音 H1 耳机单次充电连续播放时间为8小时。",
+        "实际续航会随音量和使用环境变化。"
+      ],
+      "keywords": [
+        "澄音",
+        "H1",
+        "耳机",
+        "续航",
+        "8小时",
+        "音量"
+      ],
+      "score": 11.8944
+    }
+  ],
+  "pending_review": null,
+  "review_history": [
+    {
+      "review_id": "71868bae54ff117dde1b",
+      "decision": "approve",
+      "feedback": "",
+      "answers": {},
+      "actor": "evaluation_simulated_human",
+      "stage": "direction",
+      "version": 1
+    },
+    {
+      "review_id": "ecee7cf5dfe352b39e32",
+      "decision": "approve",
+      "feedback": "",
+      "answers": {},
+      "actor": "evaluation_simulated_human",
+      "stage": "draft",
+      "version": 1
+    },
+    {
+      "review_id": "cfe0741fa6824dae5e0c",
+      "decision": "approve",
+      "feedback": "",
+      "answers": {},
+      "actor": "evaluation_simulated_human",
+      "stage": "final",
+      "version": 1
+    }
+  ],
+  "stop_reason": null,
+  "model_calls": 14,
+  "tool_calls": 13,
+  "skills_loaded": [
+    "audience-angle",
+    "claim-grounding",
+    "material-search",
+    "narration-subtitles",
+    "storyboard-planning"
+  ],
+  "data_hash": "79547a1a8070046079e5a75d5be2579ee62ecfde50ca53b0d8928795e1c7d323"
+}

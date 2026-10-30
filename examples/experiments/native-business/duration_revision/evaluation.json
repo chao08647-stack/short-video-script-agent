@@ -1,0 +1,17 @@
+{
+  "case": "duration_revision",
+  "mode": "live",
+  "run_id": "1cf8f8b6-74ca-453d-8531-a7994e2f6467",
+  "status": "waiting_human",
+  "acceptance_passed": false,
+  "acceptance_errors": [
+    "Expected completed, got waiting_human",
+    "No ordered over-duration -> revised script -> passing same-target feedback path"
+  ],
+  "elapsed_seconds": 3.61,
+  "model_calls": 1,
+  "tool_calls": 1,
+  "skills_loaded": [],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\live\\duration_revision"
+}

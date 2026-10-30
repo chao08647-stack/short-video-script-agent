@@ -1,0 +1,19 @@
+{
+  "case": "human_feedback",
+  "mode": "live",
+  "run_id": "fe1cdbef-431c-4c3c-9968-3ee706fb8bc2",
+  "status": "failed",
+  "acceptance_passed": false,
+  "acceptance_errors": [
+    "Expected completed, got failed",
+    "No human revision feedback followed by a model revision and renewed review"
+  ],
+  "elapsed_seconds": 95.44,
+  "model_calls": 7,
+  "tool_calls": 6,
+  "skills_loaded": [
+    "material-search"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\live\\human_feedback"
+}

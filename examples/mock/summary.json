@@ -1,0 +1,278 @@
+{
+  "mode": "mock",
+  "human_decisions": "evaluation_simulated_human",
+  "cases": [
+    {
+      "case": "brand_and_fact_revision",
+      "mode": "mock",
+      "run_id": "f4f36c76-2953-40f5-9756-5535b7f649d0",
+      "status": "completed",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 0.34,
+      "model_calls": 14,
+      "tool_calls": 13,
+      "skills_loaded": [
+        "audience-angle",
+        "factual-revision",
+        "material-search"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\mock\\brand_and_fact_revision"
+    },
+    {
+      "case": "conflict",
+      "mode": "mock",
+      "run_id": "7c8c422e-1f2c-467c-a5eb-392122181eac",
+      "status": "waiting_human",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 0.09,
+      "model_calls": 4,
+      "tool_calls": 4,
+      "skills_loaded": [
+        "evidence-conflict",
+        "material-search"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\mock\\conflict"
+    },
+    {
+      "case": "duration_revision",
+      "mode": "mock",
+      "run_id": "e5ddeb69-3f70-4b65-9e8d-dab1967b113c",
+      "status": "completed",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 0.36,
+      "model_calls": 15,
+      "tool_calls": 13,
+      "skills_loaded": [
+        "audience-angle",
+        "duration-compression",
+        "material-search"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\mock\\duration_revision"
+    },
+    {
+      "case": "headphones",
+      "mode": "mock",
+      "run_id": "dfe1c8d7-746e-4a8b-8df1-417300fdb23f",
+      "status": "completed",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 0.36,
+      "model_calls": 14,
+      "tool_calls": 13,
+      "skills_loaded": [
+        "audience-angle",
+        "claim-grounding",
+        "material-search",
+        "narration-subtitles",
+        "storyboard-planning"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\mock\\headphones"
+    },
+    {
+      "case": "human_feedback",
+      "mode": "mock",
+      "run_id": "3e8ba8ec-b1b8-4299-95c3-ebefb12db3a1",
+      "status": "completed",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 0.45,
+      "model_calls": 20,
+      "tool_calls": 18,
+      "skills_loaded": [
+        "audience-angle",
+        "claim-grounding",
+        "human-feedback",
+        "material-search",
+        "narration-subtitles",
+        "storyboard-planning"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\mock\\human_feedback"
+    },
+    {
+      "case": "minimal",
+      "mode": "mock",
+      "run_id": "570ef54d-0f0d-4599-9fd3-c1e5396c2b52",
+      "status": "completed",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 0.38,
+      "model_calls": 14,
+      "tool_calls": 13,
+      "skills_loaded": [
+        "audience-angle",
+        "claim-grounding",
+        "material-search",
+        "narration-subtitles",
+        "storyboard-planning"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\mock\\minimal"
+    },
+    {
+      "case": "missing_info",
+      "mode": "mock",
+      "run_id": "172dfa22-b6d8-42f2-9d4c-c9b2eeac232b",
+      "status": "completed",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 0.42,
+      "model_calls": 16,
+      "tool_calls": 15,
+      "skills_loaded": [
+        "audience-angle",
+        "brief-clarification",
+        "claim-grounding",
+        "material-search",
+        "narration-subtitles",
+        "storyboard-planning"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\mock\\missing_info"
+    },
+    {
+      "case": "no_materials",
+      "mode": "mock",
+      "run_id": "2a5dd218-efbd-4d3d-93cb-f222fa454007",
+      "status": "waiting_human",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 0.09,
+      "model_calls": 5,
+      "tool_calls": 5,
+      "skills_loaded": [
+        "material-search",
+        "query-rewrite"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\mock\\no_materials"
+    },
+    {
+      "case": "normal",
+      "mode": "mock",
+      "run_id": "a07f2fe1-69db-4cb3-9499-1e71902cd744",
+      "status": "completed",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 0.3,
+      "model_calls": 14,
+      "tool_calls": 13,
+      "skills_loaded": [
+        "audience-angle",
+        "claim-grounding",
+        "material-search",
+        "narration-subtitles",
+        "storyboard-planning"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\mock\\normal"
+    },
+    {
+      "case": "query_rewrite",
+      "mode": "mock",
+      "run_id": "502fd94b-5e5e-4176-9071-bc17a14d10e6",
+      "status": "completed",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 0.38,
+      "model_calls": 16,
+      "tool_calls": 15,
+      "skills_loaded": [
+        "audience-angle",
+        "claim-grounding",
+        "material-search",
+        "narration-subtitles",
+        "query-rewrite",
+        "storyboard-planning"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\mock\\query_rewrite"
+    },
+    {
+      "case": "step_limit",
+      "mode": "mock",
+      "run_id": "e2c11e91-04b0-4676-a4da-cead5be3690e",
+      "status": "incomplete",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 0.06,
+      "model_calls": 1,
+      "tool_calls": 1,
+      "skills_loaded": [
+        "material-search"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\mock\\step_limit"
+    },
+    {
+      "case": "too_short",
+      "mode": "mock",
+      "run_id": "aa2e62a6-3849-4e84-8b79-93869bbda3ed",
+      "status": "incomplete",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 0.33,
+      "model_calls": 15,
+      "tool_calls": 14,
+      "skills_loaded": [
+        "audience-angle",
+        "claim-grounding",
+        "duration-compression",
+        "material-search",
+        "narration-subtitles",
+        "storyboard-planning"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\mock\\too_short"
+    },
+    {
+      "case": "tool_failure",
+      "mode": "mock",
+      "run_id": "e3948ba4-47d7-4b0e-8a3b-befef0c6a0c6",
+      "status": "completed",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 0.38,
+      "model_calls": 15,
+      "tool_calls": 14,
+      "skills_loaded": [
+        "audience-angle",
+        "claim-grounding",
+        "material-search",
+        "narration-subtitles",
+        "storyboard-planning"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\mock\\tool_failure"
+    },
+    {
+      "case": "tutorial",
+      "mode": "mock",
+      "run_id": "4c4d8a4e-10c4-4ac0-89dc-c34cbbf3ca98",
+      "status": "completed",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 0.34,
+      "model_calls": 14,
+      "tool_calls": 13,
+      "skills_loaded": [
+        "audience-angle",
+        "claim-grounding",
+        "material-search",
+        "narration-subtitles",
+        "storyboard-planning"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\mock\\tutorial"
+    }
+  ],
+  "passed": 14,
+  "total": 14
+}

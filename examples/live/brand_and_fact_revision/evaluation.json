@@ -1,0 +1,19 @@
+{
+  "case": "brand_and_fact_revision",
+  "mode": "live",
+  "run_id": "d96a16bc-1862-462d-8cc9-0c8cabf0cae3",
+  "status": "waiting_human",
+  "acceptance_passed": false,
+  "acceptance_errors": [
+    "Expected completed, got waiting_human",
+    "No observed brand/fact violations -> revised script -> passing rules path"
+  ],
+  "elapsed_seconds": 8.3,
+  "model_calls": 3,
+  "tool_calls": 3,
+  "skills_loaded": [
+    "claim-grounding"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\live\\brand_and_fact_revision"
+}

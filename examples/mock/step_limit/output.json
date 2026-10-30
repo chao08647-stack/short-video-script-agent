@@ -1,0 +1,49 @@
+{
+  "run_id": "e2c11e91-04b0-4676-a4da-cead5be3690e",
+  "mode": "mock",
+  "status": "incomplete",
+  "phase": "direction",
+  "execution": {
+    "python": "3.12.9",
+    "langgraph": "1.2.18",
+    "mode": "mock",
+    "model": {
+      "name": "explicit_offline_mock"
+    },
+    "code_hashes": {
+      "engine.py": "167491b35b46e5fe569be1b55bf01633787bc5f219cd33da9af99ef89f2db3ab",
+      "prompts.py": "1ab58d618a46e01dc43c73bc6e43c6bb6a170741bfc921747511a5ac0c04731d",
+      "model.py": "9d9c0f529d6b01c48a88dd11dec889a4d7f2909504ea20ee3295686355fa1f06",
+      "business_tools.py": "6f3f549b2fe9f49b2ddcfd4881509a93fa162c9422a95d029ec282a11d0d2411",
+      "script_patch.py": "ec77a077f3a59753457e082c6936897bad7379218f7a24f0fee9ff7927de3ad7",
+      "runtime.py": "ffe5a3005c1df86b7535ab728d314b20a2a0cccf4fd6c7dc838c18b1129d4ff2"
+    },
+    "code_hash_capture": "process_import"
+  },
+  "brief": {
+    "topic": "介绍小剪 App 的字幕功能",
+    "audience": "短视频剪辑新手",
+    "platform": "抖音",
+    "target_seconds": 30.0,
+    "style": "轻松、直白"
+  },
+  "direction": null,
+  "script": null,
+  "script_version": 0,
+  "checks": {},
+  "estimated_seconds": null,
+  "duration_note": "基于固定语速与画面展示需求估算，不代表真实配音或成片测量。",
+  "sources": [],
+  "pending_review": null,
+  "review_history": [],
+  "stop_reason": {
+    "code": "model_call_limit",
+    "message": "达到模型请求次数上限。"
+  },
+  "model_calls": 1,
+  "tool_calls": 1,
+  "skills_loaded": [
+    "material-search"
+  ],
+  "data_hash": "79547a1a8070046079e5a75d5be2579ee62ecfde50ca53b0d8928795e1c7d323"
+}

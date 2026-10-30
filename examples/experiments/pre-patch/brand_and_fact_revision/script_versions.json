@@ -1,0 +1,78 @@
+[
+  {
+    "event_seq": 31,
+    "arguments": {
+      "used_skills": [
+        "brand-revision",
+        "claim-grounding"
+      ],
+      "title": "小剪 App 字幕神器",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "展示小剪自动生成字幕的操作。",
+          "narration": "小剪 App 支持自动生成字幕，建议用户检查并手动修正字幕内容。",
+          "subtitle": "建议用户检查并手动修正字幕内容",
+          "source_ids": [
+            "P01",
+            "P04"
+          ]
+        }
+      ],
+      "claims": [
+        {
+          "text": "小剪 App 支持自动生成字幕。",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S1"
+        },
+        {
+          "text": "建议用户检查并手动修正字幕内容。",
+          "source_id": "P04",
+          "quote": "建议用户检查并手动修正字幕内容。",
+          "scene_id": "S1"
+        }
+      ],
+      "reason": "修正品牌相关的表达，确保符合品牌规范；将产品功能、效果等断言绑定到真正支持它们的资料原文。"
+    }
+  },
+  {
+    "event_seq": 54,
+    "arguments": {
+      "used_skills": [
+        "claim-grounding",
+        "factual-revision",
+        "narration-subtitles"
+      ],
+      "title": "小剪 App 字幕神器",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "展示小剪自动生成字幕的操作。",
+          "narration": "小剪 App 支持自动生成字幕，建议用户检查并手动修正字幕内容。",
+          "subtitle": "支持自动生成字幕，建议检查并修正字幕内容",
+          "source_ids": [
+            "P01",
+            "P04"
+          ],
+          "min_display_seconds": 1.0
+        }
+      ],
+      "claims": [
+        {
+          "text": "小剪 App 支持自动生成字幕。",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S1"
+        },
+        {
+          "text": "建议用户检查并手动修正字幕内容。",
+          "source_id": "P04",
+          "quote": "建议用户检查并手动修正字幕内容。",
+          "scene_id": "S1"
+        }
+      ],
+      "reason": "修正断言未出现在脚本内容中的问题，以及引用与断言不匹配的情况。"
+    }
+  }
+]

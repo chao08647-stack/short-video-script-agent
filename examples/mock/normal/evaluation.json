@@ -1,0 +1,20 @@
+{
+  "case": "normal",
+  "mode": "mock",
+  "run_id": "a07f2fe1-69db-4cb3-9499-1e71902cd744",
+  "status": "completed",
+  "acceptance_passed": true,
+  "acceptance_errors": [],
+  "elapsed_seconds": 0.3,
+  "model_calls": 14,
+  "tool_calls": 13,
+  "skills_loaded": [
+    "audience-angle",
+    "claim-grounding",
+    "material-search",
+    "narration-subtitles",
+    "storyboard-planning"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\mock\\normal"
+}

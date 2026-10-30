@@ -1,0 +1,182 @@
+[
+  {
+    "event_seq": 20,
+    "tool": "submit_script",
+    "arguments": {
+      "used_skills": [
+        "narrative-structure",
+        "material-search"
+      ],
+      "title": "小剪App字幕功能介绍",
+      "scenes": [
+        {
+          "scene_id": "S01",
+          "visual": "展示小剪App界面，突出字幕功能按钮",
+          "narration": "大家好，今天给大家介绍一下小剪App的字幕功能",
+          "subtitle": "小剪App字幕功能介绍",
+          "source_ids": [
+            "P01"
+          ],
+          "min_display_seconds": 3
+        },
+        {
+          "scene_id": "S02",
+          "visual": "演示小剪App自动生成字幕的过程",
+          "narration": "首先，我们来看一下小剪App如何自动生成字幕",
+          "subtitle": "演示自动生成字幕",
+          "source_ids": [
+            "P01",
+            "P02"
+          ],
+          "min_display_seconds": 5
+        },
+        {
+          "scene_id": "S03",
+          "visual": "展示手动修改字幕的操作步骤",
+          "narration": "接下来，让我们看看如何手动修改小剪App生成的字幕",
+          "subtitle": "演示手动修改字幕",
+          "source_ids": [
+            "P02"
+          ],
+          "min_display_seconds": 5
+        },
+        {
+          "scene_id": "S04",
+          "visual": "讲解字幕样式调整的方法",
+          "narration": "最后，我们来了解一下如何调整字幕的样式，比如字体大小和颜色",
+          "subtitle": "讲解字幕样式调整",
+          "source_ids": [
+            "P03"
+          ],
+          "min_display_seconds": 5
+        },
+        {
+          "scene_id": "S05",
+          "visual": "总结小剪App字幕功能的优势",
+          "narration": "总的来说，小剪App的字幕功能非常强大，既方便又实用",
+          "subtitle": "总结字幕功能优势",
+          "source_ids": [
+            "P01",
+            "P02",
+            "P03",
+            "P04"
+          ],
+          "min_display_seconds": 5
+        }
+      ],
+      "claims": [
+        {
+          "text": "小剪 App 支持自动生成字幕。",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S02"
+        },
+        {
+          "text": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "source_id": "P02",
+          "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "scene_id": "S03"
+        },
+        {
+          "text": "小剪 App 支持调整字幕的字体大小和颜色。",
+          "source_id": "P03",
+          "quote": "小剪 App 支持调整字幕的字体大小和颜色。",
+          "scene_id": "S04"
+        },
+        {
+          "text": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+          "source_id": "P04",
+          "quote": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+          "scene_id": "S05"
+        }
+      ],
+      "reason": "根据已检索到的资料，形成了关于小剪App字幕功能的完整脚本"
+    },
+    "version": 1,
+    "script": {
+      "title": "小剪App字幕功能介绍",
+      "scenes": [
+        {
+          "scene_id": "S01",
+          "visual": "展示小剪App界面，突出字幕功能按钮",
+          "narration": "大家好，今天给大家介绍一下小剪App的字幕功能",
+          "subtitle": "小剪App字幕功能介绍",
+          "source_ids": [
+            "P01"
+          ],
+          "min_display_seconds": 3.0
+        },
+        {
+          "scene_id": "S02",
+          "visual": "演示小剪App自动生成字幕的过程",
+          "narration": "首先，我们来看一下小剪App如何自动生成字幕",
+          "subtitle": "演示自动生成字幕",
+          "source_ids": [
+            "P01",
+            "P02"
+          ],
+          "min_display_seconds": 5.0
+        },
+        {
+          "scene_id": "S03",
+          "visual": "展示手动修改字幕的操作步骤",
+          "narration": "接下来，让我们看看如何手动修改小剪App生成的字幕",
+          "subtitle": "演示手动修改字幕",
+          "source_ids": [
+            "P02"
+          ],
+          "min_display_seconds": 5.0
+        },
+        {
+          "scene_id": "S04",
+          "visual": "讲解字幕样式调整的方法",
+          "narration": "最后，我们来了解一下如何调整字幕的样式，比如字体大小和颜色",
+          "subtitle": "讲解字幕样式调整",
+          "source_ids": [
+            "P03"
+          ],
+          "min_display_seconds": 5.0
+        },
+        {
+          "scene_id": "S05",
+          "visual": "总结小剪App字幕功能的优势",
+          "narration": "总的来说，小剪App的字幕功能非常强大，既方便又实用",
+          "subtitle": "总结字幕功能优势",
+          "source_ids": [
+            "P01",
+            "P02",
+            "P03",
+            "P04"
+          ],
+          "min_display_seconds": 5.0
+        }
+      ],
+      "claims": [
+        {
+          "text": "小剪 App 支持自动生成字幕。",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S02"
+        },
+        {
+          "text": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "source_id": "P02",
+          "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "scene_id": "S03"
+        },
+        {
+          "text": "小剪 App 支持调整字幕的字体大小和颜色。",
+          "source_id": "P03",
+          "quote": "小剪 App 支持调整字幕的字体大小和颜色。",
+          "scene_id": "S04"
+        },
+        {
+          "text": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+          "source_id": "P04",
+          "quote": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+          "scene_id": "S05"
+        }
+      ]
+    }
+  }
+]

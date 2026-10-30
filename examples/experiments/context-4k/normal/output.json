@@ -1,0 +1,30 @@
+{
+  "run_id": "8c93d150-71c4-4798-89c5-50adf4b1a56b",
+  "mode": "live",
+  "status": "failed",
+  "phase": "direction",
+  "brief": {
+    "topic": "介绍小剪 App 的字幕功能",
+    "audience": "短视频剪辑新手",
+    "platform": "抖音",
+    "target_seconds": 30.0,
+    "style": "轻松、直白"
+  },
+  "direction": null,
+  "script": null,
+  "script_version": 0,
+  "checks": {},
+  "estimated_seconds": null,
+  "duration_note": "基于固定语速与画面展示需求估算，不代表真实配音或成片测量。",
+  "sources": [],
+  "pending_review": null,
+  "review_history": [],
+  "stop_reason": {
+    "code": "model_unavailable",
+    "message": "Model HTTP 400: This model's maximum context length is 4096 tokens. However, you requested 2048 output tokens and your prompt contains at least 2049 input tokens, for a total of at least 4097 tokens. Please reduce the length of the input prompt or the number of requested output tokens. (parameter=input_tokens, value=2049)"
+  },
+  "model_calls": 1,
+  "tool_calls": 0,
+  "skills_loaded": [],
+  "data_hash": "79547a1a8070046079e5a75d5be2579ee62ecfde50ca53b0d8928795e1c7d323"
+}

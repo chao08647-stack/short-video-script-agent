@@ -1,0 +1,19 @@
+{
+  "case": "normal",
+  "mode": "live",
+  "run_id": "7206e67e-9cf0-44b6-974f-6f2840c38d23",
+  "status": "incomplete",
+  "acceptance_passed": false,
+  "acceptance_errors": [
+    "Expected completed, got incomplete"
+  ],
+  "elapsed_seconds": 290.56,
+  "model_calls": 40,
+  "tool_calls": 40,
+  "skills_loaded": [
+    "material-search",
+    "narrative-structure"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\live\\normal"
+}

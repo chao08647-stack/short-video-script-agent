@@ -1,0 +1,222 @@
+[
+  {
+    "event_seq": 17,
+    "tool": "submit_script",
+    "arguments": {
+      "used_skills": [
+        "material-search"
+      ],
+      "title": "小剪 App 从生成字幕到手动修改的操作教程",
+      "scenes": [
+        {
+          "scene_id": "1",
+          "visual": "用户打开小剪 App，进入字幕生成页面",
+          "narration": "首先，我们来看一下如何使用小剪 App 自动生成字幕",
+          "subtitle": "打开小剪 App，进入字幕生成页面",
+          "source_ids": [
+            "P01"
+          ],
+          "min_display_seconds": 5
+        },
+        {
+          "scene_id": "2",
+          "visual": "系统自动识别语音并生成初步字幕",
+          "narration": "小剪 App 支持自动生成字幕，您只需点击生成即可",
+          "subtitle": "小剪 App 自动识别语音并生成初步字幕",
+          "source_ids": [
+            "P01",
+            "P04"
+          ],
+          "min_display_seconds": 5
+        },
+        {
+          "scene_id": "3",
+          "visual": "用户手动修改生成的字幕",
+          "narration": "如果对生成的字幕不满意，您可以手动修改它",
+          "subtitle": "用户可以手动修改生成的字幕",
+          "source_ids": [
+            "P02"
+          ],
+          "min_display_seconds": 5
+        },
+        {
+          "scene_id": "4",
+          "visual": "用户检查并修正字幕",
+          "narration": "请务必检查生成的字幕，如有错误，请手动修正",
+          "subtitle": "用户检查并修正生成的字幕",
+          "source_ids": [
+            "P04"
+          ],
+          "min_display_seconds": 5
+        }
+      ],
+      "claims": [
+        {
+          "text": "小剪 App 支持自动生成字幕",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕",
+          "scene_id": "2"
+        },
+        {
+          "text": "用户可以手动修改生成的字幕",
+          "source_id": "P02",
+          "quote": "用户可以手动修改小剪 App 生成的字幕文字",
+          "scene_id": "3"
+        },
+        {
+          "text": "请务必检查生成的字幕，如有错误，请手动修正",
+          "source_id": "P04",
+          "quote": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误",
+          "scene_id": "4"
+        }
+      ],
+      "reason": "根据已获取的资料，形成了完整的短视频脚本"
+    },
+    "version": 1,
+    "script": {
+      "title": "小剪 App 从生成字幕到手动修改的操作教程",
+      "scenes": [
+        {
+          "scene_id": "1",
+          "visual": "用户打开小剪 App，进入字幕生成页面",
+          "narration": "首先，我们来看一下如何使用小剪 App 自动生成字幕",
+          "subtitle": "打开小剪 App，进入字幕生成页面",
+          "source_ids": [
+            "P01"
+          ],
+          "min_display_seconds": 5.0
+        },
+        {
+          "scene_id": "2",
+          "visual": "系统自动识别语音并生成初步字幕",
+          "narration": "小剪 App 支持自动生成字幕，您只需点击生成即可",
+          "subtitle": "小剪 App 自动识别语音并生成初步字幕",
+          "source_ids": [
+            "P01",
+            "P04"
+          ],
+          "min_display_seconds": 5.0
+        },
+        {
+          "scene_id": "3",
+          "visual": "用户手动修改生成的字幕",
+          "narration": "如果对生成的字幕不满意，您可以手动修改它",
+          "subtitle": "用户可以手动修改生成的字幕",
+          "source_ids": [
+            "P02"
+          ],
+          "min_display_seconds": 5.0
+        },
+        {
+          "scene_id": "4",
+          "visual": "用户检查并修正字幕",
+          "narration": "请务必检查生成的字幕，如有错误，请手动修正",
+          "subtitle": "用户检查并修正生成的字幕",
+          "source_ids": [
+            "P04"
+          ],
+          "min_display_seconds": 5.0
+        }
+      ],
+      "claims": [
+        {
+          "text": "小剪 App 支持自动生成字幕",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕",
+          "scene_id": "2"
+        },
+        {
+          "text": "用户可以手动修改生成的字幕",
+          "source_id": "P02",
+          "quote": "用户可以手动修改小剪 App 生成的字幕文字",
+          "scene_id": "3"
+        },
+        {
+          "text": "请务必检查生成的字幕，如有错误，请手动修正",
+          "source_id": "P04",
+          "quote": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误",
+          "scene_id": "4"
+        }
+      ]
+    }
+  },
+  {
+    "event_seq": 32,
+    "tool": "patch_script",
+    "arguments": {
+      "used_skills": [
+        "material-search"
+      ],
+      "edits": [
+        {
+          "op": "remove",
+          "path": "/scenes/0/source_ids/0"
+        },
+        {
+          "op": "remove",
+          "path": "/claims/0"
+        }
+      ],
+      "reason": "移除未正确映射的来源ID和对应的claims，以解决引用绑定错误的问题"
+    },
+    "version": 2,
+    "script": {
+      "title": "小剪 App 从生成字幕到手动修改的操作教程",
+      "scenes": [
+        {
+          "scene_id": "1",
+          "visual": "用户打开小剪 App，进入字幕生成页面",
+          "narration": "首先，我们来看一下如何使用小剪 App 自动生成字幕",
+          "subtitle": "打开小剪 App，进入字幕生成页面",
+          "source_ids": [],
+          "min_display_seconds": 5.0
+        },
+        {
+          "scene_id": "2",
+          "visual": "系统自动识别语音并生成初步字幕",
+          "narration": "小剪 App 支持自动生成字幕，您只需点击生成即可",
+          "subtitle": "小剪 App 自动识别语音并生成初步字幕",
+          "source_ids": [
+            "P01",
+            "P04"
+          ],
+          "min_display_seconds": 5.0
+        },
+        {
+          "scene_id": "3",
+          "visual": "用户手动修改生成的字幕",
+          "narration": "如果对生成的字幕不满意，您可以手动修改它",
+          "subtitle": "用户可以手动修改生成的字幕",
+          "source_ids": [
+            "P02"
+          ],
+          "min_display_seconds": 5.0
+        },
+        {
+          "scene_id": "4",
+          "visual": "用户检查并修正字幕",
+          "narration": "请务必检查生成的字幕，如有错误，请手动修正",
+          "subtitle": "用户检查并修正生成的字幕",
+          "source_ids": [
+            "P04"
+          ],
+          "min_display_seconds": 5.0
+        }
+      ],
+      "claims": [
+        {
+          "text": "用户可以手动修改生成的字幕",
+          "source_id": "P02",
+          "quote": "用户可以手动修改小剪 App 生成的字幕文字",
+          "scene_id": "3"
+        },
+        {
+          "text": "请务必检查生成的字幕，如有错误，请手动修正",
+          "source_id": "P04",
+          "quote": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误",
+          "scene_id": "4"
+        }
+      ]
+    }
+  }
+]

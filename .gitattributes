@@ -1,2 +1,5 @@
 * text=auto eol=lf
 *.zip binary
+src/script_agent/vendor/deepseek/encoding.py -text
+src/script_agent/vendor/deepseek/tokenizer.json -text
+src/script_agent/vendor/deepseek/LICENSE -text

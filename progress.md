@@ -26,3 +26,5 @@
 - Added bounded model patch operations, current-state action preconditions, preserved human clarification context, strict JSON Schema protocol, and truthful code-version snapshots. 16 skills are implemented; 16 loaded and 7 model-declared associations do not prove effective application.
 - User was asked asynchronously whether another instruction-model endpoint is available; no answer was received during this implementation. Continued with the supplied model and retained failures rather than relaxing checks.
 - Local Git repository initialized. Preparing a reviewable source archive and local commit; GitHub remote is not supplied, full live acceptance remains outstanding.
+
+- Local source archive extracted into an isolated workspace subdirectory; verified imports came from the extracted source and all three Mock review gates completed. No .env, runtime DB, cache or virtualenv in the archive. Code fingerprints retained in examples/package-check.json. Local Git commit and archive are ready; remaining live acceptance and remote publication are explicitly pending.

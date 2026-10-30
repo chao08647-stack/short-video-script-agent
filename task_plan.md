@@ -28,7 +28,7 @@ User authorized implementing topic 4 according to the accepted plan. Python CLI,
 - [complete] Implement model adapter, graph, durable review/resume, checks, CLI and exports.
 - [complete] Run deterministic tests and real-model acceptance paths; fix engineering defects and preserve unresolved model failures.
 - [complete] Generate evidence and honest skill coverage; finish requirements/design/evaluation/AI-use/retrospective documentation.
-- [in_progress] Verify local deliverable, create local Git commit and source archive.
+- [complete] Verify local deliverable, create local Git commit and source archive; extracted archive imports and completes the three offline review gates.
 - [pending] Meet the full live business acceptance criteria using an adequate model configuration, then publish to a supplied GitHub remote.
 
 Constraints: no real video generation; no false claims of live model/skill coverage or human approval; simulated reviewer decisions in evaluation must be labeled. Preserve local API credentials outside tracked evidence. Remote GitHub destination has not been supplied.

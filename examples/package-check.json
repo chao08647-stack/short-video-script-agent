@@ -1,0 +1,20 @@
+{
+  "status": "completed",
+  "mode": "mock",
+  "review_stages": [
+    "direction",
+    "draft",
+    "final"
+  ],
+  "imported_from_archive": true,
+  "source_hashes": {
+    "engine.py": "167491b35b46e5fe569be1b55bf01633787bc5f219cd33da9af99ef89f2db3ab",
+    "prompts.py": "1ab58d618a46e01dc43c73bc6e43c6bb6a170741bfc921747511a5ac0c04731d",
+    "model.py": "9d9c0f529d6b01c48a88dd11dec889a4d7f2909504ea20ee3295686355fa1f06",
+    "business_tools.py": "6f3f549b2fe9f49b2ddcfd4881509a93fa162c9422a95d029ec282a11d0d2411",
+    "script_patch.py": "ec77a077f3a59753457e082c6936897bad7379218f7a24f0fee9ff7927de3ad7",
+    "runtime.py": "ffe5a3005c1df86b7535ab728d314b20a2a0cccf4fd6c7dc838c18b1129d4ff2"
+  },
+  "excluded_private_runtime_files": true,
+  "note": "Offline smoke check of extracted implementation using installed dependencies, before adding this report. Not a live-model decision test."
+}

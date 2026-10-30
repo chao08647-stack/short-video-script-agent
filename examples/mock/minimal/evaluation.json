@@ -1,11 +1,11 @@
 {
   "case": "minimal",
   "mode": "mock",
-  "run_id": "846c8917-9bb2-4e01-b156-c3ec3bd78963",
+  "run_id": "965eecc5-c7fd-472b-aff0-c4b2140720db",
   "status": "completed",
   "acceptance_passed": true,
   "acceptance_errors": [],
-  "elapsed_seconds": 0.34,
+  "elapsed_seconds": 0.25,
   "model_calls": 14,
   "tool_calls": 13,
   "skills_loaded": [

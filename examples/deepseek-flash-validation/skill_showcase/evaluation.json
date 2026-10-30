@@ -1,0 +1,21 @@
+{
+  "case": "skill_showcase",
+  "mode": "live",
+  "run_id": "6665af8e-eaf3-423c-8c0b-3f83370027c5",
+  "status": "completed",
+  "acceptance_passed": true,
+  "acceptance_errors": [],
+  "elapsed_seconds": 24.81,
+  "model_calls": 18,
+  "tool_calls": 17,
+  "skills_loaded": [
+    "factual-revision",
+    "hook-writing",
+    "material-search",
+    "platform-adaptation",
+    "storyboard-planning",
+    "visual-direction"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\deepseek-flash-validation\\skill_showcase"
+}

@@ -1,0 +1,19 @@
+{
+  "case": "brand_and_fact_revision",
+  "mode": "live",
+  "run_id": "2a742910-9a38-45d0-a318-c10d1826f569",
+  "status": "completed",
+  "acceptance_passed": true,
+  "acceptance_errors": [],
+  "elapsed_seconds": 26.91,
+  "model_calls": 17,
+  "tool_calls": 18,
+  "skills_loaded": [
+    "audience-angle",
+    "brand-revision",
+    "claim-grounding",
+    "material-search"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\deepseek-flash-recheck\\brand_and_fact_revision"
+}

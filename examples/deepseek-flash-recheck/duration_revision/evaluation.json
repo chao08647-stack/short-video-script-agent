@@ -1,0 +1,21 @@
+{
+  "case": "duration_revision",
+  "mode": "live",
+  "run_id": "2097fdfa-9c3a-4b7a-a5d6-f2c467d0c7a5",
+  "status": "completed",
+  "acceptance_passed": true,
+  "acceptance_errors": [],
+  "elapsed_seconds": 48.67,
+  "model_calls": 28,
+  "tool_calls": 29,
+  "skills_loaded": [
+    "audience-angle",
+    "claim-grounding",
+    "duration-compression",
+    "factual-revision",
+    "material-search",
+    "narration-subtitles"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\deepseek-flash-recheck\\duration_revision"
+}

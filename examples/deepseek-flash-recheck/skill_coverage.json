@@ -1,0 +1,2459 @@
+{
+  "note": "加载、模型声明与候选关联分别统计。候选关联不等于证明技能有效，须结合对应产物审阅。Mock与live输出目录分离。",
+  "skills": {
+    "audience-angle": {
+      "loaded": [
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 15
+        },
+        {
+          "case": "conflict",
+          "trace": "conflict\\trace.jsonl",
+          "event_seq": 18
+        },
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 12
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 12
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 12
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 12
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 20
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 12
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 15
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 12
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 14
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 12
+        }
+      ],
+      "model_declared_artifacts": [
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 21,
+          "tool": "submit_direction",
+          "artifact_event_seq": 18
+        },
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 27,
+          "tool": "request_review",
+          "artifact_event_seq": 24
+        },
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 45,
+          "tool": "submit_script",
+          "artifact_event_seq": 42
+        },
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 17,
+          "tool": "submit_direction",
+          "artifact_event_seq": 15
+        },
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 22,
+          "tool": "request_review",
+          "artifact_event_seq": 20
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 17,
+          "tool": "submit_direction",
+          "artifact_event_seq": 15
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 22,
+          "tool": "request_review",
+          "artifact_event_seq": 20
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 33,
+          "tool": "submit_script",
+          "artifact_event_seq": 31
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 17,
+          "tool": "submit_direction",
+          "artifact_event_seq": 15
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 22,
+          "tool": "request_review",
+          "artifact_event_seq": 20
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 33,
+          "tool": "submit_script",
+          "artifact_event_seq": 31
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 85,
+          "tool": "submit_script",
+          "artifact_event_seq": 83
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 17,
+          "tool": "submit_direction",
+          "artifact_event_seq": 15
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 22,
+          "tool": "request_review",
+          "artifact_event_seq": 20
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 25,
+          "tool": "submit_direction",
+          "artifact_event_seq": 23
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 30,
+          "tool": "request_review",
+          "artifact_event_seq": 28
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 47,
+          "tool": "submit_script",
+          "artifact_event_seq": 45
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 17,
+          "tool": "submit_direction",
+          "artifact_event_seq": 15
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 22,
+          "tool": "request_review",
+          "artifact_event_seq": 20
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 33,
+          "tool": "submit_script",
+          "artifact_event_seq": 31
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 20,
+          "tool": "submit_direction",
+          "artifact_event_seq": 18
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 25,
+          "tool": "request_review",
+          "artifact_event_seq": 23
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 36,
+          "tool": "submit_script",
+          "artifact_event_seq": 34
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 17,
+          "tool": "submit_direction",
+          "artifact_event_seq": 15
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 22,
+          "tool": "request_review",
+          "artifact_event_seq": 20
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 30,
+          "tool": "submit_script",
+          "artifact_event_seq": 28
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 19,
+          "tool": "submit_direction",
+          "artifact_event_seq": 17
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 24,
+          "tool": "request_review",
+          "artifact_event_seq": 22
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 35,
+          "tool": "submit_script",
+          "artifact_event_seq": 33
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 17,
+          "tool": "submit_direction",
+          "artifact_event_seq": 15
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 22,
+          "tool": "request_review",
+          "artifact_event_seq": 20
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 36,
+          "tool": "submit_script",
+          "artifact_event_seq": 34
+        }
+      ],
+      "candidate_links": []
+    },
+    "brand-revision": {
+      "loaded": [
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 39
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 48
+        }
+      ],
+      "model_declared_artifacts": [
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 43,
+          "tool": "submit_script",
+          "artifact_event_seq": 42
+        },
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 53,
+          "tool": "check_rules",
+          "artifact_event_seq": 51
+        },
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 58,
+          "tool": "request_review",
+          "artifact_event_seq": 56
+        },
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 64,
+          "tool": "request_review",
+          "artifact_event_seq": 62
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 52,
+          "tool": "patch_script",
+          "artifact_event_seq": 51
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 59,
+          "tool": "check_rules",
+          "artifact_event_seq": 58
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 64,
+          "tool": "request_review",
+          "artifact_event_seq": 62
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 70,
+          "tool": "request_review",
+          "artifact_event_seq": 68
+        }
+      ],
+      "candidate_links": []
+    },
+    "brief-clarification": {
+      "loaded": [
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 6
+        }
+      ],
+      "model_declared_artifacts": [
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 11,
+          "tool": "ask_user",
+          "artifact_event_seq": 10
+        }
+      ],
+      "candidate_links": []
+    },
+    "claim-grounding": {
+      "loaded": [
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 12
+        },
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 49
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 36
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 39
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 28
+        }
+      ],
+      "model_declared_artifacts": [
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 20,
+          "tool": "submit_direction",
+          "artifact_event_seq": 18
+        },
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 26,
+          "tool": "request_review",
+          "artifact_event_seq": 24
+        },
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 34,
+          "tool": "check_rules",
+          "artifact_event_seq": 33
+        },
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 44,
+          "tool": "submit_script",
+          "artifact_event_seq": 42
+        },
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 48,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 47
+        },
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 52,
+          "tool": "check_rules",
+          "artifact_event_seq": 51
+        },
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 57,
+          "tool": "request_review",
+          "artifact_event_seq": 56
+        },
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 63,
+          "tool": "request_review",
+          "artifact_event_seq": 62
+        },
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 54,
+          "tool": "check_rules",
+          "artifact_event_seq": 53
+        },
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 66,
+          "tool": "check_rules",
+          "artifact_event_seq": 65
+        },
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 70,
+          "tool": "patch_script",
+          "artifact_event_seq": 69
+        },
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 81,
+          "tool": "check_rules",
+          "artifact_event_seq": 80
+        },
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 86,
+          "tool": "request_review",
+          "artifact_event_seq": 85
+        },
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 93,
+          "tool": "request_review",
+          "artifact_event_seq": 92
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 40,
+          "tool": "check_rules",
+          "artifact_event_seq": 39
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 56,
+          "tool": "check_rules",
+          "artifact_event_seq": 55
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 61,
+          "tool": "request_review",
+          "artifact_event_seq": 60
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 67,
+          "tool": "request_review",
+          "artifact_event_seq": 66
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 49,
+          "tool": "submit_script",
+          "artifact_event_seq": 45
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 57,
+          "tool": "check_rules",
+          "artifact_event_seq": 56
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 79,
+          "tool": "check_rules",
+          "artifact_event_seq": 78
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 89,
+          "tool": "check_rules",
+          "artifact_event_seq": 88
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 96,
+          "tool": "submit_script",
+          "artifact_event_seq": 94
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 104,
+          "tool": "check_rules",
+          "artifact_event_seq": 103
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 109,
+          "tool": "request_review",
+          "artifact_event_seq": 108
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 116,
+          "tool": "request_review",
+          "artifact_event_seq": 115
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 38,
+          "tool": "submit_script",
+          "artifact_event_seq": 34
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 48,
+          "tool": "check_rules",
+          "artifact_event_seq": 47
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 57,
+          "tool": "check_rules",
+          "artifact_event_seq": 56
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 65,
+          "tool": "check_rules",
+          "artifact_event_seq": 63
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 69,
+          "tool": "patch_script",
+          "artifact_event_seq": 67
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 79,
+          "tool": "check_rules",
+          "artifact_event_seq": 78
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 84,
+          "tool": "request_review",
+          "artifact_event_seq": 83
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 90,
+          "tool": "request_review",
+          "artifact_event_seq": 89
+        }
+      ],
+      "candidate_links": []
+    },
+    "duration-compression": {
+      "loaded": [
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 31
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 44
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 36
+        }
+      ],
+      "model_declared_artifacts": [
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 38,
+          "tool": "submit_script",
+          "artifact_event_seq": 37
+        },
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 45,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 44
+        },
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 63,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 62
+        },
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 77,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 76
+        },
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 88,
+          "tool": "request_review",
+          "artifact_event_seq": 85
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 48,
+          "tool": "patch_script",
+          "artifact_event_seq": 47
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 52,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 51
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 55,
+          "tool": "patch_script",
+          "artifact_event_seq": 54
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 59,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 58
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 62,
+          "tool": "patch_script",
+          "artifact_event_seq": 61
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 66,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 65
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 69,
+          "tool": "patch_script",
+          "artifact_event_seq": 68
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 73,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 72
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 102,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 101
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 40,
+          "tool": "submit_script",
+          "artifact_event_seq": 39
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 47,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 46
+        }
+      ],
+      "candidate_links": []
+    },
+    "evidence-conflict": {
+      "loaded": [
+        {
+          "case": "conflict",
+          "trace": "conflict\\trace.jsonl",
+          "event_seq": 12
+        }
+      ],
+      "model_declared_artifacts": [
+        {
+          "case": "conflict",
+          "trace": "conflict\\trace.jsonl",
+          "event_seq": 16,
+          "tool": "search_materials",
+          "artifact_event_seq": 15
+        },
+        {
+          "case": "conflict",
+          "trace": "conflict\\trace.jsonl",
+          "event_seq": 23,
+          "tool": "search_materials",
+          "artifact_event_seq": 21
+        },
+        {
+          "case": "conflict",
+          "trace": "conflict\\trace.jsonl",
+          "event_seq": 27,
+          "tool": "ask_user",
+          "artifact_event_seq": 26
+        }
+      ],
+      "candidate_links": []
+    },
+    "factual-revision": {
+      "loaded": [
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 56
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 78
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 46
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 42
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 59
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 47
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 51
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 61
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 50
+        }
+      ],
+      "model_declared_artifacts": [
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 60,
+          "tool": "patch_script",
+          "artifact_event_seq": 59
+        },
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 67,
+          "tool": "check_rules",
+          "artifact_event_seq": 65
+        },
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 71,
+          "tool": "patch_script",
+          "artifact_event_seq": 69
+        },
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 82,
+          "tool": "check_rules",
+          "artifact_event_seq": 80
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 82,
+          "tool": "patch_script",
+          "artifact_event_seq": 81
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 85,
+          "tool": "check_rules",
+          "artifact_event_seq": 84
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 96,
+          "tool": "patch_script",
+          "artifact_event_seq": 95
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 105,
+          "tool": "check_rules",
+          "artifact_event_seq": 104
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 112,
+          "tool": "patch_script",
+          "artifact_event_seq": 111
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 115,
+          "tool": "check_rules",
+          "artifact_event_seq": 114
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 118,
+          "tool": "patch_script",
+          "artifact_event_seq": 117
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 122,
+          "tool": "check_rules",
+          "artifact_event_seq": 121
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 125,
+          "tool": "patch_script",
+          "artifact_event_seq": 124
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 50,
+          "tool": "patch_script",
+          "artifact_event_seq": 49
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 53,
+          "tool": "check_rules",
+          "artifact_event_seq": 52
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 56,
+          "tool": "patch_script",
+          "artifact_event_seq": 55
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 60,
+          "tool": "check_rules",
+          "artifact_event_seq": 59
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 63,
+          "tool": "patch_script",
+          "artifact_event_seq": 62
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 72,
+          "tool": "check_rules",
+          "artifact_event_seq": 71
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 75,
+          "tool": "patch_script",
+          "artifact_event_seq": 74
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 79,
+          "tool": "check_rules",
+          "artifact_event_seq": 78
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 88,
+          "tool": "submit_script",
+          "artifact_event_seq": 83
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 95,
+          "tool": "check_rules",
+          "artifact_event_seq": 94
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 98,
+          "tool": "patch_script",
+          "artifact_event_seq": 97
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 109,
+          "tool": "check_rules",
+          "artifact_event_seq": 108
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 114,
+          "tool": "request_review",
+          "artifact_event_seq": 112
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 46,
+          "tool": "patch_script",
+          "artifact_event_seq": 45
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 57,
+          "tool": "check_rules",
+          "artifact_event_seq": 55
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 63,
+          "tool": "patch_script",
+          "artifact_event_seq": 62
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 68,
+          "tool": "patch_script",
+          "artifact_event_seq": 67
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 82,
+          "tool": "patch_script",
+          "artifact_event_seq": 81
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 90,
+          "tool": "check_rules",
+          "artifact_event_seq": 88
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 95,
+          "tool": "submit_script",
+          "artifact_event_seq": 94
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 105,
+          "tool": "check_rules",
+          "artifact_event_seq": 103
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 51,
+          "tool": "patch_script",
+          "artifact_event_seq": 50
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 56,
+          "tool": "patch_script",
+          "artifact_event_seq": 55
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 62,
+          "tool": "check_rules",
+          "artifact_event_seq": 61
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 65,
+          "tool": "patch_script",
+          "artifact_event_seq": 64
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 75,
+          "tool": "check_rules",
+          "artifact_event_seq": 74
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 80,
+          "tool": "request_review",
+          "artifact_event_seq": 78
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 86,
+          "tool": "request_review",
+          "artifact_event_seq": 84
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 55,
+          "tool": "patch_script",
+          "artifact_event_seq": 54
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 58,
+          "tool": "check_rules",
+          "artifact_event_seq": 57
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 61,
+          "tool": "patch_script",
+          "artifact_event_seq": 60
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 64,
+          "tool": "check_rules",
+          "artifact_event_seq": 63
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 67,
+          "tool": "patch_script",
+          "artifact_event_seq": 66
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 70,
+          "tool": "check_rules",
+          "artifact_event_seq": 69
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 73,
+          "tool": "patch_script",
+          "artifact_event_seq": 72
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 82,
+          "tool": "check_rules",
+          "artifact_event_seq": 81
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 85,
+          "tool": "patch_script",
+          "artifact_event_seq": 84
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 91,
+          "tool": "check_rules",
+          "artifact_event_seq": 90
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 94,
+          "tool": "patch_script",
+          "artifact_event_seq": 93
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 101,
+          "tool": "check_rules",
+          "artifact_event_seq": 100
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 106,
+          "tool": "patch_script",
+          "artifact_event_seq": 105
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 117,
+          "tool": "check_rules",
+          "artifact_event_seq": 116
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 120,
+          "tool": "patch_script",
+          "artifact_event_seq": 119
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 126,
+          "tool": "check_rules",
+          "artifact_event_seq": 125
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 54,
+          "tool": "patch_script",
+          "artifact_event_seq": 53
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 58,
+          "tool": "check_rules",
+          "artifact_event_seq": 56
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 61,
+          "tool": "patch_script",
+          "artifact_event_seq": 60
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 64,
+          "tool": "check_rules",
+          "artifact_event_seq": 63
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 68,
+          "tool": "patch_script",
+          "artifact_event_seq": 67
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 80,
+          "tool": "check_rules",
+          "artifact_event_seq": 78
+        }
+      ],
+      "candidate_links": []
+    },
+    "hook-writing": {
+      "loaded": [],
+      "model_declared_artifacts": [],
+      "candidate_links": []
+    },
+    "human-feedback": {
+      "loaded": [
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 117
+        }
+      ],
+      "model_declared_artifacts": [
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 121,
+          "tool": "patch_script",
+          "artifact_event_seq": 120
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 125,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 124
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 129,
+          "tool": "check_rules",
+          "artifact_event_seq": 128
+        }
+      ],
+      "candidate_links": []
+    },
+    "material-search": {
+      "loaded": [
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 6
+        },
+        {
+          "case": "conflict",
+          "trace": "conflict\\trace.jsonl",
+          "event_seq": 6
+        },
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 6
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 6
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 6
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 6
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 14
+        },
+        {
+          "case": "no_materials",
+          "trace": "no_materials\\trace.jsonl",
+          "event_seq": 6
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 6
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 6
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 6
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 6
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 6
+        }
+      ],
+      "model_declared_artifacts": [
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 10,
+          "tool": "search_materials",
+          "artifact_event_seq": 9
+        },
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 19,
+          "tool": "submit_direction",
+          "artifact_event_seq": 18
+        },
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 25,
+          "tool": "request_review",
+          "artifact_event_seq": 24
+        },
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 31,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 30
+        },
+        {
+          "case": "conflict",
+          "trace": "conflict\\trace.jsonl",
+          "event_seq": 10,
+          "tool": "search_materials",
+          "artifact_event_seq": 9
+        },
+        {
+          "case": "conflict",
+          "trace": "conflict\\trace.jsonl",
+          "event_seq": 22,
+          "tool": "search_materials",
+          "artifact_event_seq": 21
+        },
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 10,
+          "tool": "search_materials",
+          "artifact_event_seq": 9
+        },
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 16,
+          "tool": "submit_direction",
+          "artifact_event_seq": 15
+        },
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 21,
+          "tool": "request_review",
+          "artifact_event_seq": 20
+        },
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 26,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 25
+        },
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 29,
+          "tool": "check_rules",
+          "artifact_event_seq": 28
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 10,
+          "tool": "search_materials",
+          "artifact_event_seq": 9
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 16,
+          "tool": "submit_direction",
+          "artifact_event_seq": 15
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 21,
+          "tool": "request_review",
+          "artifact_event_seq": 20
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 32,
+          "tool": "submit_script",
+          "artifact_event_seq": 31
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 76,
+          "tool": "check_rules",
+          "artifact_event_seq": 75
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 10,
+          "tool": "search_materials",
+          "artifact_event_seq": 9
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 16,
+          "tool": "submit_direction",
+          "artifact_event_seq": 15
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 21,
+          "tool": "request_review",
+          "artifact_event_seq": 20
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 32,
+          "tool": "submit_script",
+          "artifact_event_seq": 31
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 84,
+          "tool": "submit_script",
+          "artifact_event_seq": 83
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 10,
+          "tool": "search_materials",
+          "artifact_event_seq": 9
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 16,
+          "tool": "submit_direction",
+          "artifact_event_seq": 15
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 21,
+          "tool": "request_review",
+          "artifact_event_seq": 20
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 18,
+          "tool": "search_materials",
+          "artifact_event_seq": 17
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 24,
+          "tool": "submit_direction",
+          "artifact_event_seq": 23
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 29,
+          "tool": "request_review",
+          "artifact_event_seq": 28
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 46,
+          "tool": "submit_script",
+          "artifact_event_seq": 45
+        },
+        {
+          "case": "no_materials",
+          "trace": "no_materials\\trace.jsonl",
+          "event_seq": 10,
+          "tool": "search_materials",
+          "artifact_event_seq": 9
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 10,
+          "tool": "search_materials",
+          "artifact_event_seq": 9
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 16,
+          "tool": "submit_direction",
+          "artifact_event_seq": 15
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 21,
+          "tool": "request_review",
+          "artifact_event_seq": 20
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 32,
+          "tool": "submit_script",
+          "artifact_event_seq": 31
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 10,
+          "tool": "search_materials",
+          "artifact_event_seq": 9
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 13,
+          "tool": "search_materials",
+          "artifact_event_seq": 12
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 19,
+          "tool": "submit_direction",
+          "artifact_event_seq": 18
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 24,
+          "tool": "request_review",
+          "artifact_event_seq": 23
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 35,
+          "tool": "submit_script",
+          "artifact_event_seq": 34
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 48,
+          "tool": "check_rules",
+          "artifact_event_seq": 47
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 10,
+          "tool": "search_materials",
+          "artifact_event_seq": 9
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 16,
+          "tool": "submit_direction",
+          "artifact_event_seq": 15
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 21,
+          "tool": "request_review",
+          "artifact_event_seq": 20
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 29,
+          "tool": "submit_script",
+          "artifact_event_seq": 28
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 12,
+          "tool": "search_materials",
+          "artifact_event_seq": 11
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 18,
+          "tool": "submit_direction",
+          "artifact_event_seq": 17
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 23,
+          "tool": "request_review",
+          "artifact_event_seq": 22
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 34,
+          "tool": "submit_script",
+          "artifact_event_seq": 33
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 46,
+          "tool": "check_rules",
+          "artifact_event_seq": 45
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 10,
+          "tool": "search_materials",
+          "artifact_event_seq": 9
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 16,
+          "tool": "submit_direction",
+          "artifact_event_seq": 15
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 21,
+          "tool": "request_review",
+          "artifact_event_seq": 20
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 35,
+          "tool": "submit_script",
+          "artifact_event_seq": 34
+        }
+      ],
+      "candidate_links": []
+    },
+    "narration-subtitles": {
+      "loaded": [
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 34
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 28
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 28
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 25
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 42
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 28
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 31
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 25
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 30
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 31
+        }
+      ],
+      "model_declared_artifacts": [
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 39,
+          "tool": "submit_script",
+          "artifact_event_seq": 37
+        },
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 87,
+          "tool": "request_review",
+          "artifact_event_seq": 85
+        },
+        {
+          "case": "duration_revision",
+          "trace": "duration_revision\\trace.jsonl",
+          "event_seq": 94,
+          "tool": "request_review",
+          "artifact_event_seq": 92
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 35,
+          "tool": "submit_script",
+          "artifact_event_seq": 31
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 42,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 40
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 49,
+          "tool": "patch_script",
+          "artifact_event_seq": 47
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 56,
+          "tool": "patch_script",
+          "artifact_event_seq": 54
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 63,
+          "tool": "patch_script",
+          "artifact_event_seq": 61
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 70,
+          "tool": "patch_script",
+          "artifact_event_seq": 68
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 119,
+          "tool": "patch_script",
+          "artifact_event_seq": 117
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 35,
+          "tool": "submit_script",
+          "artifact_event_seq": 31
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 41,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 40
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 44,
+          "tool": "check_rules",
+          "artifact_event_seq": 43
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 69,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 68
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 87,
+          "tool": "submit_script",
+          "artifact_event_seq": 83
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 91,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 90
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 99,
+          "tool": "patch_script",
+          "artifact_event_seq": 97
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 105,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 104
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 113,
+          "tool": "request_review",
+          "artifact_event_seq": 112
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 122,
+          "tool": "patch_script",
+          "artifact_event_seq": 120
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 29,
+          "tool": "submit_script",
+          "artifact_event_seq": 28
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 32,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 31
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 52,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 51
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 62,
+          "tool": "request_review",
+          "artifact_event_seq": 60
+        },
+        {
+          "case": "minimal",
+          "trace": "minimal\\trace.jsonl",
+          "event_seq": 68,
+          "tool": "request_review",
+          "artifact_event_seq": 66
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 50,
+          "tool": "submit_script",
+          "artifact_event_seq": 45
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 53,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 52
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 69,
+          "tool": "patch_script",
+          "artifact_event_seq": 67
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 75,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 74
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 85,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 84
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 97,
+          "tool": "submit_script",
+          "artifact_event_seq": 94
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 100,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 99
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 110,
+          "tool": "request_review",
+          "artifact_event_seq": 108
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 117,
+          "tool": "request_review",
+          "artifact_event_seq": 115
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 35,
+          "tool": "submit_script",
+          "artifact_event_seq": 31
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 41,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 40
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 45,
+          "tool": "check_rules",
+          "artifact_event_seq": 44
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 59,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 58
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 71,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 70
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 79,
+          "tool": "request_review",
+          "artifact_event_seq": 78
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 85,
+          "tool": "request_review",
+          "artifact_event_seq": 84
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 38,
+          "tool": "submit_script",
+          "artifact_event_seq": 34
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 45,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 43
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 49,
+          "tool": "check_rules",
+          "artifact_event_seq": 47
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 107,
+          "tool": "patch_script",
+          "artifact_event_seq": 105
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 113,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 112
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 123,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 122
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 31,
+          "tool": "submit_script",
+          "artifact_event_seq": 28
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 34,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 33
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 41,
+          "tool": "submit_script",
+          "artifact_event_seq": 39
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 37,
+          "tool": "submit_script",
+          "artifact_event_seq": 33
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 43,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 42
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 55,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 54
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 63,
+          "tool": "request_review",
+          "artifact_event_seq": 62
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 69,
+          "tool": "request_review",
+          "artifact_event_seq": 68
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 39,
+          "tool": "submit_script",
+          "artifact_event_seq": 34
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 45,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 44
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 75,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 74
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 85,
+          "tool": "request_review",
+          "artifact_event_seq": 83
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 91,
+          "tool": "request_review",
+          "artifact_event_seq": 89
+        }
+      ],
+      "candidate_links": []
+    },
+    "narrative-structure": {
+      "loaded": [
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 25
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 33
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 25
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 27
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 25
+        }
+      ],
+      "model_declared_artifacts": [
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 34,
+          "tool": "submit_script",
+          "artifact_event_seq": 31
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 86,
+          "tool": "submit_script",
+          "artifact_event_seq": 83
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 48,
+          "tool": "submit_script",
+          "artifact_event_seq": 45
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 111,
+          "tool": "request_review",
+          "artifact_event_seq": 108
+        },
+        {
+          "case": "normal",
+          "trace": "normal\\trace.jsonl",
+          "event_seq": 34,
+          "tool": "submit_script",
+          "artifact_event_seq": 31
+        },
+        {
+          "case": "tool_failure",
+          "trace": "tool_failure\\trace.jsonl",
+          "event_seq": 36,
+          "tool": "submit_script",
+          "artifact_event_seq": 33
+        },
+        {
+          "case": "tutorial",
+          "trace": "tutorial\\trace.jsonl",
+          "event_seq": 37,
+          "tool": "submit_script",
+          "artifact_event_seq": 34
+        }
+      ],
+      "candidate_links": []
+    },
+    "platform-adaptation": {
+      "loaded": [],
+      "model_declared_artifacts": [],
+      "candidate_links": []
+    },
+    "query-rewrite": {
+      "loaded": [
+        {
+          "case": "no_materials",
+          "trace": "no_materials\\trace.jsonl",
+          "event_seq": 12
+        }
+      ],
+      "model_declared_artifacts": [
+        {
+          "case": "no_materials",
+          "trace": "no_materials\\trace.jsonl",
+          "event_seq": 16,
+          "tool": "search_materials",
+          "artifact_event_seq": 15
+        },
+        {
+          "case": "no_materials",
+          "trace": "no_materials\\trace.jsonl",
+          "event_seq": 19,
+          "tool": "search_materials",
+          "artifact_event_seq": 18
+        },
+        {
+          "case": "no_materials",
+          "trace": "no_materials\\trace.jsonl",
+          "event_seq": 23,
+          "tool": "ask_user",
+          "artifact_event_seq": 22
+        }
+      ],
+      "candidate_links": []
+    },
+    "storyboard-planning": {
+      "loaded": [
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 25
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 28
+        }
+      ],
+      "model_declared_artifacts": [
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 34,
+          "tool": "submit_script",
+          "artifact_event_seq": 31
+        },
+        {
+          "case": "headphones",
+          "trace": "headphones\\trace.jsonl",
+          "event_seq": 41,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 40
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 37,
+          "tool": "submit_script",
+          "artifact_event_seq": 34
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 44,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 43
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 79,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 78
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 88,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 87
+        },
+        {
+          "case": "query_rewrite",
+          "trace": "query_rewrite\\trace.jsonl",
+          "event_seq": 97,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 96
+        }
+      ],
+      "candidate_links": []
+    },
+    "visual-direction": {
+      "loaded": [],
+      "model_declared_artifacts": [],
+      "candidate_links": []
+    }
+  }
+}

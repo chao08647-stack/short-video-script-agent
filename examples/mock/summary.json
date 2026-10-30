@@ -5,11 +5,11 @@
     {
       "case": "brand_and_fact_revision",
       "mode": "mock",
-      "run_id": "dc73678f-9ba5-4502-97e8-b2e80af2ea41",
+      "run_id": "1151200e-3b38-46a7-b0f3-7df82382741d",
       "status": "completed",
       "acceptance_passed": true,
       "acceptance_errors": [],
-      "elapsed_seconds": 0.34,
+      "elapsed_seconds": 0.23,
       "model_calls": 14,
       "tool_calls": 13,
       "skills_loaded": [
@@ -23,11 +23,11 @@
     {
       "case": "conflict",
       "mode": "mock",
-      "run_id": "d7240624-848e-48d0-9673-0214159d837b",
+      "run_id": "a9331e8b-8668-43ab-8cb6-3a7d44968f22",
       "status": "waiting_human",
       "acceptance_passed": true,
       "acceptance_errors": [],
-      "elapsed_seconds": 0.08,
+      "elapsed_seconds": 0.06,
       "model_calls": 4,
       "tool_calls": 4,
       "skills_loaded": [
@@ -40,11 +40,11 @@
     {
       "case": "duration_revision",
       "mode": "mock",
-      "run_id": "8ea927aa-b7b9-4acc-a724-fba7634901fc",
+      "run_id": "97f73ce4-5229-4711-bffc-42d9329c9ea6",
       "status": "completed",
       "acceptance_passed": true,
       "acceptance_errors": [],
-      "elapsed_seconds": 0.34,
+      "elapsed_seconds": 0.23,
       "model_calls": 14,
       "tool_calls": 13,
       "skills_loaded": [
@@ -58,11 +58,11 @@
     {
       "case": "headphones",
       "mode": "mock",
-      "run_id": "e831bb4e-cfa3-4217-9847-f2be8b559f23",
+      "run_id": "1d7a25b1-c211-465c-bf27-3a80b5220f93",
       "status": "completed",
       "acceptance_passed": true,
       "acceptance_errors": [],
-      "elapsed_seconds": 0.36,
+      "elapsed_seconds": 0.25,
       "model_calls": 14,
       "tool_calls": 13,
       "skills_loaded": [
@@ -78,11 +78,11 @@
     {
       "case": "human_feedback",
       "mode": "mock",
-      "run_id": "80a81ce2-f5c8-40a3-8539-bf9bd8e44fa1",
+      "run_id": "a54d5a30-cec6-421c-b8f2-e265383e9b42",
       "status": "completed",
       "acceptance_passed": true,
       "acceptance_errors": [],
-      "elapsed_seconds": 0.45,
+      "elapsed_seconds": 0.33,
       "model_calls": 20,
       "tool_calls": 18,
       "skills_loaded": [
@@ -99,11 +99,11 @@
     {
       "case": "minimal",
       "mode": "mock",
-      "run_id": "846c8917-9bb2-4e01-b156-c3ec3bd78963",
+      "run_id": "965eecc5-c7fd-472b-aff0-c4b2140720db",
       "status": "completed",
       "acceptance_passed": true,
       "acceptance_errors": [],
-      "elapsed_seconds": 0.34,
+      "elapsed_seconds": 0.25,
       "model_calls": 14,
       "tool_calls": 13,
       "skills_loaded": [
@@ -119,11 +119,11 @@
     {
       "case": "missing_info",
       "mode": "mock",
-      "run_id": "e53bcb08-cb37-4e5f-8f09-e6a174e0ae28",
+      "run_id": "5356a723-c984-4667-8c5a-441d2dfd3d24",
       "status": "completed",
       "acceptance_passed": true,
       "acceptance_errors": [],
-      "elapsed_seconds": 0.45,
+      "elapsed_seconds": 0.3,
       "model_calls": 16,
       "tool_calls": 15,
       "skills_loaded": [
@@ -140,11 +140,11 @@
     {
       "case": "no_materials",
       "mode": "mock",
-      "run_id": "a8396dd5-19d5-4a15-a276-1c268c574caa",
+      "run_id": "70d661e2-b09d-4445-86e2-db62c42788c3",
       "status": "waiting_human",
       "acceptance_passed": true,
       "acceptance_errors": [],
-      "elapsed_seconds": 0.12,
+      "elapsed_seconds": 0.08,
       "model_calls": 5,
       "tool_calls": 5,
       "skills_loaded": [
@@ -157,11 +157,11 @@
     {
       "case": "normal",
       "mode": "mock",
-      "run_id": "f6aa09c7-bcbb-47d4-a838-18a052ae509d",
+      "run_id": "2d811b73-c7af-44a7-a513-2c1264652e53",
       "status": "completed",
       "acceptance_passed": true,
       "acceptance_errors": [],
-      "elapsed_seconds": 0.38,
+      "elapsed_seconds": 0.25,
       "model_calls": 14,
       "tool_calls": 13,
       "skills_loaded": [
@@ -177,11 +177,11 @@
     {
       "case": "query_rewrite",
       "mode": "mock",
-      "run_id": "d9d72ba3-d16c-41be-95a7-ab0374f90c63",
+      "run_id": "88e2cf0c-b1c9-475a-901c-86fe34344c5a",
       "status": "completed",
       "acceptance_passed": true,
       "acceptance_errors": [],
-      "elapsed_seconds": 0.38,
+      "elapsed_seconds": 0.3,
       "model_calls": 16,
       "tool_calls": 15,
       "skills_loaded": [
@@ -198,11 +198,11 @@
     {
       "case": "step_limit",
       "mode": "mock",
-      "run_id": "f6587d60-4675-49b3-831e-16505b7d48ba",
+      "run_id": "6f7644cc-f846-41aa-8765-059f023f4b43",
       "status": "incomplete",
       "acceptance_passed": true,
       "acceptance_errors": [],
-      "elapsed_seconds": 0.05,
+      "elapsed_seconds": 0.03,
       "model_calls": 1,
       "tool_calls": 1,
       "skills_loaded": [
@@ -214,11 +214,11 @@
     {
       "case": "too_short",
       "mode": "mock",
-      "run_id": "3509363a-77de-4ead-a3cd-4d604987d626",
+      "run_id": "5bb7fe73-3993-4727-a44d-6acc3ca2c154",
       "status": "incomplete",
       "acceptance_passed": true,
       "acceptance_errors": [],
-      "elapsed_seconds": 0.31,
+      "elapsed_seconds": 0.24,
       "model_calls": 15,
       "tool_calls": 14,
       "skills_loaded": [
@@ -235,11 +235,11 @@
     {
       "case": "tool_failure",
       "mode": "mock",
-      "run_id": "0aa0ed22-00e9-43a7-a1f2-233fa52f17cf",
+      "run_id": "cd1eb9e3-7b6b-44be-9455-df1a68f8a1d0",
       "status": "completed",
       "acceptance_passed": true,
       "acceptance_errors": [],
-      "elapsed_seconds": 0.38,
+      "elapsed_seconds": 0.27,
       "model_calls": 15,
       "tool_calls": 14,
       "skills_loaded": [
@@ -255,11 +255,11 @@
     {
       "case": "tutorial",
       "mode": "mock",
-      "run_id": "780698a1-09af-476f-bd68-c0585dbae1f2",
+      "run_id": "faa40e91-e014-4114-9319-b56c4cf8efa2",
       "status": "completed",
       "acceptance_passed": true,
       "acceptance_errors": [],
-      "elapsed_seconds": 0.33,
+      "elapsed_seconds": 0.24,
       "model_calls": 14,
       "tool_calls": 13,
       "skills_loaded": [

@@ -1,0 +1,17 @@
+{
+  "case": "conflict",
+  "mode": "live",
+  "run_id": "0ee40166-fa26-4e0a-b7bc-750a22d34c18",
+  "status": "waiting_human",
+  "acceptance_passed": true,
+  "acceptance_errors": [],
+  "elapsed_seconds": 6.39,
+  "model_calls": 5,
+  "tool_calls": 5,
+  "skills_loaded": [
+    "evidence-conflict",
+    "material-search"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\deepseek-flash-final\\conflict"
+}

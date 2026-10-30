@@ -1,0 +1,330 @@
+{
+  "run_id": "e6336bbf-e5a9-44c5-bfb8-ddb80900f0c5",
+  "mode": "live",
+  "status": "waiting_human",
+  "phase": "draft",
+  "execution": {
+    "python": "3.12.9",
+    "langgraph": "1.2.18",
+    "mode": "live",
+    "model": {
+      "base_url": "https://api.deepseek.com",
+      "model": "deepseek-flash",
+      "max_tokens": 4096,
+      "timeout_seconds": 120.0,
+      "action_protocol": "native",
+      "thinking": "disabled",
+      "context_window": 16384
+    },
+    "code_hashes": {
+      "engine.py": "bfb63d093376e8066c8c02f6fa9fa983af7404304671054fb10e70f87328ddb7",
+      "prompts.py": "ace9ec62b2a12aef9da5be15f97261d8f227a9315feb6f7a8fe12e05793f97ac",
+      "model.py": "a5b9550e21585d7dd6672d58f705dd8ab101abd90850e8d284b6d3ebc996e490",
+      "business_tools.py": "e5fdf98f891fc15e8487345fba80ae07f3eaf106db5c6190efa4909c7bc3f9ba",
+      "script_patch.py": "ec77a077f3a59753457e082c6936897bad7379218f7a24f0fee9ff7927de3ad7",
+      "runtime.py": "c5217fdd0b50752605821b94cdc6d792bd8ac780d4331b63836ebbb9da7c7c46",
+      "context_budget.py": "53b4db7819f37a1c407f3d8376ac3bc16bda5e451903c431f98cef40d8d5ea2c",
+      "vendor/deepseek/encoding.py": "142ef131e2acf9047ba7b3e222011a89997911457357e6d5dc1ce01d8da545ed"
+    },
+    "code_hash_capture": "process_import"
+  },
+  "brief": {
+    "topic": "介绍小剪 App 的字幕功能",
+    "audience": "短视频剪辑新手",
+    "platform": "抖音",
+    "target_seconds": 1.0,
+    "style": "轻松、直白"
+  },
+  "direction": {
+    "angle": "面向剪辑新手，用最直白的两句话讲清小剪字幕的两个核心动作：先自动生成字幕，再手动修改字幕文字。目标时长仅 1 秒，方向阶段先按“两项功能都保留、不提高语速”的最短表达设计，进入初稿后必须用时长估算工具实测，再据结果决定压缩、请求调整时长或说明不可行。",
+    "outline": [
+      "开场直给：小剪能自动生成字幕（P01）",
+      "紧接着补上第二项：生成后可以手动修改字幕文字（P02、P04）",
+      "画面用抽象示意动画表现字幕文字浮现与文字被改动，不虚构按钮、面板等真实界面",
+      "初稿阶段实测时长：若 1 秒上限下两项功能无法在正常语速内讲完，则请求调整目标时长或明确未完成"
+    ],
+    "source_ids": [
+      "P01",
+      "P02",
+      "P04"
+    ],
+    "notes": "硬性要求：自动生成字幕与手动修改字幕两项都必须出现，且不得提高语速。1 秒目标时长极可能不足，方向阶段不预设结论，初稿将用 estimate_duration 实测后决定压缩、请求调整或说明不可行。P03（字体大小颜色）与主题相关但非必讲，1 秒内不纳入。"
+  },
+  "script": {
+    "title": "小剪字幕：自动生成，手动修改",
+    "scenes": [
+      {
+        "scene_id": "S1",
+        "visual": "抽象示意动画：屏幕中央浮现一行字幕文字，随后文字被逐字改动，全程不出现真实界面、按钮或面板",
+        "narration": "小剪自动生成字幕，还能手动改字。",
+        "subtitle": "自动生成字幕｜可手动修改",
+        "source_ids": [
+          "P01",
+          "P02"
+        ],
+        "min_display_seconds": 1.0
+      }
+    ],
+    "claims": [
+      {
+        "text": "小剪自动生成字幕",
+        "source_id": "P01",
+        "quote": "小剪 App 支持自动生成字幕。",
+        "scene_id": "S1"
+      },
+      {
+        "text": "还能手动改字",
+        "source_id": "P02",
+        "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+        "scene_id": "S1"
+      },
+      {
+        "text": "自动生成字幕｜可手动修改",
+        "source_id": "P01",
+        "quote": "小剪 App 支持自动生成字幕。",
+        "scene_id": "S1"
+      },
+      {
+        "text": "自动生成字幕｜可手动修改",
+        "source_id": "P02",
+        "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+        "scene_id": "S1"
+      }
+    ]
+  },
+  "script_version": 1,
+  "checks": {
+    "duration": {
+      "passed": false,
+      "estimated_seconds": 4.1,
+      "target_seconds": 1.0,
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "narration_seconds": 4.1,
+          "subtitle_seconds": 1.84,
+          "min_display_seconds": 1.0,
+          "estimated_seconds": 4.1,
+          "start_seconds": 0.0,
+          "end_seconds": 4.1
+        }
+      ],
+      "issues": [
+        {
+          "code": "TIME_LIMIT_EXCEEDED",
+          "message": "预计 4.1 秒，超过目标 1 秒。请修改内容或请求用户调整要求。",
+          "excess_seconds": 3.1
+        }
+      ],
+      "assumptions": {
+        "chars_per_second": 4.0,
+        "subtitle_chars_per_second": 6.0,
+        "english_words_per_second": 2.5,
+        "minimum_scene_seconds": 1.0,
+        "transition_seconds": 0.0,
+        "timing_rule": "每镜取旁白、字幕阅读、画面最低展示时间的最大值；镜头串行累计。",
+        "limitation": "文字估时，不是实际录音或成片时长；数字、缩写及表演节奏可能存在误差。"
+      },
+      "script_version": 1,
+      "script_hash": "fdccc72ea4a8d9023d4b08e44e7ddd79cc333ba2ce6606b718e102ccb0670275",
+      "data_hash": "80771c60fd923fe46f779eb7bb6aabfebc3b7b6c64b8b9594980280eda5710c6",
+      "brief_hash": "c135c6b5e89783afd5f2f3d9f7b6afdc55dc4c17a4b0690662d3269213b8ff13"
+    }
+  },
+  "estimated_seconds": 4.1,
+  "duration_note": "基于固定语速与画面展示需求估算，不代表真实配音或成片测量。",
+  "sources": [
+    {
+      "source_id": "P01",
+      "version": "2026-10-01",
+      "title": "小剪 App：自动字幕",
+      "text": "小剪 App 支持自动生成字幕。",
+      "facts": [
+        "小剪 App 支持自动生成字幕。"
+      ],
+      "keywords": [
+        "小剪",
+        "字幕",
+        "自动生成",
+        "剪辑",
+        "视频"
+      ],
+      "score": 5.911
+    },
+    {
+      "source_id": "P02",
+      "version": "2026-10-01",
+      "title": "小剪 App：字幕文字修改",
+      "text": "用户可以手动修改小剪 App 生成的字幕文字。",
+      "facts": [
+        "用户可以手动修改小剪 App 生成的字幕文字。"
+      ],
+      "keywords": [
+        "小剪",
+        "字幕",
+        "手动修改",
+        "文字",
+        "检查"
+      ],
+      "score": 5.911
+    },
+    {
+      "source_id": "P03",
+      "version": "2026-10-01",
+      "title": "小剪 App：字幕样式",
+      "text": "小剪 App 支持调整字幕的字体大小和颜色。",
+      "facts": [
+        "小剪 App 支持调整字幕的字体大小和颜色。"
+      ],
+      "keywords": [
+        "小剪",
+        "字幕",
+        "样式",
+        "字体",
+        "颜色"
+      ],
+      "score": 5.911
+    },
+    {
+      "source_id": "P04",
+      "version": "2026-10-01",
+      "title": "小剪 App：字幕使用建议",
+      "text": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+      "facts": [
+        "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。"
+      ],
+      "keywords": [
+        "小剪",
+        "字幕",
+        "检查",
+        "识别错误",
+        "修改"
+      ],
+      "score": 5.911
+    }
+  ],
+  "pending_review": {
+    "review_id": "6f661777f6ee764effaf",
+    "stage": "clarification",
+    "version": 1,
+    "object_hash": "fdccc72ea4a8d9023d4b08e44e7ddd79cc333ba2ce6606b718e102ccb0670275",
+    "reason": "已按“两项功能都保留、不提高语速”写出最短候选稿（旁白：“小剪自动生成字幕，还能手动改字。”），实测估算 4.1 秒，超过 1 秒上限 3.1 秒。在不提高语速、不删掉“自动生成字幕”或“手动修改字幕”任一项的前提下，1 秒内无法讲完。请确认是否把目标时长调整到 5 秒左右（或你指定的其他时长）？",
+    "fields": [
+      "target_seconds"
+    ],
+    "direction": {
+      "angle": "面向剪辑新手，用最直白的两句话讲清小剪字幕的两个核心动作：先自动生成字幕，再手动修改字幕文字。目标时长仅 1 秒，方向阶段先按“两项功能都保留、不提高语速”的最短表达设计，进入初稿后必须用时长估算工具实测，再据结果决定压缩、请求调整时长或说明不可行。",
+      "outline": [
+        "开场直给：小剪能自动生成字幕（P01）",
+        "紧接着补上第二项：生成后可以手动修改字幕文字（P02、P04）",
+        "画面用抽象示意动画表现字幕文字浮现与文字被改动，不虚构按钮、面板等真实界面",
+        "初稿阶段实测时长：若 1 秒上限下两项功能无法在正常语速内讲完，则请求调整目标时长或明确未完成"
+      ],
+      "source_ids": [
+        "P01",
+        "P02",
+        "P04"
+      ],
+      "notes": "硬性要求：自动生成字幕与手动修改字幕两项都必须出现，且不得提高语速。1 秒目标时长极可能不足，方向阶段不预设结论，初稿将用 estimate_duration 实测后决定压缩、请求调整或说明不可行。P03（字体大小颜色）与主题相关但非必讲，1 秒内不纳入。"
+    },
+    "script": {
+      "title": "小剪字幕：自动生成，手动修改",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "抽象示意动画：屏幕中央浮现一行字幕文字，随后文字被逐字改动，全程不出现真实界面、按钮或面板",
+          "narration": "小剪自动生成字幕，还能手动改字。",
+          "subtitle": "自动生成字幕｜可手动修改",
+          "source_ids": [
+            "P01",
+            "P02"
+          ],
+          "min_display_seconds": 1.0
+        }
+      ],
+      "claims": [
+        {
+          "text": "小剪自动生成字幕",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S1"
+        },
+        {
+          "text": "还能手动改字",
+          "source_id": "P02",
+          "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "scene_id": "S1"
+        },
+        {
+          "text": "自动生成字幕｜可手动修改",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S1"
+        },
+        {
+          "text": "自动生成字幕｜可手动修改",
+          "source_id": "P02",
+          "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "scene_id": "S1"
+        }
+      ]
+    },
+    "checks": {
+      "duration": {
+        "passed": false,
+        "estimated_seconds": 4.1,
+        "target_seconds": 1.0,
+        "scenes": [
+          {
+            "scene_id": "S1",
+            "narration_seconds": 4.1,
+            "subtitle_seconds": 1.84,
+            "min_display_seconds": 1.0,
+            "estimated_seconds": 4.1,
+            "start_seconds": 0.0,
+            "end_seconds": 4.1
+          }
+        ],
+        "issues": [
+          {
+            "code": "TIME_LIMIT_EXCEEDED",
+            "message": "预计 4.1 秒，超过目标 1 秒。请修改内容或请求用户调整要求。",
+            "excess_seconds": 3.1
+          }
+        ],
+        "assumptions": {
+          "chars_per_second": 4.0,
+          "subtitle_chars_per_second": 6.0,
+          "english_words_per_second": 2.5,
+          "minimum_scene_seconds": 1.0,
+          "transition_seconds": 0.0,
+          "timing_rule": "每镜取旁白、字幕阅读、画面最低展示时间的最大值；镜头串行累计。",
+          "limitation": "文字估时，不是实际录音或成片时长；数字、缩写及表演节奏可能存在误差。"
+        },
+        "script_version": 1,
+        "script_hash": "fdccc72ea4a8d9023d4b08e44e7ddd79cc333ba2ce6606b718e102ccb0670275",
+        "data_hash": "80771c60fd923fe46f779eb7bb6aabfebc3b7b6c64b8b9594980280eda5710c6",
+        "brief_hash": "c135c6b5e89783afd5f2f3d9f7b6afdc55dc4c17a4b0690662d3269213b8ff13"
+      }
+    }
+  },
+  "review_history": [
+    {
+      "review_id": "1067fea4d458f484da06",
+      "decision": "approve",
+      "feedback": "",
+      "answers": {},
+      "actor": "evaluation_simulated_human",
+      "stage": "direction",
+      "version": 1
+    }
+  ],
+  "stop_reason": null,
+  "model_calls": 8,
+  "tool_calls": 8,
+  "skills_loaded": [
+    "material-search",
+    "narration-subtitles"
+  ],
+  "data_hash": "80771c60fd923fe46f779eb7bb6aabfebc3b7b6c64b8b9594980280eda5710c6"
+}

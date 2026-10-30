@@ -1,0 +1,119 @@
+[
+  {
+    "event_seq": 28,
+    "tool": "submit_script",
+    "arguments": {
+      "title": "小剪 App 自动生成字幕，10 秒看懂",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "抽象示意动画：手机竖屏画面中，一段视频画面下方逐条浮现字幕文字条（不展示真实 App 界面、按钮或操作步骤）；文字条浮现后，其中一条被高亮圈出，示意需要核对。",
+          "narration": "小剪 App 支持自动生成字幕。生成后建议检查内容，手动修正识别错误。",
+          "subtitle": "小剪 App 支持自动生成字幕｜生成后记得检查、手动修正",
+          "source_ids": [
+            "P01",
+            "P04"
+          ],
+          "min_display_seconds": 8
+        }
+      ],
+      "claims": [
+        {
+          "text": "小剪 App 支持自动生成字幕。",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S1"
+        },
+        {
+          "text": "生成后建议检查内容，手动修正识别错误。",
+          "source_id": "P04",
+          "quote": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+          "scene_id": "S1"
+        }
+      ],
+      "used_skills": [
+        "narration-subtitles"
+      ],
+      "reason": "按已批准方向写单镜头稿：旁白贴 P01/P04 原文表达，字幕提炼核心信息不新增承诺，画面用抽象示意避免编造界面"
+    },
+    "version": 1,
+    "script": {
+      "title": "小剪 App 自动生成字幕，10 秒看懂",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "抽象示意动画：手机竖屏画面中，一段视频画面下方逐条浮现字幕文字条（不展示真实 App 界面、按钮或操作步骤）；文字条浮现后，其中一条被高亮圈出，示意需要核对。",
+          "narration": "小剪 App 支持自动生成字幕。生成后建议检查内容，手动修正识别错误。",
+          "subtitle": "小剪 App 支持自动生成字幕｜生成后记得检查、手动修正",
+          "source_ids": [
+            "P01",
+            "P04"
+          ],
+          "min_display_seconds": 8.0
+        }
+      ],
+      "claims": [
+        {
+          "text": "小剪 App 支持自动生成字幕。",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S1"
+        },
+        {
+          "text": "生成后建议检查内容，手动修正识别错误。",
+          "source_id": "P04",
+          "quote": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+          "scene_id": "S1"
+        }
+      ]
+    }
+  },
+  {
+    "event_seq": 45,
+    "tool": "patch_script",
+    "arguments": {
+      "edits": [
+        {
+          "op": "replace",
+          "path": "/scenes/0/visual",
+          "value": "抽象示意动画：手机竖屏画面中，一段视频画面下方逐条浮现字幕文字条（不展示真实 App 界面与操作步骤）；文字条浮现后，其中一条被高亮圈出，示意需要核对。"
+        }
+      ],
+      "reason": "规则检查指出画面中“按钮”属无证据UI细节，删除该词，保留抽象示意表达",
+      "used_skills": [
+        "factual-revision"
+      ]
+    },
+    "version": 2,
+    "script": {
+      "title": "小剪 App 自动生成字幕，10 秒看懂",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "抽象示意动画：手机竖屏画面中，一段视频画面下方逐条浮现字幕文字条（不展示真实 App 界面与操作步骤）；文字条浮现后，其中一条被高亮圈出，示意需要核对。",
+          "narration": "小剪 App 支持自动生成字幕。生成后建议检查内容，手动修正识别错误。",
+          "subtitle": "小剪 App 支持自动生成字幕｜生成后记得检查、手动修正",
+          "source_ids": [
+            "P01",
+            "P04"
+          ],
+          "min_display_seconds": 8.0
+        }
+      ],
+      "claims": [
+        {
+          "text": "小剪 App 支持自动生成字幕。",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S1"
+        },
+        {
+          "text": "生成后建议检查内容，手动修正识别错误。",
+          "source_id": "P04",
+          "quote": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+          "scene_id": "S1"
+        }
+      ]
+    }
+  }
+]

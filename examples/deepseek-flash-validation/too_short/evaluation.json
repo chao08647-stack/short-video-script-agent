@@ -1,0 +1,17 @@
+{
+  "case": "too_short",
+  "mode": "live",
+  "run_id": "e6336bbf-e5a9-44c5-bfb8-ddb80900f0c5",
+  "status": "waiting_human",
+  "acceptance_passed": true,
+  "acceptance_errors": [],
+  "elapsed_seconds": 11.48,
+  "model_calls": 8,
+  "tool_calls": 8,
+  "skills_loaded": [
+    "material-search",
+    "narration-subtitles"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\deepseek-flash-validation\\too_short"
+}

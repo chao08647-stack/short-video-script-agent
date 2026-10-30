@@ -1,0 +1,20 @@
+{
+  "case": "minimal",
+  "mode": "live",
+  "run_id": "6a561875-811b-4a8c-b15f-10e927bf9476",
+  "status": "completed",
+  "acceptance_passed": true,
+  "acceptance_errors": [],
+  "elapsed_seconds": 25.14,
+  "model_calls": 20,
+  "tool_calls": 21,
+  "skills_loaded": [
+    "audience-angle",
+    "claim-grounding",
+    "factual-revision",
+    "material-search",
+    "narration-subtitles"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\deepseek-flash-recheck\\minimal"
+}

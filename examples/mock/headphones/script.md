@@ -1,7 +1,7 @@
 # 短视频脚本
 
 状态：completed；阶段：final；模式：mock
-任务 ID：e831bb4e-cfa3-4217-9847-f2be8b559f23
+任务 ID：1d7a25b1-c211-465c-bf27-3a80b5220f93
 
 ## 产品功能介绍
 

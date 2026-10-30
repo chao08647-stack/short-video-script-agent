@@ -1,0 +1,385 @@
+{
+  "run_id": "e1d84023-2d70-4d8f-8c49-85e928fdc9b3",
+  "mode": "live",
+  "status": "completed",
+  "phase": "final",
+  "execution": {
+    "python": "3.12.9",
+    "langgraph": "1.2.18",
+    "mode": "live",
+    "model": {
+      "base_url": "https://api.deepseek.com",
+      "model": "deepseek-flash",
+      "max_tokens": 4096,
+      "timeout_seconds": 120.0,
+      "action_protocol": "native",
+      "thinking": "disabled",
+      "context_window": 16384
+    },
+    "code_hashes": {
+      "engine.py": "bfb63d093376e8066c8c02f6fa9fa983af7404304671054fb10e70f87328ddb7",
+      "prompts.py": "145c14af05eb74bd61c0d1e407860f1ccac44255f05651177cce7fb50fd9b5f3",
+      "model.py": "176b550aa18498c1a35ac3f47693d989453e84a10ce639754a15e7577a3a5d44",
+      "business_tools.py": "a5f0a7bfb9913405a1a9a1c61a6102c3a5dc7249f508bb1516375b4533370083",
+      "script_patch.py": "ec77a077f3a59753457e082c6936897bad7379218f7a24f0fee9ff7927de3ad7",
+      "runtime.py": "c5217fdd0b50752605821b94cdc6d792bd8ac780d4331b63836ebbb9da7c7c46",
+      "context_budget.py": "53b4db7819f37a1c407f3d8376ac3bc16bda5e451903c431f98cef40d8d5ea2c",
+      "vendor/deepseek/encoding.py": "142ef131e2acf9047ba7b3e222011a89997911457357e6d5dc1ce01d8da545ed"
+    },
+    "code_hash_capture": "process_import"
+  },
+  "brief": {
+    "topic": "介绍小剪 App 的字幕功能",
+    "audience": "短视频剪辑新手",
+    "platform": "抖音",
+    "target_seconds": 30.0,
+    "style": "轻松、直白"
+  },
+  "direction": {
+    "angle": "面向短视频剪辑新手，用“字幕不用一句句敲”的轻松角度：小剪 App 能自动生成字幕，生成后建议检查并手动修正识别错误，还能调整字体大小和颜色。核心主张是“自动生成省事，但记得检查一遍再改”，不承诺准确率或效率数字。",
+    "outline": [
+      "开场（约3秒）：新手剪视频最烦一句句敲字幕，直接点题“字幕可以自动生成”",
+      "功能一（约8秒）：小剪 App 支持自动生成字幕，省去逐句打字",
+      "提醒（约8秒）：自动生成后建议检查内容，识别错误手动修正",
+      "功能二（约7秒）：字幕文字可手动修改，字体大小和颜色也能调整",
+      "收尾（约4秒）：轻松总结——自动生成打底，检查修改收尾"
+    ],
+    "source_ids": [
+      "P01",
+      "P02",
+      "P03",
+      "P04"
+    ],
+    "notes": "30秒上限，只讲自动生成、检查修正、手动改文字、调字体大小和颜色四项事实；不涉及导出流程、按钮位置、准确率或效率数字。画面以抽象示意为主，不虚构真实界面操作。用户已说明会在初稿审核时对开场和表达提意见。"
+  },
+  "script": {
+    "title": "字幕不用一句句敲，小剪帮你打底",
+    "scenes": [
+      {
+        "scene_id": "S1",
+        "visual": "纯情景拍摄：新手对着电脑剪片，手停在键盘上，屏幕只拍背影和手部，不出现任何真实软件界面；配大字幕“字幕一句句敲太费劲”",
+        "narration": "剪视频，字幕一句句敲太费劲。",
+        "subtitle": "字幕一句句敲太费劲",
+        "source_ids": [],
+        "min_display_seconds": 3.0
+      },
+      {
+        "scene_id": "S2",
+        "visual": "抽象示意动画：成排的字幕文字块依次浮现，纯图形表达，不展示任何真实软件界面或操作",
+        "narration": "小剪 App 支持自动生成字幕，不用你逐句打字。",
+        "subtitle": "支持自动生成字幕",
+        "source_ids": [
+          "P01"
+        ],
+        "min_display_seconds": 5.0
+      },
+      {
+        "scene_id": "S3",
+        "visual": "抽象示意动画：字幕文字块上出现一个高亮标记，提示“检查一下”，不模拟真实界面",
+        "narration": "不过生成完，建议先检查一遍内容，识别错的就手动修正。",
+        "subtitle": "生成后建议检查、手动修正",
+        "source_ids": [
+          "P04"
+        ],
+        "min_display_seconds": 6.0
+      },
+      {
+        "scene_id": "S4",
+        "visual": "抽象示意动画：字幕文字被替换改写，随后字体大小与颜色示意变化，均为抽象图形，不展示真实界面",
+        "narration": "字幕文字能手动改，字体大小和颜色也能调。",
+        "subtitle": "文字可改，大小颜色可调",
+        "source_ids": [
+          "P02",
+          "P03"
+        ],
+        "min_display_seconds": 6.0
+      },
+      {
+        "scene_id": "S5",
+        "visual": "纯情景拍摄：新手看完字幕满意点头，画面收在轻松的手势上",
+        "narration": "自动生成打底，检查修改收尾，字幕就搞定了。",
+        "subtitle": "自动打底，检查修改收尾",
+        "source_ids": [],
+        "min_display_seconds": 4.0
+      }
+    ],
+    "claims": [
+      {
+        "text": "小剪 App 支持自动生成字幕",
+        "source_id": "P01",
+        "quote": "小剪 App 支持自动生成字幕。",
+        "scene_id": "S2"
+      },
+      {
+        "text": "建议先检查一遍内容",
+        "source_id": "P04",
+        "quote": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+        "scene_id": "S3"
+      },
+      {
+        "text": "识别错的就手动修正",
+        "source_id": "P04",
+        "quote": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+        "scene_id": "S3"
+      },
+      {
+        "text": "字幕文字能手动改",
+        "source_id": "P02",
+        "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+        "scene_id": "S4"
+      },
+      {
+        "text": "字体大小和颜色也能调",
+        "source_id": "P03",
+        "quote": "小剪 App 支持调整字幕的字体大小和颜色。",
+        "scene_id": "S4"
+      }
+    ]
+  },
+  "script_version": 3,
+  "checks": {
+    "duration": {
+      "passed": true,
+      "estimated_seconds": 26.7,
+      "target_seconds": 30.0,
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "narration_seconds": 3.6,
+          "subtitle_seconds": 1.5,
+          "min_display_seconds": 3.0,
+          "estimated_seconds": 3.6,
+          "start_seconds": 0.0,
+          "end_seconds": 3.6
+        },
+        {
+          "scene_id": "S2",
+          "narration_seconds": 5.25,
+          "subtitle_seconds": 1.34,
+          "min_display_seconds": 5.0,
+          "estimated_seconds": 5.25,
+          "start_seconds": 3.6,
+          "end_seconds": 8.85
+        },
+        {
+          "scene_id": "S3",
+          "narration_seconds": 6.55,
+          "subtitle_seconds": 1.84,
+          "min_display_seconds": 6.0,
+          "estimated_seconds": 6.55,
+          "start_seconds": 8.85,
+          "end_seconds": 15.4
+        },
+        {
+          "scene_id": "S4",
+          "narration_seconds": 5.1,
+          "subtitle_seconds": 1.67,
+          "min_display_seconds": 6.0,
+          "estimated_seconds": 6.0,
+          "start_seconds": 15.4,
+          "end_seconds": 21.4
+        },
+        {
+          "scene_id": "S5",
+          "narration_seconds": 5.3,
+          "subtitle_seconds": 1.67,
+          "min_display_seconds": 4.0,
+          "estimated_seconds": 5.3,
+          "start_seconds": 21.4,
+          "end_seconds": 26.7
+        }
+      ],
+      "issues": [],
+      "assumptions": {
+        "chars_per_second": 4.0,
+        "subtitle_chars_per_second": 6.0,
+        "english_words_per_second": 2.5,
+        "minimum_scene_seconds": 1.0,
+        "transition_seconds": 0.0,
+        "timing_rule": "每镜取旁白、字幕阅读、画面最低展示时间的最大值；镜头串行累计。",
+        "limitation": "文字估时，不是实际录音或成片时长；数字、缩写及表演节奏可能存在误差。"
+      },
+      "script_version": 3,
+      "script_hash": "9a20d83aa13bc265968e742cabb28f56e2f20b8a2940590d7b419de6243bca18",
+      "data_hash": "9cf54186a9b547f78e8dadc4f55e0cf0e4789c8090ca45d230110642faaeef48",
+      "brief_hash": "0e3a7dcadb5bcf8c71da182e3d0a8ce26a2c8dece6d49b2393a3562ae9d28e55"
+    },
+    "rules": {
+      "passed": true,
+      "issues": [],
+      "scope": "deterministic_and_semantic",
+      "requires_semantic_verification": false,
+      "semantic_status": "passed",
+      "checked_claims": 5,
+      "valid_quote_mappings": 5,
+      "semantic": {
+        "passed": true,
+        "issues": [],
+        "claims": [
+          {
+            "text": "小剪 App 支持自动生成字幕",
+            "source_id": "P01",
+            "quote": "小剪 App 支持自动生成字幕。",
+            "status": "supported",
+            "reason": "P01原文直接支持该断言。"
+          },
+          {
+            "text": "建议先检查一遍内容",
+            "source_id": "P04",
+            "quote": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+            "status": "supported",
+            "reason": "P04明确建议生成后检查内容。"
+          },
+          {
+            "text": "识别错的就手动修正",
+            "source_id": "P04",
+            "quote": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+            "status": "supported",
+            "reason": "P04明确建议手动修正识别错误。"
+          },
+          {
+            "text": "字幕文字能手动改",
+            "source_id": "P02",
+            "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+            "status": "supported",
+            "reason": "P02直接支持字幕文字可手动修改。"
+          },
+          {
+            "text": "字体大小和颜色也能调",
+            "source_id": "P03",
+            "quote": "小剪 App 支持调整字幕的字体大小和颜色。",
+            "status": "supported",
+            "reason": "P03直接支持字体大小和颜色可调。"
+          }
+        ]
+      },
+      "script_version": 3,
+      "script_hash": "9a20d83aa13bc265968e742cabb28f56e2f20b8a2940590d7b419de6243bca18",
+      "data_hash": "9cf54186a9b547f78e8dadc4f55e0cf0e4789c8090ca45d230110642faaeef48",
+      "brief_hash": "0e3a7dcadb5bcf8c71da182e3d0a8ce26a2c8dece6d49b2393a3562ae9d28e55"
+    }
+  },
+  "estimated_seconds": 26.7,
+  "duration_note": "基于固定语速与画面展示需求估算，不代表真实配音或成片测量。",
+  "sources": [
+    {
+      "source_id": "P01",
+      "version": "2026-10-01",
+      "title": "小剪 App：自动字幕",
+      "text": "小剪 App 支持自动生成字幕。",
+      "facts": [
+        "小剪 App 支持自动生成字幕。"
+      ],
+      "keywords": [
+        "小剪",
+        "字幕",
+        "自动生成",
+        "剪辑",
+        "视频"
+      ],
+      "score": 5.911
+    },
+    {
+      "source_id": "P02",
+      "version": "2026-10-01",
+      "title": "小剪 App：字幕文字修改",
+      "text": "用户可以手动修改小剪 App 生成的字幕文字。",
+      "facts": [
+        "用户可以手动修改小剪 App 生成的字幕文字。"
+      ],
+      "keywords": [
+        "小剪",
+        "字幕",
+        "手动修改",
+        "文字",
+        "检查"
+      ],
+      "score": 5.911
+    },
+    {
+      "source_id": "P03",
+      "version": "2026-10-01",
+      "title": "小剪 App：字幕样式",
+      "text": "小剪 App 支持调整字幕的字体大小和颜色。",
+      "facts": [
+        "小剪 App 支持调整字幕的字体大小和颜色。"
+      ],
+      "keywords": [
+        "小剪",
+        "字幕",
+        "样式",
+        "字体",
+        "颜色"
+      ],
+      "score": 5.911
+    },
+    {
+      "source_id": "P04",
+      "version": "2026-10-01",
+      "title": "小剪 App：字幕使用建议",
+      "text": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+      "facts": [
+        "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。"
+      ],
+      "keywords": [
+        "小剪",
+        "字幕",
+        "检查",
+        "识别错误",
+        "修改"
+      ],
+      "score": 5.911
+    }
+  ],
+  "pending_review": null,
+  "review_history": [
+    {
+      "review_id": "ab1ad01982b95383e642",
+      "decision": "approve",
+      "feedback": "",
+      "answers": {},
+      "actor": "evaluation_simulated_human",
+      "stage": "direction",
+      "version": 1
+    },
+    {
+      "review_id": "66e4c88e50fcef7136f5",
+      "decision": "revise",
+      "feedback": "开场请直接说明字幕需求，删掉反问句；其它事实和时长要求不变。",
+      "answers": {},
+      "actor": "evaluation_simulated_human",
+      "stage": "draft",
+      "version": 2
+    },
+    {
+      "review_id": "0c922a035229b71e69ca",
+      "decision": "approve",
+      "feedback": "",
+      "answers": {},
+      "actor": "evaluation_simulated_human",
+      "stage": "draft",
+      "version": 3
+    },
+    {
+      "review_id": "1afefbaa6c6e94717573",
+      "decision": "approve",
+      "feedback": "",
+      "answers": {},
+      "actor": "evaluation_simulated_human",
+      "stage": "final",
+      "version": 3
+    }
+  ],
+  "stop_reason": null,
+  "model_calls": 23,
+  "tool_calls": 21,
+  "skills_loaded": [
+    "audience-angle",
+    "factual-revision",
+    "human-feedback",
+    "material-search",
+    "narration-subtitles",
+    "narrative-structure"
+  ],
+  "data_hash": "9cf54186a9b547f78e8dadc4f55e0cf0e4789c8090ca45d230110642faaeef48"
+}

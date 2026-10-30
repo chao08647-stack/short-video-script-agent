@@ -1,0 +1,21 @@
+{
+  "case": "tutorial",
+  "mode": "live",
+  "run_id": "e539907a-d529-4d6d-9a22-41b35bea456e",
+  "status": "completed",
+  "acceptance_passed": true,
+  "acceptance_errors": [],
+  "elapsed_seconds": 44.38,
+  "model_calls": 25,
+  "tool_calls": 27,
+  "skills_loaded": [
+    "audience-angle",
+    "claim-grounding",
+    "factual-revision",
+    "material-search",
+    "narration-subtitles",
+    "narrative-structure"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\deepseek-flash-recheck\\tutorial"
+}

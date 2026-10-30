@@ -1,0 +1,22 @@
+{
+  "case": "missing_info",
+  "mode": "live",
+  "run_id": "6b9afad3-69b0-42ee-bfc6-b592a71a6585",
+  "status": "completed",
+  "acceptance_passed": true,
+  "acceptance_errors": [],
+  "elapsed_seconds": 63.2,
+  "model_calls": 35,
+  "tool_calls": 34,
+  "skills_loaded": [
+    "audience-angle",
+    "brief-clarification",
+    "claim-grounding",
+    "factual-revision",
+    "material-search",
+    "narration-subtitles",
+    "narrative-structure"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\deepseek-flash-recheck\\missing_info"
+}

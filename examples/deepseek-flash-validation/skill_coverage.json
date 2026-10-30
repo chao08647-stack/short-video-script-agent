@@ -1,0 +1,1110 @@
+{
+  "note": "加载、模型声明与候选关联分别统计。候选关联不等于证明技能有效，须结合对应产物审阅。Mock与live输出目录分离。",
+  "skills": {
+    "audience-angle": {
+      "loaded": [
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 9
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 9
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 17
+        }
+      ],
+      "model_declared_artifacts": [
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 14,
+          "tool": "submit_direction",
+          "artifact_event_seq": 12
+        },
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 19,
+          "tool": "request_review",
+          "artifact_event_seq": 17
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 14,
+          "tool": "submit_direction",
+          "artifact_event_seq": 12
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 19,
+          "tool": "request_review",
+          "artifact_event_seq": 17
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 30,
+          "tool": "submit_script",
+          "artifact_event_seq": 28
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 23,
+          "tool": "submit_direction",
+          "artifact_event_seq": 20
+        }
+      ],
+      "candidate_links": []
+    },
+    "brand-revision": {
+      "loaded": [],
+      "model_declared_artifacts": [],
+      "candidate_links": []
+    },
+    "brief-clarification": {
+      "loaded": [
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 3
+        }
+      ],
+      "model_declared_artifacts": [
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 8,
+          "tool": "ask_user",
+          "artifact_event_seq": 7
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 21,
+          "tool": "submit_direction",
+          "artifact_event_seq": 20
+        }
+      ],
+      "candidate_links": []
+    },
+    "claim-grounding": {
+      "loaded": [
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 85
+        }
+      ],
+      "model_declared_artifacts": [
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 89,
+          "tool": "check_rules",
+          "artifact_event_seq": 88
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 93,
+          "tool": "patch_script",
+          "artifact_event_seq": 92
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 97,
+          "tool": "check_rules",
+          "artifact_event_seq": 96
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 102,
+          "tool": "patch_script",
+          "artifact_event_seq": 100
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 105,
+          "tool": "check_rules",
+          "artifact_event_seq": 104
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 109,
+          "tool": "patch_script",
+          "artifact_event_seq": 108
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 113,
+          "tool": "check_rules",
+          "artifact_event_seq": 112
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 120,
+          "tool": "patch_script",
+          "artifact_event_seq": 118
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 124,
+          "tool": "check_rules",
+          "artifact_event_seq": 123
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 128,
+          "tool": "patch_script",
+          "artifact_event_seq": 127
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 132,
+          "tool": "check_rules",
+          "artifact_event_seq": 131
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 139,
+          "tool": "patch_script",
+          "artifact_event_seq": 137
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 143,
+          "tool": "check_rules",
+          "artifact_event_seq": 142
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 152,
+          "tool": "submit_script",
+          "artifact_event_seq": 150
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 160,
+          "tool": "check_rules",
+          "artifact_event_seq": 159
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 168,
+          "tool": "patch_script",
+          "artifact_event_seq": 167
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 176,
+          "tool": "check_rules",
+          "artifact_event_seq": 175
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 181,
+          "tool": "patch_script",
+          "artifact_event_seq": 179
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 189,
+          "tool": "check_rules",
+          "artifact_event_seq": 188
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 194,
+          "tool": "request_review",
+          "artifact_event_seq": 193
+        }
+      ],
+      "candidate_links": []
+    },
+    "duration-compression": {
+      "loaded": [
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 37
+        }
+      ],
+      "model_declared_artifacts": [
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 41,
+          "tool": "patch_script",
+          "artifact_event_seq": 40
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 45,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 44
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 57,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 56
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 74,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 73
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 156,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 155
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 172,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 171
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 185,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 184
+        }
+      ],
+      "candidate_links": []
+    },
+    "evidence-conflict": {
+      "loaded": [],
+      "model_declared_artifacts": [],
+      "candidate_links": []
+    },
+    "factual-revision": {
+      "loaded": [
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 28
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 50
+        },
+        {
+          "case": "skill_showcase",
+          "trace": "skill_showcase\\trace.jsonl",
+          "event_seq": 47
+        }
+      ],
+      "model_declared_artifacts": [
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 32,
+          "tool": "submit_script",
+          "artifact_event_seq": 31
+        },
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 36,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 35
+        },
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 40,
+          "tool": "check_rules",
+          "artifact_event_seq": 39
+        },
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 44,
+          "tool": "request_review",
+          "artifact_event_seq": 43
+        },
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 49,
+          "tool": "request_review",
+          "artifact_event_seq": 48
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 54,
+          "tool": "patch_script",
+          "artifact_event_seq": 53
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 61,
+          "tool": "check_rules",
+          "artifact_event_seq": 60
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 64,
+          "tool": "patch_script",
+          "artifact_event_seq": 63
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 68,
+          "tool": "check_rules",
+          "artifact_event_seq": 67
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 71,
+          "tool": "patch_script",
+          "artifact_event_seq": 70
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 77,
+          "tool": "check_rules",
+          "artifact_event_seq": 76
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 80,
+          "tool": "patch_script",
+          "artifact_event_seq": 79
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 90,
+          "tool": "check_rules",
+          "artifact_event_seq": 88
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 94,
+          "tool": "patch_script",
+          "artifact_event_seq": 92
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 98,
+          "tool": "check_rules",
+          "artifact_event_seq": 96
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 101,
+          "tool": "patch_script",
+          "artifact_event_seq": 100
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 106,
+          "tool": "check_rules",
+          "artifact_event_seq": 104
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 110,
+          "tool": "patch_script",
+          "artifact_event_seq": 108
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 114,
+          "tool": "check_rules",
+          "artifact_event_seq": 112
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 119,
+          "tool": "patch_script",
+          "artifact_event_seq": 118
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 125,
+          "tool": "check_rules",
+          "artifact_event_seq": 123
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 129,
+          "tool": "patch_script",
+          "artifact_event_seq": 127
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 133,
+          "tool": "check_rules",
+          "artifact_event_seq": 131
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 138,
+          "tool": "patch_script",
+          "artifact_event_seq": 137
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 144,
+          "tool": "check_rules",
+          "artifact_event_seq": 142
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 151,
+          "tool": "submit_script",
+          "artifact_event_seq": 150
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 161,
+          "tool": "check_rules",
+          "artifact_event_seq": 159
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 169,
+          "tool": "patch_script",
+          "artifact_event_seq": 167
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 177,
+          "tool": "check_rules",
+          "artifact_event_seq": 175
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 180,
+          "tool": "patch_script",
+          "artifact_event_seq": 179
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 190,
+          "tool": "check_rules",
+          "artifact_event_seq": 188
+        },
+        {
+          "case": "skill_showcase",
+          "trace": "skill_showcase\\trace.jsonl",
+          "event_seq": 51,
+          "tool": "patch_script",
+          "artifact_event_seq": 50
+        },
+        {
+          "case": "skill_showcase",
+          "trace": "skill_showcase\\trace.jsonl",
+          "event_seq": 56,
+          "tool": "check_rules",
+          "artifact_event_seq": 55
+        }
+      ],
+      "candidate_links": []
+    },
+    "hook-writing": {
+      "loaded": [
+        {
+          "case": "skill_showcase",
+          "trace": "skill_showcase\\trace.jsonl",
+          "event_seq": 15
+        }
+      ],
+      "model_declared_artifacts": [
+        {
+          "case": "skill_showcase",
+          "trace": "skill_showcase\\trace.jsonl",
+          "event_seq": 24,
+          "tool": "submit_direction",
+          "artifact_event_seq": 21
+        },
+        {
+          "case": "skill_showcase",
+          "trace": "skill_showcase\\trace.jsonl",
+          "event_seq": 31,
+          "tool": "request_review",
+          "artifact_event_seq": 28
+        },
+        {
+          "case": "skill_showcase",
+          "trace": "skill_showcase\\trace.jsonl",
+          "event_seq": 38,
+          "tool": "submit_script",
+          "artifact_event_seq": 35
+        },
+        {
+          "case": "skill_showcase",
+          "trace": "skill_showcase\\trace.jsonl",
+          "event_seq": 66,
+          "tool": "request_review",
+          "artifact_event_seq": 63
+        },
+        {
+          "case": "skill_showcase",
+          "trace": "skill_showcase\\trace.jsonl",
+          "event_seq": 74,
+          "tool": "request_review",
+          "artifact_event_seq": 71
+        }
+      ],
+      "candidate_links": []
+    },
+    "human-feedback": {
+      "loaded": [
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 199
+        }
+      ],
+      "model_declared_artifacts": [
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 203,
+          "tool": "patch_script",
+          "artifact_event_seq": 202
+        }
+      ],
+      "candidate_links": []
+    },
+    "material-search": {
+      "loaded": [
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 3
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 3
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 11
+        },
+        {
+          "case": "skill_showcase",
+          "trace": "skill_showcase\\trace.jsonl",
+          "event_seq": 6
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 3
+        }
+      ],
+      "model_declared_artifacts": [
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 7,
+          "tool": "search_materials",
+          "artifact_event_seq": 6
+        },
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 13,
+          "tool": "submit_direction",
+          "artifact_event_seq": 12
+        },
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 18,
+          "tool": "request_review",
+          "artifact_event_seq": 17
+        },
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 23,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 22
+        },
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 26,
+          "tool": "check_rules",
+          "artifact_event_seq": 25
+        },
+        {
+          "case": "brand_and_fact_revision",
+          "trace": "brand_and_fact_revision\\trace.jsonl",
+          "event_seq": 33,
+          "tool": "submit_script",
+          "artifact_event_seq": 31
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 7,
+          "tool": "search_materials",
+          "artifact_event_seq": 6
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 13,
+          "tool": "submit_direction",
+          "artifact_event_seq": 12
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 18,
+          "tool": "request_review",
+          "artifact_event_seq": 17
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 29,
+          "tool": "submit_script",
+          "artifact_event_seq": 28
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 48,
+          "tool": "check_rules",
+          "artifact_event_seq": 47
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 15,
+          "tool": "search_materials",
+          "artifact_event_seq": 14
+        },
+        {
+          "case": "missing_info",
+          "trace": "missing_info\\trace.jsonl",
+          "event_seq": 22,
+          "tool": "submit_direction",
+          "artifact_event_seq": 20
+        },
+        {
+          "case": "skill_showcase",
+          "trace": "skill_showcase\\trace.jsonl",
+          "event_seq": 10,
+          "tool": "search_materials",
+          "artifact_event_seq": 9
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 7,
+          "tool": "search_materials",
+          "artifact_event_seq": 6
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 10,
+          "tool": "submit_direction",
+          "artifact_event_seq": 9
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 14,
+          "tool": "request_review",
+          "artifact_event_seq": 13
+        }
+      ],
+      "candidate_links": []
+    },
+    "narration-subtitles": {
+      "loaded": [
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 25
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 17
+        }
+      ],
+      "model_declared_artifacts": [
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 32,
+          "tool": "submit_script",
+          "artifact_event_seq": 28
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 35,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 34
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 42,
+          "tool": "patch_script",
+          "artifact_event_seq": 40
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 65,
+          "tool": "patch_script",
+          "artifact_event_seq": 63
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 81,
+          "tool": "patch_script",
+          "artifact_event_seq": 79
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 121,
+          "tool": "patch_script",
+          "artifact_event_seq": 118
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 140,
+          "tool": "patch_script",
+          "artifact_event_seq": 137
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 153,
+          "tool": "submit_script",
+          "artifact_event_seq": 150
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 182,
+          "tool": "patch_script",
+          "artifact_event_seq": 179
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 195,
+          "tool": "request_review",
+          "artifact_event_seq": 193
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 204,
+          "tool": "patch_script",
+          "artifact_event_seq": 202
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 21,
+          "tool": "submit_script",
+          "artifact_event_seq": 20
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 24,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 23
+        },
+        {
+          "case": "too_short",
+          "trace": "too_short\\trace.jsonl",
+          "event_seq": 28,
+          "tool": "ask_user",
+          "artifact_event_seq": 27
+        }
+      ],
+      "candidate_links": []
+    },
+    "narrative-structure": {
+      "loaded": [
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 22
+        }
+      ],
+      "model_declared_artifacts": [
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 31,
+          "tool": "submit_script",
+          "artifact_event_seq": 28
+        },
+        {
+          "case": "human_feedback",
+          "trace": "human_feedback\\trace.jsonl",
+          "event_seq": 196,
+          "tool": "request_review",
+          "artifact_event_seq": 193
+        }
+      ],
+      "candidate_links": []
+    },
+    "platform-adaptation": {
+      "loaded": [
+        {
+          "case": "skill_showcase",
+          "trace": "skill_showcase\\trace.jsonl",
+          "event_seq": 3
+        }
+      ],
+      "model_declared_artifacts": [
+        {
+          "case": "skill_showcase",
+          "trace": "skill_showcase\\trace.jsonl",
+          "event_seq": 22,
+          "tool": "submit_direction",
+          "artifact_event_seq": 21
+        },
+        {
+          "case": "skill_showcase",
+          "trace": "skill_showcase\\trace.jsonl",
+          "event_seq": 29,
+          "tool": "request_review",
+          "artifact_event_seq": 28
+        },
+        {
+          "case": "skill_showcase",
+          "trace": "skill_showcase\\trace.jsonl",
+          "event_seq": 36,
+          "tool": "submit_script",
+          "artifact_event_seq": 35
+        },
+        {
+          "case": "skill_showcase",
+          "trace": "skill_showcase\\trace.jsonl",
+          "event_seq": 45,
+          "tool": "check_rules",
+          "artifact_event_seq": 44
+        },
+        {
+          "case": "skill_showcase",
+          "trace": "skill_showcase\\trace.jsonl",
+          "event_seq": 64,
+          "tool": "request_review",
+          "artifact_event_seq": 63
+        },
+        {
+          "case": "skill_showcase",
+          "trace": "skill_showcase\\trace.jsonl",
+          "event_seq": 72,
+          "tool": "request_review",
+          "artifact_event_seq": 71
+        }
+      ],
+      "candidate_links": []
+    },
+    "query-rewrite": {
+      "loaded": [],
+      "model_declared_artifacts": [],
+      "candidate_links": []
+    },
+    "storyboard-planning": {
+      "loaded": [
+        {
+          "case": "skill_showcase",
+          "trace": "skill_showcase\\trace.jsonl",
+          "event_seq": 12
+        }
+      ],
+      "model_declared_artifacts": [
+        {
+          "case": "skill_showcase",
+          "trace": "skill_showcase\\trace.jsonl",
+          "event_seq": 23,
+          "tool": "submit_direction",
+          "artifact_event_seq": 21
+        },
+        {
+          "case": "skill_showcase",
+          "trace": "skill_showcase\\trace.jsonl",
+          "event_seq": 30,
+          "tool": "request_review",
+          "artifact_event_seq": 28
+        },
+        {
+          "case": "skill_showcase",
+          "trace": "skill_showcase\\trace.jsonl",
+          "event_seq": 37,
+          "tool": "submit_script",
+          "artifact_event_seq": 35
+        },
+        {
+          "case": "skill_showcase",
+          "trace": "skill_showcase\\trace.jsonl",
+          "event_seq": 42,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 41
+        },
+        {
+          "case": "skill_showcase",
+          "trace": "skill_showcase\\trace.jsonl",
+          "event_seq": 60,
+          "tool": "estimate_duration",
+          "artifact_event_seq": 59
+        },
+        {
+          "case": "skill_showcase",
+          "trace": "skill_showcase\\trace.jsonl",
+          "event_seq": 65,
+          "tool": "request_review",
+          "artifact_event_seq": 63
+        },
+        {
+          "case": "skill_showcase",
+          "trace": "skill_showcase\\trace.jsonl",
+          "event_seq": 73,
+          "tool": "request_review",
+          "artifact_event_seq": 71
+        }
+      ],
+      "candidate_links": []
+    },
+    "visual-direction": {
+      "loaded": [
+        {
+          "case": "skill_showcase",
+          "trace": "skill_showcase\\trace.jsonl",
+          "event_seq": 18
+        }
+      ],
+      "model_declared_artifacts": [
+        {
+          "case": "skill_showcase",
+          "trace": "skill_showcase\\trace.jsonl",
+          "event_seq": 25,
+          "tool": "submit_direction",
+          "artifact_event_seq": 21
+        },
+        {
+          "case": "skill_showcase",
+          "trace": "skill_showcase\\trace.jsonl",
+          "event_seq": 32,
+          "tool": "request_review",
+          "artifact_event_seq": 28
+        },
+        {
+          "case": "skill_showcase",
+          "trace": "skill_showcase\\trace.jsonl",
+          "event_seq": 39,
+          "tool": "submit_script",
+          "artifact_event_seq": 35
+        },
+        {
+          "case": "skill_showcase",
+          "trace": "skill_showcase\\trace.jsonl",
+          "event_seq": 52,
+          "tool": "patch_script",
+          "artifact_event_seq": 50
+        },
+        {
+          "case": "skill_showcase",
+          "trace": "skill_showcase\\trace.jsonl",
+          "event_seq": 57,
+          "tool": "check_rules",
+          "artifact_event_seq": 55
+        },
+        {
+          "case": "skill_showcase",
+          "trace": "skill_showcase\\trace.jsonl",
+          "event_seq": 67,
+          "tool": "request_review",
+          "artifact_event_seq": 63
+        },
+        {
+          "case": "skill_showcase",
+          "trace": "skill_showcase\\trace.jsonl",
+          "event_seq": 75,
+          "tool": "request_review",
+          "artifact_event_seq": 71
+        }
+      ],
+      "candidate_links": []
+    }
+  }
+}

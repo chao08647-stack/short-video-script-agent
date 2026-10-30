@@ -1,0 +1,916 @@
+{
+  "schema_version": 1,
+  "review_created_at": "2026-10-30T17:18:47.421395+00:00",
+  "reviewer": {
+    "actor": "Codex",
+    "type": "ai_assisted_repository_review",
+    "human_signoff": false,
+    "description": "AI辅助逐镜、逐claim和Trace对照的有限文件审阅，非真人签字；没有为本审阅额外调用模型API。"
+  },
+  "scope": {
+    "reviewed_cases": [
+      "human_feedback",
+      "brand_and_fact_revision",
+      "skill_showcase"
+    ],
+    "other_validation_cases_reviewed": false,
+    "method": "阅读输入、最终或停止时脚本、资料快照、相关历史版本与实际工具记录；检查每条claim自身引用、收尾引用、人审改动、严格三镜要求及技能方法落实，不仅依赖自动pass。",
+    "limits": [
+      "结果只覆盖这三次run，不代表其余场景或任意未来输入的全面保证。",
+      "人审事件actor为evaluation_simulated_human，不是真人批准。",
+      "本轮技能展示为输入点名的定向应用，不能证明模型自主选择了这些技能。",
+      "保守规则和语义核验均可能误报或不一致；主观创作表达不自动等同于可证伪的数值指标。"
+    ]
+  },
+  "summary": {
+    "reviewed_cases": 3,
+    "completed_cases": 2,
+    "incomplete_cases": 1,
+    "known_closing_citation_gap_resolved_in_brand": true,
+    "exact_three_scene_requirement_met_in_showcase": true,
+    "human_feedback_full_cycle_completed": false,
+    "new_severe_fabricated_product_fact_found_in_reviewed_outputs": false,
+    "conclusion": "brand_and_fact_revision的收尾已有本镜引用；skill_showcase恰好三镜，定向方法有产物与事件证据。human_feedback确实改了标题/旁白/字幕，但v16尚未复检审核即耗尽调用上限，不能算完整HITL通过。没有将正常主观创作语一概判为虚假事实。"
+  },
+  "hash_policy": {
+    "algorithm": "sha256",
+    "normalization_id": "utf8-lf-v1",
+    "steps": [
+      "UTF-8解码并移除可选UTF-8 BOM。",
+      "CRLF和独立CR统一为LF。",
+      "保留其他字符、空白和末尾换行，不重新序列化JSON。",
+      "将规范化文本编码为UTF-8并计算SHA-256。"
+    ],
+    "purpose": "跨Git/操作系统换行转换后仍可核对内容。"
+  },
+  "case_reviews": [
+    {
+      "case": "human_feedback",
+      "run_id": "55e5b573-b04e-4c9b-bbb9-4ced998408fe",
+      "status": "incomplete",
+      "script_version": 16,
+      "raw_acceptance_passed": false,
+      "human_content_approval": null,
+      "review_disposition": "partial_revision_not_rechecked_or_approved",
+      "reviewed_fields": [
+        "title",
+        "scenes.visual",
+        "scenes.narration",
+        "scenes.subtitle",
+        "scenes.source_ids",
+        "claims"
+      ],
+      "claim_reviews": [
+        {
+          "claim_index": 0,
+          "scene_id": "S2",
+          "claim": {
+            "text": "小剪 App 支持自动生成字幕",
+            "source_id": "P01",
+            "quote": "小剪 App 支持自动生成字幕。",
+            "scene_id": "S2"
+          },
+          "source_text": "小剪 App 支持自动生成字幕。",
+          "source_file": "examples/deepseek-flash-validation/human_feedback/data_snapshot.json",
+          "review": "supported_in_limited_review",
+          "reason": "单独核对所绑定来源；原文支持该字幕功能或生成后检查/修正建议，未用另一来源为本 claim 补证。"
+        },
+        {
+          "claim_index": 1,
+          "scene_id": "S2",
+          "claim": {
+            "text": "不用你逐句手打",
+            "source_id": "P01",
+            "quote": "小剪 App 支持自动生成字幕。",
+            "scene_id": "S2"
+          },
+          "source_text": "小剪 App 支持自动生成字幕。",
+          "source_file": "examples/deepseek-flash-validation/human_feedback/data_snapshot.json",
+          "review": "supported_in_limited_review",
+          "reason": "P01自动生成字幕支持减少逐句手工输入的普通表述；该稿同时说明人工检查与修改，未承诺完全无须人工或确定效率幅度。"
+        },
+        {
+          "claim_index": 2,
+          "scene_id": "S3",
+          "claim": {
+            "text": "字幕文字还能手动改",
+            "source_id": "P02",
+            "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+            "scene_id": "S3"
+          },
+          "source_text": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "source_file": "examples/deepseek-flash-validation/human_feedback/data_snapshot.json",
+          "review": "supported_in_limited_review",
+          "reason": "单独核对所绑定来源；原文支持该字幕功能或生成后检查/修正建议，未用另一来源为本 claim 补证。"
+        },
+        {
+          "claim_index": 3,
+          "scene_id": "S4",
+          "claim": {
+            "text": "字体大小、颜色也能调",
+            "source_id": "P03",
+            "quote": "小剪 App 支持调整字幕的字体大小和颜色。",
+            "scene_id": "S4"
+          },
+          "source_text": "小剪 App 支持调整字幕的字体大小和颜色。",
+          "source_file": "examples/deepseek-flash-validation/human_feedback/data_snapshot.json",
+          "review": "supported_in_limited_review",
+          "reason": "单独核对所绑定来源；原文支持该字幕功能或生成后检查/修正建议，未用另一来源为本 claim 补证。"
+        },
+        {
+          "claim_index": 4,
+          "scene_id": "S5",
+          "claim": {
+            "text": "识别不对的地方手动修正",
+            "source_id": "P04",
+            "quote": "建议用户检查内容，并手动修正识别错误",
+            "scene_id": "S5"
+          },
+          "source_text": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+          "source_file": "examples/deepseek-flash-validation/human_feedback/data_snapshot.json",
+          "review": "supported_in_limited_review",
+          "reason": "单独核对所绑定来源；原文支持该字幕功能或生成后检查/修正建议，未用另一来源为本 claim 补证。"
+        },
+        {
+          "claim_index": 5,
+          "scene_id": "S6",
+          "claim": {
+            "text": "字幕自动生成",
+            "source_id": "P01",
+            "quote": "小剪 App 支持自动生成字幕。",
+            "scene_id": "S6"
+          },
+          "source_text": "小剪 App 支持自动生成字幕。",
+          "source_file": "examples/deepseek-flash-validation/human_feedback/data_snapshot.json",
+          "review": "supported_in_limited_review",
+          "reason": "单独核对所绑定来源；原文支持该字幕功能或生成后检查/修正建议，未用另一来源为本 claim 补证。"
+        },
+        {
+          "claim_index": 6,
+          "scene_id": "S6",
+          "claim": {
+            "text": "生成后还能手动改",
+            "source_id": "P02",
+            "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+            "scene_id": "S6"
+          },
+          "source_text": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "source_file": "examples/deepseek-flash-validation/human_feedback/data_snapshot.json",
+          "review": "supported_in_limited_review",
+          "reason": "单独核对所绑定来源；原文支持该字幕功能或生成后检查/修正建议，未用另一来源为本 claim 补证。"
+        }
+      ],
+      "unknown_product_ui_or_operation_found": false,
+      "new_severe_fabricated_product_fact_found": false,
+      "cross_source_borrowing_found": false,
+      "timing": {
+        "estimated_seconds": null,
+        "target_seconds": 30.0,
+        "current_checks": {},
+        "note": "文字估时，不是实际配音或成片测量；null表示当前版本尚无有效检查，不沿用旧版本时长。"
+      },
+      "artifacts_utf8_lf_sha256": {
+        "input.json": "01844da08dd73e11100eeb64c4a69c0ca2e347868047110543918b369ec84f09",
+        "output.json": "91bedd72463a70a64e8b0b37c154651b8730eb6020b5fe44fd6e8b04359e9537",
+        "evaluation.json": "110638a9000d0bba9bdcda50f30afa73555105f007a1b2a7ba3fbc860a36d187",
+        "data_snapshot.json": "6c4e80c55d2a0961617a3f2771167992a0a0fca4bd19640e946b0bc7e93432e9",
+        "trace.jsonl": "70e3f47c47d61698a1d51e267118ea50b82e71c5abebcb29f60bab47ecbdc6b0",
+        "script.md": "9e04a81dbf8d777a100ce4ed4e3078318b34bdb95e843a0b656e01e701a09975",
+        "script_versions.json": "f0923a707cf3747474dd4f95a6f1aa9b83451e015ff30671d0d614e3f87a7597"
+      },
+      "feedback_review": {
+        "feedback": {
+          "review_id": "dafe55b107713fc055f2",
+          "decision": "revise",
+          "feedback": "开场请直接说明字幕需求，删掉反问句；其它事实和时长要求不变。",
+          "answers": {},
+          "actor": "evaluation_simulated_human",
+          "stage": "draft",
+          "version": 15
+        },
+        "before_version": 15,
+        "after_version": 16,
+        "before": [
+          {
+            "file": "examples/deepseek-flash-validation/human_feedback/script_versions.json",
+            "json_pointer": "/14/script/title",
+            "script_version": 15,
+            "value": "剪完视频还要一句句打字幕？小剪帮你省这一步"
+          },
+          {
+            "file": "examples/deepseek-flash-validation/human_feedback/script_versions.json",
+            "json_pointer": "/14/script/scenes/0/narration",
+            "script_version": 15,
+            "value": "视频剪完了，字幕还得一句一句打？"
+          },
+          {
+            "file": "examples/deepseek-flash-validation/human_feedback/script_versions.json",
+            "json_pointer": "/14/script/scenes/0/subtitle",
+            "script_version": 15,
+            "value": "剪完还要一句句打字幕？"
+          }
+        ],
+        "after": [
+          {
+            "file": "examples/deepseek-flash-validation/human_feedback/output.json",
+            "json_pointer": "/script/title",
+            "value": "剪完视频，字幕不用一句句手打"
+          },
+          {
+            "file": "examples/deepseek-flash-validation/human_feedback/output.json",
+            "json_pointer": "/script/scenes/0/narration",
+            "value": "视频剪完了，字幕还得一句一句打，太费劲。"
+          },
+          {
+            "file": "examples/deepseek-flash-validation/human_feedback/output.json",
+            "json_pointer": "/script/scenes/0/subtitle",
+            "value": "剪完视频，字幕还要一句句打"
+          }
+        ],
+        "revision_event_seq": 202,
+        "feedback_event_seq": 197,
+        "stop_event_seq": 205,
+        "finding": "标题、第一镜旁白与字幕均已从反问改为陈述，human-feedback方法实际应用于产物；但第60次模型调用后达到上限，v16 checks为空，未完成复检和重新审核，因此整个场景仍未通过。",
+        "closing_evidence": [
+          {
+            "file": "examples/deepseek-flash-validation/human_feedback/output.json",
+            "json_pointer": "/script/scenes/5/source_ids",
+            "value": [
+              "P01",
+              "P02"
+            ]
+          },
+          {
+            "file": "examples/deepseek-flash-validation/human_feedback/output.json",
+            "json_pointer": "/script/claims/5",
+            "value": {
+              "text": "字幕自动生成",
+              "source_id": "P01",
+              "quote": "小剪 App 支持自动生成字幕。",
+              "scene_id": "S6"
+            }
+          },
+          {
+            "file": "examples/deepseek-flash-validation/human_feedback/output.json",
+            "json_pointer": "/script/claims/6",
+            "value": {
+              "text": "生成后还能手动改",
+              "source_id": "P02",
+              "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+              "scene_id": "S6"
+            }
+          }
+        ],
+        "full_hitl_cycle_completed": false
+      }
+    },
+    {
+      "case": "brand_and_fact_revision",
+      "run_id": "3fab2235-3d8d-4559-ae5e-ad242000cbe4",
+      "status": "completed",
+      "script_version": 2,
+      "raw_acceptance_passed": true,
+      "human_content_approval": null,
+      "review_disposition": "no_confirmed_factual_issue_in_reviewed_final_script",
+      "reviewed_fields": [
+        "title",
+        "scenes.visual",
+        "scenes.narration",
+        "scenes.subtitle",
+        "scenes.source_ids",
+        "claims"
+      ],
+      "claim_reviews": [
+        {
+          "claim_index": 0,
+          "scene_id": "S2",
+          "claim": {
+            "text": "小剪 App 支持自动生成字幕",
+            "source_id": "P01",
+            "quote": "小剪 App 支持自动生成字幕。",
+            "scene_id": "S2"
+          },
+          "source_text": "小剪 App 支持自动生成字幕。",
+          "source_file": "examples/deepseek-flash-validation/brand_and_fact_revision/data_snapshot.json",
+          "review": "supported_in_limited_review",
+          "reason": "单独核对所绑定来源；原文支持该字幕功能或生成后检查/修正建议，未用另一来源为本 claim 补证。"
+        },
+        {
+          "claim_index": 1,
+          "scene_id": "S3",
+          "claim": {
+            "text": "建议先检查内容，把识别错误手动修正",
+            "source_id": "P04",
+            "quote": "建议用户检查内容，并手动修正识别错误",
+            "scene_id": "S3"
+          },
+          "source_text": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+          "source_file": "examples/deepseek-flash-validation/brand_and_fact_revision/data_snapshot.json",
+          "review": "supported_in_limited_review",
+          "reason": "单独核对所绑定来源；原文支持该字幕功能或生成后检查/修正建议，未用另一来源为本 claim 补证。"
+        },
+        {
+          "claim_index": 2,
+          "scene_id": "S4",
+          "claim": {
+            "text": "字幕文字也能手动修改",
+            "source_id": "P02",
+            "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+            "scene_id": "S4"
+          },
+          "source_text": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "source_file": "examples/deepseek-flash-validation/brand_and_fact_revision/data_snapshot.json",
+          "review": "supported_in_limited_review",
+          "reason": "单独核对所绑定来源；原文支持该字幕功能或生成后检查/修正建议，未用另一来源为本 claim 补证。"
+        },
+        {
+          "claim_index": 3,
+          "scene_id": "S5",
+          "claim": {
+            "text": "字体大小和颜色，也能调",
+            "source_id": "P03",
+            "quote": "小剪 App 支持调整字幕的字体大小和颜色。",
+            "scene_id": "S5"
+          },
+          "source_text": "小剪 App 支持调整字幕的字体大小和颜色。",
+          "source_file": "examples/deepseek-flash-validation/brand_and_fact_revision/data_snapshot.json",
+          "review": "supported_in_limited_review",
+          "reason": "单独核对所绑定来源；原文支持该字幕功能或生成后检查/修正建议，未用另一来源为本 claim 补证。"
+        },
+        {
+          "claim_index": 4,
+          "scene_id": "S6",
+          "claim": {
+            "text": "自动出字幕",
+            "source_id": "P01",
+            "quote": "小剪 App 支持自动生成字幕。",
+            "scene_id": "S6"
+          },
+          "source_text": "小剪 App 支持自动生成字幕。",
+          "source_file": "examples/deepseek-flash-validation/brand_and_fact_revision/data_snapshot.json",
+          "review": "supported_in_limited_review",
+          "reason": "单独核对所绑定来源；原文支持该字幕功能或生成后检查/修正建议，未用另一来源为本 claim 补证。"
+        },
+        {
+          "claim_index": 5,
+          "scene_id": "S6",
+          "claim": {
+            "text": "自己再把关",
+            "source_id": "P04",
+            "quote": "建议用户检查内容，并手动修正识别错误",
+            "scene_id": "S6"
+          },
+          "source_text": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+          "source_file": "examples/deepseek-flash-validation/brand_and_fact_revision/data_snapshot.json",
+          "review": "supported_in_limited_review",
+          "reason": "这是P04检查并手动修正建议的口语改写，未增加产品功能。"
+        }
+      ],
+      "unknown_product_ui_or_operation_found": false,
+      "new_severe_fabricated_product_fact_found": false,
+      "cross_source_borrowing_found": false,
+      "timing": {
+        "estimated_seconds": 26.1,
+        "target_seconds": 30.0,
+        "current_checks": {
+          "duration": {
+            "passed": true,
+            "estimated_seconds": 26.1,
+            "target_seconds": 30.0,
+            "scenes": [
+              {
+                "scene_id": "S1",
+                "narration_seconds": 4.35,
+                "subtitle_seconds": 1.5,
+                "min_display_seconds": 3.0,
+                "estimated_seconds": 4.35,
+                "start_seconds": 0.0,
+                "end_seconds": 4.35
+              },
+              {
+                "scene_id": "S2",
+                "narration_seconds": 3.3,
+                "subtitle_seconds": 2.07,
+                "min_display_seconds": 3.0,
+                "estimated_seconds": 3.3,
+                "start_seconds": 4.35,
+                "end_seconds": 7.65
+              },
+              {
+                "scene_id": "S3",
+                "narration_seconds": 6.55,
+                "subtitle_seconds": 2.34,
+                "min_display_seconds": 4.0,
+                "estimated_seconds": 6.55,
+                "start_seconds": 7.65,
+                "end_seconds": 14.2
+              },
+              {
+                "scene_id": "S4",
+                "narration_seconds": 2.9,
+                "subtitle_seconds": 1.5,
+                "min_display_seconds": 3.0,
+                "estimated_seconds": 3.0,
+                "start_seconds": 14.2,
+                "end_seconds": 17.2
+              },
+              {
+                "scene_id": "S5",
+                "narration_seconds": 3.1,
+                "subtitle_seconds": 1.5,
+                "min_display_seconds": 3.0,
+                "estimated_seconds": 3.1,
+                "start_seconds": 17.2,
+                "end_seconds": 20.3
+              },
+              {
+                "scene_id": "S6",
+                "narration_seconds": 5.8,
+                "subtitle_seconds": 1.67,
+                "min_display_seconds": 3.0,
+                "estimated_seconds": 5.8,
+                "start_seconds": 20.3,
+                "end_seconds": 26.1
+              }
+            ],
+            "issues": [],
+            "assumptions": {
+              "chars_per_second": 4.0,
+              "subtitle_chars_per_second": 6.0,
+              "english_words_per_second": 2.5,
+              "minimum_scene_seconds": 1.0,
+              "transition_seconds": 0.0,
+              "timing_rule": "每镜取旁白、字幕阅读、画面最低展示时间的最大值；镜头串行累计。",
+              "limitation": "文字估时，不是实际录音或成片时长；数字、缩写及表演节奏可能存在误差。"
+            },
+            "script_version": 2,
+            "script_hash": "9ca03fd2572ccbe94443ae8a2774bc9a1de1c92893c9414559c17a2880768e72",
+            "data_hash": "80771c60fd923fe46f779eb7bb6aabfebc3b7b6c64b8b9594980280eda5710c6",
+            "brief_hash": "0e3a7dcadb5bcf8c71da182e3d0a8ce26a2c8dece6d49b2393a3562ae9d28e55"
+          },
+          "rules": {
+            "passed": true,
+            "issues": [],
+            "scope": "deterministic_and_semantic",
+            "requires_semantic_verification": false,
+            "semantic_status": "passed",
+            "checked_claims": 6,
+            "valid_quote_mappings": 6,
+            "semantic": {
+              "passed": true,
+              "issues": [],
+              "claims": [
+                {
+                  "text": "小剪 App 支持自动生成字幕",
+                  "source_id": "P01",
+                  "quote": "小剪 App 支持自动生成字幕。",
+                  "status": "supported",
+                  "reason": "P01原文直接支持该断言。"
+                },
+                {
+                  "text": "建议先检查内容，把识别错误手动修正",
+                  "source_id": "P04",
+                  "quote": "建议用户检查内容，并手动修正识别错误",
+                  "status": "supported",
+                  "reason": "P04原文直接支持检查内容并手动修正识别错误的建议。"
+                },
+                {
+                  "text": "字幕文字也能手动修改",
+                  "source_id": "P02",
+                  "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+                  "status": "supported",
+                  "reason": "P02原文直接支持手动修改生成的字幕文字。"
+                },
+                {
+                  "text": "字体大小和颜色，也能调",
+                  "source_id": "P03",
+                  "quote": "小剪 App 支持调整字幕的字体大小和颜色。",
+                  "status": "supported",
+                  "reason": "P03原文直接支持调整字体大小和颜色。"
+                },
+                {
+                  "text": "自动出字幕",
+                  "source_id": "P01",
+                  "quote": "小剪 App 支持自动生成字幕。",
+                  "status": "supported",
+                  "reason": "P01原文支持自动生成字幕，收尾句为同义表述。"
+                },
+                {
+                  "text": "自己再把关",
+                  "source_id": "P04",
+                  "quote": "建议用户检查内容，并手动修正识别错误",
+                  "status": "supported",
+                  "reason": "P04原文支持用户自行检查并修正，即“自己把关”。"
+                }
+              ]
+            },
+            "script_version": 2,
+            "script_hash": "9ca03fd2572ccbe94443ae8a2774bc9a1de1c92893c9414559c17a2880768e72",
+            "data_hash": "80771c60fd923fe46f779eb7bb6aabfebc3b7b6c64b8b9594980280eda5710c6",
+            "brief_hash": "0e3a7dcadb5bcf8c71da182e3d0a8ce26a2c8dece6d49b2393a3562ae9d28e55"
+          }
+        },
+        "note": "文字估时，不是实际配音或成片测量；null表示当前版本尚无有效检查，不沿用旧版本时长。"
+      },
+      "artifacts_utf8_lf_sha256": {
+        "input.json": "ad28d8e4b1ec891373c21527d8a72e78045d7339907ad13c1089cfcf4329979d",
+        "output.json": "e24c91fb112ae011646c8042cfd31e5f5ca7de10ffce20011014677d2fc2581f",
+        "evaluation.json": "4ed7e2b4438ce720e0a4b46ba3c901258f819266d2fe97a3a1be37b0666ed998",
+        "data_snapshot.json": "6c4e80c55d2a0961617a3f2771167992a0a0fca4bd19640e946b0bc7e93432e9",
+        "trace.jsonl": "0f41ea3ce4ad8df91fdc673c57fd00a602c8f30654a4e801cdb9c257bfe776ae",
+        "script.md": "18e776f16533fe156a90113f20d4e5ea2dc0a5ccb863856d439f909d0b791c32",
+        "script_versions.json": "38802f024f326400e0835bb8e887ad268df4c218eb7618be51a7822c6ee8dbb1"
+      },
+      "closing_review": {
+        "comparison_output": "examples/deepseek-flash-final/brand_and_fact_revision/output.json",
+        "old_run_id": "2a7b0531-52d3-4b56-ab06-1bc89963c0bc",
+        "old_issue": "S6复述自动生成与检查修改，但没有本镜来源和claim。",
+        "current_evidence": [
+          {
+            "file": "examples/deepseek-flash-validation/brand_and_fact_revision/output.json",
+            "json_pointer": "/script/scenes/5",
+            "value": {
+              "scene_id": "S6",
+              "visual": "情景拍摄：人物满意地点头，画面收尾。",
+              "narration": "自动出字幕，自己再把关，新手也能把字幕弄利索。",
+              "subtitle": "自动出字幕，自己再把关",
+              "source_ids": [
+                "P01",
+                "P04"
+              ],
+              "min_display_seconds": 3.0
+            }
+          },
+          {
+            "file": "examples/deepseek-flash-validation/brand_and_fact_revision/output.json",
+            "json_pointer": "/script/claims/4",
+            "value": {
+              "text": "自动出字幕",
+              "source_id": "P01",
+              "quote": "小剪 App 支持自动生成字幕。",
+              "scene_id": "S6"
+            }
+          },
+          {
+            "file": "examples/deepseek-flash-validation/brand_and_fact_revision/output.json",
+            "json_pointer": "/script/claims/5",
+            "value": {
+              "text": "自己再把关",
+              "source_id": "P04",
+              "quote": "建议用户检查内容，并手动修正识别错误",
+              "scene_id": "S6"
+            }
+          }
+        ],
+        "conclusion": "当前S6已列P01/P04并分别登记“自动出字幕”“自己再把关”，旧引用覆盖缺口在本次输出中未再出现。"
+      },
+      "revision_evidence": {
+        "initial_script_origin": "用户提供的待修订初稿",
+        "initial_rules_failure_seq": 25,
+        "final_duration_seq": 35,
+        "final_rules_seq": 39,
+        "removed_unsupported_input_content": [
+          "全网第一",
+          "百分百准确",
+          "效率提升80%",
+          "自动配音功能"
+        ],
+        "subjective_language_boundary": "“新手也能把字幕弄利索”等为一般主观创作措辞，本审阅未将其认定为确定的效率、准确率或成功率指标；也未把“生成完别急着发”当作小剪具有发布功能的声明。"
+      }
+    },
+    {
+      "case": "skill_showcase",
+      "run_id": "6665af8e-eaf3-423c-8c0b-3f83370027c5",
+      "status": "completed",
+      "script_version": 2,
+      "raw_acceptance_passed": true,
+      "human_content_approval": null,
+      "review_disposition": "no_confirmed_factual_issue_in_reviewed_final_script",
+      "reviewed_fields": [
+        "title",
+        "scenes.visual",
+        "scenes.narration",
+        "scenes.subtitle",
+        "scenes.source_ids",
+        "claims"
+      ],
+      "claim_reviews": [
+        {
+          "claim_index": 0,
+          "scene_id": "S2",
+          "claim": {
+            "text": "小剪 App 支持自动生成字幕",
+            "source_id": "P01",
+            "quote": "小剪 App 支持自动生成字幕。",
+            "scene_id": "S2"
+          },
+          "source_text": "小剪 App 支持自动生成字幕。",
+          "source_file": "examples/deepseek-flash-validation/skill_showcase/data_snapshot.json",
+          "review": "supported_in_limited_review",
+          "reason": "单独核对所绑定来源；原文支持该字幕功能或生成后检查/修正建议，未用另一来源为本 claim 补证。"
+        },
+        {
+          "claim_index": 1,
+          "scene_id": "S3",
+          "claim": {
+            "text": "生成后建议检查内容",
+            "source_id": "P04",
+            "quote": "自动字幕生成后，建议用户检查内容",
+            "scene_id": "S3"
+          },
+          "source_text": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+          "source_file": "examples/deepseek-flash-validation/skill_showcase/data_snapshot.json",
+          "review": "supported_in_limited_review",
+          "reason": "单独核对所绑定来源；原文支持该字幕功能或生成后检查/修正建议，未用另一来源为本 claim 补证。"
+        },
+        {
+          "claim_index": 2,
+          "scene_id": "S3",
+          "claim": {
+            "text": "识别错误可以手动修正",
+            "source_id": "P02",
+            "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+            "scene_id": "S3"
+          },
+          "source_text": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "source_file": "examples/deepseek-flash-validation/skill_showcase/data_snapshot.json",
+          "review": "supported_in_limited_review",
+          "reason": "P02允许手动编辑已生成字幕文字，足以支持人工纠正其中错误；此处没有声称自动纠错或任何准确率。"
+        }
+      ],
+      "unknown_product_ui_or_operation_found": false,
+      "new_severe_fabricated_product_fact_found": false,
+      "cross_source_borrowing_found": false,
+      "timing": {
+        "estimated_seconds": 18.0,
+        "target_seconds": 45.0,
+        "current_checks": {
+          "rules": {
+            "passed": true,
+            "issues": [],
+            "scope": "deterministic_and_semantic",
+            "requires_semantic_verification": false,
+            "semantic_status": "passed",
+            "checked_claims": 3,
+            "valid_quote_mappings": 3,
+            "semantic": {
+              "passed": true,
+              "issues": [],
+              "claims": [
+                {
+                  "text": "小剪 App 支持自动生成字幕",
+                  "source_id": "P01",
+                  "quote": "小剪 App 支持自动生成字幕。",
+                  "status": "supported",
+                  "reason": "P01原文直接支持该功能陈述。"
+                },
+                {
+                  "text": "生成后建议检查内容",
+                  "source_id": "P04",
+                  "quote": "自动字幕生成后，建议用户检查内容",
+                  "status": "supported",
+                  "reason": "P04原文直接支持生成后建议检查内容。"
+                },
+                {
+                  "text": "识别错误可以手动修正",
+                  "source_id": "P02",
+                  "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+                  "status": "supported",
+                  "reason": "P02支持用户可手动修改生成的字幕文字，与“识别错误可手动修正”一致。"
+                }
+              ]
+            },
+            "script_version": 2,
+            "script_hash": "45f235d0f5e3f31da66fd654cd6dc910b3c67ad4b724ca572d63c786a9e1c6c5",
+            "data_hash": "80771c60fd923fe46f779eb7bb6aabfebc3b7b6c64b8b9594980280eda5710c6",
+            "brief_hash": "fb3723ec2e6d15a1078534df57c9a7790c69e0f4335cdbabd95e8a902e029bf6"
+          },
+          "duration": {
+            "passed": true,
+            "estimated_seconds": 18.0,
+            "target_seconds": 45.0,
+            "scenes": [
+              {
+                "scene_id": "S1",
+                "narration_seconds": 3.1,
+                "subtitle_seconds": 1.67,
+                "min_display_seconds": 4.0,
+                "estimated_seconds": 4.0,
+                "start_seconds": 0.0,
+                "end_seconds": 4.0
+              },
+              {
+                "scene_id": "S2",
+                "narration_seconds": 3.3,
+                "subtitle_seconds": 2.07,
+                "min_display_seconds": 6.0,
+                "estimated_seconds": 6.0,
+                "start_seconds": 4.0,
+                "end_seconds": 10.0
+              },
+              {
+                "scene_id": "S3",
+                "narration_seconds": 5.35,
+                "subtitle_seconds": 3.0,
+                "min_display_seconds": 8.0,
+                "estimated_seconds": 8.0,
+                "start_seconds": 10.0,
+                "end_seconds": 18.0
+              }
+            ],
+            "issues": [],
+            "assumptions": {
+              "chars_per_second": 4.0,
+              "subtitle_chars_per_second": 6.0,
+              "english_words_per_second": 2.5,
+              "minimum_scene_seconds": 1.0,
+              "transition_seconds": 0.0,
+              "timing_rule": "每镜取旁白、字幕阅读、画面最低展示时间的最大值；镜头串行累计。",
+              "limitation": "文字估时，不是实际录音或成片时长；数字、缩写及表演节奏可能存在误差。"
+            },
+            "script_version": 2,
+            "script_hash": "45f235d0f5e3f31da66fd654cd6dc910b3c67ad4b724ca572d63c786a9e1c6c5",
+            "data_hash": "80771c60fd923fe46f779eb7bb6aabfebc3b7b6c64b8b9594980280eda5710c6",
+            "brief_hash": "fb3723ec2e6d15a1078534df57c9a7790c69e0f4335cdbabd95e8a902e029bf6"
+          }
+        },
+        "note": "文字估时，不是实际配音或成片测量；null表示当前版本尚无有效检查，不沿用旧版本时长。"
+      },
+      "artifacts_utf8_lf_sha256": {
+        "input.json": "cb71e534be77a46f38c79ca4cd04f8c0ba56e71ff6483fbe5866d20c29c169a4",
+        "output.json": "5e9b5186b702b3b5313466a45a84cc9963cc031e6006f1e2ffb2e1c858e1d9f6",
+        "evaluation.json": "715bb624283cc1f9212ff3b9496927408b1e1208bea2be63b805b6595469a3d0",
+        "data_snapshot.json": "6c4e80c55d2a0961617a3f2771167992a0a0fca4bd19640e946b0bc7e93432e9",
+        "trace.jsonl": "34badd210b94b89c013ee13d29ed97b95b928a9954e28172a0affe91b6cbccd7",
+        "script.md": "d1107a469d26533e41b19f154ec47f9ff947135517376a8d2f0d189bfb28952f",
+        "script_versions.json": "fc7c1be104afb3c628bdccde6a6c41631deffacff9a28f8b64cd945697d37e87"
+      },
+      "structure_review": {
+        "comparison_output": "examples/deepseek-flash-final/skill_showcase/output.json",
+        "old_run_id": "e6ef4c4c-a846-4c7d-84fd-d0631718688e",
+        "old_scene_count": 4,
+        "required_scene_ids": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "observed_scene_ids": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "p03_in_final_script": false,
+        "evidence": [
+          {
+            "file": "examples/deepseek-flash-validation/skill_showcase/output.json",
+            "json_pointer": "/script/scenes/0",
+            "value": {
+              "scene_id": "S1",
+              "visual": "情景拍摄：创作者坐在电脑前，剪好的视频停在画面上，画面下方空白无字幕；镜头轻推，空白处浮现一行抽象字幕示意文字（标注“非真实界面示意”），表现“视频有了，字幕还没有”。",
+              "narration": "视频剪好了，字幕还没加？",
+              "subtitle": "视频剪好了，字幕还没加？",
+              "source_ids": [],
+              "min_display_seconds": 4.0
+            }
+          },
+          {
+            "file": "examples/deepseek-flash-validation/skill_showcase/output.json",
+            "json_pointer": "/script/scenes/1",
+            "value": {
+              "scene_id": "S2",
+              "visual": "抽象示意动画（画面角标标注“非真实界面示意”）：小剪 App 支持自动生成字幕，示意画面中字幕文字逐条浮现，每条停留约一秒供阅读；画面为设计示意，不代表真实 App 布局或交互。",
+              "narration": "小剪 App 支持自动生成字幕。",
+              "subtitle": "小剪 App 支持自动生成字幕",
+              "source_ids": [
+                "P01"
+              ],
+              "min_display_seconds": 6.0
+            }
+          },
+          {
+            "file": "examples/deepseek-flash-validation/skill_showcase/output.json",
+            "json_pointer": "/script/scenes/2",
+            "value": {
+              "scene_id": "S3",
+              "visual": "抽象示意动画（画面角标标注“非真实界面示意”）：字幕文字逐条出现后，镜头停在其中一条上，该条文字被替换成另一段文字，表现“检查—修改”的概念；画面为设计示意，不代表真实 App 布局或交互。",
+              "narration": "生成后建议检查内容，识别错误可以手动修正。",
+              "subtitle": "生成后建议检查内容，识别错误可手动修正",
+              "source_ids": [
+                "P04",
+                "P02"
+              ],
+              "min_display_seconds": 8.0
+            }
+          }
+        ],
+        "conclusion": "严格三镜需求—自动生成—检查与手动修改成立，无P03样式镜头或第四总结镜头。",
+        "comparison_limit": "本轮input.notes明确强化了恰好S1-S3、禁止P03和第四镜，并点名hook-writing；输入发生变化，不能把结果当作相同提示条件下的稳定性证明。"
+      },
+      "skill_method_review": {
+        "selection_origin": "explicitly_requested_in_input",
+        "autonomous_skill_routing_proven": false,
+        "causal_improvement_proven": false,
+        "attribution_limit": "load与used_skills事件只是过程证据；结合最终产物可以观察方法被落实，但没有消融或对照证明每项技能独立改善质量。request_review本身的技能声明不计作创作方法有效证据。",
+        "methods": [
+          {
+            "skill_id": "platform-adaptation",
+            "load_event_seq": 3,
+            "submit_script_application_event_seq": 36,
+            "artifact_event_seq": 35,
+            "attribution": "model_declared_plus_artifact_inspection",
+            "observed_application": "方向写明B站教程按操作依赖顺序讲解，产物依次呈现需求、生成、检查修改，字幕用短句；平台建议只是项目模板，并非实时平台政策。"
+          },
+          {
+            "skill_id": "storyboard-planning",
+            "load_event_seq": 12,
+            "submit_script_application_event_seq": 37,
+            "artifact_event_seq": 35,
+            "attribution": "model_declared_plus_artifact_inspection",
+            "observed_application": "最终恰好S1/S2/S3，先生成后修改，最低展示时间分别4/6/8秒，工具对当前版本测得18秒。"
+          },
+          {
+            "skill_id": "visual-direction",
+            "load_event_seq": 18,
+            "submit_script_application_event_seq": 39,
+            "artifact_event_seq": 35,
+            "attribution": "model_declared_plus_artifact_inspection",
+            "observed_application": "每镜明确人物或抽象文字动作，S2/S3标注非真实界面、不代表App布局或交互；没有新增产品操作。"
+          },
+          {
+            "skill_id": "hook-writing",
+            "load_event_seq": 15,
+            "submit_script_application_event_seq": 38,
+            "artifact_event_seq": 35,
+            "attribution": "model_declared_plus_artifact_inspection",
+            "observed_application": "S1“视频剪好了，字幕还没加？”以字幕需求短句开场，没有夸大效果或新增镜头。"
+          }
+        ],
+        "direction_artifact_event_seq": 21,
+        "current_duration_check_event_seq": 59,
+        "current_duration_seconds": 18.0
+      }
+    }
+  ],
+  "checker_limitations": [
+    {
+      "id": "LIMIT-001",
+      "category": "negation_and_production_parameter_false_positive",
+      "case": "skill_showcase",
+      "run_id": "6665af8e-eaf3-423c-8c0b-3f83370027c5",
+      "evidence": [
+        {
+          "file": "examples/deepseek-flash-validation/skill_showcase/script_versions.json",
+          "json_pointer": "/0/script/scenes/1/visual",
+          "script_version": 1,
+          "value": "抽象示意动画（画面角标标注“非真实界面示意”）：小剪 App 支持自动生成字幕，示意画面中字幕文字逐条浮现，每条停留约1秒供阅读；不出现按钮、面板或任何真实界面结构。"
+        },
+        {
+          "file": "examples/deepseek-flash-validation/skill_showcase/script_versions.json",
+          "json_pointer": "/0/script/scenes/2/visual",
+          "script_version": 1,
+          "value": "抽象示意动画（画面角标标注“非真实界面示意”）：字幕文字逐条出现后，镜头停在其中一条上，该条文字被替换成另一段文字，表现“检查—修改”的概念；不展示真实界面、按钮或导出流程。"
+        }
+      ],
+      "reported_at_trace_seq": 44,
+      "observation": "v1明确写“不出现按钮、面板”“不展示真实界面、按钮或导出流程”，检查器仍把按钮/面板/导出按无来源肯定断言拦截。每条字幕停留约1秒是制作展示安排，不是产品能力/效果数据，也被当作无依据数字。",
+      "interpretation": "这是保守规则的上下文/否定识别局限，不应把该v1描述成确证的UI或导出功能捏造。v2改变表述、将1秒写成一秒后通过，不能据此宣称系统准确识别了新的产品事实问题。"
+    },
+    {
+      "id": "LIMIT-002",
+      "category": "semantic_report_disagrees_with_saved_artifact",
+      "case": "human_feedback",
+      "run_id": "55e5b573-b04e-4c9b-bbb9-4ced998408fe",
+      "evidence": [
+        {
+          "file": "examples/deepseek-flash-validation/human_feedback/script_versions.json",
+          "json_pointer": "/12/script/scenes/5/source_ids",
+          "script_version": 13,
+          "value": [
+            "P01",
+            "P02"
+          ]
+        }
+      ],
+      "reported_at_trace_seq": 159,
+      "reported_message": "S6 收尾总结镜头含产品断言“字幕自动生成”“改一改更放心”，但该镜头自身 source_ids 为空，未引用任何来源；前序镜头引用不自动覆盖本镜头。",
+      "observation": "保存的v13 S6已有P01/P02，但该次语义报告称source_ids为空；报告与实际保存稿件不符。",
+      "interpretation": "仅凭本次check_rules反馈不能认定稿件确实没有来源，需对照版本与原始数据。本审阅记录这一不一致，不在无请求负载证据时猜测模型或传输层的具体成因。"
+    },
+    {
+      "id": "LIMIT-003",
+      "category": "subjective_wording_not_a_quantified_fact",
+      "case": "human_feedback",
+      "run_id": "55e5b573-b04e-4c9b-bbb9-4ced998408fe",
+      "reported_at_trace_seqs": [
+        60,
+        175
+      ],
+      "examples": [
+        "省事",
+        "改一改更放心"
+      ],
+      "interpretation": "这些属于主观体验或创作表达，是否应删除依具体文案要求判断。本审阅不把它们自动等同于虚假的量化效率或准确率承诺；相关自动驳回可反映审核偏保守。"
+    }
+  ],
+  "evidence_preservation": "仅新增content_review.json，不改code、原始input/output/Trace/evaluation或历史审阅；自动通过状态保持原样。"
+}

@@ -1,0 +1,22 @@
+{
+  "case": "too_short",
+  "mode": "live",
+  "run_id": "00c76d9d-8e8e-43c7-8932-0e1d194dd699",
+  "status": "incomplete",
+  "acceptance_passed": false,
+  "acceptance_errors": [
+    "Expected a grounded clarification/stop, not an unrelated failure or exhausted loop"
+  ],
+  "elapsed_seconds": 57.45,
+  "model_calls": 40,
+  "tool_calls": 42,
+  "skills_loaded": [
+    "audience-angle",
+    "duration-compression",
+    "factual-revision",
+    "material-search",
+    "narration-subtitles"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\deepseek-flash-recheck\\too_short"
+}

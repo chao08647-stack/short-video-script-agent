@@ -281,3 +281,141 @@ def test_all_bundled_datasets_enable_the_same_targeted_term_guards():
 def test_bad_term_configuration_fails_closed(configured):
     with pytest.raises(ValueError, match="evidence_required_terms"):
         check_rules(script(), MATERIALS, {"evidence_required_terms": configured})
+
+
+@pytest.fixture
+def headphone_material():
+    return {"source_id": "H01", "version": "2026-10-01", "title": "澄音 H1 耳机",
+            "text": "澄音 H1 耳机支持主动降噪模式。", "facts": [], "keywords": ["H1"]}
+
+
+@pytest.mark.parametrize("field", ["title", "visual", "narration", "subtitle"])
+def test_known_complete_model_number_needs_no_per_field_numeric_claim(field, headphone_material):
+    value = script()
+    if field == "title":
+        value["title"] = "澄音 H1 耳机介绍"
+    else:
+        value["scenes"][0][field] += " 澄音 H1 耳机"
+    report = check_rules(value, [*MATERIALS, headphone_material], {})
+    assert report["passed"] is True
+    assert report["requires_semantic_verification"] is True
+    assert report["semantic_status"] == "not_checked"
+
+
+@pytest.mark.parametrize("copy,unsupported", [
+    ("H1提升80%", {"80%"}),
+    ("H1续航8小时", {"8"}),
+    ("H999耳机", {"999"}),
+    ("H1Pro耳机", {"1"}),
+    ("WH1耳机", {"1"}),
+    ("H1%提升", {"1%"}),
+    ("H1-Pro新型号", {"1"}),
+])
+def test_model_exemption_does_not_cover_metrics_or_partial_unknown_tokens(copy, unsupported, headphone_material):
+    value = script(narration="小剪支持自动生成字幕。" + copy)
+    report = check_rules(value, [*MATERIALS, headphone_material], {})
+    assert {issue["number"] for issue in report["issues"] if issue["code"] == "UNSUPPORTED_NUMBER"} == unsupported
+    assert report["passed"] is False
+
+
+def test_complete_model_matching_normalizes_fullwidth_without_dropping_metric(headphone_material):
+    value = script(narration="小剪支持自动生成字幕。澄音Ｈ１耳机续航８小时。")
+    report = check_rules(value, [*MATERIALS, headphone_material], {})
+    assert {issue["number"] for issue in report["issues"] if issue["code"] == "UNSUPPORTED_NUMBER"} == {"8"}
+
+
+def test_units_and_source_metadata_do_not_become_model_exemptions(headphone_material):
+    source = deepcopy(headphone_material)
+    source.update(source_id="H999", title="H999", keywords=["H999"])
+    source["text"] += "实验室播放8h，支持4K。"
+    value = script(narration="小剪支持自动生成字幕。H999续航8h并支持4K。")
+    report = check_rules(value, [*MATERIALS, source], {})
+    assert {issue["number"] for issue in report["issues"] if issue["code"] == "UNSUPPORTED_NUMBER"} == {"999", "8", "4"}
+
+
+def test_known_multisegment_alphanumeric_model_exempts_only_its_internal_digits(headphone_material):
+    source = deepcopy(headphone_material)
+    source["text"] = "耳机型号为WH1000XM5。"
+    value = script(narration="小剪支持自动生成字幕。展示WH1000XM5，续航8小时。")
+    report = check_rules(value, [*MATERIALS, source], {})
+    assert {issue["number"] for issue in report["issues"] if issue["code"] == "UNSUPPORTED_NUMBER"} == {"8"}
+
+
+SCENE_RULES = {"scene_evidence_terms": [
+    "自动生成", "手动修改", "手动修正", "检查修改", "字体大小", "主动降噪", "通透模式", "触控",
+]}
+
+
+@pytest.mark.parametrize("run_id,scene_id,narration", [
+    ("e1d84023-2d70-4d8f-8c49-85e928fdc9b3", "S5", "自动生成打底，检查修改收尾，字幕就搞定了。"),
+    ("2a7b0531-52d3-4b56-ab06-1bc89963c0bc", "S6", "自动生成打底，检查修改收尾，字幕就弄好了。"),
+])
+def test_actual_uncited_closing_scene_cannot_borrow_previous_scene_evidence(run_id, scene_id, narration):
+    value = script()
+    value["scenes"].append({"scene_id": scene_id, "visual": "人物微笑，画面淡出。", "narration": narration,
+                            "subtitle": "", "source_ids": [], "min_display_seconds": 1.0})
+    assert check_rules(value, MATERIALS, {})["passed"] is True, run_id
+    issues = check_rules(value, MATERIALS, SCENE_RULES)["issues"]
+    missing = [issue for issue in issues if issue["code"] == "MISSING_SCENE_EVIDENCE"]
+    assert {issue["term"] for issue in missing} == {"自动生成", "检查修改"}
+    assert all(issue["scene_id"] == scene_id and issue["field"] == "narration" for issue in missing)
+    assert all(issue["path"] == "/scenes/1/narration" for issue in missing)
+
+
+@pytest.mark.parametrize("field", ["visual", "narration", "subtitle"])
+def test_feature_terms_in_any_scene_copy_require_local_evidence(field):
+    value = script(narration="人物看看手中的作品。", subtitle="轻松收尾")
+    value["scenes"][0].update(visual="人物点头，画面淡出。", source_ids=[])
+    value["claims"] = []
+    value["scenes"][0][field] = "小剪支持自动生成字幕。"
+    result = check_rules(value, MATERIALS, SCENE_RULES)
+    missing = [issue for issue in result["issues"] if issue["code"] == "MISSING_SCENE_EVIDENCE"]
+    assert len(missing) == 1
+    assert missing[0]["field"] == field and missing[0]["term"] == "自动生成"
+
+
+def test_plain_situation_with_generic_product_words_needs_no_scene_claim():
+    value = script(narration="创作者戴着耳机检查字幕，准备修改自己的作品。", subtitle="字幕整理心得")
+    value["scenes"][0].update(visual="人物拿起耳机，看看自己的字幕作品。", source_ids=[])
+    value["claims"] = []
+    assert check_rules(value, MATERIALS, SCENE_RULES)["passed"] is True
+
+
+def test_correct_local_mapping_satisfies_scene_guard_but_is_not_semantic_proof():
+    value = script()
+    result = check_rules(value, MATERIALS, SCENE_RULES)
+    assert result["passed"] is True
+    assert result["requires_semantic_verification"] is True
+    assert result["semantic_status"] == "not_checked"
+
+
+@pytest.mark.parametrize("defect", ["source_only", "claim_only", "global_claim", "other_scene", "bad_quote"])
+def test_local_evidence_requires_both_source_and_valid_non_global_claim(defect):
+    value = script()
+    if defect == "source_only":
+        value["claims"] = []
+    elif defect == "claim_only":
+        value["scenes"][0]["source_ids"] = []
+    elif defect == "global_claim":
+        value["claims"][0]["scene_id"] = ""
+    elif defect == "other_scene":
+        value["scenes"].append({**deepcopy(value["scenes"][0]), "scene_id": "S2"})
+        value["claims"][0]["scene_id"] = "S2"
+    else:
+        value["claims"][0]["quote"] = "资料不存在的句子。"
+    missing = [issue for issue in check_rules(value, MATERIALS, SCENE_RULES)["issues"] if issue["code"] == "MISSING_SCENE_EVIDENCE"]
+    assert missing and {issue["scene_id"] for issue in missing} == {"S1"}
+
+
+def test_all_datasets_configure_scene_guard_without_broad_generic_terms():
+    root = Path(__file__).resolve().parents[1]
+    for dataset in ("demo", "empty", "conflict"):
+        rules = json.loads((root / "data" / dataset / "rules.json").read_text(encoding="utf-8"))
+        assert rules["scene_evidence_terms"] == SCENE_RULES["scene_evidence_terms"]
+        assert not {"字幕", "耳机", "检查", "修改"}.intersection(rules["scene_evidence_terms"])
+
+
+@pytest.mark.parametrize("terms", [None, "自动生成", [""], [1]])
+def test_invalid_scene_term_configuration_fails_closed(terms):
+    with pytest.raises(ValueError, match="scene_evidence_terms"):
+        check_rules(script(), MATERIALS, {"scene_evidence_terms": terms})

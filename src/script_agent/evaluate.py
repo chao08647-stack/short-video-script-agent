@@ -111,6 +111,24 @@ def acceptance(case: str, state: dict) -> tuple[bool, list[str]]:
                     revised = True
         if not revised:
             errors.append("No human revision feedback followed by a model revision and renewed review")
+        if state["status"] == "completed":
+            # This fixed scenario asks to remove opening rhetorical questions.
+            # Observable punctuation checks supplement the version/review path;
+            # they do not claim to judge arbitrary human feedback semantically.
+            scenes = (state.get("script") or {}).get("scenes", [])
+            opening = scenes[0] if scenes else {}
+            for field in ("narration", "subtitle"):
+                if any(mark in opening.get(field, "") for mark in ("?", "？")):
+                    errors.append(f"Opening {field} still contains a question mark after human feedback")
+    if case == "skill_showcase" and state["status"] == "completed":
+        required = {"platform-adaptation", "storyboard-planning", "visual-direction"}
+        declared = {e.get("skill_id") for e in events
+                    if e.get("kind") == "skill_application" and e.get("attribution") == "model_declared"
+                    and e.get("tool") in {"submit_direction", "submit_script", "patch_script"}}
+        if not required.issubset(declared):
+            errors.append("Directed showcase did not associate all three requested skills with artifacts")
+        if len((state.get("script") or {}).get("scenes", [])) != 3:
+            errors.append("Directed showcase requires exactly three scenes")
     if case == "query_rewrite":
         searches = tool_events("search_materials")
         recovered = any(

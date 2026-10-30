@@ -9,7 +9,7 @@
   "dataset": "demo",
   "notes": "内容只介绍已有资料支持的功能，不使用没有依据的降噪分贝或效果百分比。",
   "initial_script": null,
-  "max_model_calls": 40,
-  "max_tool_calls": 60,
+  "max_model_calls": 60,
+  "max_tool_calls": 80,
   "failure_injections": {}
 }

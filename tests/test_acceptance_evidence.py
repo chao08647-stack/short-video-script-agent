@@ -57,13 +57,43 @@ def test_observed_mock_acceptance_paths_remain_valid(tmp_path, case):
 
 
 @pytest.mark.parametrize("case", [
-    "human_feedback", "query_rewrite", "duration_revision", "brand_and_fact_revision", "tool_failure", "missing_info",
+    "human_feedback", "query_rewrite", "duration_revision", "brand_and_fact_revision", "tool_failure", "missing_info", "skill_showcase",
 ])
 def test_normal_completion_cannot_be_relabelled_as_unobserved_special_path(completed, case):
     _, state = completed
     passed, errors = acceptance(case, state)
     assert passed is False
     assert errors
+
+
+@pytest.mark.parametrize("field", ["narration", "subtitle"])
+@pytest.mark.parametrize("question_mark", ["?", "？"])
+def test_human_feedback_rejects_residual_opening_question_despite_renewed_review(tmp_path, field, question_mark):
+    class PartialFeedbackModel(MockModel):
+        """Offline regression for the observed narration-only live revision."""
+
+        def _script(self, *, compact=False, revised=False):
+            script = super()._script(compact=compact, revised=revised)
+            if revised:
+                opening = {"scene_id": "HOOK", "visual": "创作者准备字幕的情景。",
+                           "narration": "剪完视频，需要字幕。", "subtitle": "剪完视频，需要字幕。",
+                           "source_ids": [], "min_display_seconds": 1.0}
+                opening[field] = "剪完还要一句句敲字幕" + question_mark
+                script["scenes"].insert(0, opening)
+            elif not compact:
+                script["scenes"][0]["narration"] = "剪完还要一句句敲字幕" + question_mark
+                script["scenes"][0]["subtitle"] = "剪完还要一句句敲字幕" + question_mark
+            return script
+
+    _, state = run_mock_case(tmp_path, "human_feedback", PartialFeedbackModel())
+    assert state["status"] == "completed"
+    assert checks_current(state)
+    assert any(event.get("kind") == "human_decision" and event.get("decision") == "revise"
+               for event in state["events"])
+    passed, errors = acceptance("human_feedback", state)
+    assert passed is False
+    # A valid changed-version -> renewed-review path must not hide partial feedback.
+    assert errors == [f"Opening {field} still contains a question mark after human feedback"]
 
 
 @pytest.mark.parametrize("case", ["no_materials", "conflict", "too_short"])

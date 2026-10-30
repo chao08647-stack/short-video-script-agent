@@ -1,0 +1,20 @@
+{
+  "case": "tool_failure",
+  "mode": "live",
+  "run_id": "3f21c26c-c25a-4ee0-9b19-46a81d0b1080",
+  "status": "completed",
+  "acceptance_passed": true,
+  "acceptance_errors": [],
+  "elapsed_seconds": 35.59,
+  "model_calls": 20,
+  "tool_calls": 21,
+  "skills_loaded": [
+    "audience-angle",
+    "brand-revision",
+    "material-search",
+    "narration-subtitles",
+    "narrative-structure"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\deepseek-flash-recheck\\tool_failure"
+}

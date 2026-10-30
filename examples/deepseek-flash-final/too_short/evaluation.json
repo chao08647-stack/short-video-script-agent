@@ -1,0 +1,16 @@
+{
+  "case": "too_short",
+  "mode": "live",
+  "run_id": "b6e54e84-cb33-46c2-824c-f9957e177cc4",
+  "status": "waiting_human",
+  "acceptance_passed": false,
+  "acceptance_errors": [
+    "No actual over-duration observation explains non-completion"
+  ],
+  "elapsed_seconds": 1.69,
+  "model_calls": 1,
+  "tool_calls": 1,
+  "skills_loaded": [],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\deepseek-flash-final\\too_short"
+}

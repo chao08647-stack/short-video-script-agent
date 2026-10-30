@@ -518,6 +518,12 @@ def test_focus_keeps_actual_failed_timing_and_requires_content_change():
     assert "submit_script" in focus and "重复复制原稿无效" in focus
     assert "不要询问用户是否允许修改" in focus
     assert "真正缺少来源、资料冲突或必须改变硬性要求" in focus
+    assert "保留必讲事实与必要限定" in focus
+    assert 'ask_user(fields=["target_seconds"])' in focus
+    assert "或 finish_incomplete 说明当前实际估时与目标的缺口" in focus
+    assert "不必先把其它规则或引用问题修到通过" in focus
+    assert "连续收到内容没有变化、技能已加载等结果" in focus
+    assert "澄清或结束都是合法选择" in focus
     assert "actual timing" in messages[1]["content"]
 
 
@@ -533,7 +539,8 @@ def patch_state():
 def test_patch_schema_lists_only_existing_zero_based_paths_and_operation_fields():
     state = patch_state()
     edit_schema = state_tools(state)["patch_script"]["properties"]["edits"]
-    assert edit_schema["maxItems"] == 1
+    # One planner tool call may atomically update related text and citations.
+    assert edit_schema["maxItems"] == 20
     base = next(tool for tool in tool_schemas() if tool["function"]["name"] == "patch_script")
     assert base["function"]["parameters"]["properties"]["edits"]["maxItems"] == 20
     spec = edit_schema["items"]
@@ -560,6 +567,37 @@ def test_json_action_accepts_each_patch_union_branch(edit):
     with ModelClient(Settings(action_protocol="json"), transport=httpx.MockTransport(lambda _: response({"content": raw}))) as client:
         action = client.chat([], tools_for_state(patch_state()))
         assert json.loads(action["tool_calls"][0]["function"]["arguments"])["edits"] == [edit]
+
+
+def test_json_patch_accepts_related_fields_as_one_bounded_atomic_action():
+    edits = [{"op": "replace", "path": path, "value": "supported"} for path in
+             ("/scenes/0/narration", "/scenes/0/subtitle", "/claims/0/text")]
+    raw = json.dumps({"action": "patch_script", "arguments": {
+        "used_skills": ["audience-angle"], "edits": edits, "reason": "Keep narration, subtitle, and citation aligned"}})
+    with ModelClient(Settings(action_protocol="json"), transport=httpx.MockTransport(lambda _: response({"content": raw}))) as client:
+        action = client.chat([], tools_for_state(patch_state()))
+    assert len(action["tool_calls"]) == 1
+    assert json.loads(action["tool_calls"][0]["function"]["arguments"])["edits"] == edits
+
+
+def test_json_patch_rejects_more_than_twenty_edits():
+    edits = [{"op": "replace", "path": "/title", "value": str(index)} for index in range(21)]
+    raw = json.dumps({"action": "patch_script", "arguments": {
+        "used_skills": ["audience-angle"], "edits": edits, "reason": "Oversized atomic batch"}})
+    with ModelClient(Settings(action_protocol="json"), transport=httpx.MockTransport(lambda _: response({"content": raw}))) as client:
+        with pytest.raises(ModelError, match="item count"):
+            client.chat([], tools_for_state(patch_state()))
+
+
+def test_human_revision_focus_requires_all_affected_fields_and_current_claims():
+    state = patch_state()
+    state["revision_required"] = True
+    focus = build_messages(state, [])[-1]["content"]
+    assert "一次原子调用中修改最多20处" in focus
+    assert "同一次 patch 或完整提交中同步修改对应 claims.text/source_id/quote" in focus
+    assert "标题、旁白、字幕、画面" in focus
+    assert "同时检查第一镜 narration 和 subtitle" in focus
+    assert "每轮仍只调用一个工具" in focus
 
 
 @pytest.mark.parametrize("edit", [

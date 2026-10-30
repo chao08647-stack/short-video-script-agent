@@ -1,0 +1,15 @@
+{
+  "brief": {
+    "topic": "介绍小剪 App 的字幕功能",
+    "audience": null,
+    "platform": "抖音",
+    "target_seconds": null,
+    "style": null
+  },
+  "dataset": "demo",
+  "notes": "这是技能验证变体：先使用 brief-clarification 梳理已知和缺失需求，再对实际缺项提问；完整后继续原流程。实际采用该方法时如实记录 used_skills。",
+  "initial_script": null,
+  "max_model_calls": 40,
+  "max_tool_calls": 60,
+  "failure_injections": {}
+}

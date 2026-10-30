@@ -38,5 +38,8 @@ User supplied a private API key and authorized DeepSeek Flash as the primary run
 - [complete] Explicit non-thinking native tool protocol; enforce and disclose local context estimation.
 - [complete] API connectivity and normal / duration-revision flow smoke; later content audit requires revalidation.
 - [complete] Attempt all 14 cases, preserve Qwen baseline, review traces and fix observed UI/feature grounding defects. Raw 8 automated passes; 6 HTTP 402 failures; 4 completed scripts require content revalidation.
-- [complete] Update evidence, documentation, tests and archive smoke: 282 tests, 14 Mock cases passed.
+- [complete] Update evidence, documentation, tests and archive smoke: 321 tests, 14 Mock cases passed; all four live batches and latest failures retained.
 - [pending: external dependency] Restore API balance, rerun corrected live suite, validate remaining skill application, then publish to a supplied remote.
+
+- [complete] User restored balance; executed further real comparisons and targeted skill checks, then stopped paid calls at the second HTTP 402.
+- [pending] Reliable long revision convergence, final live revalidation within a total experiment budget, and remote publication. Latest records are not all passing.

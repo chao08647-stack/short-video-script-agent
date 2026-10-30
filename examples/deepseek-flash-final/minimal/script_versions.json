@@ -1,0 +1,381 @@
+[
+  {
+    "event_seq": 25,
+    "tool": "submit_script",
+    "arguments": {
+      "title": "新手剪视频，字幕不用一句句敲",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "抽象示意动画：手机屏幕轮廓内，一行行字幕文字依次浮现（不展示真实界面、按钮或点击操作）；旁白字幕同步出现在画面下方。",
+          "narration": "新手剪视频，最怕一句句敲字幕。小剪 App 支持自动生成字幕，生成后记得检查，识别错了可以手动修改。",
+          "subtitle": "小剪 App 支持自动生成字幕｜生成后记得检查、手动修正",
+          "source_ids": [
+            "P01",
+            "P04",
+            "P02"
+          ],
+          "min_display_seconds": 9
+        }
+      ],
+      "claims": [
+        {
+          "text": "小剪 App 支持自动生成字幕",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S1"
+        },
+        {
+          "text": "生成后记得检查",
+          "source_id": "P04",
+          "quote": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+          "scene_id": "S1"
+        },
+        {
+          "text": "识别错了可以手动修改",
+          "source_id": "P02",
+          "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "scene_id": "S1"
+        }
+      ],
+      "used_skills": [
+        "narration-subtitles",
+        "audience-angle",
+        "material-search"
+      ],
+      "reason": "按已批准方向写10秒单镜头：新手痛点开场、点明自动生成字幕、补一句检查与手动修正提醒；画面用抽象示意动画，不虚构真实界面与操作；三条断言分别绑定 P01/P04/P02 原文。"
+    },
+    "version": 1,
+    "script": {
+      "title": "新手剪视频，字幕不用一句句敲",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "抽象示意动画：手机屏幕轮廓内，一行行字幕文字依次浮现（不展示真实界面、按钮或点击操作）；旁白字幕同步出现在画面下方。",
+          "narration": "新手剪视频，最怕一句句敲字幕。小剪 App 支持自动生成字幕，生成后记得检查，识别错了可以手动修改。",
+          "subtitle": "小剪 App 支持自动生成字幕｜生成后记得检查、手动修正",
+          "source_ids": [
+            "P01",
+            "P04",
+            "P02"
+          ],
+          "min_display_seconds": 9.0
+        }
+      ],
+      "claims": [
+        {
+          "text": "小剪 App 支持自动生成字幕",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S1"
+        },
+        {
+          "text": "生成后记得检查",
+          "source_id": "P04",
+          "quote": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+          "scene_id": "S1"
+        },
+        {
+          "text": "识别错了可以手动修改",
+          "source_id": "P02",
+          "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "scene_id": "S1"
+        }
+      ]
+    }
+  },
+  {
+    "event_seq": 38,
+    "tool": "patch_script",
+    "arguments": {
+      "edits": [
+        {
+          "op": "replace",
+          "path": "/scenes/0/narration",
+          "value": "新手剪视频，字幕不用一句句敲。小剪 App 支持自动生成字幕，生成后记得检查，识别错了可以手动修改。"
+        },
+        {
+          "op": "replace",
+          "path": "/scenes/0/subtitle",
+          "value": "小剪 App 支持自动生成字幕｜生成后记得检查、手动修正"
+        }
+      ],
+      "used_skills": [
+        "duration-compression",
+        "narration-subtitles"
+      ],
+      "reason": "按压缩方法删去开场冗余“最怕”铺垫，保留自动生成字幕与检查修正两项必讲事实，claims 文句未变故无需改动。"
+    },
+    "version": 2,
+    "script": {
+      "title": "新手剪视频，字幕不用一句句敲",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "抽象示意动画：手机屏幕轮廓内，一行行字幕文字依次浮现（不展示真实界面、按钮或点击操作）；旁白字幕同步出现在画面下方。",
+          "narration": "新手剪视频，字幕不用一句句敲。小剪 App 支持自动生成字幕，生成后记得检查，识别错了可以手动修改。",
+          "subtitle": "小剪 App 支持自动生成字幕｜生成后记得检查、手动修正",
+          "source_ids": [
+            "P01",
+            "P04",
+            "P02"
+          ],
+          "min_display_seconds": 9.0
+        }
+      ],
+      "claims": [
+        {
+          "text": "小剪 App 支持自动生成字幕",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S1"
+        },
+        {
+          "text": "生成后记得检查",
+          "source_id": "P04",
+          "quote": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+          "scene_id": "S1"
+        },
+        {
+          "text": "识别错了可以手动修改",
+          "source_id": "P02",
+          "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "scene_id": "S1"
+        }
+      ]
+    }
+  },
+  {
+    "event_seq": 45,
+    "tool": "patch_script",
+    "arguments": {
+      "edits": [
+        {
+          "op": "replace",
+          "path": "/scenes/0/narration",
+          "value": "新手剪视频，字幕不用一句句敲。小剪 App 支持自动生成字幕，生成后记得检查、手动修正。"
+        },
+        {
+          "op": "replace",
+          "path": "/scenes/0/subtitle",
+          "value": "小剪 App 支持自动生成字幕｜生成后记得检查、手动修正"
+        },
+        {
+          "op": "replace",
+          "path": "/claims/1/text",
+          "value": "生成后记得检查、手动修正"
+        },
+        {
+          "op": "replace",
+          "path": "/claims/1/quote",
+          "value": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。"
+        },
+        {
+          "op": "remove",
+          "path": "/claims/2"
+        },
+        {
+          "op": "remove",
+          "path": "/scenes/0/source_ids/2"
+        }
+      ],
+      "reason": "压缩旁白：把“识别错了可以手动修改”并入 P04 原文支持的“检查、手动修正”，删去重复的 P02 断言与引用，保留自动生成字幕与检查修正两项必讲事实。",
+      "used_skills": [
+        "duration-compression",
+        "narration-subtitles"
+      ]
+    },
+    "version": 3,
+    "script": {
+      "title": "新手剪视频，字幕不用一句句敲",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "抽象示意动画：手机屏幕轮廓内，一行行字幕文字依次浮现（不展示真实界面、按钮或点击操作）；旁白字幕同步出现在画面下方。",
+          "narration": "新手剪视频，字幕不用一句句敲。小剪 App 支持自动生成字幕，生成后记得检查、手动修正。",
+          "subtitle": "小剪 App 支持自动生成字幕｜生成后记得检查、手动修正",
+          "source_ids": [
+            "P01",
+            "P04"
+          ],
+          "min_display_seconds": 9.0
+        }
+      ],
+      "claims": [
+        {
+          "text": "小剪 App 支持自动生成字幕",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S1"
+        },
+        {
+          "text": "生成后记得检查、手动修正",
+          "source_id": "P04",
+          "quote": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+          "scene_id": "S1"
+        }
+      ]
+    }
+  },
+  {
+    "event_seq": 52,
+    "tool": "patch_script",
+    "arguments": {
+      "edits": [
+        {
+          "op": "replace",
+          "path": "/scenes/0/narration",
+          "value": "新手剪视频，字幕不用一句句敲。小剪 App 支持自动生成字幕，生成后记得检查、手动修正。"
+        },
+        {
+          "op": "replace",
+          "path": "/scenes/0/subtitle",
+          "value": "小剪 App 支持自动生成字幕｜生成后记得检查修正"
+        },
+        {
+          "op": "replace",
+          "path": "/claims/1/text",
+          "value": "生成后记得检查、手动修正"
+        }
+      ],
+      "reason": "版本3仍超0.3秒：删去旁白中“新手剪视频”铺垫，只保留“字幕不用一句句敲”开场与两项必讲事实；字幕同步精简，claims 文句未变。",
+      "used_skills": [
+        "duration-compression",
+        "narration-subtitles"
+      ]
+    },
+    "version": 4,
+    "script": {
+      "title": "新手剪视频，字幕不用一句句敲",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "抽象示意动画：手机屏幕轮廓内，一行行字幕文字依次浮现（不展示真实界面、按钮或点击操作）；旁白字幕同步出现在画面下方。",
+          "narration": "新手剪视频，字幕不用一句句敲。小剪 App 支持自动生成字幕，生成后记得检查、手动修正。",
+          "subtitle": "小剪 App 支持自动生成字幕｜生成后记得检查修正",
+          "source_ids": [
+            "P01",
+            "P04"
+          ],
+          "min_display_seconds": 9.0
+        }
+      ],
+      "claims": [
+        {
+          "text": "小剪 App 支持自动生成字幕",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S1"
+        },
+        {
+          "text": "生成后记得检查、手动修正",
+          "source_id": "P04",
+          "quote": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+          "scene_id": "S1"
+        }
+      ]
+    }
+  },
+  {
+    "event_seq": 59,
+    "tool": "patch_script",
+    "arguments": {
+      "edits": [
+        {
+          "op": "replace",
+          "path": "/scenes/0/narration",
+          "value": "字幕不用一句句敲。小剪 App 支持自动生成字幕，生成后记得检查、手动修正。"
+        },
+        {
+          "op": "replace",
+          "path": "/scenes/0/subtitle",
+          "value": "小剪 App 支持自动生成字幕｜生成后记得检查修正"
+        }
+      ],
+      "reason": "版本4仍超0.3秒：删去旁白中“新手剪视频”铺垫，只保留“字幕不用一句句敲”开场与两项必讲事实；字幕同步精简，claims 文句未变。",
+      "used_skills": [
+        "duration-compression",
+        "narration-subtitles"
+      ]
+    },
+    "version": 5,
+    "script": {
+      "title": "新手剪视频，字幕不用一句句敲",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "抽象示意动画：手机屏幕轮廓内，一行行字幕文字依次浮现（不展示真实界面、按钮或点击操作）；旁白字幕同步出现在画面下方。",
+          "narration": "字幕不用一句句敲。小剪 App 支持自动生成字幕，生成后记得检查、手动修正。",
+          "subtitle": "小剪 App 支持自动生成字幕｜生成后记得检查修正",
+          "source_ids": [
+            "P01",
+            "P04"
+          ],
+          "min_display_seconds": 9.0
+        }
+      ],
+      "claims": [
+        {
+          "text": "小剪 App 支持自动生成字幕",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S1"
+        },
+        {
+          "text": "生成后记得检查、手动修正",
+          "source_id": "P04",
+          "quote": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+          "scene_id": "S1"
+        }
+      ]
+    }
+  },
+  {
+    "event_seq": 74,
+    "tool": "patch_script",
+    "arguments": {
+      "edits": [
+        {
+          "op": "replace",
+          "path": "/scenes/0/visual",
+          "value": "抽象示意动画：手机屏幕轮廓内，一行行字幕文字依次浮现（不展示真实界面与点击操作）；旁白字幕同步出现在画面下方。"
+        }
+      ],
+      "used_skills": [
+        "factual-revision"
+      ],
+      "reason": "规则检查指出画面中“按钮”无原文支持，按事实修订方法删去该未证实界面元素，保留纯抽象示意描述"
+    },
+    "version": 6,
+    "script": {
+      "title": "新手剪视频，字幕不用一句句敲",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "抽象示意动画：手机屏幕轮廓内，一行行字幕文字依次浮现（不展示真实界面与点击操作）；旁白字幕同步出现在画面下方。",
+          "narration": "字幕不用一句句敲。小剪 App 支持自动生成字幕，生成后记得检查、手动修正。",
+          "subtitle": "小剪 App 支持自动生成字幕｜生成后记得检查修正",
+          "source_ids": [
+            "P01",
+            "P04"
+          ],
+          "min_display_seconds": 9.0
+        }
+      ],
+      "claims": [
+        {
+          "text": "小剪 App 支持自动生成字幕",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S1"
+        },
+        {
+          "text": "生成后记得检查、手动修正",
+          "source_id": "P04",
+          "quote": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+          "scene_id": "S1"
+        }
+      ]
+    }
+  }
+]

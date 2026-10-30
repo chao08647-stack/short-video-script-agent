@@ -1,0 +1,22 @@
+{
+  "case": "query_rewrite",
+  "mode": "live",
+  "run_id": "fdca7d1d-3479-40ee-b728-3f783adb1d33",
+  "status": "incomplete",
+  "acceptance_passed": false,
+  "acceptance_errors": [
+    "Expected completed, got incomplete"
+  ],
+  "elapsed_seconds": 57.8,
+  "model_calls": 40,
+  "tool_calls": 42,
+  "skills_loaded": [
+    "audience-angle",
+    "factual-revision",
+    "material-search",
+    "narration-subtitles",
+    "storyboard-planning"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\deepseek-flash-recheck\\query_rewrite"
+}

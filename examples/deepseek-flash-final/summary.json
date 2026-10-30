@@ -1,0 +1,293 @@
+{
+  "mode": "live",
+  "human_decisions": "evaluation_simulated_human",
+  "cases": [
+    {
+      "case": "brand_and_fact_revision",
+      "mode": "live",
+      "run_id": "2a7b0531-52d3-4b56-ab06-1bc89963c0bc",
+      "status": "completed",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 60.97,
+      "model_calls": 35,
+      "tool_calls": 30,
+      "skills_loaded": [
+        "audience-angle",
+        "brand-revision",
+        "factual-revision",
+        "material-search",
+        "narration-subtitles"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\deepseek-flash-final\\brand_and_fact_revision"
+    },
+    {
+      "case": "conflict",
+      "mode": "live",
+      "run_id": "0ee40166-fa26-4e0a-b7bc-750a22d34c18",
+      "status": "waiting_human",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 6.39,
+      "model_calls": 5,
+      "tool_calls": 5,
+      "skills_loaded": [
+        "evidence-conflict",
+        "material-search"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\deepseek-flash-final\\conflict"
+    },
+    {
+      "case": "duration_revision",
+      "mode": "live",
+      "run_id": "7db427bb-d07a-4b54-b8ee-230efc29a469",
+      "status": "completed",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 34.47,
+      "model_calls": 23,
+      "tool_calls": 21,
+      "skills_loaded": [
+        "audience-angle",
+        "claim-grounding",
+        "duration-compression",
+        "factual-revision",
+        "material-search"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\deepseek-flash-final\\duration_revision"
+    },
+    {
+      "case": "headphones",
+      "mode": "live",
+      "run_id": "c8e5e03b-4926-4ba5-bb9c-50b954146917",
+      "status": "completed",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 55.95,
+      "model_calls": 34,
+      "tool_calls": 30,
+      "skills_loaded": [
+        "audience-angle",
+        "factual-revision",
+        "material-search",
+        "narration-subtitles",
+        "narrative-structure"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\deepseek-flash-final\\headphones"
+    },
+    {
+      "case": "human_feedback",
+      "mode": "live",
+      "run_id": "e1d84023-2d70-4d8f-8c49-85e928fdc9b3",
+      "status": "completed",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 31.86,
+      "model_calls": 23,
+      "tool_calls": 21,
+      "skills_loaded": [
+        "audience-angle",
+        "factual-revision",
+        "human-feedback",
+        "material-search",
+        "narration-subtitles",
+        "narrative-structure"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\deepseek-flash-final\\human_feedback"
+    },
+    {
+      "case": "minimal",
+      "mode": "live",
+      "run_id": "6ab1cf13-c3ff-4cf2-b3fc-089aa50c9875",
+      "status": "completed",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 37.81,
+      "model_calls": 27,
+      "tool_calls": 26,
+      "skills_loaded": [
+        "audience-angle",
+        "duration-compression",
+        "factual-revision",
+        "material-search",
+        "narration-subtitles"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\deepseek-flash-final\\minimal"
+    },
+    {
+      "case": "missing_info",
+      "mode": "live",
+      "run_id": "8fa20add-2fce-4b8c-abb2-387bf9319003",
+      "status": "completed",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 23.34,
+      "model_calls": 14,
+      "tool_calls": 13,
+      "skills_loaded": [
+        "audience-angle",
+        "material-search",
+        "narration-subtitles",
+        "narrative-structure"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\deepseek-flash-final\\missing_info"
+    },
+    {
+      "case": "no_materials",
+      "mode": "live",
+      "run_id": "d6bc3822-a155-41c2-a77f-1fc3fb3d0e13",
+      "status": "waiting_human",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 5.98,
+      "model_calls": 5,
+      "tool_calls": 5,
+      "skills_loaded": [
+        "material-search"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\deepseek-flash-final\\no_materials"
+    },
+    {
+      "case": "normal",
+      "mode": "live",
+      "run_id": "08f2be74-42fb-4be2-9b20-463f8cfc4287",
+      "status": "completed",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 34.7,
+      "model_calls": 20,
+      "tool_calls": 18,
+      "skills_loaded": [
+        "audience-angle",
+        "factual-revision",
+        "material-search",
+        "narration-subtitles",
+        "narrative-structure"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\deepseek-flash-final\\normal"
+    },
+    {
+      "case": "query_rewrite",
+      "mode": "live",
+      "run_id": "de505d11-2611-4d0f-b743-d110031208a3",
+      "status": "completed",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 25.23,
+      "model_calls": 17,
+      "tool_calls": 16,
+      "skills_loaded": [
+        "audience-angle",
+        "material-search",
+        "narration-subtitles",
+        "narrative-structure"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\deepseek-flash-final\\query_rewrite"
+    },
+    {
+      "case": "skill_showcase",
+      "mode": "live",
+      "run_id": "e6ef4c4c-a846-4c7d-84fd-d0631718688e",
+      "status": "completed",
+      "acceptance_passed": false,
+      "acceptance_errors": [
+        "Directed showcase requires exactly three scenes"
+      ],
+      "elapsed_seconds": 28.8,
+      "model_calls": 17,
+      "tool_calls": 16,
+      "skills_loaded": [
+        "factual-revision",
+        "material-search",
+        "platform-adaptation",
+        "storyboard-planning",
+        "visual-direction"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\deepseek-flash-final\\skill_showcase"
+    },
+    {
+      "case": "step_limit",
+      "mode": "live",
+      "run_id": "1827f613-94c1-493c-ab18-091031cbbf38",
+      "status": "incomplete",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 1.19,
+      "model_calls": 1,
+      "tool_calls": 1,
+      "skills_loaded": [
+        "material-search"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\deepseek-flash-final\\step_limit"
+    },
+    {
+      "case": "too_short",
+      "mode": "live",
+      "run_id": "b6e54e84-cb33-46c2-824c-f9957e177cc4",
+      "status": "waiting_human",
+      "acceptance_passed": false,
+      "acceptance_errors": [
+        "No actual over-duration observation explains non-completion"
+      ],
+      "elapsed_seconds": 1.69,
+      "model_calls": 1,
+      "tool_calls": 1,
+      "skills_loaded": [],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\deepseek-flash-final\\too_short"
+    },
+    {
+      "case": "tool_failure",
+      "mode": "live",
+      "run_id": "60675491-cf34-47d0-8322-e79b2d275121",
+      "status": "completed",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 21.7,
+      "model_calls": 14,
+      "tool_calls": 13,
+      "skills_loaded": [
+        "audience-angle",
+        "material-search",
+        "narration-subtitles",
+        "narrative-structure"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\deepseek-flash-final\\tool_failure"
+    },
+    {
+      "case": "tutorial",
+      "mode": "live",
+      "run_id": "6d9b2d23-d912-4d03-8869-54a0e8a79ab9",
+      "status": "completed",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 67.12,
+      "model_calls": 39,
+      "tool_calls": 36,
+      "skills_loaded": [
+        "audience-angle",
+        "factual-revision",
+        "material-search",
+        "narration-subtitles",
+        "narrative-structure"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\deepseek-flash-final\\tutorial"
+    }
+  ],
+  "passed": 13,
+  "total": 15
+}

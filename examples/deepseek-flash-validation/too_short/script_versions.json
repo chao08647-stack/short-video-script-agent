@@ -1,0 +1,95 @@
+[
+  {
+    "event_seq": 20,
+    "tool": "submit_script",
+    "arguments": {
+      "title": "小剪字幕：自动生成，手动修改",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "抽象示意动画：屏幕中央浮现一行字幕文字，随后文字被逐字改动，全程不出现真实界面、按钮或面板",
+          "narration": "小剪自动生成字幕，还能手动改字。",
+          "subtitle": "自动生成字幕｜可手动修改",
+          "source_ids": [
+            "P01",
+            "P02"
+          ],
+          "min_display_seconds": 1
+        }
+      ],
+      "claims": [
+        {
+          "text": "小剪自动生成字幕",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S1"
+        },
+        {
+          "text": "还能手动改字",
+          "source_id": "P02",
+          "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "scene_id": "S1"
+        },
+        {
+          "text": "自动生成字幕｜可手动修改",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S1"
+        },
+        {
+          "text": "自动生成字幕｜可手动修改",
+          "source_id": "P02",
+          "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "scene_id": "S1"
+        }
+      ],
+      "used_skills": [
+        "narration-subtitles"
+      ],
+      "reason": "按方向把两项必讲功能压成一句最短口语旁白，画面用抽象示意动画避免虚构界面，引用 P01/P02"
+    },
+    "version": 1,
+    "script": {
+      "title": "小剪字幕：自动生成，手动修改",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "抽象示意动画：屏幕中央浮现一行字幕文字，随后文字被逐字改动，全程不出现真实界面、按钮或面板",
+          "narration": "小剪自动生成字幕，还能手动改字。",
+          "subtitle": "自动生成字幕｜可手动修改",
+          "source_ids": [
+            "P01",
+            "P02"
+          ],
+          "min_display_seconds": 1.0
+        }
+      ],
+      "claims": [
+        {
+          "text": "小剪自动生成字幕",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S1"
+        },
+        {
+          "text": "还能手动改字",
+          "source_id": "P02",
+          "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "scene_id": "S1"
+        },
+        {
+          "text": "自动生成字幕｜可手动修改",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S1"
+        },
+        {
+          "text": "自动生成字幕｜可手动修改",
+          "source_id": "P02",
+          "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "scene_id": "S1"
+        }
+      ]
+    }
+  }
+]

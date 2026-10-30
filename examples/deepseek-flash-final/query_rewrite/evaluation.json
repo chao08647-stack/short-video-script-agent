@@ -1,0 +1,19 @@
+{
+  "case": "query_rewrite",
+  "mode": "live",
+  "run_id": "de505d11-2611-4d0f-b743-d110031208a3",
+  "status": "completed",
+  "acceptance_passed": true,
+  "acceptance_errors": [],
+  "elapsed_seconds": 25.23,
+  "model_calls": 17,
+  "tool_calls": 16,
+  "skills_loaded": [
+    "audience-angle",
+    "material-search",
+    "narration-subtitles",
+    "narrative-structure"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\deepseek-flash-final\\query_rewrite"
+}

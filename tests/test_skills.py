@@ -22,7 +22,8 @@ def test_all_sixteen_skills_have_metadata_and_loadable_instructions():
     assert all("content" not in item for item in catalog)
     for item in catalog:
         skill = registry.load(item["name"])
-        assert skill["version"] == "1.0"
+        expected_version = "1.1" if item["name"] in {"human-feedback", "visual-direction"} else "1.0"
+        assert skill["version"] == item["version"] == expected_version
         assert "输入" in skill["content"]
         assert "产出" in skill["content"]
         assert "验证示例" in skill["content"]

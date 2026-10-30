@@ -1,0 +1,67 @@
+{
+  "run_id": "af05724b-0b59-4a09-ac23-e8ccc528e248",
+  "mode": "live",
+  "status": "waiting_human",
+  "phase": "direction",
+  "execution": {
+    "python": "3.12.9",
+    "langgraph": "1.2.18",
+    "mode": "live",
+    "model": {
+      "base_url": "https://api.deepseek.com",
+      "model": "deepseek-flash",
+      "max_tokens": 4096,
+      "timeout_seconds": 120.0,
+      "action_protocol": "native",
+      "thinking": "disabled",
+      "context_window": 16384
+    },
+    "code_hashes": {
+      "engine.py": "bfb63d093376e8066c8c02f6fa9fa983af7404304671054fb10e70f87328ddb7",
+      "prompts.py": "1a9cbf2801453983a1828ea5980efe84096f6e1fde7af403f73546414b02e812",
+      "model.py": "176b550aa18498c1a35ac3f47693d989453e84a10ce639754a15e7577a3a5d44",
+      "business_tools.py": "dc84676a93313d096a99153e684aec9f5f7530e4fcf07d9fcb55c4bb7f079b88",
+      "script_patch.py": "ec77a077f3a59753457e082c6936897bad7379218f7a24f0fee9ff7927de3ad7",
+      "runtime.py": "c5217fdd0b50752605821b94cdc6d792bd8ac780d4331b63836ebbb9da7c7c46",
+      "context_budget.py": "53b4db7819f37a1c407f3d8376ac3bc16bda5e451903c431f98cef40d8d5ea2c",
+      "vendor/deepseek/encoding.py": "142ef131e2acf9047ba7b3e222011a89997911457357e6d5dc1ce01d8da545ed"
+    },
+    "code_hash_capture": "process_import"
+  },
+  "brief": {
+    "topic": "介绍星河投影仪的无线投屏功能",
+    "audience": "短视频剪辑新手",
+    "platform": "抖音",
+    "target_seconds": 30.0,
+    "style": "轻松、直白"
+  },
+  "direction": null,
+  "script": null,
+  "script_version": 0,
+  "checks": {},
+  "estimated_seconds": null,
+  "duration_note": "基于固定语速与画面展示需求估算，不代表真实配音或成片测量。",
+  "sources": [],
+  "pending_review": {
+    "review_id": "23428cade1e06941620d",
+    "stage": "clarification",
+    "version": 0,
+    "object_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+    "reason": "本地资料库里查不到“星河投影仪”的任何资料（已试“星河投影仪 无线投屏”“星河投影仪 投屏”“星河投影仪”三次，均为零结果）。没有原文依据，我无法写投屏功能的操作步骤或效果。请问：1）产品全名/型号是否准确？2）能否提供该投影仪无线投屏的官方说明、说明书或产品页文字？",
+    "fields": [
+      "topic"
+    ],
+    "direction": null,
+    "script": null,
+    "checks": {}
+  },
+  "review_history": [],
+  "stop_reason": null,
+  "model_calls": 7,
+  "tool_calls": 8,
+  "skills_loaded": [
+    "material-search",
+    "query-rewrite"
+  ],
+  "data_hash": "d562b4d4663575336504fafdc54cfe986fbd76a0a951e9b9003e3dde67159708"
+}

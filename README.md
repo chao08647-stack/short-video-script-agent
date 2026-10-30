@@ -4,7 +4,7 @@
 
 交付的是可编辑脚本及检查证据，不需要视频输入，不生成配音或 MP4。仓库包含离线 Mock；真实模型服务需要单独配置。
 
-**当前状态：已接入 DeepSeek Flash，修补后 282 项工程测试和 14 项 Mock 场景通过；真实模型完整验收仍未完成。** 修补前真实批次自动通过 8/14，另 6 项因余额不足（HTTP 402）中断。事后文件复核发现四份完成稿含无依据 UI／操作，已补充检查，但尚未真实复验。正常生成、超时修正和工具恢复链路确已发生，不能由此宣称全部内容合格。16 个技能包已实现，本次真实加载及模型声明覆盖 12 项。具体证据、漏检及剩余工作见 [评估文档](docs/03-evaluation.md)。
+**当前状态：DeepSeek Flash 已接入，321 项工程测试和 14 项 Mock 场景通过；完整真实验收仍未全部通过。** 四批真实测试与后续文件审阅保留了成功和失败。最近一轮全量测试为 13/15 自动通过，后续六项定向验证为 3/6；人工返修再次耗尽 60 次上限，两项新变体又遇 HTTP 402。不能用此前成功覆盖最新失败。16 个技能包均有真实加载／声明记录，但部分来自定向或未完成任务，不代表全部技能效果已验证。见 [评估文档](docs/03-evaluation.md) 和 [完整批次索引](examples/deepseek-validation-index.json)。
 
 ## 评审入口
 
@@ -17,7 +17,7 @@
 | 难点与后续改进 | [docs/05-retrospective.md](docs/05-retrospective.md) |
 | 可复现输入 | [examples/inputs](examples/inputs) |
 | Mock 实际结果与覆盖 | [examples/mock/summary.json](examples/mock/summary.json)、[技能覆盖](examples/mock/skill_coverage.json) |
-| DeepSeek 实际结果与审阅 | [自动汇总](examples/deepseek-flash/summary.json)、[审阅发现](examples/deepseek-flash/manual_audit.json)、[技能覆盖](examples/deepseek-flash/skill_coverage.json) |
+| DeepSeek 实际结果与审阅 | [批次索引](examples/deepseek-validation-index.json)、[最近定向审阅](examples/deepseek-flash-validation/content_review.json)、[全部真实技能记录](examples/deepseek-skill-coverage.json) |
 | 历史 Qwen 对照 | [examples/live/summary.json](examples/live/summary.json) |
 | 多轮开发实验与失败记录 | [examples/experiments](examples/experiments) |
 
@@ -211,10 +211,10 @@ python -m script_agent.evaluate --mode mock --simulate-human
 具备可用模型服务后，可执行真实评估：
 
 ```console
-python -m script_agent.evaluate --mode live --output examples/deepseek-flash-recheck --simulate-human
+python -m script_agent.evaluate --mode live --output .runs/reviewer-live --simulate-human
 ```
 
-上述命令将 DeepSeek 修补后复验写入新目录，保留 `examples/deepseek-flash` 的原始批次和 `examples/live` 的本地模型基线；需要有效额度，命令本身不代表复验已通过。
+上述命令将新复验写入 `.runs/reviewer-live`，保留 `examples/` 下的所有已提交批次。需要有效额度；默认执行14个基础场景，单个任务上限不是整个评估的费用上限。命令本身不代表复验已通过。
 
 也可以只跑部分场景并写入新目录，避免覆盖已提交证据：
 
@@ -224,7 +224,7 @@ python -m script_agent.evaluate --mode live --cases normal,tool_failure,duration
 
 `--simulate-human` 明确允许评估器提供预设审核回复，记录中的身份是 `evaluation_simulated_human`。模型动作在 live 模式下仍来自真实模型，但这不代表真人审阅过每份脚本。默认评估分别写入 `examples/mock` 或 `examples/live`，包含实际输入、输出、Trace、汇总与技能覆盖；重新运行会更新该目录。评估器拒绝在同一输出目录混用两种模式。
 
-检查命令的退出码：`pytest` 失败时返回非零；评估器完成导出后，只要输出目录内任一场景未通过验收，就返回退出码 `1`。PowerShell 查看 `$LASTEXITCODE`，macOS / Linux 查看 `$?`。出现结果文件或“已保存”不代表通过；当前模型的完整 live 评估预计仍会报告失败，应查看 `summary.json` 和各用例的 `evaluation.json`。
+检查命令的退出码：`pytest` 失败时返回非零；评估器完成导出后，只要输出目录内任一场景未通过验收，就返回退出码 `1`。PowerShell 查看 `$LASTEXITCODE`，macOS / Linux 查看 `$?`。出现结果文件或“已保存”不代表通过；现有 live 批次包含失败且结果有波动，应查看 `summary.json` 和各用例的 `evaluation.json`。
 
 测试和评估包括正常路径、缺信息、无资料、工具失败、超时修订、不可行目标、资料冲突、品牌／事实问题、人审修改和调用上限。个别场景诚实返回未完成是预期结果；是否通过场景验收应查看其 `evaluation.json`，不能只数 `completed`。
 

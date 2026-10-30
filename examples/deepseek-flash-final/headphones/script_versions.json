@@ -1,0 +1,829 @@
+[
+  {
+    "event_seq": 28,
+    "tool": "submit_script",
+    "arguments": {
+      "title": "通勤路上的耳朵小开关：澄音 H1 降噪与触控播放",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "情景拍摄：早高峰地铁车厢，人挤人、报站声与嘈杂人声混在一起，主角戴着耳机微微皱眉，抬手碰了碰耳机。",
+          "narration": "早高峰的地铁，耳朵也想有个小开关。",
+          "subtitle": "通勤路上，耳朵也想有个小开关",
+          "source_ids": [],
+          "min_display_seconds": 4
+        },
+        {
+          "scene_id": "S2",
+          "visual": "抽象示意动画：耳机轮廓旁浮现“主动降噪模式”与“通透模式”两个文字标签，交替亮起，不展示真实界面或按钮。",
+          "narration": "澄音 H1 支持主动降噪模式，也支持通透模式。",
+          "subtitle": "支持主动降噪模式 / 通透模式",
+          "source_ids": [
+            "H01"
+          ],
+          "min_display_seconds": 5
+        },
+        {
+          "scene_id": "S3",
+          "visual": "情景拍摄：车厢嘈杂时主角安静听歌；到站前抬头，示意需要听清报站与身边对话，画面用字幕提示“按场景切换”，不演示具体操作步骤。",
+          "narration": "车厢太吵，就用降噪模式；要听报站、要和人说话，切到通透模式。",
+          "subtitle": "吵的时候降噪，要听声音时通透",
+          "source_ids": [
+            "H01"
+          ],
+          "min_display_seconds": 6
+        },
+        {
+          "scene_id": "S4",
+          "visual": "情景拍摄：主角手指轻触耳机，音乐暂停，画面配抽象示意动画：播放符号变为暂停符号；再轻触一次，音乐继续。",
+          "narration": "想安静一下，触控暂停；想接着听，再触控继续播放。",
+          "subtitle": "触控暂停 / 继续播放音乐",
+          "source_ids": [
+            "H03"
+          ],
+          "min_display_seconds": 6
+        },
+        {
+          "scene_id": "S5",
+          "visual": "情景拍摄：主角走出地铁站，摘下耳机收好，画面叠加两个功能点文字卡片“主动降噪 / 通透模式”“触控暂停 / 继续播放”。",
+          "narration": "两个小功能，通勤路上随手用。具体体验以实际使用为准。",
+          "subtitle": "主动降噪·通透模式｜触控暂停·继续播放",
+          "source_ids": [
+            "H01",
+            "H03"
+          ],
+          "min_display_seconds": 5
+        }
+      ],
+      "claims": [
+        {
+          "text": "澄音 H1 支持主动降噪模式，也支持通透模式。",
+          "source_id": "H01",
+          "quote": "澄音 H1 耳机支持主动降噪模式，也支持通透模式。",
+          "scene_id": "S2"
+        },
+        {
+          "text": "车厢太吵，就用降噪模式；要听报站、要和人说话，切到通透模式。",
+          "source_id": "H01",
+          "quote": "澄音 H1 耳机支持主动降噪模式，也支持通透模式。",
+          "scene_id": "S3"
+        },
+        {
+          "text": "想安静一下，触控暂停；想接着听，再触控继续播放。",
+          "source_id": "H03",
+          "quote": "澄音 H1 耳机可以通过触控操作暂停或继续播放音乐。",
+          "scene_id": "S4"
+        },
+        {
+          "text": "主动降噪·通透模式｜触控暂停·继续播放",
+          "source_id": "H01",
+          "quote": "澄音 H1 耳机支持主动降噪模式，也支持通透模式。",
+          "scene_id": "S5"
+        },
+        {
+          "text": "主动降噪·通透模式｜触控暂停·继续播放",
+          "source_id": "H03",
+          "quote": "澄音 H1 耳机可以通过触控操作暂停或继续播放音乐。",
+          "scene_id": "S5"
+        }
+      ],
+      "used_skills": [
+        "material-search",
+        "audience-angle",
+        "narrative-structure",
+        "narration-subtitles"
+      ],
+      "reason": "按已批准方向写完整初稿：5 镜情景+抽象示意，仅引用 H01/H03，不写分贝、百分比与具体按钮位置"
+    },
+    "version": 1,
+    "script": {
+      "title": "通勤路上的耳朵小开关：澄音 H1 降噪与触控播放",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "情景拍摄：早高峰地铁车厢，人挤人、报站声与嘈杂人声混在一起，主角戴着耳机微微皱眉，抬手碰了碰耳机。",
+          "narration": "早高峰的地铁，耳朵也想有个小开关。",
+          "subtitle": "通勤路上，耳朵也想有个小开关",
+          "source_ids": [],
+          "min_display_seconds": 4.0
+        },
+        {
+          "scene_id": "S2",
+          "visual": "抽象示意动画：耳机轮廓旁浮现“主动降噪模式”与“通透模式”两个文字标签，交替亮起，不展示真实界面或按钮。",
+          "narration": "澄音 H1 支持主动降噪模式，也支持通透模式。",
+          "subtitle": "支持主动降噪模式 / 通透模式",
+          "source_ids": [
+            "H01"
+          ],
+          "min_display_seconds": 5.0
+        },
+        {
+          "scene_id": "S3",
+          "visual": "情景拍摄：车厢嘈杂时主角安静听歌；到站前抬头，示意需要听清报站与身边对话，画面用字幕提示“按场景切换”，不演示具体操作步骤。",
+          "narration": "车厢太吵，就用降噪模式；要听报站、要和人说话，切到通透模式。",
+          "subtitle": "吵的时候降噪，要听声音时通透",
+          "source_ids": [
+            "H01"
+          ],
+          "min_display_seconds": 6.0
+        },
+        {
+          "scene_id": "S4",
+          "visual": "情景拍摄：主角手指轻触耳机，音乐暂停，画面配抽象示意动画：播放符号变为暂停符号；再轻触一次，音乐继续。",
+          "narration": "想安静一下，触控暂停；想接着听，再触控继续播放。",
+          "subtitle": "触控暂停 / 继续播放音乐",
+          "source_ids": [
+            "H03"
+          ],
+          "min_display_seconds": 6.0
+        },
+        {
+          "scene_id": "S5",
+          "visual": "情景拍摄：主角走出地铁站，摘下耳机收好，画面叠加两个功能点文字卡片“主动降噪 / 通透模式”“触控暂停 / 继续播放”。",
+          "narration": "两个小功能，通勤路上随手用。具体体验以实际使用为准。",
+          "subtitle": "主动降噪·通透模式｜触控暂停·继续播放",
+          "source_ids": [
+            "H01",
+            "H03"
+          ],
+          "min_display_seconds": 5.0
+        }
+      ],
+      "claims": [
+        {
+          "text": "澄音 H1 支持主动降噪模式，也支持通透模式。",
+          "source_id": "H01",
+          "quote": "澄音 H1 耳机支持主动降噪模式，也支持通透模式。",
+          "scene_id": "S2"
+        },
+        {
+          "text": "车厢太吵，就用降噪模式；要听报站、要和人说话，切到通透模式。",
+          "source_id": "H01",
+          "quote": "澄音 H1 耳机支持主动降噪模式，也支持通透模式。",
+          "scene_id": "S3"
+        },
+        {
+          "text": "想安静一下，触控暂停；想接着听，再触控继续播放。",
+          "source_id": "H03",
+          "quote": "澄音 H1 耳机可以通过触控操作暂停或继续播放音乐。",
+          "scene_id": "S4"
+        },
+        {
+          "text": "主动降噪·通透模式｜触控暂停·继续播放",
+          "source_id": "H01",
+          "quote": "澄音 H1 耳机支持主动降噪模式，也支持通透模式。",
+          "scene_id": "S5"
+        },
+        {
+          "text": "主动降噪·通透模式｜触控暂停·继续播放",
+          "source_id": "H03",
+          "quote": "澄音 H1 耳机可以通过触控操作暂停或继续播放音乐。",
+          "scene_id": "S5"
+        }
+      ]
+    }
+  },
+  {
+    "event_seq": 43,
+    "tool": "patch_script",
+    "arguments": {
+      "edits": [
+        {
+          "op": "replace",
+          "path": "/scenes/1/visual",
+          "value": "抽象示意动画：耳机轮廓旁浮现“主动降噪模式”与“通透模式”两个文字标签，交替亮起，不展示真实界面或操作步骤。"
+        }
+      ],
+      "used_skills": [
+        "factual-revision"
+      ],
+      "reason": "S2 画面“按钮”无原文支持，改为不涉及界面元素的抽象示意，保留 H01 功能事实"
+    },
+    "version": 2,
+    "script": {
+      "title": "通勤路上的耳朵小开关：澄音 H1 降噪与触控播放",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "情景拍摄：早高峰地铁车厢，人挤人、报站声与嘈杂人声混在一起，主角戴着耳机微微皱眉，抬手碰了碰耳机。",
+          "narration": "早高峰的地铁，耳朵也想有个小开关。",
+          "subtitle": "通勤路上，耳朵也想有个小开关",
+          "source_ids": [],
+          "min_display_seconds": 4.0
+        },
+        {
+          "scene_id": "S2",
+          "visual": "抽象示意动画：耳机轮廓旁浮现“主动降噪模式”与“通透模式”两个文字标签，交替亮起，不展示真实界面或操作步骤。",
+          "narration": "澄音 H1 支持主动降噪模式，也支持通透模式。",
+          "subtitle": "支持主动降噪模式 / 通透模式",
+          "source_ids": [
+            "H01"
+          ],
+          "min_display_seconds": 5.0
+        },
+        {
+          "scene_id": "S3",
+          "visual": "情景拍摄：车厢嘈杂时主角安静听歌；到站前抬头，示意需要听清报站与身边对话，画面用字幕提示“按场景切换”，不演示具体操作步骤。",
+          "narration": "车厢太吵，就用降噪模式；要听报站、要和人说话，切到通透模式。",
+          "subtitle": "吵的时候降噪，要听声音时通透",
+          "source_ids": [
+            "H01"
+          ],
+          "min_display_seconds": 6.0
+        },
+        {
+          "scene_id": "S4",
+          "visual": "情景拍摄：主角手指轻触耳机，音乐暂停，画面配抽象示意动画：播放符号变为暂停符号；再轻触一次，音乐继续。",
+          "narration": "想安静一下，触控暂停；想接着听，再触控继续播放。",
+          "subtitle": "触控暂停 / 继续播放音乐",
+          "source_ids": [
+            "H03"
+          ],
+          "min_display_seconds": 6.0
+        },
+        {
+          "scene_id": "S5",
+          "visual": "情景拍摄：主角走出地铁站，摘下耳机收好，画面叠加两个功能点文字卡片“主动降噪 / 通透模式”“触控暂停 / 继续播放”。",
+          "narration": "两个小功能，通勤路上随手用。具体体验以实际使用为准。",
+          "subtitle": "主动降噪·通透模式｜触控暂停·继续播放",
+          "source_ids": [
+            "H01",
+            "H03"
+          ],
+          "min_display_seconds": 5.0
+        }
+      ],
+      "claims": [
+        {
+          "text": "澄音 H1 支持主动降噪模式，也支持通透模式。",
+          "source_id": "H01",
+          "quote": "澄音 H1 耳机支持主动降噪模式，也支持通透模式。",
+          "scene_id": "S2"
+        },
+        {
+          "text": "车厢太吵，就用降噪模式；要听报站、要和人说话，切到通透模式。",
+          "source_id": "H01",
+          "quote": "澄音 H1 耳机支持主动降噪模式，也支持通透模式。",
+          "scene_id": "S3"
+        },
+        {
+          "text": "想安静一下，触控暂停；想接着听，再触控继续播放。",
+          "source_id": "H03",
+          "quote": "澄音 H1 耳机可以通过触控操作暂停或继续播放音乐。",
+          "scene_id": "S4"
+        },
+        {
+          "text": "主动降噪·通透模式｜触控暂停·继续播放",
+          "source_id": "H01",
+          "quote": "澄音 H1 耳机支持主动降噪模式，也支持通透模式。",
+          "scene_id": "S5"
+        },
+        {
+          "text": "主动降噪·通透模式｜触控暂停·继续播放",
+          "source_id": "H03",
+          "quote": "澄音 H1 耳机可以通过触控操作暂停或继续播放音乐。",
+          "scene_id": "S5"
+        }
+      ]
+    }
+  },
+  {
+    "event_seq": 55,
+    "tool": "patch_script",
+    "arguments": {
+      "edits": [
+        {
+          "op": "replace",
+          "path": "/scenes/2/narration",
+          "value": "澄音 H1 有主动降噪模式，也有通透模式，按你的场景来选。"
+        },
+        {
+          "op": "replace",
+          "path": "/scenes/2/subtitle",
+          "value": "两种模式，按场景选"
+        },
+        {
+          "op": "replace",
+          "path": "/scenes/2/visual",
+          "value": "情景拍摄：车厢嘈杂时主角安静听歌；到站前抬头，示意需要听清报站与身边对话，画面用字幕提示“按场景选模式”，不演示具体操作步骤。"
+        },
+        {
+          "op": "replace",
+          "path": "/scenes/3/narration",
+          "value": "想安静一下，触控暂停；想接着听，触控继续播放。"
+        },
+        {
+          "op": "replace",
+          "path": "/scenes/3/visual",
+          "value": "情景拍摄：主角抬手做触控动作，音乐暂停，画面配抽象示意动画：播放符号变为暂停符号；再做一次触控动作，音乐继续。不展示真实界面或具体手势。"
+        },
+        {
+          "op": "replace",
+          "path": "/scenes/4/subtitle",
+          "value": "主动降噪·通透模式｜触控播放"
+        },
+        {
+          "op": "replace",
+          "path": "/scenes/4/visual",
+          "value": "情景拍摄：主角走出地铁站，摘下耳机收好，画面叠加两个功能点文字卡片“主动降噪 / 通透模式”“触控暂停或继续播放”。"
+        },
+        {
+          "op": "replace",
+          "path": "/claims/1/text",
+          "value": "澄音 H1 有主动降噪模式，也有通透模式，按你的场景来选。"
+        },
+        {
+          "op": "replace",
+          "path": "/claims/2/text",
+          "value": "想安静一下，触控暂停；想接着听，触控继续播放。"
+        },
+        {
+          "op": "replace",
+          "path": "/claims/3/text",
+          "value": "主动降噪·通透模式"
+        },
+        {
+          "op": "replace",
+          "path": "/claims/4/text",
+          "value": "触控播放"
+        },
+        {
+          "op": "replace",
+          "path": "/claims/4/quote",
+          "value": "澄音 H1 耳机可以通过触控操作暂停或继续播放音乐。"
+        }
+      ],
+      "reason": "按事实修订：S3 去掉“切到通透模式”的切换操作断言，改为原文支持的“两种模式按场景选”；S4 去掉“再触控”次数与“轻触耳机”手势细节；S5 复合字幕拆成两条各自单一来源的 claim，并同步画面卡片文字",
+      "used_skills": [
+        "factual-revision",
+        "narration-subtitles"
+      ]
+    },
+    "version": 3,
+    "script": {
+      "title": "通勤路上的耳朵小开关：澄音 H1 降噪与触控播放",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "情景拍摄：早高峰地铁车厢，人挤人、报站声与嘈杂人声混在一起，主角戴着耳机微微皱眉，抬手碰了碰耳机。",
+          "narration": "早高峰的地铁，耳朵也想有个小开关。",
+          "subtitle": "通勤路上，耳朵也想有个小开关",
+          "source_ids": [],
+          "min_display_seconds": 4.0
+        },
+        {
+          "scene_id": "S2",
+          "visual": "抽象示意动画：耳机轮廓旁浮现“主动降噪模式”与“通透模式”两个文字标签，交替亮起，不展示真实界面或操作步骤。",
+          "narration": "澄音 H1 支持主动降噪模式，也支持通透模式。",
+          "subtitle": "支持主动降噪模式 / 通透模式",
+          "source_ids": [
+            "H01"
+          ],
+          "min_display_seconds": 5.0
+        },
+        {
+          "scene_id": "S3",
+          "visual": "情景拍摄：车厢嘈杂时主角安静听歌；到站前抬头，示意需要听清报站与身边对话，画面用字幕提示“按场景选模式”，不演示具体操作步骤。",
+          "narration": "澄音 H1 有主动降噪模式，也有通透模式，按你的场景来选。",
+          "subtitle": "两种模式，按场景选",
+          "source_ids": [
+            "H01"
+          ],
+          "min_display_seconds": 6.0
+        },
+        {
+          "scene_id": "S4",
+          "visual": "情景拍摄：主角抬手做触控动作，音乐暂停，画面配抽象示意动画：播放符号变为暂停符号；再做一次触控动作，音乐继续。不展示真实界面或具体手势。",
+          "narration": "想安静一下，触控暂停；想接着听，触控继续播放。",
+          "subtitle": "触控暂停 / 继续播放音乐",
+          "source_ids": [
+            "H03"
+          ],
+          "min_display_seconds": 6.0
+        },
+        {
+          "scene_id": "S5",
+          "visual": "情景拍摄：主角走出地铁站，摘下耳机收好，画面叠加两个功能点文字卡片“主动降噪 / 通透模式”“触控暂停或继续播放”。",
+          "narration": "两个小功能，通勤路上随手用。具体体验以实际使用为准。",
+          "subtitle": "主动降噪·通透模式｜触控播放",
+          "source_ids": [
+            "H01",
+            "H03"
+          ],
+          "min_display_seconds": 5.0
+        }
+      ],
+      "claims": [
+        {
+          "text": "澄音 H1 支持主动降噪模式，也支持通透模式。",
+          "source_id": "H01",
+          "quote": "澄音 H1 耳机支持主动降噪模式，也支持通透模式。",
+          "scene_id": "S2"
+        },
+        {
+          "text": "澄音 H1 有主动降噪模式，也有通透模式，按你的场景来选。",
+          "source_id": "H01",
+          "quote": "澄音 H1 耳机支持主动降噪模式，也支持通透模式。",
+          "scene_id": "S3"
+        },
+        {
+          "text": "想安静一下，触控暂停；想接着听，触控继续播放。",
+          "source_id": "H03",
+          "quote": "澄音 H1 耳机可以通过触控操作暂停或继续播放音乐。",
+          "scene_id": "S4"
+        },
+        {
+          "text": "主动降噪·通透模式",
+          "source_id": "H01",
+          "quote": "澄音 H1 耳机支持主动降噪模式，也支持通透模式。",
+          "scene_id": "S5"
+        },
+        {
+          "text": "触控播放",
+          "source_id": "H03",
+          "quote": "澄音 H1 耳机可以通过触控操作暂停或继续播放音乐。",
+          "scene_id": "S5"
+        }
+      ]
+    }
+  },
+  {
+    "event_seq": 66,
+    "tool": "patch_script",
+    "arguments": {
+      "edits": [
+        {
+          "op": "replace",
+          "path": "/scenes/2/visual",
+          "value": "情景拍摄：车厢嘈杂时主角安静听歌；到站前抬头，示意需要听清报站与身边对话，画面用字幕提示“两种模式”，不演示具体操作步骤。"
+        },
+        {
+          "op": "replace",
+          "path": "/scenes/2/narration",
+          "value": "澄音 H1 有主动降噪模式，也有通透模式。"
+        },
+        {
+          "op": "replace",
+          "path": "/scenes/2/subtitle",
+          "value": "两种模式"
+        },
+        {
+          "op": "replace",
+          "path": "/scenes/3/narration",
+          "value": "想暂停音乐，触控一下；想继续播放，也是触控。"
+        },
+        {
+          "op": "replace",
+          "path": "/scenes/3/subtitle",
+          "value": "触控暂停 / 继续播放音乐"
+        },
+        {
+          "op": "replace",
+          "path": "/scenes/4/narration",
+          "value": "两个功能点，通勤路上用得上。具体体验以实际使用为准。"
+        },
+        {
+          "op": "replace",
+          "path": "/claims/1/text",
+          "value": "澄音 H1 有主动降噪模式，也有通透模式。"
+        },
+        {
+          "op": "replace",
+          "path": "/claims/2/text",
+          "value": "想暂停音乐，触控一下；想继续播放，也是触控。"
+        }
+      ],
+      "reason": "按事实修订：S3 删除“按场景选模式”的切换暗示，只保留两种模式存在；S4 去掉“安静一下/接着听”的场景效果绑定，改为原文支持的触控暂停或继续播放；S5 删除“随手用”便捷性承诺；同步更新 claims 文本",
+      "used_skills": [
+        "factual-revision",
+        "narration-subtitles"
+      ]
+    },
+    "version": 4,
+    "script": {
+      "title": "通勤路上的耳朵小开关：澄音 H1 降噪与触控播放",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "情景拍摄：早高峰地铁车厢，人挤人、报站声与嘈杂人声混在一起，主角戴着耳机微微皱眉，抬手碰了碰耳机。",
+          "narration": "早高峰的地铁，耳朵也想有个小开关。",
+          "subtitle": "通勤路上，耳朵也想有个小开关",
+          "source_ids": [],
+          "min_display_seconds": 4.0
+        },
+        {
+          "scene_id": "S2",
+          "visual": "抽象示意动画：耳机轮廓旁浮现“主动降噪模式”与“通透模式”两个文字标签，交替亮起，不展示真实界面或操作步骤。",
+          "narration": "澄音 H1 支持主动降噪模式，也支持通透模式。",
+          "subtitle": "支持主动降噪模式 / 通透模式",
+          "source_ids": [
+            "H01"
+          ],
+          "min_display_seconds": 5.0
+        },
+        {
+          "scene_id": "S3",
+          "visual": "情景拍摄：车厢嘈杂时主角安静听歌；到站前抬头，示意需要听清报站与身边对话，画面用字幕提示“两种模式”，不演示具体操作步骤。",
+          "narration": "澄音 H1 有主动降噪模式，也有通透模式。",
+          "subtitle": "两种模式",
+          "source_ids": [
+            "H01"
+          ],
+          "min_display_seconds": 6.0
+        },
+        {
+          "scene_id": "S4",
+          "visual": "情景拍摄：主角抬手做触控动作，音乐暂停，画面配抽象示意动画：播放符号变为暂停符号；再做一次触控动作，音乐继续。不展示真实界面或具体手势。",
+          "narration": "想暂停音乐，触控一下；想继续播放，也是触控。",
+          "subtitle": "触控暂停 / 继续播放音乐",
+          "source_ids": [
+            "H03"
+          ],
+          "min_display_seconds": 6.0
+        },
+        {
+          "scene_id": "S5",
+          "visual": "情景拍摄：主角走出地铁站，摘下耳机收好，画面叠加两个功能点文字卡片“主动降噪 / 通透模式”“触控暂停或继续播放”。",
+          "narration": "两个功能点，通勤路上用得上。具体体验以实际使用为准。",
+          "subtitle": "主动降噪·通透模式｜触控播放",
+          "source_ids": [
+            "H01",
+            "H03"
+          ],
+          "min_display_seconds": 5.0
+        }
+      ],
+      "claims": [
+        {
+          "text": "澄音 H1 支持主动降噪模式，也支持通透模式。",
+          "source_id": "H01",
+          "quote": "澄音 H1 耳机支持主动降噪模式，也支持通透模式。",
+          "scene_id": "S2"
+        },
+        {
+          "text": "澄音 H1 有主动降噪模式，也有通透模式。",
+          "source_id": "H01",
+          "quote": "澄音 H1 耳机支持主动降噪模式，也支持通透模式。",
+          "scene_id": "S3"
+        },
+        {
+          "text": "想暂停音乐，触控一下；想继续播放，也是触控。",
+          "source_id": "H03",
+          "quote": "澄音 H1 耳机可以通过触控操作暂停或继续播放音乐。",
+          "scene_id": "S4"
+        },
+        {
+          "text": "主动降噪·通透模式",
+          "source_id": "H01",
+          "quote": "澄音 H1 耳机支持主动降噪模式，也支持通透模式。",
+          "scene_id": "S5"
+        },
+        {
+          "text": "触控播放",
+          "source_id": "H03",
+          "quote": "澄音 H1 耳机可以通过触控操作暂停或继续播放音乐。",
+          "scene_id": "S5"
+        }
+      ]
+    }
+  },
+  {
+    "event_seq": 77,
+    "tool": "patch_script",
+    "arguments": {
+      "edits": [
+        {
+          "op": "replace",
+          "path": "/scenes/3/visual",
+          "value": "情景拍摄：主角在地铁车厢里听歌，抬手在耳机上做触控动作，画面配抽象示意动画：音乐波形暂停、再继续流动。不展示真实界面、按钮位置或具体手势。"
+        },
+        {
+          "op": "replace",
+          "path": "/scenes/3/narration",
+          "value": "音乐想暂停或继续播放，用触控操作就行。"
+        },
+        {
+          "op": "replace",
+          "path": "/scenes/3/subtitle",
+          "value": "触控操作暂停或继续播放音乐"
+        },
+        {
+          "op": "replace",
+          "path": "/scenes/4/subtitle",
+          "value": "主动降噪·通透模式｜触控暂停或继续播放"
+        },
+        {
+          "op": "replace",
+          "path": "/claims/2/text",
+          "value": "音乐想暂停或继续播放，用触控操作就行。"
+        },
+        {
+          "op": "replace",
+          "path": "/claims/3/text",
+          "value": "主动降噪·通透模式"
+        },
+        {
+          "op": "replace",
+          "path": "/claims/4/text",
+          "value": "触控暂停或继续播放"
+        }
+      ],
+      "reason": "按事实修订：S4 画面去掉“播放符号变暂停符号”的具体界面反馈与“抬手触控”手势演示，改为抽象波形示意；S5 字幕补全为“触控暂停或继续播放”，同步 claims 文本",
+      "used_skills": [
+        "factual-revision",
+        "narration-subtitles"
+      ]
+    },
+    "version": 5,
+    "script": {
+      "title": "通勤路上的耳朵小开关：澄音 H1 降噪与触控播放",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "情景拍摄：早高峰地铁车厢，人挤人、报站声与嘈杂人声混在一起，主角戴着耳机微微皱眉，抬手碰了碰耳机。",
+          "narration": "早高峰的地铁，耳朵也想有个小开关。",
+          "subtitle": "通勤路上，耳朵也想有个小开关",
+          "source_ids": [],
+          "min_display_seconds": 4.0
+        },
+        {
+          "scene_id": "S2",
+          "visual": "抽象示意动画：耳机轮廓旁浮现“主动降噪模式”与“通透模式”两个文字标签，交替亮起，不展示真实界面或操作步骤。",
+          "narration": "澄音 H1 支持主动降噪模式，也支持通透模式。",
+          "subtitle": "支持主动降噪模式 / 通透模式",
+          "source_ids": [
+            "H01"
+          ],
+          "min_display_seconds": 5.0
+        },
+        {
+          "scene_id": "S3",
+          "visual": "情景拍摄：车厢嘈杂时主角安静听歌；到站前抬头，示意需要听清报站与身边对话，画面用字幕提示“两种模式”，不演示具体操作步骤。",
+          "narration": "澄音 H1 有主动降噪模式，也有通透模式。",
+          "subtitle": "两种模式",
+          "source_ids": [
+            "H01"
+          ],
+          "min_display_seconds": 6.0
+        },
+        {
+          "scene_id": "S4",
+          "visual": "情景拍摄：主角在地铁车厢里听歌，抬手在耳机上做触控动作，画面配抽象示意动画：音乐波形暂停、再继续流动。不展示真实界面、按钮位置或具体手势。",
+          "narration": "音乐想暂停或继续播放，用触控操作就行。",
+          "subtitle": "触控操作暂停或继续播放音乐",
+          "source_ids": [
+            "H03"
+          ],
+          "min_display_seconds": 6.0
+        },
+        {
+          "scene_id": "S5",
+          "visual": "情景拍摄：主角走出地铁站，摘下耳机收好，画面叠加两个功能点文字卡片“主动降噪 / 通透模式”“触控暂停或继续播放”。",
+          "narration": "两个功能点，通勤路上用得上。具体体验以实际使用为准。",
+          "subtitle": "主动降噪·通透模式｜触控暂停或继续播放",
+          "source_ids": [
+            "H01",
+            "H03"
+          ],
+          "min_display_seconds": 5.0
+        }
+      ],
+      "claims": [
+        {
+          "text": "澄音 H1 支持主动降噪模式，也支持通透模式。",
+          "source_id": "H01",
+          "quote": "澄音 H1 耳机支持主动降噪模式，也支持通透模式。",
+          "scene_id": "S2"
+        },
+        {
+          "text": "澄音 H1 有主动降噪模式，也有通透模式。",
+          "source_id": "H01",
+          "quote": "澄音 H1 耳机支持主动降噪模式，也支持通透模式。",
+          "scene_id": "S3"
+        },
+        {
+          "text": "音乐想暂停或继续播放，用触控操作就行。",
+          "source_id": "H03",
+          "quote": "澄音 H1 耳机可以通过触控操作暂停或继续播放音乐。",
+          "scene_id": "S4"
+        },
+        {
+          "text": "主动降噪·通透模式",
+          "source_id": "H01",
+          "quote": "澄音 H1 耳机支持主动降噪模式，也支持通透模式。",
+          "scene_id": "S5"
+        },
+        {
+          "text": "触控暂停或继续播放",
+          "source_id": "H03",
+          "quote": "澄音 H1 耳机可以通过触控操作暂停或继续播放音乐。",
+          "scene_id": "S5"
+        }
+      ]
+    }
+  },
+  {
+    "event_seq": 89,
+    "tool": "patch_script",
+    "arguments": {
+      "edits": [
+        {
+          "op": "replace",
+          "path": "/scenes/3/visual",
+          "value": "情景拍摄：主角在地铁车厢里听歌，抬手在耳机上做触控动作，画面配抽象示意动画：音乐波形暂停、再继续流动。不展示真实界面或具体手势。"
+        }
+      ],
+      "used_skills": [
+        "factual-revision"
+      ],
+      "reason": "按事实修订：S4 画面删除未获资料支持的“按钮位置”表述，保留抽象波形示意，其余字段与引用不变"
+    },
+    "version": 6,
+    "script": {
+      "title": "通勤路上的耳朵小开关：澄音 H1 降噪与触控播放",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "情景拍摄：早高峰地铁车厢，人挤人、报站声与嘈杂人声混在一起，主角戴着耳机微微皱眉，抬手碰了碰耳机。",
+          "narration": "早高峰的地铁，耳朵也想有个小开关。",
+          "subtitle": "通勤路上，耳朵也想有个小开关",
+          "source_ids": [],
+          "min_display_seconds": 4.0
+        },
+        {
+          "scene_id": "S2",
+          "visual": "抽象示意动画：耳机轮廓旁浮现“主动降噪模式”与“通透模式”两个文字标签，交替亮起，不展示真实界面或操作步骤。",
+          "narration": "澄音 H1 支持主动降噪模式，也支持通透模式。",
+          "subtitle": "支持主动降噪模式 / 通透模式",
+          "source_ids": [
+            "H01"
+          ],
+          "min_display_seconds": 5.0
+        },
+        {
+          "scene_id": "S3",
+          "visual": "情景拍摄：车厢嘈杂时主角安静听歌；到站前抬头，示意需要听清报站与身边对话，画面用字幕提示“两种模式”，不演示具体操作步骤。",
+          "narration": "澄音 H1 有主动降噪模式，也有通透模式。",
+          "subtitle": "两种模式",
+          "source_ids": [
+            "H01"
+          ],
+          "min_display_seconds": 6.0
+        },
+        {
+          "scene_id": "S4",
+          "visual": "情景拍摄：主角在地铁车厢里听歌，抬手在耳机上做触控动作，画面配抽象示意动画：音乐波形暂停、再继续流动。不展示真实界面或具体手势。",
+          "narration": "音乐想暂停或继续播放，用触控操作就行。",
+          "subtitle": "触控操作暂停或继续播放音乐",
+          "source_ids": [
+            "H03"
+          ],
+          "min_display_seconds": 6.0
+        },
+        {
+          "scene_id": "S5",
+          "visual": "情景拍摄：主角走出地铁站，摘下耳机收好，画面叠加两个功能点文字卡片“主动降噪 / 通透模式”“触控暂停或继续播放”。",
+          "narration": "两个功能点，通勤路上用得上。具体体验以实际使用为准。",
+          "subtitle": "主动降噪·通透模式｜触控暂停或继续播放",
+          "source_ids": [
+            "H01",
+            "H03"
+          ],
+          "min_display_seconds": 5.0
+        }
+      ],
+      "claims": [
+        {
+          "text": "澄音 H1 支持主动降噪模式，也支持通透模式。",
+          "source_id": "H01",
+          "quote": "澄音 H1 耳机支持主动降噪模式，也支持通透模式。",
+          "scene_id": "S2"
+        },
+        {
+          "text": "澄音 H1 有主动降噪模式，也有通透模式。",
+          "source_id": "H01",
+          "quote": "澄音 H1 耳机支持主动降噪模式，也支持通透模式。",
+          "scene_id": "S3"
+        },
+        {
+          "text": "音乐想暂停或继续播放，用触控操作就行。",
+          "source_id": "H03",
+          "quote": "澄音 H1 耳机可以通过触控操作暂停或继续播放音乐。",
+          "scene_id": "S4"
+        },
+        {
+          "text": "主动降噪·通透模式",
+          "source_id": "H01",
+          "quote": "澄音 H1 耳机支持主动降噪模式，也支持通透模式。",
+          "scene_id": "S5"
+        },
+        {
+          "text": "触控暂停或继续播放",
+          "source_id": "H03",
+          "quote": "澄音 H1 耳机可以通过触控操作暂停或继续播放音乐。",
+          "scene_id": "S5"
+        }
+      ]
+    }
+  }
+]

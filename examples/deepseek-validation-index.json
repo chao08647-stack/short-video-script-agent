@@ -1,0 +1,412 @@
+{
+  "generated_at": "2026-10-30T17:20:56.824706+00:00",
+  "note": "Chronological development batches, with code/input changes and explicit simulated reviews. Do not sum pass counts or claim one frozen-version success rate. Latest attempt includes failures even when earlier runs completed. Token totals include cache-accounted tokens and are not a billing amount.",
+  "batches": [
+    {
+      "batch": "deepseek-flash",
+      "automated_passed": 8,
+      "total": 14,
+      "distinct_source_snapshots": 1,
+      "successful_usage_records": 170,
+      "reported_total_tokens": 989939,
+      "max_single_request_tokens": 9837,
+      "summary": "examples/deepseek-flash/summary.json"
+    },
+    {
+      "batch": "deepseek-flash-recheck",
+      "automated_passed": 10,
+      "total": 14,
+      "distinct_source_snapshots": 1,
+      "successful_usage_records": 347,
+      "reported_total_tokens": 2274424,
+      "max_single_request_tokens": 10063,
+      "summary": "examples/deepseek-flash-recheck/summary.json"
+    },
+    {
+      "batch": "deepseek-flash-final",
+      "automated_passed": 13,
+      "total": 15,
+      "distinct_source_snapshots": 1,
+      "successful_usage_records": 275,
+      "reported_total_tokens": 1802494,
+      "max_single_request_tokens": 10304,
+      "summary": "examples/deepseek-flash-final/summary.json"
+    },
+    {
+      "batch": "deepseek-flash-validation",
+      "automated_passed": 3,
+      "total": 6,
+      "distinct_source_snapshots": 1,
+      "successful_usage_records": 106,
+      "reported_total_tokens": 771862,
+      "max_single_request_tokens": 10844,
+      "summary": "examples/deepseek-flash-validation/summary.json"
+    }
+  ],
+  "latest_attempts": [
+    {
+      "batch": "deepseek-flash-validation",
+      "case": "brand_and_fact_revision",
+      "mode": "live",
+      "run_id": "3fab2235-3d8d-4559-ae5e-ad242000cbe4",
+      "status": "completed",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 19.23,
+      "model_calls": 14,
+      "tool_calls": 13,
+      "skills_loaded": [
+        "audience-angle",
+        "factual-revision",
+        "material-search"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\deepseek-flash-validation\\brand_and_fact_revision",
+      "output": "examples/deepseek-flash-validation/brand_and_fact_revision/output.json",
+      "trace": "examples/deepseek-flash-validation/brand_and_fact_revision/trace.jsonl",
+      "stop_reason": null
+    },
+    {
+      "batch": "deepseek-flash-final",
+      "case": "conflict",
+      "mode": "live",
+      "run_id": "0ee40166-fa26-4e0a-b7bc-750a22d34c18",
+      "status": "waiting_human",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 6.39,
+      "model_calls": 5,
+      "tool_calls": 5,
+      "skills_loaded": [
+        "evidence-conflict",
+        "material-search"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\deepseek-flash-final\\conflict",
+      "output": "examples/deepseek-flash-final/conflict/output.json",
+      "trace": "examples/deepseek-flash-final/conflict/trace.jsonl",
+      "stop_reason": null
+    },
+    {
+      "batch": "deepseek-flash-final",
+      "case": "duration_revision",
+      "mode": "live",
+      "run_id": "7db427bb-d07a-4b54-b8ee-230efc29a469",
+      "status": "completed",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 34.47,
+      "model_calls": 23,
+      "tool_calls": 21,
+      "skills_loaded": [
+        "audience-angle",
+        "claim-grounding",
+        "duration-compression",
+        "factual-revision",
+        "material-search"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\deepseek-flash-final\\duration_revision",
+      "output": "examples/deepseek-flash-final/duration_revision/output.json",
+      "trace": "examples/deepseek-flash-final/duration_revision/trace.jsonl",
+      "stop_reason": null
+    },
+    {
+      "batch": "deepseek-flash-final",
+      "case": "headphones",
+      "mode": "live",
+      "run_id": "c8e5e03b-4926-4ba5-bb9c-50b954146917",
+      "status": "completed",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 55.95,
+      "model_calls": 34,
+      "tool_calls": 30,
+      "skills_loaded": [
+        "audience-angle",
+        "factual-revision",
+        "material-search",
+        "narration-subtitles",
+        "narrative-structure"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\deepseek-flash-final\\headphones",
+      "output": "examples/deepseek-flash-final/headphones/output.json",
+      "trace": "examples/deepseek-flash-final/headphones/trace.jsonl",
+      "stop_reason": null
+    },
+    {
+      "batch": "deepseek-flash-validation",
+      "case": "human_feedback",
+      "mode": "live",
+      "run_id": "55e5b573-b04e-4c9b-bbb9-4ced998408fe",
+      "status": "incomplete",
+      "acceptance_passed": false,
+      "acceptance_errors": [
+        "Expected completed, got incomplete",
+        "No human revision feedback followed by a model revision and renewed review"
+      ],
+      "elapsed_seconds": 90.95,
+      "model_calls": 60,
+      "tool_calls": 56,
+      "skills_loaded": [
+        "audience-angle",
+        "claim-grounding",
+        "duration-compression",
+        "factual-revision",
+        "human-feedback",
+        "material-search",
+        "narration-subtitles",
+        "narrative-structure"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\deepseek-flash-validation\\human_feedback",
+      "output": "examples/deepseek-flash-validation/human_feedback/output.json",
+      "trace": "examples/deepseek-flash-validation/human_feedback/trace.jsonl",
+      "stop_reason": {
+        "code": "model_call_limit",
+        "message": "达到模型请求次数上限。"
+      }
+    },
+    {
+      "batch": "deepseek-flash-final",
+      "case": "minimal",
+      "mode": "live",
+      "run_id": "6ab1cf13-c3ff-4cf2-b3fc-089aa50c9875",
+      "status": "completed",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 37.81,
+      "model_calls": 27,
+      "tool_calls": 26,
+      "skills_loaded": [
+        "audience-angle",
+        "duration-compression",
+        "factual-revision",
+        "material-search",
+        "narration-subtitles"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\deepseek-flash-final\\minimal",
+      "output": "examples/deepseek-flash-final/minimal/output.json",
+      "trace": "examples/deepseek-flash-final/minimal/trace.jsonl",
+      "stop_reason": null
+    },
+    {
+      "batch": "deepseek-flash-validation",
+      "case": "missing_info",
+      "mode": "live",
+      "run_id": "33207077-8ca5-461a-8e7c-d0396f0dd104",
+      "status": "failed",
+      "acceptance_passed": false,
+      "acceptance_errors": [
+        "Expected completed, got failed"
+      ],
+      "elapsed_seconds": 9.53,
+      "model_calls": 7,
+      "tool_calls": 6,
+      "skills_loaded": [
+        "audience-angle",
+        "brief-clarification",
+        "material-search"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\deepseek-flash-validation\\missing_info",
+      "output": "examples/deepseek-flash-validation/missing_info/output.json",
+      "trace": "examples/deepseek-flash-validation/missing_info/trace.jsonl",
+      "stop_reason": {
+        "code": "model_unavailable",
+        "message": "Model HTTP 402: Insufficient Balance (request_id: 1d813ba7-ca62-41fe-8c93-158dd1c3345c)"
+      }
+    },
+    {
+      "batch": "deepseek-flash-final",
+      "case": "no_materials",
+      "mode": "live",
+      "run_id": "d6bc3822-a155-41c2-a77f-1fc3fb3d0e13",
+      "status": "waiting_human",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 5.98,
+      "model_calls": 5,
+      "tool_calls": 5,
+      "skills_loaded": [
+        "material-search"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\deepseek-flash-final\\no_materials",
+      "output": "examples/deepseek-flash-final/no_materials/output.json",
+      "trace": "examples/deepseek-flash-final/no_materials/trace.jsonl",
+      "stop_reason": null
+    },
+    {
+      "batch": "deepseek-flash-final",
+      "case": "normal",
+      "mode": "live",
+      "run_id": "08f2be74-42fb-4be2-9b20-463f8cfc4287",
+      "status": "completed",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 34.7,
+      "model_calls": 20,
+      "tool_calls": 18,
+      "skills_loaded": [
+        "audience-angle",
+        "factual-revision",
+        "material-search",
+        "narration-subtitles",
+        "narrative-structure"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\deepseek-flash-final\\normal",
+      "output": "examples/deepseek-flash-final/normal/output.json",
+      "trace": "examples/deepseek-flash-final/normal/trace.jsonl",
+      "stop_reason": null
+    },
+    {
+      "batch": "deepseek-flash-validation",
+      "case": "query_rewrite",
+      "mode": "live",
+      "run_id": "e689037f-38a2-4b57-ad6b-833502907fd0",
+      "status": "failed",
+      "acceptance_passed": false,
+      "acceptance_errors": [
+        "Expected completed, got failed",
+        "No observed empty search -> changed query -> successful retrieval path"
+      ],
+      "elapsed_seconds": 0.61,
+      "model_calls": 1,
+      "tool_calls": 0,
+      "skills_loaded": [],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\deepseek-flash-validation\\query_rewrite",
+      "output": "examples/deepseek-flash-validation/query_rewrite/output.json",
+      "trace": "examples/deepseek-flash-validation/query_rewrite/trace.jsonl",
+      "stop_reason": {
+        "code": "model_unavailable",
+        "message": "Model HTTP 402: Insufficient Balance (request_id: 4f144d74-468f-422f-bce5-662a37fc98bd)"
+      }
+    },
+    {
+      "batch": "deepseek-flash-validation",
+      "case": "skill_showcase",
+      "mode": "live",
+      "run_id": "6665af8e-eaf3-423c-8c0b-3f83370027c5",
+      "status": "completed",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 24.81,
+      "model_calls": 18,
+      "tool_calls": 17,
+      "skills_loaded": [
+        "factual-revision",
+        "hook-writing",
+        "material-search",
+        "platform-adaptation",
+        "storyboard-planning",
+        "visual-direction"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\deepseek-flash-validation\\skill_showcase",
+      "output": "examples/deepseek-flash-validation/skill_showcase/output.json",
+      "trace": "examples/deepseek-flash-validation/skill_showcase/trace.jsonl",
+      "stop_reason": null
+    },
+    {
+      "batch": "deepseek-flash-final",
+      "case": "step_limit",
+      "mode": "live",
+      "run_id": "1827f613-94c1-493c-ab18-091031cbbf38",
+      "status": "incomplete",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 1.19,
+      "model_calls": 1,
+      "tool_calls": 1,
+      "skills_loaded": [
+        "material-search"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\deepseek-flash-final\\step_limit",
+      "output": "examples/deepseek-flash-final/step_limit/output.json",
+      "trace": "examples/deepseek-flash-final/step_limit/trace.jsonl",
+      "stop_reason": {
+        "code": "model_call_limit",
+        "message": "达到模型请求次数上限。"
+      }
+    },
+    {
+      "batch": "deepseek-flash-validation",
+      "case": "too_short",
+      "mode": "live",
+      "run_id": "e6336bbf-e5a9-44c5-bfb8-ddb80900f0c5",
+      "status": "waiting_human",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 11.48,
+      "model_calls": 8,
+      "tool_calls": 8,
+      "skills_loaded": [
+        "material-search",
+        "narration-subtitles"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\deepseek-flash-validation\\too_short",
+      "output": "examples/deepseek-flash-validation/too_short/output.json",
+      "trace": "examples/deepseek-flash-validation/too_short/trace.jsonl",
+      "stop_reason": null
+    },
+    {
+      "batch": "deepseek-flash-final",
+      "case": "tool_failure",
+      "mode": "live",
+      "run_id": "60675491-cf34-47d0-8322-e79b2d275121",
+      "status": "completed",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 21.7,
+      "model_calls": 14,
+      "tool_calls": 13,
+      "skills_loaded": [
+        "audience-angle",
+        "material-search",
+        "narration-subtitles",
+        "narrative-structure"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\deepseek-flash-final\\tool_failure",
+      "output": "examples/deepseek-flash-final/tool_failure/output.json",
+      "trace": "examples/deepseek-flash-final/tool_failure/trace.jsonl",
+      "stop_reason": null
+    },
+    {
+      "batch": "deepseek-flash-final",
+      "case": "tutorial",
+      "mode": "live",
+      "run_id": "6d9b2d23-d912-4d03-8869-54a0e8a79ab9",
+      "status": "completed",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 67.12,
+      "model_calls": 39,
+      "tool_calls": 36,
+      "skills_loaded": [
+        "audience-angle",
+        "factual-revision",
+        "material-search",
+        "narration-subtitles",
+        "narrative-structure"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\deepseek-flash-final\\tutorial",
+      "output": "examples/deepseek-flash-final/tutorial/output.json",
+      "trace": "examples/deepseek-flash-final/tutorial/trace.jsonl",
+      "stop_reason": null
+    }
+  ],
+  "latest_automated_passed": 12,
+  "latest_total": 15,
+  "reported_total_tokens": 5838719,
+  "max_single_request_tokens": 10844,
+  "api_blocker": "latest requests returned HTTP 402 Insufficient Balance; no further paid calls after diagnosis"
+}

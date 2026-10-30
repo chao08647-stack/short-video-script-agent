@@ -1,0 +1,22 @@
+{
+  "case": "skill_showcase",
+  "mode": "live",
+  "run_id": "e6ef4c4c-a846-4c7d-84fd-d0631718688e",
+  "status": "completed",
+  "acceptance_passed": false,
+  "acceptance_errors": [
+    "Directed showcase requires exactly three scenes"
+  ],
+  "elapsed_seconds": 28.8,
+  "model_calls": 17,
+  "tool_calls": 16,
+  "skills_loaded": [
+    "factual-revision",
+    "material-search",
+    "platform-adaptation",
+    "storyboard-planning",
+    "visual-direction"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\deepseek-flash-final\\skill_showcase"
+}

@@ -1,0 +1,106 @@
+{
+  "run_id": "0ee40166-fa26-4e0a-b7bc-750a22d34c18",
+  "mode": "live",
+  "status": "waiting_human",
+  "phase": "direction",
+  "execution": {
+    "python": "3.12.9",
+    "langgraph": "1.2.18",
+    "mode": "live",
+    "model": {
+      "base_url": "https://api.deepseek.com",
+      "model": "deepseek-flash",
+      "max_tokens": 4096,
+      "timeout_seconds": 120.0,
+      "action_protocol": "native",
+      "thinking": "disabled",
+      "context_window": 16384
+    },
+    "code_hashes": {
+      "engine.py": "bfb63d093376e8066c8c02f6fa9fa983af7404304671054fb10e70f87328ddb7",
+      "prompts.py": "145c14af05eb74bd61c0d1e407860f1ccac44255f05651177cce7fb50fd9b5f3",
+      "model.py": "176b550aa18498c1a35ac3f47693d989453e84a10ce639754a15e7577a3a5d44",
+      "business_tools.py": "a5f0a7bfb9913405a1a9a1c61a6102c3a5dc7249f508bb1516375b4533370083",
+      "script_patch.py": "ec77a077f3a59753457e082c6936897bad7379218f7a24f0fee9ff7927de3ad7",
+      "runtime.py": "c5217fdd0b50752605821b94cdc6d792bd8ac780d4331b63836ebbb9da7c7c46",
+      "context_budget.py": "53b4db7819f37a1c407f3d8376ac3bc16bda5e451903c431f98cef40d8d5ea2c",
+      "vendor/deepseek/encoding.py": "142ef131e2acf9047ba7b3e222011a89997911457357e6d5dc1ce01d8da545ed"
+    },
+    "code_hash_capture": "process_import"
+  },
+  "brief": {
+    "topic": "介绍澄音 H1 耳机的单次播放续航",
+    "audience": "通勤用户",
+    "platform": "抖音",
+    "target_seconds": 30.0,
+    "style": "客观、简洁"
+  },
+  "direction": null,
+  "script": null,
+  "script_version": 0,
+  "checks": {},
+  "estimated_seconds": null,
+  "duration_note": "基于固定语速与画面展示需求估算，不代表真实配音或成片测量。",
+  "sources": [
+    {
+      "source_id": "C01",
+      "version": "2026-09-01",
+      "title": "澄音 H1 耳机续航说明 A",
+      "text": "澄音 H1 耳机单次充电连续播放时间为8小时。本文未说明测试条件、适用版本或制度优先级。",
+      "facts": [
+        "澄音 H1 耳机单次充电连续播放时间为8小时。"
+      ],
+      "keywords": [
+        "澄音",
+        "H1",
+        "耳机",
+        "续航",
+        "播放",
+        "8小时"
+      ],
+      "conflict_group": "h1-battery-unscoped",
+      "score": 10.852
+    },
+    {
+      "source_id": "C02",
+      "version": "2026-10-01",
+      "title": "澄音 H1 耳机续航说明 B",
+      "text": "澄音 H1 耳机单次充电连续播放时间为12小时。本文未说明测试条件、适用版本或制度优先级。",
+      "facts": [
+        "澄音 H1 耳机单次充电连续播放时间为12小时。"
+      ],
+      "keywords": [
+        "澄音",
+        "H1",
+        "耳机",
+        "续航",
+        "播放",
+        "12小时"
+      ],
+      "conflict_group": "h1-battery-unscoped",
+      "score": 10.852
+    }
+  ],
+  "pending_review": {
+    "review_id": "2f4ce37ee7b4cc13ec91",
+    "stage": "clarification",
+    "version": 0,
+    "object_hash": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+    "reason": "关于澄音 H1 的单次播放续航，本地资料存在无法消解的冲突：C01（2026-09-01）写“单次充电连续播放时间为8小时”，C02（2026-10-01）写“单次充电连续播放时间为12小时”，两份都未说明测试条件、适用版本或制度优先级，按规则不能自行选一个。请问：1）是否有权威资料或官方口径可确认具体数值（8 小时还是 12 小时）？2）若暂时无法确认，是否同意脚本只讲“单次充电可连续播放”这一事实、不出现具体小时数，并在画面/字幕中标注“具体续航以官方说明为准”？",
+    "fields": [
+      "topic"
+    ],
+    "direction": null,
+    "script": null,
+    "checks": {}
+  },
+  "review_history": [],
+  "stop_reason": null,
+  "model_calls": 5,
+  "tool_calls": 5,
+  "skills_loaded": [
+    "evidence-conflict",
+    "material-search"
+  ],
+  "data_hash": "5d0b8acefd0f7b490b66a92fbf24ad67a7a9d5562038fd73f6a7bfcf8f1e0254"
+}

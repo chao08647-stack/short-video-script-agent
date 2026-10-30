@@ -1,0 +1,200 @@
+[
+  {
+    "event_seq": 35,
+    "tool": "submit_script",
+    "arguments": {
+      "title": "小剪 App 字幕教程：自动生成后，记得检查再手动改",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "情景拍摄：创作者坐在电脑前，剪好的视频停在画面上，画面下方空白无字幕；镜头轻推，空白处浮现一行抽象字幕示意文字（标注“非真实界面示意”），表现“视频有了，字幕还没有”。",
+          "narration": "视频剪好了，字幕还没加？",
+          "subtitle": "视频剪好了，字幕还没加？",
+          "source_ids": [],
+          "min_display_seconds": 4
+        },
+        {
+          "scene_id": "S2",
+          "visual": "抽象示意动画（画面角标标注“非真实界面示意”）：小剪 App 支持自动生成字幕，示意画面中字幕文字逐条浮现，每条停留约1秒供阅读；不出现按钮、面板或任何真实界面结构。",
+          "narration": "小剪 App 支持自动生成字幕。",
+          "subtitle": "小剪 App 支持自动生成字幕",
+          "source_ids": [
+            "P01"
+          ],
+          "min_display_seconds": 6
+        },
+        {
+          "scene_id": "S3",
+          "visual": "抽象示意动画（画面角标标注“非真实界面示意”）：字幕文字逐条出现后，镜头停在其中一条上，该条文字被替换成另一段文字，表现“检查—修改”的概念；不展示真实界面、按钮或导出流程。",
+          "narration": "生成后建议检查内容，识别错误可以手动修正。",
+          "subtitle": "生成后建议检查内容，识别错误可手动修正",
+          "source_ids": [
+            "P04",
+            "P02"
+          ],
+          "min_display_seconds": 8
+        }
+      ],
+      "claims": [
+        {
+          "text": "小剪 App 支持自动生成字幕",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S2"
+        },
+        {
+          "text": "生成后建议检查内容",
+          "source_id": "P04",
+          "quote": "自动字幕生成后，建议用户检查内容",
+          "scene_id": "S3"
+        },
+        {
+          "text": "识别错误可以手动修正",
+          "source_id": "P02",
+          "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "scene_id": "S3"
+        }
+      ],
+      "used_skills": [
+        "platform-adaptation",
+        "storyboard-planning",
+        "hook-writing",
+        "visual-direction"
+      ],
+      "reason": "按已批准方向提交三镜稿：S1用直接指出字幕需求的短句开场（hook-writing），S2仅讲P01自动生成，S3讲P04检查与P02手动修改；B站教程按操作依赖顺序展开、字幕短句易读（platform-adaptation、storyboard-planning）；资料无真实UI，画面均为标注“非真实界面示意”的抽象动画并预留展示时间（visual-direction）。"
+    },
+    "version": 1,
+    "script": {
+      "title": "小剪 App 字幕教程：自动生成后，记得检查再手动改",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "情景拍摄：创作者坐在电脑前，剪好的视频停在画面上，画面下方空白无字幕；镜头轻推，空白处浮现一行抽象字幕示意文字（标注“非真实界面示意”），表现“视频有了，字幕还没有”。",
+          "narration": "视频剪好了，字幕还没加？",
+          "subtitle": "视频剪好了，字幕还没加？",
+          "source_ids": [],
+          "min_display_seconds": 4.0
+        },
+        {
+          "scene_id": "S2",
+          "visual": "抽象示意动画（画面角标标注“非真实界面示意”）：小剪 App 支持自动生成字幕，示意画面中字幕文字逐条浮现，每条停留约1秒供阅读；不出现按钮、面板或任何真实界面结构。",
+          "narration": "小剪 App 支持自动生成字幕。",
+          "subtitle": "小剪 App 支持自动生成字幕",
+          "source_ids": [
+            "P01"
+          ],
+          "min_display_seconds": 6.0
+        },
+        {
+          "scene_id": "S3",
+          "visual": "抽象示意动画（画面角标标注“非真实界面示意”）：字幕文字逐条出现后，镜头停在其中一条上，该条文字被替换成另一段文字，表现“检查—修改”的概念；不展示真实界面、按钮或导出流程。",
+          "narration": "生成后建议检查内容，识别错误可以手动修正。",
+          "subtitle": "生成后建议检查内容，识别错误可手动修正",
+          "source_ids": [
+            "P04",
+            "P02"
+          ],
+          "min_display_seconds": 8.0
+        }
+      ],
+      "claims": [
+        {
+          "text": "小剪 App 支持自动生成字幕",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S2"
+        },
+        {
+          "text": "生成后建议检查内容",
+          "source_id": "P04",
+          "quote": "自动字幕生成后，建议用户检查内容",
+          "scene_id": "S3"
+        },
+        {
+          "text": "识别错误可以手动修正",
+          "source_id": "P02",
+          "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "scene_id": "S3"
+        }
+      ]
+    }
+  },
+  {
+    "event_seq": 50,
+    "tool": "patch_script",
+    "arguments": {
+      "edits": [
+        {
+          "op": "replace",
+          "path": "/scenes/1/visual",
+          "value": "抽象示意动画（画面角标标注“非真实界面示意”）：小剪 App 支持自动生成字幕，示意画面中字幕文字逐条浮现，每条停留约一秒供阅读；画面为设计示意，不代表真实 App 布局或交互。"
+        },
+        {
+          "op": "replace",
+          "path": "/scenes/2/visual",
+          "value": "抽象示意动画（画面角标标注“非真实界面示意”）：字幕文字逐条出现后，镜头停在其中一条上，该条文字被替换成另一段文字，表现“检查—修改”的概念；画面为设计示意，不代表真实 App 布局或交互。"
+        }
+      ],
+      "used_skills": [
+        "factual-revision",
+        "visual-direction"
+      ],
+      "reason": "按事实修订方法删除画面中无资料支持的“按钮/面板/导出”表述与数字“1”，改为明确不代表真实布局的抽象示意；旁白、字幕与claims未变，无需改动引用。"
+    },
+    "version": 2,
+    "script": {
+      "title": "小剪 App 字幕教程：自动生成后，记得检查再手动改",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "情景拍摄：创作者坐在电脑前，剪好的视频停在画面上，画面下方空白无字幕；镜头轻推，空白处浮现一行抽象字幕示意文字（标注“非真实界面示意”），表现“视频有了，字幕还没有”。",
+          "narration": "视频剪好了，字幕还没加？",
+          "subtitle": "视频剪好了，字幕还没加？",
+          "source_ids": [],
+          "min_display_seconds": 4.0
+        },
+        {
+          "scene_id": "S2",
+          "visual": "抽象示意动画（画面角标标注“非真实界面示意”）：小剪 App 支持自动生成字幕，示意画面中字幕文字逐条浮现，每条停留约一秒供阅读；画面为设计示意，不代表真实 App 布局或交互。",
+          "narration": "小剪 App 支持自动生成字幕。",
+          "subtitle": "小剪 App 支持自动生成字幕",
+          "source_ids": [
+            "P01"
+          ],
+          "min_display_seconds": 6.0
+        },
+        {
+          "scene_id": "S3",
+          "visual": "抽象示意动画（画面角标标注“非真实界面示意”）：字幕文字逐条出现后，镜头停在其中一条上，该条文字被替换成另一段文字，表现“检查—修改”的概念；画面为设计示意，不代表真实 App 布局或交互。",
+          "narration": "生成后建议检查内容，识别错误可以手动修正。",
+          "subtitle": "生成后建议检查内容，识别错误可手动修正",
+          "source_ids": [
+            "P04",
+            "P02"
+          ],
+          "min_display_seconds": 8.0
+        }
+      ],
+      "claims": [
+        {
+          "text": "小剪 App 支持自动生成字幕",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S2"
+        },
+        {
+          "text": "生成后建议检查内容",
+          "source_id": "P04",
+          "quote": "自动字幕生成后，建议用户检查内容",
+          "scene_id": "S3"
+        },
+        {
+          "text": "识别错误可以手动修正",
+          "source_id": "P02",
+          "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "scene_id": "S3"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,278 @@
+[
+  {
+    "event_seq": 31,
+    "tool": "submit_script",
+    "arguments": {
+      "title": "片子里的说话声，怎么变成屏幕上的字？",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "纯情景拍摄：新手对着剪辑画面皱眉，手指在键盘上敲字；画面角落用抽象示意动画表现“声音波形”跳动。不出现真实产品界面。",
+          "narration": "剪片子最烦的，是把说的话一句句敲成字幕。",
+          "subtitle": "说话声→字幕，一句句敲太累",
+          "source_ids": [],
+          "min_display_seconds": 3
+        },
+        {
+          "scene_id": "S2",
+          "visual": "抽象示意动画：声音波形流动，随后文字逐字浮现成一行字幕。仅示意，不展示真实界面与按钮。",
+          "narration": "小剪支持自动生成字幕，说话声先变成屏幕上的字。",
+          "subtitle": "小剪支持自动生成字幕",
+          "source_ids": [
+            "P01"
+          ],
+          "min_display_seconds": 6
+        },
+        {
+          "scene_id": "S3",
+          "visual": "抽象示意动画：浮现的字幕中有一处文字被高亮圈出，随后被替换成正确文字。仅示意，不展示真实界面与操作步骤。",
+          "narration": "但生成完别急着发，先检查内容，识别错的地方手动改过来。",
+          "subtitle": "生成后先检查，手动修正识别错误",
+          "source_ids": [
+            "P04",
+            "P02"
+          ],
+          "min_display_seconds": 8
+        },
+        {
+          "scene_id": "S4",
+          "visual": "抽象示意动画：同一行字幕文字的字号变大、颜色变化，画面收尾定格在“字幕顺眼”的示意画面上。仅示意，不展示真实界面。",
+          "narration": "文字改好，还能调字体大小和颜色，新手也能把字幕弄顺眼。",
+          "subtitle": "可调字体大小和颜色",
+          "source_ids": [
+            "P03"
+          ],
+          "min_display_seconds": 7
+        }
+      ],
+      "claims": [
+        {
+          "text": "小剪支持自动生成字幕",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S2"
+        },
+        {
+          "text": "说话声先变成屏幕上的字",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S2"
+        },
+        {
+          "text": "先检查内容",
+          "source_id": "P04",
+          "quote": "建议用户检查内容",
+          "scene_id": "S3"
+        },
+        {
+          "text": "识别错的地方手动改过来",
+          "source_id": "P04",
+          "quote": "手动修正识别错误",
+          "scene_id": "S3"
+        },
+        {
+          "text": "手动改过来",
+          "source_id": "P02",
+          "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "scene_id": "S3"
+        },
+        {
+          "text": "还能调字体大小和颜色",
+          "source_id": "P03",
+          "quote": "小剪 App 支持调整字幕的字体大小和颜色。",
+          "scene_id": "S4"
+        }
+      ],
+      "used_skills": [
+        "material-search",
+        "audience-angle",
+        "narrative-structure",
+        "narration-subtitles"
+      ],
+      "reason": "按已批准方向写四镜完整稿：开场抛新手困扰，S2 自动生成字幕（P01），S3 检查并手动修正（P04、P02），S4 调字体大小和颜色（P03）；画面全部为抽象示意或纯情景，不虚构界面按钮与操作步骤，不涉及准确率。"
+    },
+    "version": 1,
+    "script": {
+      "title": "片子里的说话声，怎么变成屏幕上的字？",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "纯情景拍摄：新手对着剪辑画面皱眉，手指在键盘上敲字；画面角落用抽象示意动画表现“声音波形”跳动。不出现真实产品界面。",
+          "narration": "剪片子最烦的，是把说的话一句句敲成字幕。",
+          "subtitle": "说话声→字幕，一句句敲太累",
+          "source_ids": [],
+          "min_display_seconds": 3.0
+        },
+        {
+          "scene_id": "S2",
+          "visual": "抽象示意动画：声音波形流动，随后文字逐字浮现成一行字幕。仅示意，不展示真实界面与按钮。",
+          "narration": "小剪支持自动生成字幕，说话声先变成屏幕上的字。",
+          "subtitle": "小剪支持自动生成字幕",
+          "source_ids": [
+            "P01"
+          ],
+          "min_display_seconds": 6.0
+        },
+        {
+          "scene_id": "S3",
+          "visual": "抽象示意动画：浮现的字幕中有一处文字被高亮圈出，随后被替换成正确文字。仅示意，不展示真实界面与操作步骤。",
+          "narration": "但生成完别急着发，先检查内容，识别错的地方手动改过来。",
+          "subtitle": "生成后先检查，手动修正识别错误",
+          "source_ids": [
+            "P04",
+            "P02"
+          ],
+          "min_display_seconds": 8.0
+        },
+        {
+          "scene_id": "S4",
+          "visual": "抽象示意动画：同一行字幕文字的字号变大、颜色变化，画面收尾定格在“字幕顺眼”的示意画面上。仅示意，不展示真实界面。",
+          "narration": "文字改好，还能调字体大小和颜色，新手也能把字幕弄顺眼。",
+          "subtitle": "可调字体大小和颜色",
+          "source_ids": [
+            "P03"
+          ],
+          "min_display_seconds": 7.0
+        }
+      ],
+      "claims": [
+        {
+          "text": "小剪支持自动生成字幕",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S2"
+        },
+        {
+          "text": "说话声先变成屏幕上的字",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S2"
+        },
+        {
+          "text": "先检查内容",
+          "source_id": "P04",
+          "quote": "建议用户检查内容",
+          "scene_id": "S3"
+        },
+        {
+          "text": "识别错的地方手动改过来",
+          "source_id": "P04",
+          "quote": "手动修正识别错误",
+          "scene_id": "S3"
+        },
+        {
+          "text": "手动改过来",
+          "source_id": "P02",
+          "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "scene_id": "S3"
+        },
+        {
+          "text": "还能调字体大小和颜色",
+          "source_id": "P03",
+          "quote": "小剪 App 支持调整字幕的字体大小和颜色。",
+          "scene_id": "S4"
+        }
+      ]
+    }
+  },
+  {
+    "event_seq": 43,
+    "tool": "patch_script",
+    "arguments": {
+      "edits": [
+        {
+          "op": "replace",
+          "path": "/scenes/1/visual",
+          "value": "抽象示意动画：声音波形流动，随后文字逐字浮现成一行字幕。仅示意，不展示真实界面。"
+        }
+      ],
+      "reason": "规则检查指出 S2 画面中“按钮”缺少原文支持，示意标签不豁免；删除该未证实界面表述，其余内容不变。",
+      "used_skills": [
+        "narration-subtitles"
+      ]
+    },
+    "version": 2,
+    "script": {
+      "title": "片子里的说话声，怎么变成屏幕上的字？",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "纯情景拍摄：新手对着剪辑画面皱眉，手指在键盘上敲字；画面角落用抽象示意动画表现“声音波形”跳动。不出现真实产品界面。",
+          "narration": "剪片子最烦的，是把说的话一句句敲成字幕。",
+          "subtitle": "说话声→字幕，一句句敲太累",
+          "source_ids": [],
+          "min_display_seconds": 3.0
+        },
+        {
+          "scene_id": "S2",
+          "visual": "抽象示意动画：声音波形流动，随后文字逐字浮现成一行字幕。仅示意，不展示真实界面。",
+          "narration": "小剪支持自动生成字幕，说话声先变成屏幕上的字。",
+          "subtitle": "小剪支持自动生成字幕",
+          "source_ids": [
+            "P01"
+          ],
+          "min_display_seconds": 6.0
+        },
+        {
+          "scene_id": "S3",
+          "visual": "抽象示意动画：浮现的字幕中有一处文字被高亮圈出，随后被替换成正确文字。仅示意，不展示真实界面与操作步骤。",
+          "narration": "但生成完别急着发，先检查内容，识别错的地方手动改过来。",
+          "subtitle": "生成后先检查，手动修正识别错误",
+          "source_ids": [
+            "P04",
+            "P02"
+          ],
+          "min_display_seconds": 8.0
+        },
+        {
+          "scene_id": "S4",
+          "visual": "抽象示意动画：同一行字幕文字的字号变大、颜色变化，画面收尾定格在“字幕顺眼”的示意画面上。仅示意，不展示真实界面。",
+          "narration": "文字改好，还能调字体大小和颜色，新手也能把字幕弄顺眼。",
+          "subtitle": "可调字体大小和颜色",
+          "source_ids": [
+            "P03"
+          ],
+          "min_display_seconds": 7.0
+        }
+      ],
+      "claims": [
+        {
+          "text": "小剪支持自动生成字幕",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S2"
+        },
+        {
+          "text": "说话声先变成屏幕上的字",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S2"
+        },
+        {
+          "text": "先检查内容",
+          "source_id": "P04",
+          "quote": "建议用户检查内容",
+          "scene_id": "S3"
+        },
+        {
+          "text": "识别错的地方手动改过来",
+          "source_id": "P04",
+          "quote": "手动修正识别错误",
+          "scene_id": "S3"
+        },
+        {
+          "text": "手动改过来",
+          "source_id": "P02",
+          "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "scene_id": "S3"
+        },
+        {
+          "text": "还能调字体大小和颜色",
+          "source_id": "P03",
+          "quote": "小剪 App 支持调整字幕的字体大小和颜色。",
+          "scene_id": "S4"
+        }
+      ]
+    }
+  }
+]

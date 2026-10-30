@@ -9,7 +9,7 @@
   "dataset": "demo",
   "notes": "先生成初稿，审核时我会对开场和表达提出意见。",
   "initial_script": null,
-  "max_model_calls": 40,
-  "max_tool_calls": 60,
+  "max_model_calls": 60,
+  "max_tool_calls": 80,
   "failure_injections": {}
 }

@@ -1,11 +1,11 @@
 {
   "case": "headphones",
   "mode": "mock",
-  "run_id": "e831bb4e-cfa3-4217-9847-f2be8b559f23",
+  "run_id": "1d7a25b1-c211-465c-bf27-3a80b5220f93",
   "status": "completed",
   "acceptance_passed": true,
   "acceptance_errors": [],
-  "elapsed_seconds": 0.36,
+  "elapsed_seconds": 0.25,
   "model_calls": 14,
   "tool_calls": 13,
   "skills_loaded": [

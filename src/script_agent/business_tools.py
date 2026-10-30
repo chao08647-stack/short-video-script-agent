@@ -22,6 +22,9 @@ _HAN = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\U00020000-\U0002ebef]")
 _HAN_RUN = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff]+")
 _WORD = re.compile(r"[a-zA-Z]+(?:['’-][a-zA-Z]+)*")
 _NUMBER = re.compile(r"\d+(?:\.\d+)?\s*[%％]?")
+# Keep model recognition narrow: a complete ASCII alphanumeric token beginning
+# with letters. Do not infer models from units such as 8h/4K or partial H1-Pro.
+_MODEL_TOKEN = re.compile(r"(?<![A-Za-z0-9_.-])[A-Za-z]+[0-9][A-Za-z0-9]*(?![A-Za-z0-9_.-])")
 _SPACE = re.compile(r"\s+")
 
 
@@ -238,6 +241,9 @@ def check_rules(script: dict, materials: list[dict], rules: dict) -> dict:
     source ID or quote is never represented as complete fact verification here.
     Configured evidence_required_terms provide targeted literal-term guards for
     observed feature/UI hallucinations, not exhaustive semantic understanding.
+    scene_evidence_terms additionally require a non-global claim mapped to each
+    scene mentioning a configured feature; one mapped claim is not proof that
+    every assertion in that scene is supported.
     """
     try:
         draft = Script.model_validate(script)
@@ -251,6 +257,10 @@ def check_rules(script: dict, materials: list[dict], rules: dict) -> dict:
         }
     sources = _material_index(materials)
     required_term_groups = _required_term_groups(rules)
+    scene_terms = rules.get("scene_evidence_terms", [])
+    if not isinstance(scene_terms, list) or any(not isinstance(term, str) or not term.strip() for term in scene_terms):
+        raise ValueError("scene_evidence_terms must be a list of non-empty strings.")
+    scene_terms = list(dict.fromkeys(term.strip() for term in scene_terms))
     scenes = {scene.scene_id: scene for scene in draft.scenes}
     scene_indices = {scene.scene_id: index for index, scene in enumerate(draft.scenes)}
     issues: list[dict] = []
@@ -289,6 +299,21 @@ def check_rules(script: dict, materials: list[dict], rules: dict) -> dict:
                 for claim in valid_claims
             ):
                 issues.append(_issue("UNMAPPED_SOURCE", "来源 ID 需要对应脚本文句及支持原文，不能只挂一个引用。", scene_id=scene.scene_id, source_id=source_id))
+        has_scene_evidence = bool(scene.source_ids) and any(
+            claim.scene_id == scene.scene_id and claim.source_id in scene.source_ids
+            for claim in valid_claims
+        )
+        if not has_scene_evidence:
+            for field in ("visual", "narration", "subtitle"):
+                text = _normal(getattr(scene, field))
+                for term in scene_terms:
+                    if _normal(term) in text:
+                        issues.append(_issue(
+                            "MISSING_SCENE_EVIDENCE",
+                            f"本镜头出现功能短语“{term}”，但没有来源 ID 与有效的本镜头断言映射；全局或其它镜头的引用不能代替。请补证或删改。",
+                            scene_id=scene.scene_id, field=field,
+                            path=f"/scenes/{scene_indices[scene.scene_id]}/{field}", term=term,
+                        ))
     for banned in rules.get("banned_phrases", []):
         phrase = banned.get("phrase", "") if isinstance(banned, dict) else str(banned)
         if not phrase:
@@ -318,10 +343,26 @@ def check_rules(script: dict, materials: list[dict], rules: dict) -> dict:
                         scene_id=scene_id, field=field, path=path, term=term, group=group,
                     ))
     if rules.get("check_unsupported_numbers", True):
+        known_models = {
+            match.group().casefold()
+            for material in materials
+            for match in _MODEL_TOKEN.finditer(unicodedata.normalize("NFKC", material["text"]))
+        }
         for scene_id, field, text in fields:
-            for match in _NUMBER.finditer(unicodedata.normalize("NFKC", text)):
-                normalized_text = unicodedata.normalize("NFKC", text)
+            normalized_text = unicodedata.normalize("NFKC", text)
+            model_ranges = [(match.start(), match.end()) for match in _MODEL_TOKEN.finditer(normalized_text)
+                            if match.group().casefold() in known_models]
+            for match in _NUMBER.finditer(normalized_text):
                 if _structural_number(normalized_text, match.start(), match.end()):
+                    continue
+                # _NUMBER may consume trailing spaces before an optional %.
+                # Exempt only the digit range within an attested full model;
+                # a percentage or separate performance number is never covered.
+                numeric_text = match.group().rstrip()
+                if "%" not in numeric_text and any(
+                    start <= match.start() and match.start() + len(numeric_text) <= end
+                    for start, end in model_ranges
+                ):
                     continue
                 number = _normal(match.group())
                 supported = any(
@@ -332,7 +373,7 @@ def check_rules(script: dict, materials: list[dict], rules: dict) -> dict:
                     for claim in valid_claims
                 )
                 if not supported:
-                    issues.append(_issue("UNSUPPORTED_NUMBER", "数字表述缺少对应文句及支持原文；结构性步骤编号除外。", scene_id=scene_id, field=field, number=match.group().strip()))
+                    issues.append(_issue("UNSUPPORTED_NUMBER", "数字表述缺少对应文句及支持原文；结构性步骤编号及原文已有完整型号的内部数字除外。", scene_id=scene_id, field=field, number=match.group().strip()))
     used_ids = {source_id for scene in draft.scenes for source_id in scene.source_ids} | {claim.source_id for claim in draft.claims}
     for conflict in _conflicts(materials):
         if used_ids.intersection(conflict["source_ids"]):

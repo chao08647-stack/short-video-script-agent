@@ -1,0 +1,395 @@
+[
+  {
+    "event_seq": 28,
+    "tool": "submit_script",
+    "arguments": {
+      "title": "字幕不用一句句敲，小剪帮你打底",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "纯情景拍摄：新手对着电脑剪片，手停在键盘上，屏幕只拍背影和手部，不出现任何真实软件界面；配大字幕“字幕一句句敲？”",
+          "narration": "剪视频最烦的，是不是一句句敲字幕？",
+          "subtitle": "字幕一句句敲？",
+          "source_ids": [],
+          "min_display_seconds": 3
+        },
+        {
+          "scene_id": "S2",
+          "visual": "抽象示意动画：一条时间线上浮现成排的字幕文字块，不展示任何按钮、面板或点击操作",
+          "narration": "小剪 App 支持自动生成字幕，不用你逐句打字。",
+          "subtitle": "支持自动生成字幕",
+          "source_ids": [
+            "P01"
+          ],
+          "min_display_seconds": 5
+        },
+        {
+          "scene_id": "S3",
+          "visual": "抽象示意动画：字幕文字块上出现一个高亮标记，提示“检查一下”，不模拟真实界面",
+          "narration": "不过生成完，建议先检查一遍内容，识别错的就手动修正。",
+          "subtitle": "生成后建议检查、手动修正",
+          "source_ids": [
+            "P04"
+          ],
+          "min_display_seconds": 6
+        },
+        {
+          "scene_id": "S4",
+          "visual": "抽象示意动画：字幕文字被替换改写，随后字体大小与颜色示意变化，均为抽象图形，不展示真实界面",
+          "narration": "字幕文字能手动改，字体大小和颜色也能调。",
+          "subtitle": "文字可改，大小颜色可调",
+          "source_ids": [
+            "P02",
+            "P03"
+          ],
+          "min_display_seconds": 6
+        },
+        {
+          "scene_id": "S5",
+          "visual": "纯情景拍摄：新手看完字幕满意点头，画面收在轻松的手势上",
+          "narration": "自动生成打底，检查修改收尾，字幕就搞定了。",
+          "subtitle": "自动打底，检查修改收尾",
+          "source_ids": [],
+          "min_display_seconds": 4
+        }
+      ],
+      "claims": [
+        {
+          "text": "小剪 App 支持自动生成字幕",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S2"
+        },
+        {
+          "text": "建议先检查一遍内容",
+          "source_id": "P04",
+          "quote": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+          "scene_id": "S3"
+        },
+        {
+          "text": "识别错的就手动修正",
+          "source_id": "P04",
+          "quote": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+          "scene_id": "S3"
+        },
+        {
+          "text": "字幕文字能手动改",
+          "source_id": "P02",
+          "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "scene_id": "S4"
+        },
+        {
+          "text": "字体大小和颜色也能调",
+          "source_id": "P03",
+          "quote": "小剪 App 支持调整字幕的字体大小和颜色。",
+          "scene_id": "S4"
+        }
+      ],
+      "used_skills": [
+        "narration-subtitles",
+        "narrative-structure",
+        "audience-angle"
+      ],
+      "reason": "按已批准方向写30秒内初稿：开场点新手困扰，中段只讲自动生成、检查修正、改文字与调大小颜色四项事实，画面用抽象示意避免虚构界面，收尾轻松总结"
+    },
+    "version": 1,
+    "script": {
+      "title": "字幕不用一句句敲，小剪帮你打底",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "纯情景拍摄：新手对着电脑剪片，手停在键盘上，屏幕只拍背影和手部，不出现任何真实软件界面；配大字幕“字幕一句句敲？”",
+          "narration": "剪视频最烦的，是不是一句句敲字幕？",
+          "subtitle": "字幕一句句敲？",
+          "source_ids": [],
+          "min_display_seconds": 3.0
+        },
+        {
+          "scene_id": "S2",
+          "visual": "抽象示意动画：一条时间线上浮现成排的字幕文字块，不展示任何按钮、面板或点击操作",
+          "narration": "小剪 App 支持自动生成字幕，不用你逐句打字。",
+          "subtitle": "支持自动生成字幕",
+          "source_ids": [
+            "P01"
+          ],
+          "min_display_seconds": 5.0
+        },
+        {
+          "scene_id": "S3",
+          "visual": "抽象示意动画：字幕文字块上出现一个高亮标记，提示“检查一下”，不模拟真实界面",
+          "narration": "不过生成完，建议先检查一遍内容，识别错的就手动修正。",
+          "subtitle": "生成后建议检查、手动修正",
+          "source_ids": [
+            "P04"
+          ],
+          "min_display_seconds": 6.0
+        },
+        {
+          "scene_id": "S4",
+          "visual": "抽象示意动画：字幕文字被替换改写，随后字体大小与颜色示意变化，均为抽象图形，不展示真实界面",
+          "narration": "字幕文字能手动改，字体大小和颜色也能调。",
+          "subtitle": "文字可改，大小颜色可调",
+          "source_ids": [
+            "P02",
+            "P03"
+          ],
+          "min_display_seconds": 6.0
+        },
+        {
+          "scene_id": "S5",
+          "visual": "纯情景拍摄：新手看完字幕满意点头，画面收在轻松的手势上",
+          "narration": "自动生成打底，检查修改收尾，字幕就搞定了。",
+          "subtitle": "自动打底，检查修改收尾",
+          "source_ids": [],
+          "min_display_seconds": 4.0
+        }
+      ],
+      "claims": [
+        {
+          "text": "小剪 App 支持自动生成字幕",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S2"
+        },
+        {
+          "text": "建议先检查一遍内容",
+          "source_id": "P04",
+          "quote": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+          "scene_id": "S3"
+        },
+        {
+          "text": "识别错的就手动修正",
+          "source_id": "P04",
+          "quote": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+          "scene_id": "S3"
+        },
+        {
+          "text": "字幕文字能手动改",
+          "source_id": "P02",
+          "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "scene_id": "S4"
+        },
+        {
+          "text": "字体大小和颜色也能调",
+          "source_id": "P03",
+          "quote": "小剪 App 支持调整字幕的字体大小和颜色。",
+          "scene_id": "S4"
+        }
+      ]
+    }
+  },
+  {
+    "event_seq": 42,
+    "tool": "patch_script",
+    "arguments": {
+      "edits": [
+        {
+          "op": "replace",
+          "path": "/scenes/1/visual",
+          "value": "抽象示意动画：成排的字幕文字块依次浮现，纯图形表达，不展示任何真实软件界面或操作"
+        }
+      ],
+      "used_skills": [
+        "factual-revision"
+      ],
+      "reason": "按事实修订方法删除S2画面中无资料支持的“时间线/按钮/面板”UI细节，改为纯抽象示意，旁白与引用不变"
+    },
+    "version": 2,
+    "script": {
+      "title": "字幕不用一句句敲，小剪帮你打底",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "纯情景拍摄：新手对着电脑剪片，手停在键盘上，屏幕只拍背影和手部，不出现任何真实软件界面；配大字幕“字幕一句句敲？”",
+          "narration": "剪视频最烦的，是不是一句句敲字幕？",
+          "subtitle": "字幕一句句敲？",
+          "source_ids": [],
+          "min_display_seconds": 3.0
+        },
+        {
+          "scene_id": "S2",
+          "visual": "抽象示意动画：成排的字幕文字块依次浮现，纯图形表达，不展示任何真实软件界面或操作",
+          "narration": "小剪 App 支持自动生成字幕，不用你逐句打字。",
+          "subtitle": "支持自动生成字幕",
+          "source_ids": [
+            "P01"
+          ],
+          "min_display_seconds": 5.0
+        },
+        {
+          "scene_id": "S3",
+          "visual": "抽象示意动画：字幕文字块上出现一个高亮标记，提示“检查一下”，不模拟真实界面",
+          "narration": "不过生成完，建议先检查一遍内容，识别错的就手动修正。",
+          "subtitle": "生成后建议检查、手动修正",
+          "source_ids": [
+            "P04"
+          ],
+          "min_display_seconds": 6.0
+        },
+        {
+          "scene_id": "S4",
+          "visual": "抽象示意动画：字幕文字被替换改写，随后字体大小与颜色示意变化，均为抽象图形，不展示真实界面",
+          "narration": "字幕文字能手动改，字体大小和颜色也能调。",
+          "subtitle": "文字可改，大小颜色可调",
+          "source_ids": [
+            "P02",
+            "P03"
+          ],
+          "min_display_seconds": 6.0
+        },
+        {
+          "scene_id": "S5",
+          "visual": "纯情景拍摄：新手看完字幕满意点头，画面收在轻松的手势上",
+          "narration": "自动生成打底，检查修改收尾，字幕就搞定了。",
+          "subtitle": "自动打底，检查修改收尾",
+          "source_ids": [],
+          "min_display_seconds": 4.0
+        }
+      ],
+      "claims": [
+        {
+          "text": "小剪 App 支持自动生成字幕",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S2"
+        },
+        {
+          "text": "建议先检查一遍内容",
+          "source_id": "P04",
+          "quote": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+          "scene_id": "S3"
+        },
+        {
+          "text": "识别错的就手动修正",
+          "source_id": "P04",
+          "quote": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+          "scene_id": "S3"
+        },
+        {
+          "text": "字幕文字能手动改",
+          "source_id": "P02",
+          "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "scene_id": "S4"
+        },
+        {
+          "text": "字体大小和颜色也能调",
+          "source_id": "P03",
+          "quote": "小剪 App 支持调整字幕的字体大小和颜色。",
+          "scene_id": "S4"
+        }
+      ]
+    }
+  },
+  {
+    "event_seq": 61,
+    "tool": "patch_script",
+    "arguments": {
+      "edits": [
+        {
+          "op": "replace",
+          "path": "/scenes/0/narration",
+          "value": "剪视频，字幕一句句敲太费劲。"
+        },
+        {
+          "op": "replace",
+          "path": "/scenes/0/subtitle",
+          "value": "字幕一句句敲太费劲"
+        },
+        {
+          "op": "replace",
+          "path": "/scenes/0/visual",
+          "value": "纯情景拍摄：新手对着电脑剪片，手停在键盘上，屏幕只拍背影和手部，不出现任何真实软件界面；配大字幕“字幕一句句敲太费劲”"
+        }
+      ],
+      "used_skills": [
+        "human-feedback"
+      ],
+      "reason": "按反馈删掉开场反问句，第一镜旁白、字幕、画面大字幕一并改为直接陈述字幕需求，其余事实与时长不变"
+    },
+    "version": 3,
+    "script": {
+      "title": "字幕不用一句句敲，小剪帮你打底",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "纯情景拍摄：新手对着电脑剪片，手停在键盘上，屏幕只拍背影和手部，不出现任何真实软件界面；配大字幕“字幕一句句敲太费劲”",
+          "narration": "剪视频，字幕一句句敲太费劲。",
+          "subtitle": "字幕一句句敲太费劲",
+          "source_ids": [],
+          "min_display_seconds": 3.0
+        },
+        {
+          "scene_id": "S2",
+          "visual": "抽象示意动画：成排的字幕文字块依次浮现，纯图形表达，不展示任何真实软件界面或操作",
+          "narration": "小剪 App 支持自动生成字幕，不用你逐句打字。",
+          "subtitle": "支持自动生成字幕",
+          "source_ids": [
+            "P01"
+          ],
+          "min_display_seconds": 5.0
+        },
+        {
+          "scene_id": "S3",
+          "visual": "抽象示意动画：字幕文字块上出现一个高亮标记，提示“检查一下”，不模拟真实界面",
+          "narration": "不过生成完，建议先检查一遍内容，识别错的就手动修正。",
+          "subtitle": "生成后建议检查、手动修正",
+          "source_ids": [
+            "P04"
+          ],
+          "min_display_seconds": 6.0
+        },
+        {
+          "scene_id": "S4",
+          "visual": "抽象示意动画：字幕文字被替换改写，随后字体大小与颜色示意变化，均为抽象图形，不展示真实界面",
+          "narration": "字幕文字能手动改，字体大小和颜色也能调。",
+          "subtitle": "文字可改，大小颜色可调",
+          "source_ids": [
+            "P02",
+            "P03"
+          ],
+          "min_display_seconds": 6.0
+        },
+        {
+          "scene_id": "S5",
+          "visual": "纯情景拍摄：新手看完字幕满意点头，画面收在轻松的手势上",
+          "narration": "自动生成打底，检查修改收尾，字幕就搞定了。",
+          "subtitle": "自动打底，检查修改收尾",
+          "source_ids": [],
+          "min_display_seconds": 4.0
+        }
+      ],
+      "claims": [
+        {
+          "text": "小剪 App 支持自动生成字幕",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S2"
+        },
+        {
+          "text": "建议先检查一遍内容",
+          "source_id": "P04",
+          "quote": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+          "scene_id": "S3"
+        },
+        {
+          "text": "识别错的就手动修正",
+          "source_id": "P04",
+          "quote": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+          "scene_id": "S3"
+        },
+        {
+          "text": "字幕文字能手动改",
+          "source_id": "P02",
+          "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "scene_id": "S4"
+        },
+        {
+          "text": "字体大小和颜色也能调",
+          "source_id": "P03",
+          "quote": "小剪 App 支持调整字幕的字体大小和颜色。",
+          "scene_id": "S4"
+        }
+      ]
+    }
+  }
+]

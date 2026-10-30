@@ -1,0 +1,20 @@
+{
+  "case": "headphones",
+  "mode": "live",
+  "run_id": "c8e5e03b-4926-4ba5-bb9c-50b954146917",
+  "status": "completed",
+  "acceptance_passed": true,
+  "acceptance_errors": [],
+  "elapsed_seconds": 55.95,
+  "model_calls": 34,
+  "tool_calls": 30,
+  "skills_loaded": [
+    "audience-angle",
+    "factual-revision",
+    "material-search",
+    "narration-subtitles",
+    "narrative-structure"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\deepseek-flash-final\\headphones"
+}

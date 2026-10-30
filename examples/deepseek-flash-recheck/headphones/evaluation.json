@@ -1,0 +1,23 @@
+{
+  "case": "headphones",
+  "mode": "live",
+  "run_id": "33bc4f14-3084-4e8d-8a56-5ecbddea8b15",
+  "status": "incomplete",
+  "acceptance_passed": false,
+  "acceptance_errors": [
+    "Expected completed, got incomplete"
+  ],
+  "elapsed_seconds": 68.77,
+  "model_calls": 40,
+  "tool_calls": 44,
+  "skills_loaded": [
+    "audience-angle",
+    "duration-compression",
+    "factual-revision",
+    "material-search",
+    "narration-subtitles",
+    "storyboard-planning"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\deepseek-flash-recheck\\headphones"
+}

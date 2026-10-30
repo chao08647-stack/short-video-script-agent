@@ -216,12 +216,28 @@ def _structural_number(text: str, start: int, end: int) -> bool:
     )
 
 
+def _required_term_groups(rules: dict) -> list[tuple[str, str, list[str]]]:
+    """Read an explicit regression guard; absent configuration adds no terms."""
+    configured = rules.get("evidence_required_terms", {})
+    codes = {"feature": "UNSUPPORTED_FEATURE", "ui_detail": "UNSUPPORTED_UI_DETAIL"}
+    if not isinstance(configured, dict) or set(configured) - set(codes):
+        raise ValueError("evidence_required_terms must contain only feature/ui_detail groups.")
+    groups = []
+    for group, terms in configured.items():
+        if not isinstance(terms, list) or any(not isinstance(term, str) or not term.strip() for term in terms):
+            raise ValueError(f"evidence_required_terms.{group} must be a list of non-empty strings.")
+        groups.append((group, codes[group], list(dict.fromkeys(term.strip() for term in terms))))
+    return groups
+
+
 def check_rules(script: dict, materials: list[dict], rules: dict) -> dict:
     """Check deterministic constraints; this does NOT establish semantic support.
 
     The caller must perform a separate semantic verifier pass to detect uncited
     qualitative claims, mismatched entities, and misleading paraphrases. A valid
     source ID or quote is never represented as complete fact verification here.
+    Configured evidence_required_terms provide targeted literal-term guards for
+    observed feature/UI hallucinations, not exhaustive semantic understanding.
     """
     try:
         draft = Script.model_validate(script)
@@ -234,7 +250,9 @@ def check_rules(script: dict, materials: list[dict], rules: dict) -> dict:
             "semantic_status": "not_checked",
         }
     sources = _material_index(materials)
+    required_term_groups = _required_term_groups(rules)
     scenes = {scene.scene_id: scene for scene in draft.scenes}
+    scene_indices = {scene.scene_id: index for index, scene in enumerate(draft.scenes)}
     issues: list[dict] = []
     fields: list[tuple[str, str, str]] = [("", "title", draft.title)]
     for scene in draft.scenes:
@@ -278,6 +296,27 @@ def check_rules(script: dict, materials: list[dict], rules: dict) -> dict:
         for scene_id, field, text in fields:
             if _normal(phrase) in _normal(text):
                 issues.append(_issue("BANNED_PHRASE", f"出现品牌禁用表述：{phrase}", scene_id=scene_id, field=field, phrase=phrase))
+    for scene_id, field, text in fields:
+        normalized_text = _normal(text)
+        for group, code, terms in required_term_groups:
+            for term in terms:
+                normalized_term = _normal(term)
+                if normalized_term not in normalized_text:
+                    continue
+                supported = any(
+                    (not claim.scene_id or claim.scene_id == scene_id)
+                    and (not scene_id or claim.source_id in scenes[scene_id].source_ids)
+                    and _normal(claim.text) in normalized_text
+                    and normalized_term in _normal(claim.text)
+                    and normalized_term in _normal(claim.quote)
+                    for claim in valid_claims
+                )
+                if not supported:
+                    path = "/title" if not scene_id else f"/scenes/{scene_indices[scene_id]}/{field}"
+                    issues.append(_issue(
+                        code, f"表述“{term}”缺少本字段有效断言与对应原文的共同支持；请补充证据或删改，标为示意不豁免。",
+                        scene_id=scene_id, field=field, path=path, term=term, group=group,
+                    ))
     if rules.get("check_unsupported_numbers", True):
         for scene_id, field, text in fields:
             for match in _NUMBER.finditer(unicodedata.normalize("NFKC", text)):

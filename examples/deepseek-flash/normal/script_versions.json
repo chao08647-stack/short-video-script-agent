@@ -1,0 +1,312 @@
+[
+  {
+    "event_seq": 34,
+    "tool": "submit_script",
+    "arguments": {
+      "title": "小剪字幕功能：新手30秒字幕流程",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "竖屏手机录屏：剪辑时间线上一条没有字幕的视频，手指在屏幕上停顿，画面配一个“敲字幕”的键盘动画",
+          "narration": "视频剪好了，字幕还得一句句敲？",
+          "subtitle": "字幕还要一句句敲？",
+          "source_ids": [],
+          "min_display_seconds": 3
+        },
+        {
+          "scene_id": "S2",
+          "visual": "录屏：在小剪 App 里点开字幕功能，选择自动生成字幕，进度条走完后时间线上出现字幕条",
+          "narration": "小剪 App 支持自动生成字幕。",
+          "subtitle": "小剪：自动生成字幕",
+          "source_ids": [
+            "P01"
+          ],
+          "min_display_seconds": 4
+        },
+        {
+          "scene_id": "S3",
+          "visual": "录屏：逐条点开生成的字幕，光标停在文字上，手动改掉一个识别错的字",
+          "narration": "生成完先检查一遍，识别错的字，手动改掉。",
+          "subtitle": "先检查，再手动改错字",
+          "source_ids": [
+            "P02",
+            "P04"
+          ],
+          "min_display_seconds": 5
+        },
+        {
+          "scene_id": "S4",
+          "visual": "录屏：字幕样式面板，手指拖动字体大小滑块，再点选一个颜色，画面字幕实时变化",
+          "narration": "字体大小、颜色，也能自己调。",
+          "subtitle": "字体大小、颜色可调",
+          "source_ids": [
+            "P03"
+          ],
+          "min_display_seconds": 5
+        },
+        {
+          "scene_id": "S5",
+          "visual": "竖屏成片预览：字幕清晰出现在画面下方，结尾定格在小剪 App 字幕功能界面",
+          "narration": "自动生成，再手动改一改，字幕就顺了。新手也去试试这条流程。",
+          "subtitle": "自动生成 + 手动修改，去试试",
+          "source_ids": [
+            "P01",
+            "P02"
+          ],
+          "min_display_seconds": 5
+        }
+      ],
+      "claims": [
+        {
+          "text": "小剪 App 支持自动生成字幕。",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S2"
+        },
+        {
+          "text": "生成完先检查一遍，识别错的字，手动改掉。",
+          "source_id": "P04",
+          "quote": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+          "scene_id": "S3"
+        },
+        {
+          "text": "手动改掉",
+          "source_id": "P02",
+          "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "scene_id": "S3"
+        },
+        {
+          "text": "字体大小、颜色，也能自己调。",
+          "source_id": "P03",
+          "quote": "小剪 App 支持调整字幕的字体大小和颜色。",
+          "scene_id": "S4"
+        },
+        {
+          "text": "自动生成，再手动改一改",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S5"
+        },
+        {
+          "text": "手动改一改",
+          "source_id": "P02",
+          "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "scene_id": "S5"
+        }
+      ],
+      "used_skills": [
+        "material-search",
+        "audience-angle",
+        "narrative-structure",
+        "hook-writing",
+        "narration-subtitles"
+      ],
+      "reason": "按已批准方向写5个镜头：情景开场、自动生成、检查修改、样式调整、收尾行动；事实句逐条绑定 P01-P04 原文"
+    },
+    "version": 1,
+    "script": {
+      "title": "小剪字幕功能：新手30秒字幕流程",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "竖屏手机录屏：剪辑时间线上一条没有字幕的视频，手指在屏幕上停顿，画面配一个“敲字幕”的键盘动画",
+          "narration": "视频剪好了，字幕还得一句句敲？",
+          "subtitle": "字幕还要一句句敲？",
+          "source_ids": [],
+          "min_display_seconds": 3.0
+        },
+        {
+          "scene_id": "S2",
+          "visual": "录屏：在小剪 App 里点开字幕功能，选择自动生成字幕，进度条走完后时间线上出现字幕条",
+          "narration": "小剪 App 支持自动生成字幕。",
+          "subtitle": "小剪：自动生成字幕",
+          "source_ids": [
+            "P01"
+          ],
+          "min_display_seconds": 4.0
+        },
+        {
+          "scene_id": "S3",
+          "visual": "录屏：逐条点开生成的字幕，光标停在文字上，手动改掉一个识别错的字",
+          "narration": "生成完先检查一遍，识别错的字，手动改掉。",
+          "subtitle": "先检查，再手动改错字",
+          "source_ids": [
+            "P02",
+            "P04"
+          ],
+          "min_display_seconds": 5.0
+        },
+        {
+          "scene_id": "S4",
+          "visual": "录屏：字幕样式面板，手指拖动字体大小滑块，再点选一个颜色，画面字幕实时变化",
+          "narration": "字体大小、颜色，也能自己调。",
+          "subtitle": "字体大小、颜色可调",
+          "source_ids": [
+            "P03"
+          ],
+          "min_display_seconds": 5.0
+        },
+        {
+          "scene_id": "S5",
+          "visual": "竖屏成片预览：字幕清晰出现在画面下方，结尾定格在小剪 App 字幕功能界面",
+          "narration": "自动生成，再手动改一改，字幕就顺了。新手也去试试这条流程。",
+          "subtitle": "自动生成 + 手动修改，去试试",
+          "source_ids": [
+            "P01",
+            "P02"
+          ],
+          "min_display_seconds": 5.0
+        }
+      ],
+      "claims": [
+        {
+          "text": "小剪 App 支持自动生成字幕。",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S2"
+        },
+        {
+          "text": "生成完先检查一遍，识别错的字，手动改掉。",
+          "source_id": "P04",
+          "quote": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+          "scene_id": "S3"
+        },
+        {
+          "text": "手动改掉",
+          "source_id": "P02",
+          "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "scene_id": "S3"
+        },
+        {
+          "text": "字体大小、颜色，也能自己调。",
+          "source_id": "P03",
+          "quote": "小剪 App 支持调整字幕的字体大小和颜色。",
+          "scene_id": "S4"
+        },
+        {
+          "text": "自动生成，再手动改一改",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S5"
+        },
+        {
+          "text": "手动改一改",
+          "source_id": "P02",
+          "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "scene_id": "S5"
+        }
+      ]
+    }
+  },
+  {
+    "event_seq": 53,
+    "tool": "patch_script",
+    "arguments": {
+      "edits": [
+        {
+          "op": "replace",
+          "path": "/title",
+          "value": "小剪字幕功能：新手字幕流程"
+        }
+      ],
+      "used_skills": [
+        "brand-revision"
+      ],
+      "reason": "标题中的“30”无资料支持，改为不含数字的功能性标题，其余内容不变"
+    },
+    "version": 2,
+    "script": {
+      "title": "小剪字幕功能：新手字幕流程",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "竖屏手机录屏：剪辑时间线上一条没有字幕的视频，手指在屏幕上停顿，画面配一个“敲字幕”的键盘动画",
+          "narration": "视频剪好了，字幕还得一句句敲？",
+          "subtitle": "字幕还要一句句敲？",
+          "source_ids": [],
+          "min_display_seconds": 3.0
+        },
+        {
+          "scene_id": "S2",
+          "visual": "录屏：在小剪 App 里点开字幕功能，选择自动生成字幕，进度条走完后时间线上出现字幕条",
+          "narration": "小剪 App 支持自动生成字幕。",
+          "subtitle": "小剪：自动生成字幕",
+          "source_ids": [
+            "P01"
+          ],
+          "min_display_seconds": 4.0
+        },
+        {
+          "scene_id": "S3",
+          "visual": "录屏：逐条点开生成的字幕，光标停在文字上，手动改掉一个识别错的字",
+          "narration": "生成完先检查一遍，识别错的字，手动改掉。",
+          "subtitle": "先检查，再手动改错字",
+          "source_ids": [
+            "P02",
+            "P04"
+          ],
+          "min_display_seconds": 5.0
+        },
+        {
+          "scene_id": "S4",
+          "visual": "录屏：字幕样式面板，手指拖动字体大小滑块，再点选一个颜色，画面字幕实时变化",
+          "narration": "字体大小、颜色，也能自己调。",
+          "subtitle": "字体大小、颜色可调",
+          "source_ids": [
+            "P03"
+          ],
+          "min_display_seconds": 5.0
+        },
+        {
+          "scene_id": "S5",
+          "visual": "竖屏成片预览：字幕清晰出现在画面下方，结尾定格在小剪 App 字幕功能界面",
+          "narration": "自动生成，再手动改一改，字幕就顺了。新手也去试试这条流程。",
+          "subtitle": "自动生成 + 手动修改，去试试",
+          "source_ids": [
+            "P01",
+            "P02"
+          ],
+          "min_display_seconds": 5.0
+        }
+      ],
+      "claims": [
+        {
+          "text": "小剪 App 支持自动生成字幕。",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S2"
+        },
+        {
+          "text": "生成完先检查一遍，识别错的字，手动改掉。",
+          "source_id": "P04",
+          "quote": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+          "scene_id": "S3"
+        },
+        {
+          "text": "手动改掉",
+          "source_id": "P02",
+          "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "scene_id": "S3"
+        },
+        {
+          "text": "字体大小、颜色，也能自己调。",
+          "source_id": "P03",
+          "quote": "小剪 App 支持调整字幕的字体大小和颜色。",
+          "scene_id": "S4"
+        },
+        {
+          "text": "自动生成，再手动改一改",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S5"
+        },
+        {
+          "text": "手动改一改",
+          "source_id": "P02",
+          "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "scene_id": "S5"
+        }
+      ]
+    }
+  }
+]

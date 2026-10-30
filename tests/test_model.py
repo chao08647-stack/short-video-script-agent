@@ -4,8 +4,19 @@ import hashlib
 import httpx
 import pytest
 
-from script_agent.model import ModelClient, ModelError, Settings
-from script_agent.prompts import build_messages, skill_instructions, state_prompt, tool_schemas, tools_for_phase, tools_for_state
+from script_agent.model import ContextLimitError, ModelClient, ModelError, Settings
+from script_agent.prompts import build_messages, skill_instructions, state_prompt, system_prompt, tool_schemas, tools_for_phase, tools_for_state
+
+
+@pytest.fixture(autouse=True)
+def isolate_model_configuration(monkeypatch):
+    """Never read workstation credentials when running simulated HTTP tests."""
+    import dotenv
+
+    monkeypatch.setattr(dotenv, "load_dotenv", lambda **_: False)
+    for name in ("LLM_BASE_URL", "LLM_MODEL", "LLM_API_KEY", "LLM_TIMEOUT_SECONDS", "LLM_MAX_TOKENS",
+                 "LLM_ACTION_PROTOCOL", "LLM_THINKING", "LLM_CONTEXT_WINDOW"):
+        monkeypatch.delenv(name, raising=False)
 
 
 def response(message, **extra):
@@ -20,6 +31,7 @@ def test_native_tool_protocol_and_no_key_header():
         assert body["tool_choice"] == "auto"
         assert body["parallel_tool_calls"] is False
         assert "response_format" not in body
+        assert "thinking" not in body
         return response({"role": "assistant", "content": None, "reasoning": "private", "tool_calls": [{"id": "call-1", "type": "function", "function": {"name": "estimate_duration", "arguments": "{}"}}]}, usage={"prompt_tokens": 12, "completion_tokens": 3, "total_tokens": 15, "reasoning": "private"})
 
     with ModelClient(Settings(), transport=httpx.MockTransport(handle)) as client:
@@ -78,6 +90,65 @@ def test_verifier_accepts_supported_claim_and_counts_request():
         result = client.verify_script(SCRIPT, MATERIALS)
         assert result["passed"] is True
         assert client.request_count == 1
+
+
+def test_verifier_requests_full_script_ui_and_independent_citation_audit():
+    """Assert the sent contract, not a claim that a real judge follows it."""
+    script = {
+        "title": "字幕教程",
+        "scenes": [{"scene_id": "S1", "visual": "真实录屏：点击导出按钮，进度条走完。",
+                    "narration": "自动生成，再手动改一改", "subtitle": "", "source_ids": ["P01", "P02"]}],
+        "claims": [
+            {"text": "自动生成，再手动改一改", "source_id": "P01", "quote": "支持自动生成字幕。", "scene_id": "S1"},
+            {"text": "手动改一改", "source_id": "P02", "quote": "支持手动修改字幕。", "scene_id": "S1"},
+        ],
+    }
+    materials = MATERIALS + [{"source_id": "P02", "text": "支持手动修改字幕。"}]
+    report = {
+        "passed": False,
+        "issues": [{"code": "missing_citation", "message": "visual 中导出按钮和进度条无原文支持", "scene_id": "S1"}],
+        "claims": [
+            {**script["claims"][0], "status": "unsupported", "reason": "P01 不独立支持手动修改，应拆开引用"},
+            {**script["claims"][1], "status": "supported", "reason": "P02 支持手动修改"},
+            {"text": script["scenes"][0]["visual"], "source_id": "", "quote": "", "status": "unsupported", "reason": "未声明的具体 UI 和导出操作缺少来源"},
+        ],
+    }
+
+    def handle(request):
+        body = json.loads(request.content)
+        instructions = body["messages"][0]["content"]
+        assert "不能只检查claims清单" in instructions
+        assert "标题、画面visual、旁白narration、字幕subtitle" in instructions
+        assert all(term in instructions for term in ("按钮", "进度条", "滑块", "导出", "不得把未知UI写成真实录屏"))
+        assert "每条claim的完整text必须独立由该条source_id的原文和quote支持" in instructions
+        assert "不能借其他claim或其他来源补齐复合事实" in instructions
+        assert "不能因同镜头另有P02就把该条判为supported" in instructions
+        assert "抽象示意镜头" in instructions
+        assert "写“示意”不能豁免未证实的功能、操作或效果承诺" in instructions
+        submitted = json.loads(body["messages"][1]["content"])
+        assert submitted["script"] == script
+        assert {item["source_id"] for item in submitted["materials"]} == {"P01", "P02"}
+        assert "tools" not in body
+        return response({"role": "assistant", "content": json.dumps(report, ensure_ascii=False)})
+
+    with ModelClient(Settings(), transport=httpx.MockTransport(handle)) as client:
+        result = client.verify_script(script, materials)
+        assert result["passed"] is False
+        assert [claim["status"] for claim in result["claims"]] == ["unsupported", "supported", "unsupported"]
+        assert result["issues"][0]["scene_id"] == "S1"
+        assert client.request_count == 1
+
+
+def test_planner_prompt_distinguishes_illustrations_from_unverified_product_ui():
+    instructions = system_prompt([])
+    assert "每条 claim 的完整 text 必须独立由自己的 source_id 和 quote 支持" in instructions
+    assert "不能借其他 claim 或来源补齐复合事实" in instructions
+    assert "分别截取“自动生成”和“手动改一改”引用各自原文" in instructions
+    assert "包括未在 claims 声明的产品操作和具体 UI 结构" in instructions
+    assert all(term in instructions for term in ("按钮", "进度条", "滑块", "导出"))
+    assert "不能把未知 UI 写成真实录屏" in instructions
+    assert "抽象示意动画：字幕文字浮现" in instructions
+    assert "加“示意”标签不能豁免未证实的功能、操作和承诺" in instructions
 
 
 def test_verifier_cannot_pass_omitted_claims():
@@ -521,3 +592,168 @@ def test_const_rejects_boolean_equal_to_integer_and_anyof_obeys_outer_type():
         _validate_arguments(True, {"const": 1})
     with pytest.raises(ModelError, match="must be object"):
         _validate_arguments("text", {"type": "object", "anyOf": [{"type": "string"}]})
+
+
+@pytest.mark.parametrize("base_url", ["https://api.deepseek.com", "https://api.deepseek.com/v1"])
+def test_deepseek_native_disables_thinking_and_replays_only_public_tool_messages(base_url):
+    requests = []
+
+    def handle(request):
+        body = json.loads(request.content)
+        requests.append(body)
+        assert body["thinking"] == {"type": "disabled"}
+        assert body["tool_choice"] == "auto"
+        assert "parallel_tool_calls" not in body
+        assert "response_format" not in body
+        if len(requests) == 2:
+            assert body["messages"][-1]["role"] == "tool"
+            assert body["messages"][-1]["content"] == '{"matches":[]}'
+            assert body["messages"][-2]["tool_calls"][0]["id"] == "deepseek-call"
+            assert "reasoning_content" not in body["messages"][-2]
+        return response({"role": "assistant", "content": None, "reasoning_content": "private reasoning", "tool_calls": [{"id": "deepseek-call", "type": "function", "function": {"name": "search_materials", "arguments": '{"query":"subtitle","reason":"lookup"}'}}]})
+
+    settings = Settings(base_url=base_url, model="deepseek-flash")
+    assert settings.thinking == "disabled"
+    with ModelClient(settings, transport=httpx.MockTransport(handle)) as client:
+        first = client.chat([{"role": "user", "content": "task"}], tool_schemas())
+        client.chat([{"role": "user", "content": "task"}, first, {"role": "tool", "tool_call_id": "deepseek-call", "content": '{"matches":[]}'}], tool_schemas())
+        assert client.request_count == 2
+        assert client.last_response_metadata["provider"] == "deepseek"
+        assert "private reasoning" not in json.dumps(client.last_response_metadata)
+
+
+def test_generic_explicit_thinking_disabled_keeps_native_parameters():
+    def handle(request):
+        body = json.loads(request.content)
+        assert body["thinking"] == {"type": "disabled"}
+        assert body["parallel_tool_calls"] is False
+        return response({"content": "ok"})
+
+    with ModelClient(Settings(thinking="disabled"), transport=httpx.MockTransport(handle)) as client:
+        client.chat([], tool_schemas())
+    assert Settings(base_url="https://api.deepseek.com.example.invalid/v1").thinking == "default"
+
+
+@pytest.mark.parametrize("thinking", ["default", "enabled"])
+def test_deepseek_rejects_unsupported_thinking_modes_before_client_creation(thinking):
+    with pytest.raises(ModelError, match="THINKING"):
+        Settings(base_url="https://api.deepseek.com/v1", thinking=thinking)
+
+
+def test_deepseek_rejects_json_schema_action_protocol_explicitly():
+    with pytest.raises(ModelError, match="json_schema.*native"):
+        Settings(base_url="https://api.deepseek.com", action_protocol="json")
+
+
+def test_deepseek_fact_verifier_also_disables_thinking():
+    report = {"passed": True, "issues": [], "claims": [{**SCRIPT["claims"][0], "status": "supported", "reason": "source supports text"}]}
+
+    def handle(request):
+        body = json.loads(request.content)
+        assert body["thinking"] == {"type": "disabled"}
+        assert not {"tools", "parallel_tool_calls", "response_format"}.intersection(body)
+        return response({"content": json.dumps(report), "reasoning_content": "private"})
+
+    with ModelClient(Settings(base_url="https://api.deepseek.com"), transport=httpx.MockTransport(handle)) as client:
+        assert client.verify_script(SCRIPT, MATERIALS)["passed"] is True
+        assert client.last_action_protocol == "text"
+
+
+@pytest.mark.parametrize("protocol", ["native", "json"])
+def test_context_budget_observes_final_payload_before_http(monkeypatch, protocol):
+    import script_agent.model as model_module
+
+    observed = []
+    budget_metadata = {"enabled": True, "context_window": 16000, "reserved_output_tokens": 4096, "is_exact": False}
+
+    def budget(payload, context_window, max_tokens):
+        assert (context_window, max_tokens) == (16000, 4096)
+        assert payload["max_tokens"] == 4096
+        assert payload["thinking"] == {"type": "disabled"}
+        if protocol == "native":
+            assert payload["tools"] == tool_schemas()
+        else:
+            assert payload["response_format"]["type"] == "json_schema"
+            assert "arguments_schema" in payload["messages"][0]["content"]
+        observed.append(payload)
+        return budget_metadata
+
+    def handle(request):
+        assert len(observed) == 1
+        assert json.loads(request.content) == observed[0]
+        content = '{"action":"estimate_duration","arguments":{"reason":"estimate"}}' if protocol == "json" else "ok"
+        return response({"content": content})
+
+    monkeypatch.setattr(model_module, "enforce_budget", budget)
+    with ModelClient(Settings(action_protocol=protocol, thinking="disabled", context_window=16000, max_tokens=4096), transport=httpx.MockTransport(handle)) as client:
+        client.chat([{"role": "user", "content": "task"}], tool_schemas())
+        assert client.last_response_metadata["context_budget"] == budget_metadata
+        assert client.last_request_count == client.request_count == 1
+
+
+def test_context_limit_is_visible_and_does_not_make_or_count_http():
+    seen = []
+    with ModelClient(Settings(context_window=300, max_tokens=128), transport=httpx.MockTransport(lambda request: seen.append(request))) as client:
+        with pytest.raises(ContextLimitError, match="before HTTP") as caught:
+            client.chat([{"role": "user", "content": "long input " * 3000}])
+        assert caught.value.code == "context_budget_exceeded"
+        assert isinstance(caught.value, ModelError)
+        assert not seen
+        assert client.request_count == client.last_request_count == 0
+        assert client.last_response_metadata["context_budget"]
+
+
+@pytest.mark.parametrize("context_window", [-1, 4096, 4000, True, 16000.0])
+def test_invalid_context_budget_settings_are_rejected(context_window):
+    with pytest.raises(ModelError, match="LLM_CONTEXT_WINDOW"):
+        Settings(context_window=context_window, max_tokens=4096)
+
+
+def test_model_settings_read_explicit_budget_and_thinking_environment(monkeypatch):
+    monkeypatch.setenv("LLM_BASE_URL", "https://api.deepseek.com/v1")
+    monkeypatch.setenv("LLM_MODEL", "deepseek-flash")
+    monkeypatch.setenv("LLM_THINKING", "disabled")
+    monkeypatch.setenv("LLM_CONTEXT_WINDOW", "16000")
+    monkeypatch.setenv("LLM_MAX_TOKENS", "4096")
+    settings = Settings.from_env()
+    assert settings.is_deepseek and settings.thinking == "disabled"
+    assert (settings.context_window, settings.max_tokens) == (16000, 4096)
+    assert not settings.api_key
+    monkeypatch.delenv("LLM_THINKING")
+    assert Settings.from_env().thinking == "disabled"
+
+
+def test_actual_usage_over_budget_fails_after_http_and_retains_evidence(monkeypatch):
+    import script_agent.model as model_module
+
+    monkeypatch.setattr(model_module, "enforce_budget", lambda *_: {"enabled": True, "is_exact": False})
+    usage = {"prompt_tokens": 200, "completion_tokens": 101, "total_tokens": 1}
+    with ModelClient(Settings(context_window=300, max_tokens=128), transport=httpx.MockTransport(lambda _: response({"content": "public answer", "reasoning_content": "private"}, usage=usage))) as client:
+        with pytest.raises(ContextLimitError, match="after HTTP"):
+            client.chat([{"role": "user", "content": "task"}])
+        assert client.last_request_count == client.request_count == 1
+        assert client.last_usage == usage
+        assert client.last_public_response == "public answer"
+        assert client.last_response_metadata["context_usage_check"] == {
+            "phase": "response_usage", "request_sent": True, "context_window": 300,
+            "observed_total_tokens": 301, "exceeded": True,
+        }
+        assert "private" not in json.dumps(client.last_response_metadata)
+
+
+@pytest.mark.parametrize("usage", [
+    {"prompt_tokens": 200, "completion_tokens": 100},
+    {"prompt_tokens": True, "completion_tokens": 500},
+    {"prompt_tokens": 200.0, "completion_tokens": 101},
+    {"prompt_tokens": -1, "completion_tokens": 500},
+])
+def test_actual_usage_check_requires_valid_integers_and_accepts_exact_budget(monkeypatch, usage):
+    import script_agent.model as model_module
+
+    monkeypatch.setattr(model_module, "enforce_budget", lambda *_: {"enabled": True, "is_exact": False})
+    with ModelClient(Settings(context_window=300, max_tokens=128), transport=httpx.MockTransport(lambda _: response({"content": "ok"}, usage=usage))) as client:
+        assert client.chat([])["content"] == "ok"
+        if type(usage["prompt_tokens"]) is int and usage["prompt_tokens"] >= 0:
+            assert client.last_response_metadata["context_usage_check"]["exceeded"] is False
+        else:
+            assert "context_usage_check" not in client.last_response_metadata

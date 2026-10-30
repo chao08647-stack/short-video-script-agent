@@ -32,3 +32,11 @@ User authorized implementing topic 4 according to the accepted plan. Python CLI,
 - [pending] Meet the full live business acceptance criteria using an adequate model configuration, then publish to a supplied GitHub remote.
 
 Constraints: no real video generation; no false claims of live model/skill coverage or human approval; simulated reviewer decisions in evaluation must be labeled. Preserve local API credentials outside tracked evidence. Remote GitHub destination has not been supplied.
+
+## DeepSeek integration: 2026-10-30
+User supplied a private API key and authorized DeepSeek Flash as the primary runtime model, with a 16,384-token application budget and 4,096-token output reservation. Topic 4 remains the selected assignment.
+- [complete] Explicit non-thinking native tool protocol; enforce and disclose local context estimation.
+- [complete] API connectivity and normal / duration-revision flow smoke; later content audit requires revalidation.
+- [complete] Attempt all 14 cases, preserve Qwen baseline, review traces and fix observed UI/feature grounding defects. Raw 8 automated passes; 6 HTTP 402 failures; 4 completed scripts require content revalidation.
+- [complete] Update evidence, documentation, tests and archive smoke: 282 tests, 14 Mock cases passed.
+- [pending: external dependency] Restore API balance, rerun corrected live suite, validate remaining skill application, then publish to a supplied remote.

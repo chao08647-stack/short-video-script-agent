@@ -1,0 +1,21 @@
+{
+  "case": "normal",
+  "mode": "live",
+  "run_id": "8d6b1326-f461-41cb-afa3-10a8326af758",
+  "status": "completed",
+  "acceptance_passed": true,
+  "acceptance_errors": [],
+  "elapsed_seconds": 41.88,
+  "model_calls": 20,
+  "tool_calls": 21,
+  "skills_loaded": [
+    "audience-angle",
+    "brand-revision",
+    "hook-writing",
+    "material-search",
+    "narration-subtitles",
+    "narrative-structure"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\deepseek-flash\\normal"
+}

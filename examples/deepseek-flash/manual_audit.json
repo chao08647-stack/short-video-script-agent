@@ -1,0 +1,721 @@
+{
+  "schema_version": 1,
+  "audit_created_at": "2026-10-30T16:20:41.095350+00:00",
+  "reviewer": {
+    "type": "ai_assisted_repository_review",
+    "actor": "Codex",
+    "human_signoff": false,
+    "description": "AI 辅助逐项审阅已保存文件；未调用新的模型 API，未冒充真人审核或真人签字。文件名 manual_audit 表示自动验收之外的独立审阅记录。"
+  },
+  "raw_evaluation": {
+    "summary_file": "examples/deepseek-flash/summary.json",
+    "summary_sha256": "356545529667b0968f606756178f25b859ce80da1f7e4165f0cb70022e9c16ae",
+    "passed": 8,
+    "total": 14,
+    "completed": 5,
+    "waiting_human": 3,
+    "provider_http_402_failed": 6,
+    "interpretation": "原始自动评估 8/14 通过，不等于 8 份脚本内容合格。其中 5 个 completed、3 个按预期 waiting_human；normal/missing_info/tool_failure/duration_revision 有已确认内容或引用问题，必须复验。其余 4 个自动通过仅未发现新增明确问题，不换算为人工通过率。另 6 个失败均停止于 HTTP 402，不能归因为模型业务能力失败。duration_revision 从 54.35 秒修订至 22.75 秒的动态修正路径仍然有效，内容复验不否定该证据。"
+  },
+  "scope": {
+    "read_files": [
+      "summary.json",
+      "各场景 output.json/evaluation.json/data_snapshot.json",
+      "部分场景 input.json 和 script.md",
+      "相关 trace.jsonl"
+    ],
+    "review_focus": [
+      "标题、画面、旁白、字幕与来源支持关系",
+      "单个 claim 对应引用是否完整支持",
+      "时长估算及其边界",
+      "实际状态、审核身份、自动验收结论"
+    ],
+    "limitations": [
+      "有限的 AI 辅助文件审阅，不是独立真人签字或完整质量认证。",
+      "已确认具体 UI 缺陷以按钮名、字号滑块和进度条等明确细节为依据；没有宣称其他画面建议已经过真实 App 界面核验。",
+      "不修改原始输出、Trace、检查结果或 acceptance_passed；此记录只补充审阅结论。",
+      "补充审阅将 duration_revision 的产品录屏时间轴/样式面板纳入缺据 UI；该保守标准有误报与泛化局限，不能替代对具体文案语境及真实界面资料的人工判断。"
+    ]
+  },
+  "required_revalidation_cases": [
+    "normal",
+    "missing_info",
+    "tool_failure",
+    "duration_revision"
+  ],
+  "findings": [
+    {
+      "id": "AUDIT-001",
+      "category": "unsupported_specific_product_ui",
+      "severity": "requires_revalidation",
+      "affected_cases": [
+        "normal",
+        "missing_info",
+        "tool_failure"
+      ],
+      "finding": "原文只支持字幕功能，没有给出按钮名称、字号滑块、进度条等具体界面设计。输出把这些细节写成小剪 App 真实录屏，没有标记概念示意或待确认。自动规则与语义检查仍通过，不能据此认为全稿事实已被验证。",
+      "evidence": [
+        {
+          "case": "normal",
+          "run_id": "8d6b1326-f461-41cb-afa3-10a8326af758",
+          "scene_id": "S4",
+          "file": "examples/deepseek-flash/normal/output.json",
+          "json_pointer": "/script/scenes/3/visual",
+          "text": "录屏：字幕样式面板，手指拖动字体大小滑块，再点选一个颜色，画面字幕实时变化",
+          "sources": [
+            {
+              "file": "examples/deepseek-flash/normal/data_snapshot.json",
+              "source_id": "P03",
+              "version": "2026-10-01",
+              "text": "小剪 App 支持调整字幕的字体大小和颜色。"
+            }
+          ]
+        },
+        {
+          "case": "normal",
+          "run_id": "8d6b1326-f461-41cb-afa3-10a8326af758",
+          "scene_id": "S2",
+          "file": "examples/deepseek-flash/normal/output.json",
+          "json_pointer": "/script/scenes/1/visual",
+          "text": "录屏：在小剪 App 里点开字幕功能，选择自动生成字幕，进度条走完后时间线上出现字幕条",
+          "sources": [
+            {
+              "file": "examples/deepseek-flash/normal/data_snapshot.json",
+              "source_id": "P01",
+              "version": "2026-10-01",
+              "text": "小剪 App 支持自动生成字幕。"
+            }
+          ]
+        },
+        {
+          "case": "missing_info",
+          "run_id": "033c5552-1641-4eac-ba87-344a3499ba8b",
+          "scene_id": "S1",
+          "file": "examples/deepseek-flash/missing_info/output.json",
+          "json_pointer": "/script/scenes/0/visual",
+          "text": "手机竖屏：剪辑界面里视频已剪好，人物手指悬在“加字幕”按钮上停顿，画面配一行大字“字幕一句句打？”",
+          "sources": []
+        },
+        {
+          "case": "missing_info",
+          "run_id": "033c5552-1641-4eac-ba87-344a3499ba8b",
+          "scene_id": "S2",
+          "file": "examples/deepseek-flash/missing_info/output.json",
+          "json_pointer": "/script/scenes/1/visual",
+          "text": "录屏：在小剪 App 内点击自动生成字幕，字幕条成段出现在时间轴上，进度条走完",
+          "sources": [
+            {
+              "file": "examples/deepseek-flash/missing_info/data_snapshot.json",
+              "source_id": "P01",
+              "version": "2026-10-01",
+              "text": "小剪 App 支持自动生成字幕。"
+            }
+          ]
+        },
+        {
+          "case": "missing_info",
+          "run_id": "033c5552-1641-4eac-ba87-344a3499ba8b",
+          "scene_id": "S4",
+          "file": "examples/deepseek-flash/missing_info/output.json",
+          "json_pointer": "/script/scenes/3/visual",
+          "text": "录屏：选中字幕，拖动字体大小滑块，再点颜色选项换色，画面里字幕明显变大变色",
+          "sources": [
+            {
+              "file": "examples/deepseek-flash/missing_info/data_snapshot.json",
+              "source_id": "P03",
+              "version": "2026-10-01",
+              "text": "小剪 App 支持调整字幕的字体大小和颜色。"
+            }
+          ]
+        },
+        {
+          "case": "tool_failure",
+          "run_id": "e8e5a583-7c0c-452f-9c4c-15105efc924e",
+          "scene_id": "S5",
+          "file": "examples/deepseek-flash/tool_failure/output.json",
+          "json_pointer": "/script/scenes/4/visual",
+          "text": "录屏：打开字幕样式面板，拖动字体大小滑块，再点选不同颜色，字幕实时变化",
+          "sources": [
+            {
+              "file": "examples/deepseek-flash/tool_failure/data_snapshot.json",
+              "source_id": "P03",
+              "version": "2026-10-01",
+              "text": "小剪 App 支持调整字幕的字体大小和颜色。"
+            }
+          ]
+        }
+      ],
+      "required_action": "由模型去除无来源的具体控件/按钮/界面细节，改为明确标注的抽象演示；或提供真实界面资料后重新生成、检查并审核。不得手改旧运行记录冒充模型修正结果。"
+    },
+    {
+      "id": "AUDIT-002",
+      "category": "unregistered_unsupported_narration_claim",
+      "severity": "requires_revalidation",
+      "affected_cases": [
+        "missing_info"
+      ],
+      "finding": "S5 旁白的“再导出”引入资料中未提供的产品功能。该场景登记的 claim 只覆盖检查和修正，遗漏了导出表述；原始语义检查与自动验收仍通过。",
+      "evidence": [
+        {
+          "case": "missing_info",
+          "run_id": "033c5552-1641-4eac-ba87-344a3499ba8b",
+          "scene_id": "S5",
+          "file": "examples/deepseek-flash/missing_info/output.json",
+          "json_pointer": "/script/scenes/4/narration",
+          "text": "记住，自动生成后检查一遍内容，识别错误手动修正，再导出。",
+          "sources": [
+            {
+              "file": "examples/deepseek-flash/missing_info/data_snapshot.json",
+              "source_id": "P04",
+              "version": "2026-10-01",
+              "text": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。"
+            }
+          ]
+        }
+      ],
+      "registered_claim": {
+        "text": "自动生成后检查一遍内容，识别错误手动修正",
+        "source_id": "P04",
+        "quote": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+        "scene_id": "S5"
+      },
+      "required_action": "删除或明确待确认这项功能，并验证全稿中的未登记断言也进入事实检查。保留本次失败证据，另存修复后的真实复验。"
+    },
+    {
+      "id": "AUDIT-003",
+      "category": "claim_to_source_granularity",
+      "severity": "requires_revalidation",
+      "affected_cases": [
+        "normal",
+        "tool_failure"
+      ],
+      "finding": "复合 claim 被绑定到只支持其中一部分的单条来源。normal 的核验理由明确借用同场景 P02，来放行绑定 P01 的“自动生成，再手动改一改”。产品能力整体在资料中可找到，并非两个能力都捏造；问题是单个 claim→source_id→quote 映射的支持粒度不准确。tool_failure 中 P01 单引用也仅支持复合 claim 的自动生成部分。",
+      "evidence": [
+        {
+          "case": "normal",
+          "run_id": "8d6b1326-f461-41cb-afa3-10a8326af758",
+          "scene_id": "S5",
+          "file": "examples/deepseek-flash/normal/output.json",
+          "json_pointer": "/script/claims/4",
+          "claim": {
+            "text": "自动生成，再手动改一改",
+            "source_id": "P01",
+            "quote": "小剪 App 支持自动生成字幕。",
+            "scene_id": "S5"
+          },
+          "source": {
+            "file": "examples/deepseek-flash/normal/data_snapshot.json",
+            "source_id": "P01",
+            "version": "2026-10-01",
+            "text": "小剪 App 支持自动生成字幕。"
+          },
+          "automatic_semantic_judgment": {
+            "text": "自动生成，再手动改一改",
+            "source_id": "P01",
+            "quote": "小剪 App 支持自动生成字幕。",
+            "status": "supported",
+            "reason": "自动生成由P01支持，手动修改由同场景P02支持，组合断言成立。"
+          }
+        },
+        {
+          "case": "tool_failure",
+          "run_id": "e8e5a583-7c0c-452f-9c4c-15105efc924e",
+          "scene_id": "S6",
+          "file": "examples/deepseek-flash/tool_failure/output.json",
+          "json_pointer": "/script/claims/4",
+          "claim": {
+            "text": "先自动生成，再逐句检查修改",
+            "source_id": "P01",
+            "quote": "小剪 App 支持自动生成字幕。",
+            "scene_id": "S6"
+          },
+          "source": {
+            "file": "examples/deepseek-flash/tool_failure/data_snapshot.json",
+            "source_id": "P01",
+            "version": "2026-10-01",
+            "text": "小剪 App 支持自动生成字幕。"
+          },
+          "automatic_semantic_judgment": {
+            "text": "先自动生成，再逐句检查修改",
+            "source_id": "P01",
+            "quote": "小剪 App 支持自动生成字幕。",
+            "status": "supported",
+            "reason": "P01支持自动生成字幕这一环节。"
+          }
+        }
+      ],
+      "additional_support": {
+        "normal": [
+          {
+            "file": "examples/deepseek-flash/normal/data_snapshot.json",
+            "source_id": "P02",
+            "version": "2026-10-01",
+            "text": "用户可以手动修改小剪 App 生成的字幕文字。"
+          }
+        ],
+        "tool_failure": [
+          {
+            "file": "examples/deepseek-flash/tool_failure/data_snapshot.json",
+            "source_id": "P04",
+            "version": "2026-10-01",
+            "text": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。"
+          }
+        ]
+      },
+      "required_action": "把复合 claim 拆成分别由各自引用完整支持的原子断言；或显式采用可表达多来源联合支持的数据结构与校验协议。复验时不能仅以同场景存在另一来源为单引用映射补足依据。"
+    },
+    {
+      "id": "AUDIT-004",
+      "category": "unsupported_product_ui_in_duration_revision",
+      "severity": "requires_revalidation",
+      "affected_cases": [
+        "duration_revision"
+      ],
+      "finding": "最终稿 S2 以小剪 App 真实录屏口吻指定时间轴及字幕条布局，S3 指定打开样式面板。来源只证明自动生成、检查修正、手动改字及调整字号颜色，没有证明这些界面布局或操作入口，也没有把画面标为概念示意。因此时长修订虽然真实成功，最终内容仍需要复验。",
+      "evidence": [
+        {
+          "case": "duration_revision",
+          "run_id": "35f24324-8e49-468b-b6a4-87aabd792e5d",
+          "scene_id": "S2",
+          "file": "examples/deepseek-flash/duration_revision/output.json",
+          "json_pointer": "/script/scenes/1/visual",
+          "text": "录屏：小剪 App 自动生成字幕，时间轴上出现整段字幕条；随后逐条点开检查，改掉一处识别错误。",
+          "sources": [
+            {
+              "file": "examples/deepseek-flash/duration_revision/data_snapshot.json",
+              "source_id": "P01",
+              "version": "2026-10-01",
+              "text": "小剪 App 支持自动生成字幕。"
+            },
+            {
+              "file": "examples/deepseek-flash/duration_revision/data_snapshot.json",
+              "source_id": "P04",
+              "version": "2026-10-01",
+              "text": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。"
+            }
+          ]
+        },
+        {
+          "case": "duration_revision",
+          "run_id": "35f24324-8e49-468b-b6a4-87aabd792e5d",
+          "scene_id": "S3",
+          "file": "examples/deepseek-flash/duration_revision/output.json",
+          "json_pointer": "/script/scenes/2/visual",
+          "text": "录屏：选中一条字幕改文字，再打开样式面板调字体大小和颜色，画面字幕随之变化。",
+          "sources": [
+            {
+              "file": "examples/deepseek-flash/duration_revision/data_snapshot.json",
+              "source_id": "P02",
+              "version": "2026-10-01",
+              "text": "用户可以手动修改小剪 App 生成的字幕文字。"
+            },
+            {
+              "file": "examples/deepseek-flash/duration_revision/data_snapshot.json",
+              "source_id": "P03",
+              "version": "2026-10-01",
+              "text": "小剪 App 支持调整字幕的字体大小和颜色。"
+            }
+          ]
+        }
+      ],
+      "context_only_evidence": [
+        {
+          "case": "duration_revision",
+          "run_id": "35f24324-8e49-468b-b6a4-87aabd792e5d",
+          "scene_id": "S1",
+          "file": "examples/deepseek-flash/duration_revision/output.json",
+          "json_pointer": "/script/scenes/0/visual",
+          "text": "人物对着剪辑时间轴皱眉，手指敲键盘打字幕；画面切到小剪 App 图标。",
+          "sources": []
+        }
+      ],
+      "interpretation_boundary": "S1 的剪辑时间轴可以理解为一般剪辑情景，且用户初稿已有类似画面，不单独据此断言小剪界面造假。本项确认风险主要依据 S2/S3 明确的产品录屏描述。把时间轴、面板等常见 UI 词视为需要证据是一项保守审阅规则，泛化有限；真实界面资料或明确的抽象示意标注可能解除疑点。",
+      "required_action": "保留 54.35 秒压缩至 22.75 秒的真实运行证据；由模型将没有来源的产品 UI 改为明确的抽象演示或补充界面资料，随后重新检查并人工审核。不得把离线新增规则结果覆盖写回原始 evaluation。"
+    }
+  ],
+  "timing_review": {
+    "observation": "5 个 completed 输出的逐镜估时之和与总时长一致，均在目标上限内；只核对固定语速公式与记录一致性，未测量实际配音或成片。品牌修订的 16.6 秒低于 30 秒上限不单独记为失败。",
+    "cases": [
+      {
+        "case": "brand_and_fact_revision",
+        "run_id": "71f9842c-513b-44e7-a3c0-53412f529b4f",
+        "target_seconds": 30.0,
+        "estimated_seconds": 16.6,
+        "sum_scene_seconds": 16.6,
+        "raw_duration_passed": true
+      },
+      {
+        "case": "duration_revision",
+        "run_id": "35f24324-8e49-468b-b6a4-87aabd792e5d",
+        "target_seconds": 30.0,
+        "estimated_seconds": 22.75,
+        "sum_scene_seconds": 22.75,
+        "raw_duration_passed": true
+      },
+      {
+        "case": "missing_info",
+        "run_id": "033c5552-1641-4eac-ba87-344a3499ba8b",
+        "target_seconds": 30.0,
+        "estimated_seconds": 26.65,
+        "sum_scene_seconds": 26.65,
+        "raw_duration_passed": true
+      },
+      {
+        "case": "normal",
+        "run_id": "8d6b1326-f461-41cb-afa3-10a8326af758",
+        "target_seconds": 30.0,
+        "estimated_seconds": 25.35,
+        "sum_scene_seconds": 25.35,
+        "raw_duration_passed": true
+      },
+      {
+        "case": "tool_failure",
+        "run_id": "e8e5a583-7c0c-452f-9c4c-15105efc924e",
+        "target_seconds": 30.0,
+        "estimated_seconds": 29.5,
+        "sum_scene_seconds": 29.5,
+        "raw_duration_passed": true
+      }
+    ],
+    "preserved_dynamic_revision_evidence": {
+      "case": "duration_revision",
+      "run_id": "35f24324-8e49-468b-b6a4-87aabd792e5d",
+      "initial_script_origin": "用户提供的超长初稿，不是本次模型首稿",
+      "trace_file": "examples/deepseek-flash/duration_revision/trace.jsonl",
+      "duration_checks": [
+        {
+          "seq": 25,
+          "script_version": 1,
+          "estimated_seconds": 54.35,
+          "target_seconds": 30.0,
+          "passed": false
+        },
+        {
+          "seq": 42,
+          "script_version": 2,
+          "estimated_seconds": 22.75,
+          "target_seconds": 30.0,
+          "passed": true
+        },
+        {
+          "seq": 54,
+          "script_version": 3,
+          "estimated_seconds": 22.75,
+          "target_seconds": 30.0,
+          "passed": true
+        }
+      ],
+      "conclusion": "真实模型观察超时结果后修订，最终有效检查从 54.35 秒降至 22.75 秒，满足 30 秒上限；这是时长修正证据，不是最终画面事实完整合格的保证。"
+    }
+  },
+  "human_review_authenticity": {
+    "recorded_actor": "evaluation_simulated_human",
+    "actual_human_review_proven": false,
+    "observation": "已完成场景的方向/初稿/终稿批准均标记为评估器模拟；missing_info 的补充答案同样由模拟回复提供。它们证明中断与恢复机制的执行记录，不能证明真人认可内容。"
+  },
+  "case_reviews": [
+    {
+      "case": "brand_and_fact_revision",
+      "run_id": "71f9842c-513b-44e7-a3c0-53412f529b4f",
+      "raw_status": "completed",
+      "raw_acceptance_passed": true,
+      "output_file": "examples/deepseek-flash/brand_and_fact_revision/output.json",
+      "evaluation_file": "examples/deepseek-flash/brand_and_fact_revision/evaluation.json",
+      "trace_file": "examples/deepseek-flash/brand_and_fact_revision/trace.jsonl",
+      "data_snapshot_file": "examples/deepseek-flash/brand_and_fact_revision/data_snapshot.json",
+      "finding_ids": [],
+      "human_content_approval": null,
+      "audit_disposition": "no_additional_confirmed_finding_in_limited_review",
+      "comment": "本轮有限审阅未确认上述同类缺陷；这不构成全面质量保证、真人批准或内容人工验收通过。waiting_human 场景的自动通过只代表预期安全停止行为，不代表脚本完成。",
+      "evidence_sha256": {
+        "output.json": "797bdf3fe3ea2ded6ff7ac1e3a024851f90357a91fbdd3bb44f47935cee27396",
+        "evaluation.json": "cdae820b01cf848b69ab7a3dc6ffcc993bc3703914c472ee0df954a9b21a050f",
+        "trace.jsonl": "cf1d9ad15d6679841f33774866b49928f7e692dbafc43af3c6d663329ef76538"
+      }
+    },
+    {
+      "case": "conflict",
+      "run_id": "7e2e52e2-cc26-4472-bdbf-bb557d9d7626",
+      "raw_status": "waiting_human",
+      "raw_acceptance_passed": true,
+      "output_file": "examples/deepseek-flash/conflict/output.json",
+      "evaluation_file": "examples/deepseek-flash/conflict/evaluation.json",
+      "trace_file": "examples/deepseek-flash/conflict/trace.jsonl",
+      "data_snapshot_file": "examples/deepseek-flash/conflict/data_snapshot.json",
+      "finding_ids": [],
+      "human_content_approval": null,
+      "audit_disposition": "no_additional_confirmed_finding_in_limited_review",
+      "comment": "本轮有限审阅未确认上述同类缺陷；这不构成全面质量保证、真人批准或内容人工验收通过。waiting_human 场景的自动通过只代表预期安全停止行为，不代表脚本完成。",
+      "evidence_sha256": {
+        "output.json": "5eca629609eed2ddf2f18bd98683af1ddcb4cf389ed15934b58f0b010bf237fc",
+        "evaluation.json": "5966221f91d6e4b96187baa8efa5f98b335253d52edfc2618234329e4a831555",
+        "trace.jsonl": "bcfad3b0deacbe1b616b14ac3bdb63bcb56356edc3beb6bf6510e3761b884832"
+      }
+    },
+    {
+      "case": "duration_revision",
+      "run_id": "35f24324-8e49-468b-b6a4-87aabd792e5d",
+      "raw_status": "completed",
+      "raw_acceptance_passed": true,
+      "output_file": "examples/deepseek-flash/duration_revision/output.json",
+      "evaluation_file": "examples/deepseek-flash/duration_revision/evaluation.json",
+      "trace_file": "examples/deepseek-flash/duration_revision/trace.jsonl",
+      "data_snapshot_file": "examples/deepseek-flash/duration_revision/data_snapshot.json",
+      "finding_ids": [
+        "AUDIT-004"
+      ],
+      "human_content_approval": null,
+      "audit_disposition": "requires_revalidation",
+      "comment": "时长超限后的模型压缩与重新估时是真实成功路径；最终稿仍含未获来源支持的具体产品 UI，内容需复验。原始 acceptance_passed 保持 true，不以审阅记录改写历史。",
+      "evidence_sha256": {
+        "output.json": "ef57ebc351ecbbe6599bba25c4a4ffadb480c8a0d789956075c784f9b5df9840",
+        "evaluation.json": "e1eadb2b10d4a4be62c3288a92f915bb1a7756ed441f9abae75ddb70b60bbc4d",
+        "trace.jsonl": "cc63040c21465b6012151041e10bf1e6f37b4806e8e0be942ed41cd2c5b98c22"
+      }
+    },
+    {
+      "case": "headphones",
+      "run_id": "362743cc-0f87-48b6-8fb2-057ddd046dc5",
+      "raw_status": "failed",
+      "raw_acceptance_passed": false,
+      "output_file": "examples/deepseek-flash/headphones/output.json",
+      "evaluation_file": "examples/deepseek-flash/headphones/evaluation.json",
+      "trace_file": "examples/deepseek-flash/headphones/trace.jsonl",
+      "data_snapshot_file": "examples/deepseek-flash/headphones/data_snapshot.json",
+      "finding_ids": [],
+      "human_content_approval": null,
+      "audit_disposition": "not_validated_provider_balance_unavailable",
+      "stop_reason": {
+        "code": "model_unavailable",
+        "message": "Model HTTP 402: Insufficient Balance (request_id: 16d60bda-a9ef-4f8a-b0a0-4ec37f7c8378)"
+      },
+      "comment": "实际停止原因是 HTTP 402 / Insufficient Balance，属于服务余额不可用；不能据此判定模型业务能力失败，也不能算业务验收通过。此前已产生的中间稿或工具结果仍只是部分证据。",
+      "evidence_sha256": {
+        "output.json": "dc84b0c6ccad4770a119ab17cbddea5b6e6cb6f51f9f44387fb08018ac99b29f",
+        "evaluation.json": "75fd2937dc3ce996a451b98412377250f7a0d88a48c5a5e86b58795b61d06731",
+        "trace.jsonl": "668d0b853bc49f6a0000ceed77634b4f2e955d50595423bf2f78d1ac95ef985d"
+      }
+    },
+    {
+      "case": "human_feedback",
+      "run_id": "3036d7bf-1bed-4148-bb8b-c08125b81405",
+      "raw_status": "failed",
+      "raw_acceptance_passed": false,
+      "output_file": "examples/deepseek-flash/human_feedback/output.json",
+      "evaluation_file": "examples/deepseek-flash/human_feedback/evaluation.json",
+      "trace_file": "examples/deepseek-flash/human_feedback/trace.jsonl",
+      "data_snapshot_file": "examples/deepseek-flash/human_feedback/data_snapshot.json",
+      "finding_ids": [],
+      "human_content_approval": null,
+      "audit_disposition": "not_validated_provider_balance_unavailable",
+      "stop_reason": {
+        "code": "model_unavailable",
+        "message": "Model HTTP 402: Insufficient Balance (request_id: c8da00f3-af61-43d2-ac6b-8648bfc6e0b8)"
+      },
+      "comment": "实际停止原因是 HTTP 402 / Insufficient Balance，属于服务余额不可用；不能据此判定模型业务能力失败，也不能算业务验收通过。此前已产生的中间稿或工具结果仍只是部分证据。",
+      "evidence_sha256": {
+        "output.json": "5350a14948f0dbe4ea7e6d4ae2ae7302e2a0e526ce3d70da15f1d5400cda3e40",
+        "evaluation.json": "966666f946b65cd305be2af613cac5e2ef0c5f3f556d6afa654ef49682d2eb04",
+        "trace.jsonl": "52a581dafe37fe3e6e3c3aabe046abd1de1fd59903779f87091fcc776c445fe4"
+      }
+    },
+    {
+      "case": "minimal",
+      "run_id": "ebfb8f67-7f1c-4db7-85ee-ef0a4c05b5fc",
+      "raw_status": "failed",
+      "raw_acceptance_passed": false,
+      "output_file": "examples/deepseek-flash/minimal/output.json",
+      "evaluation_file": "examples/deepseek-flash/minimal/evaluation.json",
+      "trace_file": "examples/deepseek-flash/minimal/trace.jsonl",
+      "data_snapshot_file": "examples/deepseek-flash/minimal/data_snapshot.json",
+      "finding_ids": [],
+      "human_content_approval": null,
+      "audit_disposition": "not_validated_provider_balance_unavailable",
+      "stop_reason": {
+        "code": "model_unavailable",
+        "message": "Model HTTP 402: Insufficient Balance (request_id: 979844f0-323a-4ace-ab62-50cb8e5431a1)"
+      },
+      "comment": "实际停止原因是 HTTP 402 / Insufficient Balance，属于服务余额不可用；不能据此判定模型业务能力失败，也不能算业务验收通过。此前已产生的中间稿或工具结果仍只是部分证据。",
+      "evidence_sha256": {
+        "output.json": "db673844df5f6d9e77049e3ac22f16f6cc75d6d73d91df1f6a406a3a9b9b8c7c",
+        "evaluation.json": "11fe5089f8b4045bffc47ef996338b8469ae405d8eaf9ef3039b1f386ac63842",
+        "trace.jsonl": "9ec309fe0a3d1fa6f1766adcb5a551ecc09e2e2071179016fdd9cef8618298e0"
+      }
+    },
+    {
+      "case": "missing_info",
+      "run_id": "033c5552-1641-4eac-ba87-344a3499ba8b",
+      "raw_status": "completed",
+      "raw_acceptance_passed": true,
+      "output_file": "examples/deepseek-flash/missing_info/output.json",
+      "evaluation_file": "examples/deepseek-flash/missing_info/evaluation.json",
+      "trace_file": "examples/deepseek-flash/missing_info/trace.jsonl",
+      "data_snapshot_file": "examples/deepseek-flash/missing_info/data_snapshot.json",
+      "finding_ids": [
+        "AUDIT-001",
+        "AUDIT-002"
+      ],
+      "human_content_approval": null,
+      "audit_disposition": "requires_revalidation",
+      "comment": "自动通过存在已确认漏检，不能作为内容完整合格的证据；修复后必须另行真实复验。",
+      "evidence_sha256": {
+        "output.json": "ab2448fe113014800f04072c20c13d735f23bda74edd348c91a40fe70008794a",
+        "evaluation.json": "cf039a0fc3e179f1694a48e351eb4af43e79c670f3a5fb989846d6ff6c0bbce2",
+        "trace.jsonl": "59b9e1c7115588207a21ec2ea60bc0b1a71d1563d86e730a8f3f4e2b0af97d34"
+      }
+    },
+    {
+      "case": "no_materials",
+      "run_id": "d90d89b1-b4b2-4f5e-96be-13df171b5705",
+      "raw_status": "waiting_human",
+      "raw_acceptance_passed": true,
+      "output_file": "examples/deepseek-flash/no_materials/output.json",
+      "evaluation_file": "examples/deepseek-flash/no_materials/evaluation.json",
+      "trace_file": "examples/deepseek-flash/no_materials/trace.jsonl",
+      "data_snapshot_file": "examples/deepseek-flash/no_materials/data_snapshot.json",
+      "finding_ids": [],
+      "human_content_approval": null,
+      "audit_disposition": "no_additional_confirmed_finding_in_limited_review",
+      "comment": "本轮有限审阅未确认上述同类缺陷；这不构成全面质量保证、真人批准或内容人工验收通过。waiting_human 场景的自动通过只代表预期安全停止行为，不代表脚本完成。",
+      "evidence_sha256": {
+        "output.json": "99283403f02fa233be565e11cb1e0c5b63c7de7747d98452471017bfb5972b6a",
+        "evaluation.json": "f6da9c1e111cb094fc4a9032d5429e1bb525ef2116f2f2b8101bb1c583f4d7a2",
+        "trace.jsonl": "41796c759be23698e05229eaf5c496f984af80318bcacdcc81a1a973533e8368"
+      }
+    },
+    {
+      "case": "normal",
+      "run_id": "8d6b1326-f461-41cb-afa3-10a8326af758",
+      "raw_status": "completed",
+      "raw_acceptance_passed": true,
+      "output_file": "examples/deepseek-flash/normal/output.json",
+      "evaluation_file": "examples/deepseek-flash/normal/evaluation.json",
+      "trace_file": "examples/deepseek-flash/normal/trace.jsonl",
+      "data_snapshot_file": "examples/deepseek-flash/normal/data_snapshot.json",
+      "finding_ids": [
+        "AUDIT-001",
+        "AUDIT-003"
+      ],
+      "human_content_approval": null,
+      "audit_disposition": "requires_revalidation",
+      "comment": "自动通过存在已确认漏检，不能作为内容完整合格的证据；修复后必须另行真实复验。",
+      "evidence_sha256": {
+        "output.json": "e3e2c514e11b13f5042c2af1a9f7a66e7e8b9ea9726b7687c0e6751ba32cbd70",
+        "evaluation.json": "d96f5e9c1cea05c6106c4514fbe4ea4a45cd51a79d43a85c61bce2b0a1e13713",
+        "trace.jsonl": "5724315b4dc77d49efe4f55a3fbb91627896f7f70c19241349f6c4e55c2dc2bd"
+      }
+    },
+    {
+      "case": "query_rewrite",
+      "run_id": "3ac47750-4a91-482b-8d7d-5828601d1d4d",
+      "raw_status": "failed",
+      "raw_acceptance_passed": false,
+      "output_file": "examples/deepseek-flash/query_rewrite/output.json",
+      "evaluation_file": "examples/deepseek-flash/query_rewrite/evaluation.json",
+      "trace_file": "examples/deepseek-flash/query_rewrite/trace.jsonl",
+      "data_snapshot_file": "examples/deepseek-flash/query_rewrite/data_snapshot.json",
+      "finding_ids": [],
+      "human_content_approval": null,
+      "audit_disposition": "not_validated_provider_balance_unavailable",
+      "stop_reason": {
+        "code": "model_unavailable",
+        "message": "Model HTTP 402: Insufficient Balance (request_id: bde3ed0f-8ea8-47a3-8a50-42618bf26ae7)"
+      },
+      "comment": "实际停止原因是 HTTP 402 / Insufficient Balance，属于服务余额不可用；不能据此判定模型业务能力失败，也不能算业务验收通过。此前已产生的中间稿或工具结果仍只是部分证据。",
+      "evidence_sha256": {
+        "output.json": "fe5b7704b7f4328c00dcfa0e4bdd140e48db6e3bcb671c64db2778ec0ceaca09",
+        "evaluation.json": "acdda733940dccf5406723d06bf496ceee38790c4b2f4afd8715e8284db89fe7",
+        "trace.jsonl": "760410be41c8d8e0f61490bc7ce79458e9a917bf5e73af1175c51fe111db9eea"
+      }
+    },
+    {
+      "case": "step_limit",
+      "run_id": "310834c9-fd60-4eb7-ac80-29c8f43f0935",
+      "raw_status": "failed",
+      "raw_acceptance_passed": false,
+      "output_file": "examples/deepseek-flash/step_limit/output.json",
+      "evaluation_file": "examples/deepseek-flash/step_limit/evaluation.json",
+      "trace_file": "examples/deepseek-flash/step_limit/trace.jsonl",
+      "data_snapshot_file": "examples/deepseek-flash/step_limit/data_snapshot.json",
+      "finding_ids": [],
+      "human_content_approval": null,
+      "audit_disposition": "not_validated_provider_balance_unavailable",
+      "stop_reason": {
+        "code": "model_unavailable",
+        "message": "Model HTTP 402: Insufficient Balance (request_id: 7492a325-d6fd-449b-af69-0bdd0de57f5a)"
+      },
+      "comment": "实际停止原因是 HTTP 402 / Insufficient Balance，属于服务余额不可用；不能据此判定模型业务能力失败，也不能算业务验收通过。此前已产生的中间稿或工具结果仍只是部分证据。",
+      "evidence_sha256": {
+        "output.json": "7d091fcef06fd1bff95360d447003f3dbcd66046201dfac9eeec78402cfdd60a",
+        "evaluation.json": "c39c6c2efae3d2d06f297df31cc85a53b225bd52d08370f15298ef2f0494fdfe",
+        "trace.jsonl": "913aab0e2e0452e825ad2374d2357246060279033baa28f8994311516128c0f0"
+      }
+    },
+    {
+      "case": "too_short",
+      "run_id": "8818ae49-6901-4266-8c01-f84cbd153aa5",
+      "raw_status": "waiting_human",
+      "raw_acceptance_passed": true,
+      "output_file": "examples/deepseek-flash/too_short/output.json",
+      "evaluation_file": "examples/deepseek-flash/too_short/evaluation.json",
+      "trace_file": "examples/deepseek-flash/too_short/trace.jsonl",
+      "data_snapshot_file": "examples/deepseek-flash/too_short/data_snapshot.json",
+      "finding_ids": [],
+      "human_content_approval": null,
+      "audit_disposition": "no_additional_confirmed_finding_in_limited_review",
+      "comment": "本轮有限审阅未确认上述同类缺陷；这不构成全面质量保证、真人批准或内容人工验收通过。waiting_human 场景的自动通过只代表预期安全停止行为，不代表脚本完成。",
+      "evidence_sha256": {
+        "output.json": "9aa7a2b7ac85c1c14e5c680f9433ed056da744aa9b6aef4e3b51873c56f5cae7",
+        "evaluation.json": "4871d043109d85148ea0857be7d517759290453dc71b534e8c969921ed147273",
+        "trace.jsonl": "3db7ab17ef9328a20f3c69060e1cf798e69eb84b004a486f7177c8b480a0a7be"
+      }
+    },
+    {
+      "case": "tool_failure",
+      "run_id": "e8e5a583-7c0c-452f-9c4c-15105efc924e",
+      "raw_status": "completed",
+      "raw_acceptance_passed": true,
+      "output_file": "examples/deepseek-flash/tool_failure/output.json",
+      "evaluation_file": "examples/deepseek-flash/tool_failure/evaluation.json",
+      "trace_file": "examples/deepseek-flash/tool_failure/trace.jsonl",
+      "data_snapshot_file": "examples/deepseek-flash/tool_failure/data_snapshot.json",
+      "finding_ids": [
+        "AUDIT-001",
+        "AUDIT-003"
+      ],
+      "human_content_approval": null,
+      "audit_disposition": "requires_revalidation",
+      "comment": "自动通过存在已确认漏检，不能作为内容完整合格的证据；修复后必须另行真实复验。",
+      "evidence_sha256": {
+        "output.json": "6f64dfc064f68cec731270dfe79b2468b330a703f487e05cda6cad3f821cf109",
+        "evaluation.json": "1fbbe9974c5e0f3d92f739f811cfe69df0f92352308b49a6642abccf18c603fd",
+        "trace.jsonl": "aeb4d613c5782081a4900948bfe5c54e5c17407880191482a14451addf3d81f6"
+      }
+    },
+    {
+      "case": "tutorial",
+      "run_id": "c6f9eb4a-800b-49b4-9c5c-2036d853c266",
+      "raw_status": "failed",
+      "raw_acceptance_passed": false,
+      "output_file": "examples/deepseek-flash/tutorial/output.json",
+      "evaluation_file": "examples/deepseek-flash/tutorial/evaluation.json",
+      "trace_file": "examples/deepseek-flash/tutorial/trace.jsonl",
+      "data_snapshot_file": "examples/deepseek-flash/tutorial/data_snapshot.json",
+      "finding_ids": [],
+      "human_content_approval": null,
+      "audit_disposition": "not_validated_provider_balance_unavailable",
+      "stop_reason": {
+        "code": "model_unavailable",
+        "message": "Model HTTP 402: Insufficient Balance (request_id: 8e150650-182b-48a5-80c6-628ae06340bc)"
+      },
+      "comment": "实际停止原因是 HTTP 402 / Insufficient Balance，属于服务余额不可用；不能据此判定模型业务能力失败，也不能算业务验收通过。此前已产生的中间稿或工具结果仍只是部分证据。",
+      "evidence_sha256": {
+        "output.json": "29aae1b917207dff2ced0f444aaf34ab8d79cc54ec3dd485d3a138c23ddae443",
+        "evaluation.json": "754f4b61d30ff3a62381e76e790845b257c7552b82102c6d8cb7f501c210b85c",
+        "trace.jsonl": "0ff971b670f342e3519defeac6f5903857f6d79d47b906c9de71865dd177c04a"
+      }
+    }
+  ],
+  "next_validation": "保留本次证据不变；补齐全稿事实覆盖、具体产品 UI 边界和单引用支持粒度的检查后，对四例另存真实复验。保留 duration_revision 的真实时长修正路径。余额恢复后再验证 6 个因 HTTP 402 未完成的场景。",
+  "audit_updated_at": "2026-10-30T16:23:01.421982+00:00"
+}

@@ -51,6 +51,9 @@ def test_three_review_gates_survive_new_runtime_instances(tmp_path, run_request)
     runtime = Runtime(MockModel(), runs, ROOT)
     state = approve(runtime, state)
     assert state["status"] == "completed"
+    assert state["checks"]["rules"]["scope"] == "deterministic_and_semantic"
+    assert state["checks"]["rules"]["semantic_status"] == "passed"
+    assert state["checks"]["rules"]["requires_semantic_verification"] is False
     assert state["completed_script_hash"] == fingerprint(state["script"])
     assert len(state["review_history"]) == 3
     assert all(e["actor"] == "evaluation_simulated_human" for e in state["review_history"])

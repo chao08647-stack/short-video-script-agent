@@ -1,0 +1,24 @@
+{
+  "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "revision": "1bae0e1088993b9b82de08f59de5be5a34e42170",
+  "files": [
+    {
+      "file": "encoding.py",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017/resolve/1bae0e1088993b9b82de08f59de5be5a34e42170/encoding/encoding.py",
+      "sha256": "13231c592e958fb39e2af6001dae69d90e7a36b265702b9b390236fb387599e2",
+      "bytes": 37962
+    },
+    {
+      "file": "tokenizer.json",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017/resolve/1bae0e1088993b9b82de08f59de5be5a34e42170/tokenizer.json",
+      "sha256": "c90dfa01249db1be4245780a052ede752e1361c612ac6d08e2bdada7d599476b",
+      "bytes": 6367257
+    },
+    {
+      "file": "LICENSE",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017/resolve/1bae0e1088993b9b82de08f59de5be5a34e42170/LICENSE",
+      "sha256": "f2c6c602815669d292889e5be8c802f2ed950653b77999b1584e8e6aed25d040",
+      "bytes": 1084
+    }
+  ]
+}

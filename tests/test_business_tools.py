@@ -1,4 +1,6 @@
 from copy import deepcopy
+import json
+from pathlib import Path
 
 import pytest
 from pydantic import ValidationError
@@ -161,3 +163,121 @@ def test_tools_do_not_mutate_input():
     check_rules(value, MATERIALS, {})
     assert value == original_script
     assert MATERIALS == original_materials
+
+
+TERM_RULES = {
+    "evidence_required_terms": {
+        "feature": ["导出", "下载", "上传", "实时"],
+        "ui_detail": ["滑块", "进度条", "按钮", "面板", "菜单", "时间轴", "时间线"],
+    }
+}
+
+
+# Freeze actual field excerpts, not mutable paths under examples/deepseek-flash.
+# These runs passed the earlier automatic checker and failed manual fact review.
+@pytest.mark.parametrize("run_id,field,excerpt,expected_code,term", [
+    ("8d6b1326-f461-41cb-afa3-10a8326af758", "visual",
+     "录屏：在小剪 App 里点开字幕功能，选择自动生成字幕，进度条走完后时间线上出现字幕条",
+     "UNSUPPORTED_UI_DETAIL", "进度条"),
+    ("033c5552-1641-4eac-ba87-344a3499ba8b", "narration",
+     "记住，自动生成后检查一遍内容，识别错误手动修正，再导出。",
+     "UNSUPPORTED_FEATURE", "导出"),
+    ("e8e5a583-7c0c-452f-9c4c-15105efc924e", "visual",
+     "录屏：打开字幕样式面板，拖动字体大小滑块，再点选不同颜色，字幕实时变化",
+     "UNSUPPORTED_UI_DETAIL", "滑块"),
+])
+def test_manual_audit_regression_excerpts_require_feature_or_ui_evidence(run_id, field, excerpt, expected_code, term):
+    value = script()
+    # Preserve the ordinary cited subtitle fact so this tests the new omission.
+    value["scenes"][0][field] += " " + excerpt
+    assert check_rules(value, MATERIALS, {})["passed"] is True, run_id
+    result = check_rules(value, MATERIALS, TERM_RULES)
+    assert result["passed"] is False
+    issue = next(issue for issue in result["issues"] if issue["code"] == expected_code and issue["term"] == term)
+    assert issue["field"] == field and issue["scene_id"] == "S1"
+    assert issue["path"] == f"/scenes/0/{field}"
+
+
+@pytest.mark.parametrize("field", ["title", "visual", "narration", "subtitle"])
+def test_term_evidence_must_be_a_valid_claim_in_that_exact_field(field):
+    value = script()
+    phrase = "字幕界面提供按钮。"
+    sources = deepcopy(MATERIALS)
+    sources[0]["text"] += phrase
+    if field == "title":
+        value["title"] += phrase
+    else:
+        value["scenes"][0][field] += phrase
+    assert "UNSUPPORTED_UI_DETAIL" in codes(check_rules(value, sources, TERM_RULES))
+    value["claims"].append({"text": phrase, "source_id": "P01", "quote": phrase,
+                            "scene_id": "" if field == "title" else "S1"})
+    assert check_rules(value, sources, TERM_RULES)["passed"] is True
+
+
+def test_term_in_an_unrelated_source_cannot_support_caption_only_claim():
+    value = script(narration="小剪支持自动生成字幕。再导出。")
+    sources = deepcopy(MATERIALS)
+    sources[1]["text"] += "另一个产品支持导出。"
+    assert "UNSUPPORTED_FEATURE" in codes(check_rules(value, sources, TERM_RULES))
+
+
+def test_broad_quote_containing_term_cannot_expand_a_caption_only_claim():
+    value = script(narration="小剪支持自动生成字幕。再导出。")
+    sources = deepcopy(MATERIALS)
+    sources[0]["text"] += "产品还支持导出。"
+    value["claims"][0]["quote"] = sources[0]["text"]
+    assert "UNSUPPORTED_FEATURE" in codes(check_rules(value, sources, TERM_RULES))
+    value["claims"].append({"text": "导出", "source_id": "P01", "quote": "产品还支持导出。", "scene_id": "S1"})
+    assert check_rules(value, sources, TERM_RULES)["passed"] is True
+
+
+def test_claim_in_narration_does_not_cover_a_different_visual_assertion():
+    value = script(narration="小剪支持自动生成字幕。界面有按钮。")
+    value["scenes"][0]["visual"] = "点击红色按钮，画面切换。"
+    sources = deepcopy(MATERIALS)
+    sources[0]["text"] += "界面有按钮。"
+    value["claims"].append({"text": "界面有按钮。", "source_id": "P01", "quote": "界面有按钮。", "scene_id": "S1"})
+    issues = [issue for issue in check_rules(value, sources, TERM_RULES)["issues"] if issue["code"] == "UNSUPPORTED_UI_DETAIL"]
+    assert len(issues) == 1 and issues[0]["field"] == "visual"
+
+
+def test_demo_label_does_not_exempt_specific_ui_and_abstract_visual_is_allowed():
+    value = script()
+    value["scenes"][0]["visual"] = "示意画面：拖动字体滑块。"
+    assert "UNSUPPORTED_UI_DETAIL" in codes(check_rules(value, MATERIALS, TERM_RULES))
+    value["scenes"][0]["visual"] = "抽象演示：字幕文字逐渐放大，与人物画面交替展示。"
+    assert check_rules(value, MATERIALS, TERM_RULES)["passed"] is True
+
+
+def test_term_guard_does_not_claim_unconfigured_synonym_detection():
+    value = script()
+    value["scenes"][0]["visual"] = "拖动滑杆调整显示。"
+    assert check_rules(value, MATERIALS, TERM_RULES)["passed"] is True
+    configured = deepcopy(TERM_RULES)
+    configured["evidence_required_terms"]["ui_detail"].append("滑杆")
+    assert "UNSUPPORTED_UI_DETAIL" in codes(check_rules(value, MATERIALS, configured))
+
+
+def test_term_aliases_each_need_corresponding_literal_quote_support():
+    value = script()
+    value["scenes"][0]["visual"] = "界面显示时间线。"
+    sources = deepcopy(MATERIALS)
+    sources[0]["text"] += "界面显示时间轴。"
+    value["claims"].append({"text": "界面显示时间线。", "source_id": "P01", "quote": "界面显示时间轴。", "scene_id": "S1"})
+    assert "UNSUPPORTED_UI_DETAIL" in codes(check_rules(value, sources, TERM_RULES))
+    sources[0]["text"] += "界面显示时间线。"
+    value["claims"][-1]["quote"] = "界面显示时间线。"
+    assert check_rules(value, sources, TERM_RULES)["passed"] is True
+
+
+def test_all_bundled_datasets_enable_the_same_targeted_term_guards():
+    root = Path(__file__).resolve().parents[1]
+    for dataset in ("demo", "empty", "conflict"):
+        rules = json.loads((root / "data" / dataset / "rules.json").read_text(encoding="utf-8"))
+        assert rules["evidence_required_terms"] == TERM_RULES["evidence_required_terms"]
+
+
+@pytest.mark.parametrize("configured", [None, [], {"unknown": ["导出"]}, {"feature": "导出"}, {"feature": [""]}])
+def test_bad_term_configuration_fails_closed(configured):
+    with pytest.raises(ValueError, match="evidence_required_terms"):
+        check_rules(script(), MATERIALS, {"evidence_required_terms": configured})

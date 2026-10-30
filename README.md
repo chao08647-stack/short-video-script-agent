@@ -4,7 +4,7 @@
 
 交付的是可编辑脚本及检查证据，不需要视频输入，不生成配音或 MP4。仓库包含离线 Mock；真实模型服务需要单独配置。
 
-**当前状态：核心工程与离线流程已实现，但当前本地模型尚未完成正常脚本的三阶段全流程验收，作品尚未达到题目的完整交付标准。** 已有真实运行证明无资料时会请求补充、资料冲突时会补查并请求确认、达到步数上限会明确停止；这些不能替代正常生成、修订成功和人工反馈后的完整链路。16 个技能包已实现，全量加载曾发生在失败循环中，不能据此声称 16 项效果已验证。详细缺口及真实成功／失败记录见 [评估文档](docs/03-evaluation.md)。
+**当前状态：已接入 DeepSeek Flash，修补后 282 项工程测试和 14 项 Mock 场景通过；真实模型完整验收仍未完成。** 修补前真实批次自动通过 8/14，另 6 项因余额不足（HTTP 402）中断。事后文件复核发现四份完成稿含无依据 UI／操作，已补充检查，但尚未真实复验。正常生成、超时修正和工具恢复链路确已发生，不能由此宣称全部内容合格。16 个技能包已实现，本次真实加载及模型声明覆盖 12 项。具体证据、漏检及剩余工作见 [评估文档](docs/03-evaluation.md)。
 
 ## 评审入口
 
@@ -17,7 +17,8 @@
 | 难点与后续改进 | [docs/05-retrospective.md](docs/05-retrospective.md) |
 | 可复现输入 | [examples/inputs](examples/inputs) |
 | Mock 实际结果与覆盖 | [examples/mock/summary.json](examples/mock/summary.json)、[技能覆盖](examples/mock/skill_coverage.json) |
-| 真实模型实际结果与覆盖 | [examples/live/summary.json](examples/live/summary.json)、[技能覆盖](examples/live/skill_coverage.json) |
+| DeepSeek 实际结果与审阅 | [自动汇总](examples/deepseek-flash/summary.json)、[审阅发现](examples/deepseek-flash/manual_audit.json)、[技能覆盖](examples/deepseek-flash/skill_coverage.json) |
+| 历史 Qwen 对照 | [examples/live/summary.json](examples/live/summary.json) |
 | 多轮开发实验与失败记录 | [examples/experiments](examples/experiments) |
 
 以评估文档和实际运行文件判断完成情况。Mock 不证明真实模型决策效果；评估程序中的人工回复明确标记为模拟，不冒充真人审核。
@@ -100,31 +101,51 @@ python -m script_agent resume --run-id <run_id> --review-id <当前review_id> --
 
 ## 接入真实模型
 
-参考 [.env.example](.env.example) 创建本地 `.env`，或直接配置环境变量：
+参考 [.env.example](.env.example) 创建本地 `.env`，填入自己的密钥，或直接配置环境变量。已有 `.env` 时只修改所需字段。主配置使用 DeepSeek Flash：
+
+```dotenv
+LLM_BASE_URL=https://api.deepseek.com
+LLM_MODEL=deepseek-flash
+LLM_API_KEY=
+LLM_TIMEOUT_SECONDS=120
+LLM_ACTION_PROTOCOL=native
+LLM_THINKING=disabled
+LLM_MAX_TOKENS=4096
+LLM_CONTEXT_WINDOW=16384
+```
+
+`LLM_API_KEY` 在本地填入有效密钥。接口使用 Chat Completions；`native` 让模型返回原生工具调用，工具执行结果会送回模型决定下一步。本适配器不保留推理内容供工具调用续接，因此显式关闭 thinking；DeepSeek 官方支持该组合，见 [Tool Calls](https://api-docs.deepseek.com/guides/tool_calls/)。动作协议需要根据服务能力选择：
+
+| `LLM_ACTION_PROTOCOL` | 服务要求与行为 |
+|---|---|
+| `native`（代码默认） | 支持原生 `tool_calls` 与自动工具选择；普通正文中的 JSON 不当作原生调用执行。 |
+| `json`（可选本地服务） | 支持严格 `json_schema` 结构化输出及 `anyOf`、`const`；每个分支绑定动作名和对应参数，适配层再次校验后交给相同工具执行。 |
+
+DeepSeek 的 `response_format` 文档列出 `text` 和 `json_object`，不支持本项目 `json` 协议所要求的 `json_schema`，所以 DeepSeek 配置必须选择 `native`。两种协议都调用真实模型、返回真实工具观察，并使用相同的人审与检查约束；JSON 协议不属于 Mock。服务不支持所需格式时会直接报错，不自动降级或切换协议。见 [Chat Completions 参数](https://api-docs.deepseek.com/api/create-chat-completion/)。实际采用的协议与运行效果以 [评估记录](docs/03-evaluation.md) 为准，不能只用普通聊天成功证明可用。
+
+这里的 **16K = 16,384 token，是应用为每次模型请求设置的输入与预留输出总预算**。`LLM_MAX_TOKENS=4096` 只限制输出，`LLM_CONTEXT_WINDOW=16384` 由项目在发送请求前检查，不作为 DeepSeek API 参数发送。官方当前列出的 Flash 服务端原生上下文为 1M；设置应用预算不会改变服务端容量。见 [模型规格](https://api-docs.deepseek.com/quick_start/pricing/)。
+
+预检使用 [DeepSeek-V4.1-Flash-1017 官方 tokenizer 与编码参考](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017/tree/1bae0e1088993b9b82de08f59de5be5a34e42170)：取完整提示渲染与请求 JSON 的 token 计数较大值，再加入 10% + 128 token 余量，并预留本次输出额度。超过预算时明确停止；响应返回后还会检查 `usage`。公开编码参考不能证明与云端实际提示模板完全一致，因此这是 tokenizer 估算与事后核对，不能承诺服务端精确的 16K 硬上限。实际 token 用量以响应 `usage` 为准，见 [Token 用量说明](https://api-docs.deepseek.com/quick_start/token_usage/)。
+
+已有本地 Qwen 服务时，可把 `.env` 中对应字段改为以下配置；保留 `LLM_TIMEOUT_SECONDS=120`。地址属于开发者自己的服务，其他电脑需提供自己的地址；无鉴权时密钥可留空。
 
 ```dotenv
 LLM_BASE_URL=http://127.0.0.1:8012/v1
 LLM_MODEL=qwen25-14b-pbn-answer
 LLM_API_KEY=
-LLM_TIMEOUT_SECONDS=120
 LLM_ACTION_PROTOCOL=json
+LLM_THINKING=default
 LLM_MAX_TOKENS=2048
+LLM_CONTEXT_WINDOW=0
 ```
 
-该地址是开发者提供的本地服务，不内嵌于仓库；换电脑评审时需使用自己的地址。服务不要求鉴权时密钥可留空。接口使用标准 Chat Completions，动作协议需要显式选择：
-
-| `LLM_ACTION_PROTOCOL` | 服务要求与行为 |
-|---|---|
-| `native`（代码默认） | 支持原生 `tool_calls` 与自动工具选择；普通正文中的 JSON 不当作原生调用执行。 |
-| `json`（上面的配置示例） | 支持严格 `json_schema` 结构化输出及 `anyOf`、`const`；每个分支绑定动作名和对应参数，适配层再次校验后交给相同工具执行。 |
-
-代码未配置时使用 `native`；`.env.example` 为本次本地服务显式选择 `json`，超时 120 秒、输出预算 2048 token。两种协议都调用真实模型、返回真实工具观察，并使用相同的人审与检查约束；JSON 协议不属于 Mock。服务不支持所需结构化格式时会直接报错，不自动降级格式或切换协议。实际采用的协议与运行效果以 [评估记录](docs/03-evaluation.md) 为准，不能只用普通聊天成功证明可用。
+`LLM_CONTEXT_WINDOW=0` 关闭本项目的 DeepSeek 专用预算预检。Qwen 服务端的上下文容量由服务启动配置决定；已有基线服务配置为 32K。DeepSeek tokenizer 不用于声称 Qwen 的精确计数，服务参数配置成功也不等于业务验收通过。
 
 ```console
 python -m script_agent run --input examples/inputs/normal.json --mode live
 ```
 
-后续审核命令与 Mock 相同，恢复时自动使用任务原有模式。模型失败、上下文不足、输出截断等错误保持可见，不会自动切换为 Mock。开发用服务已从 4K 升级为 32K 上下文；这项配置验证不等于完整业务验收。`LLM_MAX_TOKENS` 控制单次输出预算，不能扩大服务端上下文；具体设置与实际效果见评估文档。
+后续审核命令与 Mock 相同，恢复时自动使用任务原有模式。模型失败、上下文不足、输出截断等错误保持可见，不会自动切换为 Mock。具体设置与实际效果见评估文档。
 
 需要观察执行进度时，PowerShell 使用：
 
@@ -178,7 +199,7 @@ python -m script_agent skills list
 
 模型可以通过 `patch_script` 修改现有稿件的一处文字或引用，成功后生成新版本并重新检查。动作清单按前置条件过滤：已加载技能不再加载、同一稿件的有效检查不重复执行、未改变内容的方向或稿件不接受重提。这里约束的是合法操作，具体查什么、改哪里、如何改仍由模型决定。
 
-默认上限是每任务 40 次模型请求、60 次工具调用，人工恢复后继续累计。达到上限返回 `incomplete` 并保留成果。LangGraph 递归保护上限随配置预算计算，避免较大的合法调用预算先被固定图步数中断。事实检查结合确定性规则和独立模型核验，仍可能误判或漏判；明确限制和失败案例见评估文档。
+默认上限是每任务 40 次模型尝试、60 次工具尝试（包括被拒绝动作），人工恢复后继续累计；它们不是精确计费请求数。达到上限返回 `incomplete` 并保留成果。LangGraph 递归保护上限随配置预算计算，避免较大的合法调用预算先被固定图步数中断。事实检查结合确定性规则和独立模型核验，仍可能误判或漏判；明确限制和失败案例见评估文档。
 
 ## 执行测试与评估
 
@@ -190,8 +211,10 @@ python -m script_agent.evaluate --mode mock --simulate-human
 具备可用模型服务后，可执行真实评估：
 
 ```console
-python -m script_agent.evaluate --mode live --simulate-human
+python -m script_agent.evaluate --mode live --output examples/deepseek-flash-recheck --simulate-human
 ```
+
+上述命令将 DeepSeek 修补后复验写入新目录，保留 `examples/deepseek-flash` 的原始批次和 `examples/live` 的本地模型基线；需要有效额度，命令本身不代表复验已通过。
 
 也可以只跑部分场景并写入新目录，避免覆盖已提交证据：
 

@@ -1,0 +1,16 @@
+{
+  "case": "tutorial",
+  "mode": "live",
+  "run_id": "c6f9eb4a-800b-49b4-9c5c-2036d853c266",
+  "status": "failed",
+  "acceptance_passed": false,
+  "acceptance_errors": [
+    "Expected completed, got failed"
+  ],
+  "elapsed_seconds": 0.59,
+  "model_calls": 1,
+  "tool_calls": 0,
+  "skills_loaded": [],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\deepseek-flash\\tutorial"
+}

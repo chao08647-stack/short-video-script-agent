@@ -80,7 +80,7 @@
     }
   },
   {
-    "event_seq": 36,
+    "event_seq": 35,
     "tool": "submit_script",
     "arguments": {
       "title": "产品功能介绍",

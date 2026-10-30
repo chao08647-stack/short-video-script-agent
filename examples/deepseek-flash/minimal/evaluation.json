@@ -1,0 +1,16 @@
+{
+  "case": "minimal",
+  "mode": "live",
+  "run_id": "ebfb8f67-7f1c-4db7-85ee-ef0a4c05b5fc",
+  "status": "failed",
+  "acceptance_passed": false,
+  "acceptance_errors": [
+    "Expected completed, got failed"
+  ],
+  "elapsed_seconds": 0.69,
+  "model_calls": 1,
+  "tool_calls": 0,
+  "skills_loaded": [],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\deepseek-flash\\minimal"
+}

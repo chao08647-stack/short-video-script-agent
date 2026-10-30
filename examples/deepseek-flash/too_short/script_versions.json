@@ -1,0 +1,311 @@
+[
+  {
+    "event_seq": 31,
+    "tool": "submit_script",
+    "arguments": {
+      "title": "小剪字幕两步走：自动生成 + 手动修改",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "手机竖屏录屏：剪辑时间轴上一段视频，下方字幕轨道空着；画面叠一行大字“字幕还没打？”",
+          "narration": "剪视频最烦的，就是一句一句打字幕。",
+          "subtitle": "字幕还没打？",
+          "source_ids": [],
+          "min_display_seconds": 2
+        },
+        {
+          "scene_id": "S2",
+          "visual": "录屏：在小剪 App 里点开字幕功能，选择自动生成，字幕轨道上逐条出现字幕条",
+          "narration": "小剪 App 支持自动生成字幕，先把字幕铺出来。",
+          "subtitle": "第一步：自动生成字幕",
+          "source_ids": [
+            "P01"
+          ],
+          "min_display_seconds": 3
+        },
+        {
+          "scene_id": "S3",
+          "visual": "录屏：手指点开其中一条字幕，进入文字编辑框，把识别错的字删掉重新输入，点确认",
+          "narration": "生成完别急着发，检查一下内容，识别错的字手动改掉。",
+          "subtitle": "第二步：手动修改字幕文字",
+          "source_ids": [
+            "P02",
+            "P04"
+          ],
+          "min_display_seconds": 3
+        },
+        {
+          "scene_id": "S4",
+          "visual": "录屏：改好的字幕在时间轴上对齐播放，画面叠字“自动生成 + 手动修改”",
+          "narration": "自动生成，再手动修改，两步走，字幕就顺了。",
+          "subtitle": "自动生成 + 手动修改",
+          "source_ids": [
+            "P01",
+            "P02"
+          ],
+          "min_display_seconds": 2
+        }
+      ],
+      "claims": [
+        {
+          "text": "小剪 App 支持自动生成字幕",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S2"
+        },
+        {
+          "text": "识别错的字手动改掉",
+          "source_id": "P02",
+          "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "scene_id": "S3"
+        },
+        {
+          "text": "生成完别急着发，检查一下内容",
+          "source_id": "P04",
+          "quote": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+          "scene_id": "S3"
+        },
+        {
+          "text": "自动生成，再手动修改",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S4"
+        },
+        {
+          "text": "再手动修改",
+          "source_id": "P02",
+          "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "scene_id": "S4"
+        }
+      ],
+      "used_skills": [
+        "material-search",
+        "audience-angle",
+        "narrative-structure",
+        "narration-subtitles"
+      ],
+      "reason": "按已批准方向写四镜头：开场点出打字幕困扰，S2 讲自动生成（P01），S3 讲检查并手动修改（P02/P04），S4 收尾两步走；不新增准确率、免费、提速等未支持说法"
+    },
+    "version": 1,
+    "script": {
+      "title": "小剪字幕两步走：自动生成 + 手动修改",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "手机竖屏录屏：剪辑时间轴上一段视频，下方字幕轨道空着；画面叠一行大字“字幕还没打？”",
+          "narration": "剪视频最烦的，就是一句一句打字幕。",
+          "subtitle": "字幕还没打？",
+          "source_ids": [],
+          "min_display_seconds": 2.0
+        },
+        {
+          "scene_id": "S2",
+          "visual": "录屏：在小剪 App 里点开字幕功能，选择自动生成，字幕轨道上逐条出现字幕条",
+          "narration": "小剪 App 支持自动生成字幕，先把字幕铺出来。",
+          "subtitle": "第一步：自动生成字幕",
+          "source_ids": [
+            "P01"
+          ],
+          "min_display_seconds": 3.0
+        },
+        {
+          "scene_id": "S3",
+          "visual": "录屏：手指点开其中一条字幕，进入文字编辑框，把识别错的字删掉重新输入，点确认",
+          "narration": "生成完别急着发，检查一下内容，识别错的字手动改掉。",
+          "subtitle": "第二步：手动修改字幕文字",
+          "source_ids": [
+            "P02",
+            "P04"
+          ],
+          "min_display_seconds": 3.0
+        },
+        {
+          "scene_id": "S4",
+          "visual": "录屏：改好的字幕在时间轴上对齐播放，画面叠字“自动生成 + 手动修改”",
+          "narration": "自动生成，再手动修改，两步走，字幕就顺了。",
+          "subtitle": "自动生成 + 手动修改",
+          "source_ids": [
+            "P01",
+            "P02"
+          ],
+          "min_display_seconds": 2.0
+        }
+      ],
+      "claims": [
+        {
+          "text": "小剪 App 支持自动生成字幕",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S2"
+        },
+        {
+          "text": "识别错的字手动改掉",
+          "source_id": "P02",
+          "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "scene_id": "S3"
+        },
+        {
+          "text": "生成完别急着发，检查一下内容",
+          "source_id": "P04",
+          "quote": "小剪 App 的自动字幕生成后，建议用户检查内容，并手动修正识别错误。",
+          "scene_id": "S3"
+        },
+        {
+          "text": "自动生成，再手动修改",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S4"
+        },
+        {
+          "text": "再手动修改",
+          "source_id": "P02",
+          "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "scene_id": "S4"
+        }
+      ]
+    }
+  },
+  {
+    "event_seq": 46,
+    "tool": "submit_script",
+    "arguments": {
+      "title": "小剪字幕：自动生成 + 手动修改",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "手机竖屏录屏：小剪 App 字幕轨道上逐条出现字幕条，随后手指点开一条字幕，把识别错的字改掉并确认",
+          "narration": "小剪自动生成字幕，再手动修改。",
+          "subtitle": "自动生成 + 手动修改",
+          "source_ids": [
+            "P01",
+            "P02"
+          ],
+          "min_display_seconds": 1.0
+        }
+      ],
+      "claims": [
+        {
+          "text": "小剪自动生成字幕",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S1"
+        },
+        {
+          "text": "再手动修改",
+          "source_id": "P02",
+          "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "scene_id": "S1"
+        }
+      ],
+      "used_skills": [
+        "material-search",
+        "audience-angle",
+        "narrative-structure",
+        "narration-subtitles",
+        "duration-compression"
+      ],
+      "reason": "1 秒上限下无法容纳四镜头，按压缩技能合并为单镜头：旁白只保留两项必讲功能（P01 自动生成、P02 手动修改），删去开场铺垫与重复收尾，不提高语速、不改目标时长"
+    },
+    "version": 2,
+    "script": {
+      "title": "小剪字幕：自动生成 + 手动修改",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "手机竖屏录屏：小剪 App 字幕轨道上逐条出现字幕条，随后手指点开一条字幕，把识别错的字改掉并确认",
+          "narration": "小剪自动生成字幕，再手动修改。",
+          "subtitle": "自动生成 + 手动修改",
+          "source_ids": [
+            "P01",
+            "P02"
+          ],
+          "min_display_seconds": 1.0
+        }
+      ],
+      "claims": [
+        {
+          "text": "小剪自动生成字幕",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S1"
+        },
+        {
+          "text": "再手动修改",
+          "source_id": "P02",
+          "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "scene_id": "S1"
+        }
+      ]
+    }
+  },
+  {
+    "event_seq": 58,
+    "tool": "submit_script",
+    "arguments": {
+      "title": "小剪字幕：自动生成 + 手动修改",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "手机竖屏录屏：小剪 App 字幕轨道上出现字幕条，手指点开一条字幕，把识别错的字改掉并确认",
+          "narration": "自动生成，手动改。",
+          "subtitle": "自动生成 + 手动修改",
+          "source_ids": [
+            "P01",
+            "P02"
+          ],
+          "min_display_seconds": 1.0
+        }
+      ],
+      "claims": [
+        {
+          "text": "自动生成",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S1"
+        },
+        {
+          "text": "手动改",
+          "source_id": "P02",
+          "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "scene_id": "S1"
+        }
+      ],
+      "used_skills": [
+        "duration-compression",
+        "narration-subtitles"
+      ],
+      "reason": "按压缩方法把旁白压到最短仍保留两项必讲功能（自动生成、手动修改），字幕保留完整表述，不提高语速、不改目标时长"
+    },
+    "version": 3,
+    "script": {
+      "title": "小剪字幕：自动生成 + 手动修改",
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "visual": "手机竖屏录屏：小剪 App 字幕轨道上出现字幕条，手指点开一条字幕，把识别错的字改掉并确认",
+          "narration": "自动生成，手动改。",
+          "subtitle": "自动生成 + 手动修改",
+          "source_ids": [
+            "P01",
+            "P02"
+          ],
+          "min_display_seconds": 1.0
+        }
+      ],
+      "claims": [
+        {
+          "text": "自动生成",
+          "source_id": "P01",
+          "quote": "小剪 App 支持自动生成字幕。",
+          "scene_id": "S1"
+        },
+        {
+          "text": "手动改",
+          "source_id": "P02",
+          "quote": "用户可以手动修改小剪 App 生成的字幕文字。",
+          "scene_id": "S1"
+        }
+      ]
+    }
+  }
+]

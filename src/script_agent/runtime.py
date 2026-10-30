@@ -21,7 +21,7 @@ from .skill_registry import SkillRegistry
 # Capture once with module import: later edits on disk cannot mislabel a running
 # evaluation process as if it had executed the new source code.
 _EXECUTED_CODE_HASHES = {name: fingerprint((Path(__file__).parent / name).read_text(encoding="utf-8"))
-                         for name in ("engine.py", "prompts.py", "model.py", "business_tools.py", "script_patch.py", "runtime.py")}
+                         for name in ("engine.py", "prompts.py", "model.py", "business_tools.py", "script_patch.py", "runtime.py", "context_budget.py", "vendor/deepseek/encoding.py")}
 
 
 def project_root() -> Path:
@@ -83,7 +83,7 @@ class Runtime:
         execution = {
             "python": platform.python_version(), "langgraph": importlib.metadata.version("langgraph"),
             "mode": mode,
-            "model": {key: getattr(settings, key) for key in ("base_url", "model", "max_tokens", "timeout_seconds", "action_protocol")} if settings else {"name": "explicit_offline_mock"},
+            "model": {key: getattr(settings, key, None) for key in ("base_url", "model", "max_tokens", "timeout_seconds", "action_protocol", "thinking", "context_window")} if settings else {"name": "explicit_offline_mock"},
             "code_hashes": dict(_EXECUTED_CODE_HASHES), "code_hash_capture": "process_import",
         }
         state = {

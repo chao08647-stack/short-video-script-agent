@@ -1,0 +1,12 @@
+{
+  "initial_sandbox_probe": {
+    "checked_at": "2026-10-30T16:03:34.858014+00:00",
+    "base_url": "https://api.deepseek.com",
+    "error_type": "ConnectError"
+  },
+  "initial_failure_classification": "Windows 10013 sandbox network denial, before provider request",
+  "integration_connected": true,
+  "evidence": "deepseek-flash/normal/trace.jsonl",
+  "subsequent_blocker": "HTTP 402 Insufficient Balance during full evaluation",
+  "note": "Sandbox escalation was approved on retry; integration used the private key without exporting it. Original logs preserved."
+}

@@ -184,16 +184,16 @@
         {
           "case": "duration_revision",
           "trace": "duration_revision\\trace.jsonl",
-          "event_seq": 26,
+          "event_seq": 25,
           "tool": "check_rules",
-          "artifact_event_seq": 25
+          "artifact_event_seq": 24
         },
         {
           "case": "duration_revision",
           "trace": "duration_revision\\trace.jsonl",
-          "event_seq": 30,
+          "event_seq": 29,
           "tool": "request_review",
-          "artifact_event_seq": 29
+          "artifact_event_seq": 28
         },
         {
           "case": "headphones",
@@ -650,7 +650,7 @@
         {
           "case": "duration_revision",
           "trace": "duration_revision\\trace.jsonl",
-          "event_seq": 33
+          "event_seq": 32
         },
         {
           "case": "too_short",
@@ -662,32 +662,32 @@
         {
           "case": "duration_revision",
           "trace": "duration_revision\\trace.jsonl",
-          "event_seq": 37,
+          "event_seq": 36,
           "tool": "submit_script",
-          "artifact_event_seq": 36
+          "artifact_event_seq": 35
         }
       ],
       "candidate_links": [
         {
           "case": "duration_revision",
           "trace": "duration_revision\\trace.jsonl",
-          "event_seq": 40,
+          "event_seq": 39,
           "tool": "estimate_duration",
-          "artifact_event_seq": 39
+          "artifact_event_seq": 38
         },
         {
           "case": "duration_revision",
           "trace": "duration_revision\\trace.jsonl",
-          "event_seq": 44,
+          "event_seq": 43,
           "tool": "check_rules",
-          "artifact_event_seq": 43
+          "artifact_event_seq": 42
         },
         {
           "case": "duration_revision",
           "trace": "duration_revision\\trace.jsonl",
-          "event_seq": 48,
+          "event_seq": 47,
           "tool": "request_review",
-          "artifact_event_seq": 47
+          "artifact_event_seq": 46
         },
         {
           "case": "too_short",

@@ -1,0 +1,17 @@
+{
+  "case": "no_materials",
+  "mode": "live",
+  "run_id": "d90d89b1-b4b2-4f5e-96be-13df171b5705",
+  "status": "waiting_human",
+  "acceptance_passed": true,
+  "acceptance_errors": [],
+  "elapsed_seconds": 9.98,
+  "model_calls": 7,
+  "tool_calls": 8,
+  "skills_loaded": [
+    "material-search",
+    "query-rewrite"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\deepseek-flash\\no_materials"
+}

@@ -1,5 +1,5 @@
 {
-  "run_id": "aa2e62a6-3849-4e84-8b79-93869bbda3ed",
+  "run_id": "3509363a-77de-4ead-a3cd-4d604987d626",
   "mode": "mock",
   "status": "incomplete",
   "phase": "final",
@@ -11,12 +11,14 @@
       "name": "explicit_offline_mock"
     },
     "code_hashes": {
-      "engine.py": "167491b35b46e5fe569be1b55bf01633787bc5f219cd33da9af99ef89f2db3ab",
-      "prompts.py": "1ab58d618a46e01dc43c73bc6e43c6bb6a170741bfc921747511a5ac0c04731d",
-      "model.py": "9d9c0f529d6b01c48a88dd11dec889a4d7f2909504ea20ee3295686355fa1f06",
-      "business_tools.py": "6f3f549b2fe9f49b2ddcfd4881509a93fa162c9422a95d029ec282a11d0d2411",
+      "engine.py": "bfb63d093376e8066c8c02f6fa9fa983af7404304671054fb10e70f87328ddb7",
+      "prompts.py": "1a9cbf2801453983a1828ea5980efe84096f6e1fde7af403f73546414b02e812",
+      "model.py": "176b550aa18498c1a35ac3f47693d989453e84a10ce639754a15e7577a3a5d44",
+      "business_tools.py": "dc84676a93313d096a99153e684aec9f5f7530e4fcf07d9fcb55c4bb7f079b88",
       "script_patch.py": "ec77a077f3a59753457e082c6936897bad7379218f7a24f0fee9ff7927de3ad7",
-      "runtime.py": "ffe5a3005c1df86b7535ab728d314b20a2a0cccf4fd6c7dc838c18b1129d4ff2"
+      "runtime.py": "c5217fdd0b50752605821b94cdc6d792bd8ac780d4331b63836ebbb9da7c7c46",
+      "context_budget.py": "53b4db7819f37a1c407f3d8376ac3bc16bda5e451903c431f98cef40d8d5ea2c",
+      "vendor/deepseek/encoding.py": "142ef131e2acf9047ba7b3e222011a89997911457357e6d5dc1ce01d8da545ed"
     },
     "code_hash_capture": "process_import"
   },
@@ -126,15 +128,15 @@
       },
       "script_version": 1,
       "script_hash": "429ecac06dd4a82348f689da99f31416ffda3575a5751b574e9a3b086d7e3132",
-      "data_hash": "79547a1a8070046079e5a75d5be2579ee62ecfde50ca53b0d8928795e1c7d323",
+      "data_hash": "9cf54186a9b547f78e8dadc4f55e0cf0e4789c8090ca45d230110642faaeef48",
       "brief_hash": "c135c6b5e89783afd5f2f3d9f7b6afdc55dc4c17a4b0690662d3269213b8ff13"
     },
     "rules": {
       "passed": true,
       "issues": [],
-      "scope": "deterministic_only",
-      "requires_semantic_verification": true,
-      "semantic_status": "not_checked",
+      "scope": "deterministic_and_semantic",
+      "requires_semantic_verification": false,
+      "semantic_status": "passed",
       "checked_claims": 2,
       "valid_quote_mappings": 2,
       "semantic": {
@@ -163,7 +165,7 @@
       },
       "script_version": 1,
       "script_hash": "429ecac06dd4a82348f689da99f31416ffda3575a5751b574e9a3b086d7e3132",
-      "data_hash": "79547a1a8070046079e5a75d5be2579ee62ecfde50ca53b0d8928795e1c7d323",
+      "data_hash": "9cf54186a9b547f78e8dadc4f55e0cf0e4789c8090ca45d230110642faaeef48",
       "brief_hash": "c135c6b5e89783afd5f2f3d9f7b6afdc55dc4c17a4b0690662d3269213b8ff13"
     }
   },
@@ -260,7 +262,7 @@
   "pending_review": null,
   "review_history": [
     {
-      "review_id": "daf5ba3c738e7a137fb7",
+      "review_id": "261d9c90f92d0c25eb54",
       "decision": "approve",
       "feedback": "",
       "answers": {},
@@ -269,7 +271,7 @@
       "version": 1
     },
     {
-      "review_id": "c3a4d63e3360dee600fb",
+      "review_id": "f017244798d8a05e85eb",
       "decision": "approve",
       "feedback": "",
       "answers": {},
@@ -292,5 +294,5 @@
     "narration-subtitles",
     "storyboard-planning"
   ],
-  "data_hash": "79547a1a8070046079e5a75d5be2579ee62ecfde50ca53b0d8928795e1c7d323"
+  "data_hash": "9cf54186a9b547f78e8dadc4f55e0cf0e4789c8090ca45d230110642faaeef48"
 }

@@ -17,6 +17,7 @@ from .business_tools import check_rules, estimate_duration, search_materials
 from .prompts import build_messages, tools_for_state
 from .schemas import Brief, Direction, Script
 from .script_patch import apply_script_patch
+from .model import ContextLimitError
 
 TERMINAL = {"completed", "incomplete", "failed", "cancelled"}
 
@@ -99,6 +100,7 @@ class AgentEngine:
             event(state, "model_action", content=reply.get("content"), tool_calls=state["pending_calls"],
                   usage=getattr(self.model, "last_usage", {}), model_call=state["model_calls"],
                   action_protocol=getattr(self.model, "last_action_protocol", "explicit_offline_mock"),
+                  response_metadata=getattr(self.model, "last_response_metadata", {}),
                   public_response=getattr(self.model, "last_public_response", None))
             if not state["pending_calls"]:
                 state["no_action_count"] = state.get("no_action_count", 0) + 1
@@ -110,6 +112,8 @@ class AgentEngine:
         except Exception as exc:
             event(state, "model_error", error=str(exc), model_call=state["model_calls"],
                   response_metadata=getattr(self.model, "last_response_metadata", {}))
+            if isinstance(exc, ContextLimitError):
+                return self.stop(state, "incomplete", "context_budget_exceeded", str(exc))
             return self.stop(state, "failed", "model_unavailable", str(exc))
         return state
 
@@ -265,11 +269,21 @@ class AgentEngine:
                 try:
                     semantic = self.model.verify_script(state["script"], state["materials"])
                     event(state, "semantic_verification", result=semantic, usage=getattr(self.model, "last_usage", {}),
+                          response_metadata=getattr(self.model, "last_response_metadata", {}),
                           model_call=state["model_calls"], mode=state["mode"])
                     report["semantic"] = semantic
+                    report["scope"] = "deterministic_and_semantic"
+                    report["semantic_status"] = "passed" if semantic.get("passed") is True else "failed"
+                    report["requires_semantic_verification"] = False
                     report["passed"] = semantic.get("passed") is True
                     report["issues"] = report.get("issues", []) + semantic.get("issues", [])
                 except Exception as exc:
+                    event(state, "semantic_error", error=str(exc), usage=getattr(self.model, "last_usage", {}),
+                          response_metadata=getattr(self.model, "last_response_metadata", {}),
+                          model_call=state["model_calls"], mode=state["mode"])
+                    if isinstance(exc, ContextLimitError):
+                        self.stop(state, "incomplete", "context_budget_exceeded", str(exc))
+                    report["semantic_status"] = "unavailable"
                     report["passed"] = False
                     report.setdefault("issues", []).append({"code": "semantic_unavailable", "message": str(exc)})
             else:

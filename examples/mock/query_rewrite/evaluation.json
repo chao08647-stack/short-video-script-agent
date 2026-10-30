@@ -1,7 +1,7 @@
 {
   "case": "query_rewrite",
   "mode": "mock",
-  "run_id": "502fd94b-5e5e-4176-9071-bc17a14d10e6",
+  "run_id": "d9d72ba3-d16c-41be-95a7-ab0374f90c63",
   "status": "completed",
   "acceptance_passed": true,
   "acceptance_errors": [],

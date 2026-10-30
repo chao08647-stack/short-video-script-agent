@@ -1,0 +1,210 @@
+{
+  "checked_at": "2026-10-30T16:22:44.347274+00:00",
+  "mode": "offline_deterministic_recheck_of_historical_outputs",
+  "note": "No new model request or semantic judge call. Original output/trace/evaluation are unchanged. Passing this check is not full factual acceptance.",
+  "checker_source_hash": "dc84676a93313d096a99153e684aec9f5f7530e4fcf07d9fcb55c4bb7f079b88",
+  "rules_hash": "be6b8996400fd29ab3bbccc1637f8250b2af1b4ffc9a3906cc58eaf5562b8d51",
+  "cases": [
+    {
+      "case": "normal",
+      "original_run_id": "8d6b1326-f461-41cb-afa3-10a8326af758",
+      "script_hash": "e2973bf64c593bb4f346b5704cc504ba5e4f73375ce69c54004bd17ac1f15bc0",
+      "passed_deterministic_recheck": false,
+      "issues": [
+        {
+          "code": "UNSUPPORTED_UI_DETAIL",
+          "message": "表述“时间线”缺少本字段有效断言与对应原文的共同支持；请补充证据或删改，标为示意不豁免。",
+          "scene_id": "S1",
+          "field": "visual",
+          "path": "/scenes/0/visual",
+          "term": "时间线",
+          "group": "ui_detail"
+        },
+        {
+          "code": "UNSUPPORTED_UI_DETAIL",
+          "message": "表述“进度条”缺少本字段有效断言与对应原文的共同支持；请补充证据或删改，标为示意不豁免。",
+          "scene_id": "S2",
+          "field": "visual",
+          "path": "/scenes/1/visual",
+          "term": "进度条",
+          "group": "ui_detail"
+        },
+        {
+          "code": "UNSUPPORTED_UI_DETAIL",
+          "message": "表述“时间线”缺少本字段有效断言与对应原文的共同支持；请补充证据或删改，标为示意不豁免。",
+          "scene_id": "S2",
+          "field": "visual",
+          "path": "/scenes/1/visual",
+          "term": "时间线",
+          "group": "ui_detail"
+        },
+        {
+          "code": "UNSUPPORTED_FEATURE",
+          "message": "表述“实时”缺少本字段有效断言与对应原文的共同支持；请补充证据或删改，标为示意不豁免。",
+          "scene_id": "S4",
+          "field": "visual",
+          "path": "/scenes/3/visual",
+          "term": "实时",
+          "group": "feature"
+        },
+        {
+          "code": "UNSUPPORTED_UI_DETAIL",
+          "message": "表述“滑块”缺少本字段有效断言与对应原文的共同支持；请补充证据或删改，标为示意不豁免。",
+          "scene_id": "S4",
+          "field": "visual",
+          "path": "/scenes/3/visual",
+          "term": "滑块",
+          "group": "ui_detail"
+        },
+        {
+          "code": "UNSUPPORTED_UI_DETAIL",
+          "message": "表述“面板”缺少本字段有效断言与对应原文的共同支持；请补充证据或删改，标为示意不豁免。",
+          "scene_id": "S4",
+          "field": "visual",
+          "path": "/scenes/3/visual",
+          "term": "面板",
+          "group": "ui_detail"
+        }
+      ]
+    },
+    {
+      "case": "missing_info",
+      "original_run_id": "033c5552-1641-4eac-ba87-344a3499ba8b",
+      "script_hash": "9088455351829f48b832ac9ed9a83ebe9e8df9194be69d631781db54ac1d8ece",
+      "passed_deterministic_recheck": false,
+      "issues": [
+        {
+          "code": "UNSUPPORTED_UI_DETAIL",
+          "message": "表述“按钮”缺少本字段有效断言与对应原文的共同支持；请补充证据或删改，标为示意不豁免。",
+          "scene_id": "S1",
+          "field": "visual",
+          "path": "/scenes/0/visual",
+          "term": "按钮",
+          "group": "ui_detail"
+        },
+        {
+          "code": "UNSUPPORTED_UI_DETAIL",
+          "message": "表述“进度条”缺少本字段有效断言与对应原文的共同支持；请补充证据或删改，标为示意不豁免。",
+          "scene_id": "S2",
+          "field": "visual",
+          "path": "/scenes/1/visual",
+          "term": "进度条",
+          "group": "ui_detail"
+        },
+        {
+          "code": "UNSUPPORTED_UI_DETAIL",
+          "message": "表述“时间轴”缺少本字段有效断言与对应原文的共同支持；请补充证据或删改，标为示意不豁免。",
+          "scene_id": "S2",
+          "field": "visual",
+          "path": "/scenes/1/visual",
+          "term": "时间轴",
+          "group": "ui_detail"
+        },
+        {
+          "code": "UNSUPPORTED_FEATURE",
+          "message": "表述“实时”缺少本字段有效断言与对应原文的共同支持；请补充证据或删改，标为示意不豁免。",
+          "scene_id": "S3",
+          "field": "visual",
+          "path": "/scenes/2/visual",
+          "term": "实时",
+          "group": "feature"
+        },
+        {
+          "code": "UNSUPPORTED_UI_DETAIL",
+          "message": "表述“滑块”缺少本字段有效断言与对应原文的共同支持；请补充证据或删改，标为示意不豁免。",
+          "scene_id": "S4",
+          "field": "visual",
+          "path": "/scenes/3/visual",
+          "term": "滑块",
+          "group": "ui_detail"
+        },
+        {
+          "code": "UNSUPPORTED_FEATURE",
+          "message": "表述“导出”缺少本字段有效断言与对应原文的共同支持；请补充证据或删改，标为示意不豁免。",
+          "scene_id": "S5",
+          "field": "narration",
+          "path": "/scenes/4/narration",
+          "term": "导出",
+          "group": "feature"
+        }
+      ]
+    },
+    {
+      "case": "duration_revision",
+      "original_run_id": "35f24324-8e49-468b-b6a4-87aabd792e5d",
+      "script_hash": "6f630b8badf95b8d3d1a4b99cbb096f8adfb834d75e3566a9affd343df08991a",
+      "passed_deterministic_recheck": false,
+      "issues": [
+        {
+          "code": "UNSUPPORTED_UI_DETAIL",
+          "message": "表述“时间轴”缺少本字段有效断言与对应原文的共同支持；请补充证据或删改，标为示意不豁免。",
+          "scene_id": "S1",
+          "field": "visual",
+          "path": "/scenes/0/visual",
+          "term": "时间轴",
+          "group": "ui_detail"
+        },
+        {
+          "code": "UNSUPPORTED_UI_DETAIL",
+          "message": "表述“时间轴”缺少本字段有效断言与对应原文的共同支持；请补充证据或删改，标为示意不豁免。",
+          "scene_id": "S2",
+          "field": "visual",
+          "path": "/scenes/1/visual",
+          "term": "时间轴",
+          "group": "ui_detail"
+        },
+        {
+          "code": "UNSUPPORTED_UI_DETAIL",
+          "message": "表述“面板”缺少本字段有效断言与对应原文的共同支持；请补充证据或删改，标为示意不豁免。",
+          "scene_id": "S3",
+          "field": "visual",
+          "path": "/scenes/2/visual",
+          "term": "面板",
+          "group": "ui_detail"
+        }
+      ]
+    },
+    {
+      "case": "tool_failure",
+      "original_run_id": "e8e5a583-7c0c-452f-9c4c-15105efc924e",
+      "script_hash": "0d6fa440bcf50d2ab1ec54506e7f12589167d19fa55313ee093da22c5fa58073",
+      "passed_deterministic_recheck": false,
+      "issues": [
+        {
+          "code": "UNSUPPORTED_FEATURE",
+          "message": "表述“实时”缺少本字段有效断言与对应原文的共同支持；请补充证据或删改，标为示意不豁免。",
+          "scene_id": "S5",
+          "field": "visual",
+          "path": "/scenes/4/visual",
+          "term": "实时",
+          "group": "feature"
+        },
+        {
+          "code": "UNSUPPORTED_UI_DETAIL",
+          "message": "表述“滑块”缺少本字段有效断言与对应原文的共同支持；请补充证据或删改，标为示意不豁免。",
+          "scene_id": "S5",
+          "field": "visual",
+          "path": "/scenes/4/visual",
+          "term": "滑块",
+          "group": "ui_detail"
+        },
+        {
+          "code": "UNSUPPORTED_UI_DETAIL",
+          "message": "表述“面板”缺少本字段有效断言与对应原文的共同支持；请补充证据或删改，标为示意不豁免。",
+          "scene_id": "S5",
+          "field": "visual",
+          "path": "/scenes/4/visual",
+          "term": "面板",
+          "group": "ui_detail"
+        }
+      ]
+    },
+    {
+      "case": "brand_and_fact_revision",
+      "original_run_id": "71f9842c-513b-44e7-a3c0-53412f529b4f",
+      "script_hash": "4f7f4e2c6b182f726942b1c47b1c10855c5566e8373983d575204135cdcdc7cf",
+      "passed_deterministic_recheck": true,
+      "issues": []
+    }
+  ]
+}

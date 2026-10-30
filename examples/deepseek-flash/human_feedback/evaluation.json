@@ -1,0 +1,25 @@
+{
+  "case": "human_feedback",
+  "mode": "live",
+  "run_id": "3036d7bf-1bed-4148-bb8b-c08125b81405",
+  "status": "failed",
+  "acceptance_passed": false,
+  "acceptance_errors": [
+    "Expected completed, got failed",
+    "No human revision feedback followed by a model revision and renewed review"
+  ],
+  "elapsed_seconds": 52.64,
+  "model_calls": 30,
+  "tool_calls": 32,
+  "skills_loaded": [
+    "audience-angle",
+    "duration-compression",
+    "factual-revision",
+    "hook-writing",
+    "material-search",
+    "narration-subtitles",
+    "narrative-structure"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\deepseek-flash\\human_feedback"
+}

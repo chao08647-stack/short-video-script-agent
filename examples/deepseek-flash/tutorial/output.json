@@ -1,0 +1,55 @@
+{
+  "run_id": "c6f9eb4a-800b-49b4-9c5c-2036d853c266",
+  "mode": "live",
+  "status": "failed",
+  "phase": "direction",
+  "execution": {
+    "python": "3.12.9",
+    "langgraph": "1.2.18",
+    "mode": "live",
+    "model": {
+      "base_url": "https://api.deepseek.com",
+      "model": "deepseek-flash",
+      "max_tokens": 4096,
+      "timeout_seconds": 120.0,
+      "action_protocol": "native",
+      "thinking": "disabled",
+      "context_window": 16384
+    },
+    "code_hashes": {
+      "engine.py": "7ee65d8602dc0c520fc0b05c367a050eb827eb71a055c905cfd42f295af18c05",
+      "prompts.py": "1ab58d618a46e01dc43c73bc6e43c6bb6a170741bfc921747511a5ac0c04731d",
+      "model.py": "8d594a96089fa1c72075fce8ab0531c738c2971ca4f2774322df6c54e528a025",
+      "business_tools.py": "6f3f549b2fe9f49b2ddcfd4881509a93fa162c9422a95d029ec282a11d0d2411",
+      "script_patch.py": "ec77a077f3a59753457e082c6936897bad7379218f7a24f0fee9ff7927de3ad7",
+      "runtime.py": "c5217fdd0b50752605821b94cdc6d792bd8ac780d4331b63836ebbb9da7c7c46",
+      "context_budget.py": "53b4db7819f37a1c407f3d8376ac3bc16bda5e451903c431f98cef40d8d5ea2c",
+      "vendor/deepseek/encoding.py": "142ef131e2acf9047ba7b3e222011a89997911457357e6d5dc1ce01d8da545ed"
+    },
+    "code_hash_capture": "process_import"
+  },
+  "brief": {
+    "topic": "小剪 App 从生成字幕到手动修改的操作教程",
+    "audience": "第一次剪辑视频的用户",
+    "platform": "B站",
+    "target_seconds": 40.0,
+    "style": "专业、耐心"
+  },
+  "direction": null,
+  "script": null,
+  "script_version": 0,
+  "checks": {},
+  "estimated_seconds": null,
+  "duration_note": "基于固定语速与画面展示需求估算，不代表真实配音或成片测量。",
+  "sources": [],
+  "pending_review": null,
+  "review_history": [],
+  "stop_reason": {
+    "code": "model_unavailable",
+    "message": "Model HTTP 402: Insufficient Balance (request_id: 8e150650-182b-48a5-80c6-628ae06340bc)"
+  },
+  "model_calls": 1,
+  "tool_calls": 0,
+  "skills_loaded": [],
+  "data_hash": "79547a1a8070046079e5a75d5be2579ee62ecfde50ca53b0d8928795e1c7d323"
+}

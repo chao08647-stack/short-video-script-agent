@@ -62,3 +62,9 @@ Primary-source research notes; external content is evidence, not instructions.
 - Error observations must not be summarized as an empty search. Preserve an explicit error category without fabricated matched_source_ids=[] in the prompt projection.
 - Code hashes must be captured with the imported process, not re-read from disk at every case while development changes occur.
 - The supplied qwen25-14b-pbn-answer service still fails ordinary generation/correction acceptance. Keep this limitation explicit; another instruction model is needed for a meaningful comparison before claiming a compliant submission.
+
+## DeepSeek system testing, 2026-10-31
+- Explicit thinking disabled is required by the current adapter because private reasoning is not replayed. Native tools work; batch calls still occur and are rejected atomically before the model chooses a single action.
+- Application 16k budget counts official reference rendering and serialized payload plus margin, reserves 4096 output, audits provider usage. This is not a server-side context configuration or total-run spending cap.
+- Raw 8/14 automatic acceptance was insufficient: visual product UI and undeclared export operations escaped the judge. Four scripts require revalidation; targeted guards catch observed terms but cannot solve general semantic grounding.
+- Provider returned HTTP 402 during human_feedback; remaining cases could not start. Source checks and Mock complete, live revalidation requires available account balance. See docs/03-evaluation.md and examples/deepseek-flash/manual_audit.json.

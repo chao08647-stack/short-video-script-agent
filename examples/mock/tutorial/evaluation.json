@@ -1,11 +1,11 @@
 {
   "case": "tutorial",
   "mode": "mock",
-  "run_id": "4c4d8a4e-10c4-4ac0-89dc-c34cbbf3ca98",
+  "run_id": "780698a1-09af-476f-bd68-c0585dbae1f2",
   "status": "completed",
   "acceptance_passed": true,
   "acceptance_errors": [],
-  "elapsed_seconds": 0.34,
+  "elapsed_seconds": 0.33,
   "model_calls": 14,
   "tool_calls": 13,
   "skills_loaded": [

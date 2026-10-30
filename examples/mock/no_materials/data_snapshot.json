@@ -14,6 +14,24 @@
     "subtitle_chars_per_second": 6,
     "english_words_per_second": 2.5,
     "minimum_scene_seconds": 1,
+    "evidence_required_terms": {
+      "feature": [
+        "导出",
+        "下载",
+        "上传",
+        "实时"
+      ],
+      "ui_detail": [
+        "滑块",
+        "进度条",
+        "按钮",
+        "面板",
+        "菜单",
+        "时间轴",
+        "时间线"
+      ]
+    },
+    "evidence_required_terms_notice": "针对实测漏检的术语回归规则，仅检查已配置字面词与同字段断言/原文映射，不代表完整语义保障；未列同义表达仍需独立核验。抽象画面不需编造具体界面。",
     "brand_guidance": [
       "使用清楚、具体的功能描述。",
       "产品断言必须由对应来源原文支持。",

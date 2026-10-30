@@ -1,0 +1,274 @@
+{
+  "mode": "live",
+  "human_decisions": "evaluation_simulated_human",
+  "cases": [
+    {
+      "case": "brand_and_fact_revision",
+      "mode": "live",
+      "run_id": "71f9842c-513b-44e7-a3c0-53412f529b4f",
+      "status": "completed",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 35.8,
+      "model_calls": 21,
+      "tool_calls": 22,
+      "skills_loaded": [
+        "audience-angle",
+        "brand-revision",
+        "claim-grounding",
+        "factual-revision",
+        "material-search"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\deepseek-flash\\brand_and_fact_revision"
+    },
+    {
+      "case": "conflict",
+      "mode": "live",
+      "run_id": "7e2e52e2-cc26-4472-bdbf-bb557d9d7626",
+      "status": "waiting_human",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 9.3,
+      "model_calls": 6,
+      "tool_calls": 7,
+      "skills_loaded": [
+        "evidence-conflict",
+        "material-search"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\deepseek-flash\\conflict"
+    },
+    {
+      "case": "duration_revision",
+      "mode": "live",
+      "run_id": "35f24324-8e49-468b-b6a4-87aabd792e5d",
+      "status": "completed",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 42.91,
+      "model_calls": 21,
+      "tool_calls": 21,
+      "skills_loaded": [
+        "audience-angle",
+        "claim-grounding",
+        "duration-compression",
+        "material-search"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\deepseek-flash\\duration_revision"
+    },
+    {
+      "case": "headphones",
+      "mode": "live",
+      "run_id": "362743cc-0f87-48b6-8fb2-057ddd046dc5",
+      "status": "failed",
+      "acceptance_passed": false,
+      "acceptance_errors": [
+        "Expected completed, got failed"
+      ],
+      "elapsed_seconds": 0.66,
+      "model_calls": 1,
+      "tool_calls": 0,
+      "skills_loaded": [],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\deepseek-flash\\headphones"
+    },
+    {
+      "case": "human_feedback",
+      "mode": "live",
+      "run_id": "3036d7bf-1bed-4148-bb8b-c08125b81405",
+      "status": "failed",
+      "acceptance_passed": false,
+      "acceptance_errors": [
+        "Expected completed, got failed",
+        "No human revision feedback followed by a model revision and renewed review"
+      ],
+      "elapsed_seconds": 52.64,
+      "model_calls": 30,
+      "tool_calls": 32,
+      "skills_loaded": [
+        "audience-angle",
+        "duration-compression",
+        "factual-revision",
+        "hook-writing",
+        "material-search",
+        "narration-subtitles",
+        "narrative-structure"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\deepseek-flash\\human_feedback"
+    },
+    {
+      "case": "minimal",
+      "mode": "live",
+      "run_id": "ebfb8f67-7f1c-4db7-85ee-ef0a4c05b5fc",
+      "status": "failed",
+      "acceptance_passed": false,
+      "acceptance_errors": [
+        "Expected completed, got failed"
+      ],
+      "elapsed_seconds": 0.69,
+      "model_calls": 1,
+      "tool_calls": 0,
+      "skills_loaded": [],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\deepseek-flash\\minimal"
+    },
+    {
+      "case": "missing_info",
+      "mode": "live",
+      "run_id": "033c5552-1641-4eac-ba87-344a3499ba8b",
+      "status": "completed",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 42.09,
+      "model_calls": 20,
+      "tool_calls": 21,
+      "skills_loaded": [
+        "audience-angle",
+        "brief-clarification",
+        "claim-grounding",
+        "hook-writing",
+        "material-search",
+        "narration-subtitles",
+        "narrative-structure"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\deepseek-flash\\missing_info"
+    },
+    {
+      "case": "no_materials",
+      "mode": "live",
+      "run_id": "d90d89b1-b4b2-4f5e-96be-13df171b5705",
+      "status": "waiting_human",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 9.98,
+      "model_calls": 7,
+      "tool_calls": 8,
+      "skills_loaded": [
+        "material-search",
+        "query-rewrite"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\deepseek-flash\\no_materials"
+    },
+    {
+      "case": "normal",
+      "mode": "live",
+      "run_id": "8d6b1326-f461-41cb-afa3-10a8326af758",
+      "status": "completed",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 41.88,
+      "model_calls": 20,
+      "tool_calls": 21,
+      "skills_loaded": [
+        "audience-angle",
+        "brand-revision",
+        "hook-writing",
+        "material-search",
+        "narration-subtitles",
+        "narrative-structure"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\deepseek-flash\\normal"
+    },
+    {
+      "case": "query_rewrite",
+      "mode": "live",
+      "run_id": "3ac47750-4a91-482b-8d7d-5828601d1d4d",
+      "status": "failed",
+      "acceptance_passed": false,
+      "acceptance_errors": [
+        "Expected completed, got failed",
+        "No observed empty search -> changed query -> successful retrieval path"
+      ],
+      "elapsed_seconds": 0.77,
+      "model_calls": 1,
+      "tool_calls": 0,
+      "skills_loaded": [],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\deepseek-flash\\query_rewrite"
+    },
+    {
+      "case": "step_limit",
+      "mode": "live",
+      "run_id": "310834c9-fd60-4eb7-ac80-29c8f43f0935",
+      "status": "failed",
+      "acceptance_passed": false,
+      "acceptance_errors": [
+        "Expected honest non-completion",
+        "No explicit stop at the configured execution limit"
+      ],
+      "elapsed_seconds": 1.05,
+      "model_calls": 1,
+      "tool_calls": 0,
+      "skills_loaded": [],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\deepseek-flash\\step_limit"
+    },
+    {
+      "case": "too_short",
+      "mode": "live",
+      "run_id": "8818ae49-6901-4266-8c01-f84cbd153aa5",
+      "status": "waiting_human",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 34.09,
+      "model_calls": 19,
+      "tool_calls": 21,
+      "skills_loaded": [
+        "audience-angle",
+        "duration-compression",
+        "material-search",
+        "narration-subtitles",
+        "narrative-structure"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\deepseek-flash\\too_short"
+    },
+    {
+      "case": "tool_failure",
+      "mode": "live",
+      "run_id": "e8e5a583-7c0c-452f-9c4c-15105efc924e",
+      "status": "completed",
+      "acceptance_passed": true,
+      "acceptance_errors": [],
+      "elapsed_seconds": 48.22,
+      "model_calls": 27,
+      "tool_calls": 29,
+      "skills_loaded": [
+        "audience-angle",
+        "claim-grounding",
+        "duration-compression",
+        "factual-revision",
+        "hook-writing",
+        "material-search",
+        "narration-subtitles",
+        "narrative-structure"
+      ],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\deepseek-flash\\tool_failure"
+    },
+    {
+      "case": "tutorial",
+      "mode": "live",
+      "run_id": "c6f9eb4a-800b-49b4-9c5c-2036d853c266",
+      "status": "failed",
+      "acceptance_passed": false,
+      "acceptance_errors": [
+        "Expected completed, got failed"
+      ],
+      "elapsed_seconds": 0.59,
+      "model_calls": 1,
+      "tool_calls": 0,
+      "skills_loaded": [],
+      "human_decisions": "evaluation_simulated_human",
+      "artifacts": "examples\\deepseek-flash\\tutorial"
+    }
+  ],
+  "passed": 8,
+  "total": 14
+}

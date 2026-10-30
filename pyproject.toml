@@ -16,6 +16,7 @@ dependencies = [
   "rich>=13,<15",
   "PyYAML>=6,<7",
   "python-dotenv>=1,<2",
+  "tokenizers>=0.23,<0.24",
 ]
 
 [project.optional-dependencies]
@@ -26,6 +27,9 @@ script-agent = "script_agent.cli:app"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.package-data]
+"script_agent" = ["vendor/deepseek/*.json", "vendor/deepseek/LICENSE", "vendor/deepseek/*.md"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

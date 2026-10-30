@@ -1,0 +1,23 @@
+{
+  "case": "tool_failure",
+  "mode": "live",
+  "run_id": "e8e5a583-7c0c-452f-9c4c-15105efc924e",
+  "status": "completed",
+  "acceptance_passed": true,
+  "acceptance_errors": [],
+  "elapsed_seconds": 48.22,
+  "model_calls": 27,
+  "tool_calls": 29,
+  "skills_loaded": [
+    "audience-angle",
+    "claim-grounding",
+    "duration-compression",
+    "factual-revision",
+    "hook-writing",
+    "material-search",
+    "narration-subtitles",
+    "narrative-structure"
+  ],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\deepseek-flash\\tool_failure"
+}

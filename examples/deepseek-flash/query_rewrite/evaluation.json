@@ -1,0 +1,17 @@
+{
+  "case": "query_rewrite",
+  "mode": "live",
+  "run_id": "3ac47750-4a91-482b-8d7d-5828601d1d4d",
+  "status": "failed",
+  "acceptance_passed": false,
+  "acceptance_errors": [
+    "Expected completed, got failed",
+    "No observed empty search -> changed query -> successful retrieval path"
+  ],
+  "elapsed_seconds": 0.77,
+  "model_calls": 1,
+  "tool_calls": 0,
+  "skills_loaded": [],
+  "human_decisions": "evaluation_simulated_human",
+  "artifacts": "examples\\deepseek-flash\\query_rewrite"
+}

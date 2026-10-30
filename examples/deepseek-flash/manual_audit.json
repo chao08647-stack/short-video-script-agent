@@ -431,6 +431,11 @@
         "output.json": "797bdf3fe3ea2ded6ff7ac1e3a024851f90357a91fbdd3bb44f47935cee27396",
         "evaluation.json": "cdae820b01cf848b69ab7a3dc6ffcc993bc3703914c472ee0df954a9b21a050f",
         "trace.jsonl": "cf1d9ad15d6679841f33774866b49928f7e692dbafc43af3c6d663329ef76538"
+      },
+      "evidence_text_sha256": {
+        "output.json": "795356f25d264b74a2c3066f4cbf17e1ea7456005fd44a5dbc2bf77f72ebe7d0",
+        "evaluation.json": "6fd47fab19bbf4e155c8309e3e320277afe491710a3eabf7d029741b4f4de23b",
+        "trace.jsonl": "c12c08c9b06737336c48ddc799ab176a105fb5be742169da5fbe0b4f398c938b"
       }
     },
     {
@@ -450,6 +455,11 @@
         "output.json": "5eca629609eed2ddf2f18bd98683af1ddcb4cf389ed15934b58f0b010bf237fc",
         "evaluation.json": "5966221f91d6e4b96187baa8efa5f98b335253d52edfc2618234329e4a831555",
         "trace.jsonl": "bcfad3b0deacbe1b616b14ac3bdb63bcb56356edc3beb6bf6510e3761b884832"
+      },
+      "evidence_text_sha256": {
+        "output.json": "0a722d0b396aa08375d20496800da380cf133f46ad96d18e71ba88f6b546a111",
+        "evaluation.json": "f6671958d9fc09b64b8ebc7f90295b3d06e6602a7bbe283570859e087e0778f5",
+        "trace.jsonl": "aee63c77c20ff1fe02cb5f93c4bd62ca4b50c6970a4f139bd552e3363743fa09"
       }
     },
     {
@@ -471,6 +481,11 @@
         "output.json": "ef57ebc351ecbbe6599bba25c4a4ffadb480c8a0d789956075c784f9b5df9840",
         "evaluation.json": "e1eadb2b10d4a4be62c3288a92f915bb1a7756ed441f9abae75ddb70b60bbc4d",
         "trace.jsonl": "cc63040c21465b6012151041e10bf1e6f37b4806e8e0be942ed41cd2c5b98c22"
+      },
+      "evidence_text_sha256": {
+        "output.json": "39823113734802765027abce3564bc64b8418afc8f24e6f6368b491e373643e5",
+        "evaluation.json": "c4c64a2f706339717ff592968e615e7dd97a65195b95c46a730d11cb102bf7e6",
+        "trace.jsonl": "df2bf91a436c560e5ed011abd926afb745388eee46fb6bf10e72c4806be34569"
       }
     },
     {
@@ -494,6 +509,11 @@
         "output.json": "dc84b0c6ccad4770a119ab17cbddea5b6e6cb6f51f9f44387fb08018ac99b29f",
         "evaluation.json": "75fd2937dc3ce996a451b98412377250f7a0d88a48c5a5e86b58795b61d06731",
         "trace.jsonl": "668d0b853bc49f6a0000ceed77634b4f2e955d50595423bf2f78d1ac95ef985d"
+      },
+      "evidence_text_sha256": {
+        "output.json": "19add8dd5c2cc40f0424be5d493be6a9be70e0c4e275aba9c2f839b9108e4566",
+        "evaluation.json": "9c759e08d635881bd271bb1d884ecd7fabcd483f0894829cd1c092f09ebba767",
+        "trace.jsonl": "c13dc2af12e75c97dd33db24145281ae9b580ee766c90ea936faa7d4e2c3e045"
       }
     },
     {
@@ -517,6 +537,11 @@
         "output.json": "5350a14948f0dbe4ea7e6d4ae2ae7302e2a0e526ce3d70da15f1d5400cda3e40",
         "evaluation.json": "966666f946b65cd305be2af613cac5e2ef0c5f3f556d6afa654ef49682d2eb04",
         "trace.jsonl": "52a581dafe37fe3e6e3c3aabe046abd1de1fd59903779f87091fcc776c445fe4"
+      },
+      "evidence_text_sha256": {
+        "output.json": "5cda7affd9cfba2a80de86eedf1ca8627aa00af03759acf157bff474277082f6",
+        "evaluation.json": "c88455f1cd7c2bf8028e4e5db97cfdd92d8db18ddf15a940f348d0283c2e9d55",
+        "trace.jsonl": "1e05393f1ab0312f1b63a946ac46ff988151d2bbab3ea52704fa633f6e8bf842"
       }
     },
     {
@@ -540,6 +565,11 @@
         "output.json": "db673844df5f6d9e77049e3ac22f16f6cc75d6d73d91df1f6a406a3a9b9b8c7c",
         "evaluation.json": "11fe5089f8b4045bffc47ef996338b8469ae405d8eaf9ef3039b1f386ac63842",
         "trace.jsonl": "9ec309fe0a3d1fa6f1766adcb5a551ecc09e2e2071179016fdd9cef8618298e0"
+      },
+      "evidence_text_sha256": {
+        "output.json": "b9ee7f7225826b2e1298c09b7d865f028a20605ef8d5e46399a4108c9bcbb527",
+        "evaluation.json": "1e3df26c4c7311b42af36d6e8fe3a4259761971009d3723a1107093e04816867",
+        "trace.jsonl": "acc0a502242f0a96326e71793e8e4d09da1d2784ac69edbac63e59611cf56c35"
       }
     },
     {
@@ -562,6 +592,11 @@
         "output.json": "ab2448fe113014800f04072c20c13d735f23bda74edd348c91a40fe70008794a",
         "evaluation.json": "cf039a0fc3e179f1694a48e351eb4af43e79c670f3a5fb989846d6ff6c0bbce2",
         "trace.jsonl": "59b9e1c7115588207a21ec2ea60bc0b1a71d1563d86e730a8f3f4e2b0af97d34"
+      },
+      "evidence_text_sha256": {
+        "output.json": "9e1d62f88262e41e00b7b6239804e25830aae09c4fbf074a7d34fdadabe3b914",
+        "evaluation.json": "aa25ce26875694615652f9b78ff8fa8982804696945e86a290bb765c940de32f",
+        "trace.jsonl": "0764cbaf56ab7106ad3dbffe02cf80506c22af91f54da55055c98ca0ec050812"
       }
     },
     {
@@ -581,6 +616,11 @@
         "output.json": "99283403f02fa233be565e11cb1e0c5b63c7de7747d98452471017bfb5972b6a",
         "evaluation.json": "f6da9c1e111cb094fc4a9032d5429e1bb525ef2116f2f2b8101bb1c583f4d7a2",
         "trace.jsonl": "41796c759be23698e05229eaf5c496f984af80318bcacdcc81a1a973533e8368"
+      },
+      "evidence_text_sha256": {
+        "output.json": "d7e4dacb5129de6862e2ca7add150d91f925197a533fafbe70e7d4fe34b5f5ed",
+        "evaluation.json": "0224263029633c75c54a310b2c1059be26eb95c5f4039c1304d56b0879f70b9e",
+        "trace.jsonl": "d087be387cd42f163251f4badec9ab38dad72790b726506aaf161ec8cfa785c9"
       }
     },
     {
@@ -603,6 +643,11 @@
         "output.json": "e3e2c514e11b13f5042c2af1a9f7a66e7e8b9ea9726b7687c0e6751ba32cbd70",
         "evaluation.json": "d96f5e9c1cea05c6106c4514fbe4ea4a45cd51a79d43a85c61bce2b0a1e13713",
         "trace.jsonl": "5724315b4dc77d49efe4f55a3fbb91627896f7f70c19241349f6c4e55c2dc2bd"
+      },
+      "evidence_text_sha256": {
+        "output.json": "518cf037257943ece3329b7cd2b809b43791c3b960f1993072722a64f1498275",
+        "evaluation.json": "a3547259cd99abc1b1eb9624d3043c9e8871a8015e49e75ca8ecf034132f1cee",
+        "trace.jsonl": "477eeceed255ed1f4017b7a584ef69affa0d6c215b201cc710150545f74d16b7"
       }
     },
     {
@@ -626,6 +671,11 @@
         "output.json": "fe5b7704b7f4328c00dcfa0e4bdd140e48db6e3bcb671c64db2778ec0ceaca09",
         "evaluation.json": "acdda733940dccf5406723d06bf496ceee38790c4b2f4afd8715e8284db89fe7",
         "trace.jsonl": "760410be41c8d8e0f61490bc7ce79458e9a917bf5e73af1175c51fe111db9eea"
+      },
+      "evidence_text_sha256": {
+        "output.json": "31821480fa21c9569750508fb083c93d007f8a65742809045551b2c05ee302d1",
+        "evaluation.json": "27c4275e1fe2f66b01361afc3b546d640cf99a53e1a6c208779ae55d5e390f08",
+        "trace.jsonl": "aac0bede1bf76adf2474f4dad677fb4b7aea262fd6b3a69099b01387d3feb1f3"
       }
     },
     {
@@ -649,6 +699,11 @@
         "output.json": "7d091fcef06fd1bff95360d447003f3dbcd66046201dfac9eeec78402cfdd60a",
         "evaluation.json": "c39c6c2efae3d2d06f297df31cc85a53b225bd52d08370f15298ef2f0494fdfe",
         "trace.jsonl": "913aab0e2e0452e825ad2374d2357246060279033baa28f8994311516128c0f0"
+      },
+      "evidence_text_sha256": {
+        "output.json": "42960290174554a35c80f8df743aec23477dacdf983bb33a4d9704d13e2c8815",
+        "evaluation.json": "6596a3027edae2c1dea9bf441c43340ff717ee7869fd7abd7a9e5a8ea5e70af1",
+        "trace.jsonl": "71726bec2fb54b73ff66be3de65bf0665a47d36c5ffb005194c2d7f9ba5d0eec"
       }
     },
     {
@@ -668,6 +723,11 @@
         "output.json": "9aa7a2b7ac85c1c14e5c680f9433ed056da744aa9b6aef4e3b51873c56f5cae7",
         "evaluation.json": "4871d043109d85148ea0857be7d517759290453dc71b534e8c969921ed147273",
         "trace.jsonl": "3db7ab17ef9328a20f3c69060e1cf798e69eb84b004a486f7177c8b480a0a7be"
+      },
+      "evidence_text_sha256": {
+        "output.json": "bca310978263fe0cc532b7c8afcaf3a52af2752c8ad694623c012a65ef7fff99",
+        "evaluation.json": "27d21f1a3aef92ef14bb04e7ad702cd649b9b639823517a96bf5b3e1f3858a79",
+        "trace.jsonl": "40ad0e9af5ef1c9d53025e1572125bc141b4d40c889c3954837359f1aef5e412"
       }
     },
     {
@@ -690,6 +750,11 @@
         "output.json": "6f64dfc064f68cec731270dfe79b2468b330a703f487e05cda6cad3f821cf109",
         "evaluation.json": "1fbbe9974c5e0f3d92f739f811cfe69df0f92352308b49a6642abccf18c603fd",
         "trace.jsonl": "aeb4d613c5782081a4900948bfe5c54e5c17407880191482a14451addf3d81f6"
+      },
+      "evidence_text_sha256": {
+        "output.json": "ca6e1dfd5387d82a99ad967e65b5816ffc9c56662e0ed83e9238a08f045fcd40",
+        "evaluation.json": "8fb11bbfa27697ed50f7078b0accfbba825c270f171474c73d49ef083d165632",
+        "trace.jsonl": "1b2327d980b74b047fedc92f47dd3cd73c14929a14c27d41726ba650d115159e"
       }
     },
     {
@@ -713,9 +778,18 @@
         "output.json": "29aae1b917207dff2ced0f444aaf34ab8d79cc54ec3dd485d3a138c23ddae443",
         "evaluation.json": "754f4b61d30ff3a62381e76e790845b257c7552b82102c6d8cb7f501c210b85c",
         "trace.jsonl": "0ff971b670f342e3519defeac6f5903857f6d79d47b906c9de71865dd177c04a"
+      },
+      "evidence_text_sha256": {
+        "output.json": "1f883637ccbef189b4e10d23f451d78fa95267799274f51b5cbf722504f2ac55",
+        "evaluation.json": "4956454af8d7ae9f6f6f1656fab4b52b8d7ccc334ea72f3f1d2b6755eb64d06a",
+        "trace.jsonl": "da619c995c652aa5e89cd1706b6a03fa9bc8676a9cc2e38e75eec3502180db68"
       }
     }
   ],
   "next_validation": "保留本次证据不变；补齐全稿事实覆盖、具体产品 UI 边界和单引用支持粒度的检查后，对四例另存真实复验。保留 duration_revision 的真实时长修正路径。余额恢复后再验证 6 个因 HTTP 402 未完成的场景。",
-  "audit_updated_at": "2026-10-30T16:23:01.421982+00:00"
+  "audit_updated_at": "2026-10-30T16:23:01.421982+00:00",
+  "evidence_hash_conventions": {
+    "evidence_sha256": "Original Windows working-file bytes at review time, including CRLF. Kept as historical capture; Git normalizes text to LF.",
+    "evidence_text_sha256": "Portable verification: decode UTF-8, normalize CRLF and CR to LF, encode UTF-8, then SHA-256. Matches committed LF files."
+  }
 }
